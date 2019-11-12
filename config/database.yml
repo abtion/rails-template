@@ -1,0 +1,22 @@
+# Configuration options that are shared across all environments
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+# Development config
+development:
+  <<: *default
+  database: PROJECT_NAME_development
+
+# Test config
+test:
+  <<: *default
+  database: PROJECT_NAME_test
+
+# Staging/Production config
+production:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>

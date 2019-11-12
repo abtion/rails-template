@@ -1,0 +1,32 @@
+AllCops:
+  TargetRubyVersion: 2.6
+  Severity: error
+
+  Exclude:
+    - "node_modules/**/*"
+    - "bin/**/*"
+
+Bundler/DuplicatedGem:
+  Enabled: true
+
+Bundler/OrderedGems:
+  Enabled: true
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*_spec.rb"
+
+Metrics/LineLength:
+  Max: 100
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  EnforcedStyle: brackets

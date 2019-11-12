@@ -1,0 +1,30 @@
+---
+version: "2"
+exclude_patterns:
+  - db/**/*
+  - vendor/**/*
+  - public/**/*
+
+plugins:
+  # https://docs.codeclimate.com/docs/brakeman
+  brakeman:
+    enabled: true
+
+  # https://docs.codeclimate.com/docs/bundler-audit
+  bundler-audit:
+    enabled: true
+
+  # https://docs.codeclimate.com/docs/duplication
+  duplication:
+    enabled: true
+    exclude_patterns:
+      - spec/**/*_spec.rb
+
+  # https://docs.codeclimate.com/docs/fixme
+  fixme:
+    enabled: true
+
+  # https://docs.codeclimate.com/docs/rubocop
+  rubocop:
+    enabled: true
+    channel: rubocop-0-74

@@ -1,0 +1,57 @@
+{
+  "environments": {
+    "test": {
+      "env": {
+        "BUNDLE_WITHOUT": "do-not-exclude-gems",
+        "CODE_CLIMATE_TEST_REPORTER_TOKEN": "<YOUR-TEST-REPORTER-ID>",
+        "POSTGRESQL_VERSION": "11",
+        "SEED_ADMIN_EMAIL": "admin@example.com",
+        "SEED_ADMIN_INITIAL_PASSWORD": "password",
+        "NODE_ENV": "test",
+        "RAILS_ENV": "test"
+      },
+      "addons": [
+        "heroku-postgresql:in-dyno"
+      ],
+      "buildpacks": [
+        {
+          "url": "heroku/google-chrome"
+        },
+        {
+          "url": "heroku/nodejs"
+        },
+        {
+          "url": "heroku/ruby"
+        }
+      ],
+      "scripts": {
+        "test-setup": "./script/ci-setup",
+        "test": "./script/ci"
+      }
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [],
+  "env": {
+    "STAGING_DATABASE_URL": {
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "SEED_ADMIN_EMAIL": {
+      "required": true
+    },
+    "SEED_ADMIN_INITIAL_PASSWORD": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "name": "PROJECT_NAME",
+  "scripts": {
+    "postdeploy": "bin/rake postdeploy:postdeploy"
+  },
+  "stack": "heroku-18"
+}

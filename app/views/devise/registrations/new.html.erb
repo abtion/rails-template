@@ -1,0 +1,28 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <img src="<%= asset_path('') %>" class="mb-4">
+  <h3>Please sign up</h3>
+
+  <div>
+    <%= f.label :email, class: 'visually-hidden' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: 'user@PROJECT_NAME.com', tabindex: 1 %>
+  </div>
+
+  <div>
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.label :password, class: 'visually-hidden' %>
+    <%= f.password_field :password, autocomplete: "new-password" , class: 'form-control', placeholder: 'password', tabindex: 2 %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation, class: 'visually-hidden' %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control', placeholder: 'retype password', tabindex: 3 %>
+  </div>
+
+  <div>
+    <%= f.submit "Sign up", class: 'btn btn-lg btn-primary btn-block', tabindex: 4 %>
+  </div>
+  <br/>
+  <%= render "devise/shared/error_messages" %>
+<% end %>

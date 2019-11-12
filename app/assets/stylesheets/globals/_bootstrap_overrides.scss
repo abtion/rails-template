@@ -1,0 +1,20 @@
+$theme-colors: (
+  "primary": $PROJECT_NAME-blue,
+  "secondary": $PROJECT_NAME-green,
+  "success": $PROJECT_NAME-green,
+  "info": $PROJECT_NAME-yellow,
+  "warning": $PROJECT_NAME-pink,
+  "dark": $PROJECT_NAME-darkblue
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$font-family-sans-serif: 'd-din';
+
+@import "bootstrap";
