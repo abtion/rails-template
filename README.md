@@ -14,8 +14,8 @@
 
 ## What is Muffi?
 
-Muffi is a project template maintained by [Abtion](https://abtion.com/) and used
-to kick start Ruby on Rails applications.
+Muffi is a project template maintained by [Abtion](https://abtion.com/) and used to kick start
+Ruby on Rails applications.
 
 ## Key features
 
@@ -64,17 +64,15 @@ your own repository.
 
 ## Contributing
 
-Muffi is maintained by _Abtioneers_, but open for anyone to suggest improvements and bugfixes.
+Muffi is maintained by [_Abtioneers_](#about-abtion), but open for anyone to suggest improvements and bugfixes.
 
-One abtioneer is currently Responsible for the project at Abtion
+One abtioneer is currently responsible for the project at Abtion, with support from other employees.
 
 Please see [CONTRIBUTING.md](https://github.com/abtion/muffi/blob/master/CONTRIBUTING.md).
 
-For security vulnerability reports, please email support@abtion.com.
-
 ## License
 
-TBD
+[MIT](https://opensource.org/licenses/MIT)
 
 ## About Abtion
 
