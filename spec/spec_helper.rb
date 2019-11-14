@@ -38,8 +38,8 @@ Capybara.register_driver :headless_chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: browser_options)
 end
 
-Capybara.javascript_driver = ENV.fetch("TEST_DRIVER", "headless_chrome").to_sym
-Capybara.default_driver = ENV.fetch("TEST_DRIVER", "headless_chrome").to_sym
+Capybara.javascript_driver = ENV.fetch("CAPYBARA_DRIVER", "headless_chrome").to_sym
+Capybara.default_driver = ENV.fetch("CAPYBARA_DRIVER", "headless_chrome").to_sym
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
