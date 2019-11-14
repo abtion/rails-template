@@ -32,8 +32,6 @@ module PROJECT_NAME
 
     # Record the DB schema in SQL format for accuracy
     config.active_record.schema_format = :sql
-    config.assets.paths << Rails.root.join("app", "assets", "fonts")
-    config.assets.precompile << /\.(?:svg|eot|otf|woff|ttf)$/
 
     config.generators do |g|
       # Use UUID primary keys by default
