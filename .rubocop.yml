@@ -20,7 +20,7 @@ Metrics/LineLength:
   Max: 100
 
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  EnforcedStyle: always
 
 Style/Documentation:
   Enabled: false
