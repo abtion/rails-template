@@ -51,7 +51,6 @@
   },
   "name": "PROJECT_NAME",
   "scripts": {
-    "postdeploy": "bin/rake postdeploy:postdeploy"
   },
   "stack": "heroku-18"
 }
