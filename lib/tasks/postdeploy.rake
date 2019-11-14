@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 desc "Review Apps Post-Deploy"
 
 namespace :postdeploy do
-  DUMP_STAGING_DATABASE = "pg_dump -cOx $STAGING_DATABASE_URL".freeze
-  LOAD_DATA = "psql $DATABASE_URL".freeze
-  MIGRATE_AND_SEED = "bundle exec rails db:migrate db:seed".freeze
+  DUMP_STAGING_DATABASE = "pg_dump -cOx $STAGING_DATABASE_URL"
+  LOAD_DATA = "psql $DATABASE_URL"
+  MIGRATE_AND_SEED = "bundle exec rails db:migrate db:seed"
 
   task :postdeploy do
     if review_app?
