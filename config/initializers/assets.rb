@@ -10,7 +10,7 @@ Rails.application.config.assets.paths << Rails.root.join("node_modules")
 
 Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
-["svg", "eot", "otf", "woff", "ttf"].each do |extension|
+%w[svg eot otf woff ttf].each do |extension|
   Rails.application.config.assets.precompile << "*.#{extension}"
 end
 
