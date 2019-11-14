@@ -10,6 +10,7 @@
       2. [Configure the project](#configure-the-project)
       3. [Configure Code Climate](#configure-code-climate)
       4. [Configure CD](#configure-cd)
+      5. [Capybara drivers](#capybara-drivers)
    4. [Contributing](#contributing)
    5. [License](#license)
    6. [About Abtion](#about-abtion)
@@ -63,6 +64,13 @@ your own repository.
     - Staging: `<PROJECT-NAME>-staging`
     - Production: `<PROJECT-NAME>-production`
 3. Turn on "Review Apps" from the Pipeline's page
+
+### Capybara drivers
+
+This project registers two Capybara drivers.
+
+Set the environment variable `CAPYBARA_DRIVER` to `headless_chrome` (default) to run specs without
+opening Chrome, or use `chrome` to open the browser automatically.
 
 ## Contributing
 

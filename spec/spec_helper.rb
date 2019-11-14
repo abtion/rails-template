@@ -29,8 +29,17 @@ Capybara.register_driver :chrome do |app|
   )
 end
 
-Capybara.javascript_driver = :chrome
-Capybara.default_driver = :chrome
+Capybara.register_driver :headless_chrome do |app|
+  Capybara::Selenium::Driver.load_selenium
+  browser_options = ::Selenium::WebDriver::Chrome::Options.new
+  browser_options.args << "--headless"
+  browser_options.args << "--disable-gpu"
+  browser_options.args << "--window-size=1920,1080"
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: browser_options)
+end
+
+Capybara.javascript_driver = ENV.fetch("CAPYBARA_DRIVER", "headless_chrome").to_sym
+Capybara.default_driver = ENV.fetch("CAPYBARA_DRIVER", "headless_chrome").to_sym
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
