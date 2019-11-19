@@ -114,6 +114,7 @@ $ yarn install
 
 Prepare the database
 
+You can set `DATABASE_URL` in `.env.local`, if for instance you use Docker for Postgres. `DATABASE_URL="postgresql://localhost:5432"`
 ```sh
 $ bundle exec rails db:setup
 ```
