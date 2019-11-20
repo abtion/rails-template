@@ -6,14 +6,21 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
+local: &local
+  <<: *default
+  username: <%= ENV.key?("DATABASE_URL") ? URI(ENV.fetch("DATABASE_URL")).user : "" %>
+  password: <%= ENV.key?("DATABASE_URL") ? URI(ENV.fetch("DATABASE_URL")).password : "" %>
+  host: <%= ENV.key?("DATABASE_URL") ? URI(ENV.fetch("DATABASE_URL")).host : "" %>
+  port: <%= ENV.key?("DATABASE_URL") ? URI(ENV.fetch("DATABASE_URL")).port : "" %>
+
 # Development config
 development:
-  <<: *default
+  <<: *local
   database: PROJECT_NAME_development
 
 # Test config
 test:
-  <<: *default
+  <<: *local
   database: PROJECT_NAME_test
 
 # Staging/Production config
