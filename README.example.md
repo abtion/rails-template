@@ -58,15 +58,18 @@ By default, only admins are authorized to call a controller action.
 
 Description of the project. What is it solving? Who are the users?
 
-URL to the project
-Asana:
-URL to Abtion's own related git repositories (frontend / backend / admin area / microservices)
-Harvest:
-Travis:
-Client name, and if possible, contact details including IT contact details
+This section should include any business related explanation that helps understand the context of the project. It could be an excellent idea to include a dictionary of terms, a color legend or a user roles explanation.
+
+- URL to the project
+- Asana:
+- URL to Abtion's own related git repositories (frontend / backend / admin area / microservices)
+- Harvest:
+- CI:
+- Client name, and if possible, contact details.
+- IT person contact details
+
 Name, and a short description of any services that the project is using (error tracking, activity monitoring, log registry, email service, etc). Include where to get the credentials. E.g., 1Password under admin+project@abtion.com.
 
-This section should include any business related explanation that helps understand the context of the project. It could be an excellent idea to include a dictionary of terms, a color legend or a user roles explanation.
 
 # Development
 
