@@ -62,7 +62,8 @@ CREATE TABLE public.users (
     reset_password_token character varying,
     reset_password_sent_at timestamp without time zone,
     remember_created_at timestamp without time zone,
-    admin boolean DEFAULT false
+    admin boolean DEFAULT false,
+    authentication_token character varying NOT NULL
 );
 
 
@@ -114,6 +115,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190521234616'),
 ('20190522002832'),
 ('20190522002904'),
-('20190522021338');
+('20190522021338'),
+('20191126124825');
 
 
