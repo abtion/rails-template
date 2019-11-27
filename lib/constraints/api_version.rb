@@ -2,19 +2,15 @@
 
 module Constraints
   class ApiVersion
-    attr_reader :version, :default
+    attr_reader :version
 
-    def initialize(version, use_default = false)
+    def initialize(version)
       @version = version
-      @use_default = use_default
     end
 
     def matches?(request)
-      if request.headers["X-Api-Version"].present?
-        request.headers["X-Api-Version"] == @version
-      else
-        @use_default
-      end
+      request.headers["X-Api-Version"].present? &&
+        request.headers["X-Api-Version"] == version
     end
   end
 end
