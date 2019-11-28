@@ -10,7 +10,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap", "~> 4.3.1"
 gem "cancancan"
 gem "devise"
-gem "jbuilder", "~> 2.5"
+gem "fast_jsonapi"
 gem "jquery-rails"
 gem "pg", ">= 0.18", "< 2.0"
 gem "pry"
