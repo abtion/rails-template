@@ -54,7 +54,6 @@ By default, only admins are authorized to call a controller action.
 5. [Staging](#staging)
 6. [Third party services](#third-party-services)
    1. [Name of the third party](#name-of-the-third-party)
-7. [Conventions](#conventions)
 
 Description of the project. What is it solving? Who are the users?
 
@@ -192,43 +191,3 @@ Any differences that could have with production, e.g. how are emails delivered.
 - **Documentation:**
 - **Web interface:**
 - **IT Contact person:**
-
-# Conventions
-
-This document and other documentation in this project may use the following
-conventions:
-
-**`$`** is used to denote commands that are executed in your shell
-(zsh/fish/bash etc.)
-
-**`>`** is used to denote commands that are executed in a REPL or other
-interactive tool (e.g. ruby console, psql session.)
-
-**`#`** is used to annotate the instructions or describe what the reader will
-see when the instructions are followed. It doesn't hold any functional
-significance.
-
-For example:
-
-```sh
-$ bundle exec irb
-> puts "foo"
-# you'll see ruby repeat "foo" back to you
-> exit
-
-$ psql -h localhost
-> select * from table;
-```
-
-Context will often indicate what the `>` prompt represents, but it may be
-represented in unambiguous ways such as:
-
-```sh
-$ bundle exec irb
-(irb)> puts "foo"
-# you'll see ruby repeat "foo" back to you
-(irb)> exit
-
-$ psql -h localhost
-(psql)> SELECT * FROM table;
-```
