@@ -8,7 +8,9 @@ module Api
       private
 
       def require_authentication!
-        user = User.find_by(authentication_token: request.headers["X-Api-Key"])
+        user = authenticate_or_request_with_http_token do |token, _options|
+          User.find_by(authentication_token: token)
+        end
 
         if user.present?
           sign_in user

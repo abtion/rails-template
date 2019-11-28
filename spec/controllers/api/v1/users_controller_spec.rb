@@ -6,7 +6,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
   describe "#show" do
     it "returns a 200 OK" do
       user = FactoryBot.create(:user)
-      request.headers["X-Api-Key"] = user.authentication_token
+      request.headers["Authorization"] = "Token #{user.authentication_token}"
 
       get :show, params: { id: user.id }
 
