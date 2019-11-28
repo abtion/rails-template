@@ -49,7 +49,6 @@ By default, only admins are authorized to call a controller action.
    5. [Download production or staging DB](#download-production-or-staging-db)
    6. [Notable inclusions and Notable exclusions](#notable-inclusions-and-notable-exclusions)
 4. [Production](#production)
-      1. [Heroku](#heroku)
    1. [Deployments](#deployments)
 5. [Staging](#staging)
 6. [Third party services](#third-party-services)
@@ -165,14 +164,11 @@ Exclusions:
 
 # Production
 
-### Heroku
-
-Dynos - EU location, Heroku-18 stack
-Postgres - Hobby Dev $7 in staging and Standard $50 in production
-
 ## Deployments
 
-Using Heroku review apps and CI. Auto merge setup to staging environment on merging of branches into master.
+The project is hosted by [heroku](https://heroku.com).
+
+Review apps and CI are enabled for PR's. Auto merge setup to staging environment on merging of branches into master.
 
 Remote (App)
 Staging https://git.heroku.com/PROJECT_NAME-staging-eu.git (https://PROJECT_NAME-staging-eu.herokuapp.com/)
