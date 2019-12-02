@@ -164,11 +164,13 @@ Exclusions:
 
 # Production
 
-## Deployments
-
 The project is hosted by [heroku](https://heroku.com).
 
-Review apps and CI are enabled for PR's. Auto merge setup to staging environment on merging of branches into master.
+Current dyno types and add-on plans can be found in the project's [heroku dashboard](https://dashboard.heroku.com/apps/PROJECT_NAME-production). To access the dashboard, a heroku user with access to the abtion team is required.
+
+## Deployments
+
+Review apps and CI are enable for PR's. Auto merge setup to staging environment on merging of branches into master.
 
 Remote (App)
 Staging https://git.heroku.com/PROJECT_NAME-staging-eu.git (https://PROJECT_NAME-staging-eu.herokuapp.com/)
