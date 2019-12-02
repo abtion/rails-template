@@ -49,7 +49,6 @@ By default, only admins are authorized to call a controller action.
    5. [Download production or staging DB](#download-production-or-staging-db)
    6. [Notable inclusions and Notable exclusions](#notable-inclusions-and-notable-exclusions)
 4. [Production](#production)
-      1. [Heroku](#heroku)
    1. [Deployments](#deployments)
 5. [Staging](#staging)
 6. [Third party services](#third-party-services)
@@ -165,14 +164,13 @@ Exclusions:
 
 # Production
 
-### Heroku
+The project is hosted by [heroku](https://heroku.com).
 
-Dynos - EU location, Heroku-18 stack
-Postgres - Hobby Dev $7 in staging and Standard $50 in production
+Current dyno types and add-on plans can be found in the project's [heroku dashboard](https://dashboard.heroku.com/apps/PROJECT_NAME-production). To access the dashboard, a heroku user with access to the abtion team is required.
 
 ## Deployments
 
-Using Heroku review apps and CI. Auto merge setup to staging environment on merging of branches into master.
+Review apps and CI are enable for PR's. Auto merge setup to staging environment on merging of branches into master.
 
 Remote (App)
 Staging https://git.heroku.com/PROJECT_NAME-staging-eu.git (https://PROJECT_NAME-staging-eu.herokuapp.com/)
