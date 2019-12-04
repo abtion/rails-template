@@ -47,7 +47,7 @@ your own repository.
 4. `cp .env.example .env`
 5. `cp .env.development.example .env.development`
 6. `cp .env.test.example .env.test`
-7. `mv README.example.md README.md`
+7. `curl -o README.md https://raw.githubusercontent.com/abtion/muffi/master/README.example.md`
 8. Add `export DATABASE_URL="postgresql://HOST:@localhost:5432"` to .env.development and .env.test
 
 ### Configure Code Climate
