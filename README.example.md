@@ -21,15 +21,6 @@ This project is built on top of [Muffi](https://github.com/abtion/muffi).
 
 ### HerokuCI green builds deploy to Heroku staging servers
 
-## What's Included
-
-### Simple User Authorization
-
-There are 2 user levels: **admin**, **user**. **Admins** are users whose `admin` flag is set.
-**user** are users who aren't admins.
-
-By default, only admins are authorized to call a controller action.
-
 # Name of the project
 
 1. [README](#readme)
@@ -38,8 +29,6 @@ By default, only admins are authorized to call a controller action.
       2. [Day-to-day](#day-to-day)
       3. [Debugging](#debugging)
       4. [HerokuCI green builds deploy to Heroku staging servers](#herokuci-green-builds-deploy-to-heroku-staging-servers)
-   2. [What's Included](#whats-included)
-      1. [Simple User Authorization](#simple-user-authorization)
 2. [Name of the project](#name-of-the-project)
 3. [Development](#development)
    1. [Requirements](#requirements)
@@ -48,6 +37,7 @@ By default, only admins are authorized to call a controller action.
    4. [Run the tests](#run-the-tests)
    5. [Download production or staging DB](#download-production-or-staging-db)
    6. [Notable inclusions and Notable exclusions](#notable-inclusions-and-notable-exclusions)
+      1. [Devise User Authorization](#devise-user-authorization)
 4. [Production](#production)
    1. [Deployments](#deployments)
 5. [Staging](#staging)
@@ -150,7 +140,10 @@ heroku local
 Use [parity](https://github.com/thoughtbot/parity)
 
 ## Notable inclusions and Notable exclusions
+
 Inclusions:
+
+- [Devise](#devise-user-authorization)
 - Webpacker
 - PostgreSQL database (11.x)
 - RSpec runner
@@ -159,8 +152,16 @@ Inclusions:
 
 Exclusions:
 
-- No Spring
-- No Turbolinks
+- Spring
+- Turbolinks
+
+### Devise User Authorization
+
+There's a single `user` model with two user levels: **user** and **admin**.
+
+A boolean `admin` attribute determines which of the two levels a user belongs to.
+
+By default, only admins are authorized to call a controller action.
 
 # Production
 
