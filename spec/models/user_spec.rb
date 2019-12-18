@@ -11,9 +11,9 @@ RSpec.describe User, type: :model do
       end
     end
 
-        user = build(:user, password: "1234")
     context "without 8 character long password" do
       it "user is not valid" do
+        user = build(:user, password: "1234567")
         expect(user).to_not be_valid
         expect(user.errors[:password]).to eq(["is too short (minimum is 8 characters)"])
       end
