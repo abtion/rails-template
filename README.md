@@ -43,7 +43,12 @@ your own repository.
 
 1. Edit `application.rb` and change the module name and configuration settings.
 2. Edit the database names in `database.yml`
-3. Search the project for the word `PROJECT_NAME` to find other things to change.
+3. Use "search and replace" to replace project specific strings across all files:
+   - PROJECT_DOMAIN => project-name.com
+   - PROJECT_NAME_PARAM => project-name
+   - PROJECT_NAME_PASCAL => ProjectName
+   - PROJECT_NAME_SNAKE => project_name
+   - PROJECT_NAME_HUMAN => Project name
 4. `cp .env.example .env`
 5. `cp .env.development.example .env.development`
 6. `cp .env.test.example .env.test`
