@@ -16,12 +16,12 @@ local: &local
 # Development config
 development:
   <<: *local
-  database: PROJECT_NAME_development
+  database: PROJECT_NAME_SNAKE_development
 
 # Test config
 test:
   <<: *local
-  database: PROJECT_NAME_test
+  database: PROJECT_NAME_SNAKE_test
 
 # Staging/Production config
 production:

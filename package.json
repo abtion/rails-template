@@ -1,5 +1,5 @@
 {
-  "name": "PROJECT_NAME",
+  "name": "PROJECT_NAME_HUMAN",
   "private": true,
   "scripts": {
     "test": "echo 'No Node.js tests to run!'"

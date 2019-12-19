@@ -47,10 +47,8 @@
       "required": true
     }
   },
-  "formation": {
-  },
-  "name": "PROJECT_NAME",
-  "scripts": {
-  },
+  "formation": {},
+  "name": "PROJECT_NAME_PARAM",
+  "scripts": {},
   "stack": "heroku-18"
 }
