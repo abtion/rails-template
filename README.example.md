@@ -2,46 +2,27 @@
 
 This project is built on top of [Muffi](https://github.com/abtion/muffi).
 
-## Developing
-
-### Getting Started
-
-* After cloning this repo, run: `bin/setup`
-
-### Day-to-day
-
-* Run the server: `heroku local` and [http://localhost:5000](http://localhost:5000)
-* Run tests: `rspec`
-
-### Debugging
-
-* Call `byebug` anywhere in the code to stop execution and get a debugger console.
-* Access an IRB console on exception pages or by using `<%= console %>` anywhere in the code.
-* (Of course, [RubyMine](https://www.jetbrains.com/ruby/) includes a great [visual debugger](https://www.jetbrains.com/ruby/features/ruby_debugger.html)).
-
-### HerokuCI green builds deploy to Heroku staging servers
-
 # Name of the project
 
 1. [README](#readme)
-   1. [Developing](#developing)
-      1. [Getting Started](#getting-started)
-      2. [Day-to-day](#day-to-day)
-      3. [Debugging](#debugging)
-      4. [HerokuCI green builds deploy to Heroku staging servers](#herokuci-green-builds-deploy-to-heroku-staging-servers)
 2. [Name of the project](#name-of-the-project)
-3. [Development](#development)
-   1. [Requirements](#requirements)
-   2. [Set up the app the first time](#set-up-the-app-the-first-time)
-   3. [Run the app](#run-the-app)
-   4. [Run the tests](#run-the-tests)
-   5. [Download production or staging DB](#download-production-or-staging-db)
-   6. [Notable inclusions and Notable exclusions](#notable-inclusions-and-notable-exclusions)
-      1. [Devise User Authorization](#devise-user-authorization)
-4. [Production](#production)
+3. [Requirements](#requirements)
+4. [Developing](#developing)
+   1. [First time setup](#first-time-setup)
+      1. [1. Configuration](#1-configuration)
+         1. [Database connection](#database-connection)
+      2. [2. Dependencies and database setup](#2-dependencies-and-database-setup)
+         1. [Chrome driver](#chrome-driver)
+      3. [3. Ensure that tests pass](#3-ensure-that-tests-pass)
+   2. [Day-to-day](#day-to-day)
+   3. [Debugging](#debugging)
+   4. [Download production or staging DB](#download-production-or-staging-db)
+5. [Notable inclusions and Notable exclusions](#notable-inclusions-and-notable-exclusions)
+   1. [Devise User Authorization](#devise-user-authorization)
+6. [Production](#production)
    1. [Deployments](#deployments)
-5. [Staging](#staging)
-6. [Third party services](#third-party-services)
+7. [Staging](#staging)
+8. [Third party services](#third-party-services)
    1. [Name of the third party](#name-of-the-third-party)
 
 Description of the project. What is it solving? Who are the users?
@@ -58,13 +39,25 @@ This section should include any business related explanation that helps understa
 
 Name, and a short description of any services that the project is using (error tracking, activity monitoring, log registry, email service, etc). Include where to get the credentials. E.g., 1Password under admin+project@abtion.com.
 
+# Requirements
 
-# Development
+You must have the following installed and available on your machine:
+
+- **Ruby 2.6.5**
+- **Node JS 12.x**
+- **Yarn 1.x**
+- **PostgreSQL 11.3**
+
+# Developing
+
+## First time setup
+
+### 1. Configuration
 
 There are two main configuration files that are of concern:
 
 - `.env` - configuration that's common across all environments that you intend
-  to run on your machine (e.g. database connection)
+  to run on your machine (e.g. [database connection](#database-connection))
 - `.env.development` - configuration that's specific to the development
   environment that you intend to run on your machine (e.g. API credentials)
 
@@ -77,69 +70,48 @@ stub any external calls using the test suite's features.
 Setting up the configuration is a matter of copying the supplied examples and
 filling in the gaps, as follows:
 
+1. `cp .env.example .env`
+2. `cp .env.development.example .env.development`
+3. Fill in env vars that are local to your setup
 
-## Requirements
+#### Database connection
 
-You must have the following installed and available on your machine:
+You can set `DATABASE_URL` in `.env`, if for instance you use Docker for Postgres. `DATABASE_URL="postgresql://localhost:5432"`
 
-- **Ruby 2.6.5**
-- **Node JS 12.x**
-- **PostgreSQL 11.3**
+### 2. Dependencies and database setup
 
-## Set up the app the first time
-```sh
-$ cp .env.example .env
-# edit .env in your editor of choice
+Run: `bin/setup`
 
-$ cp .env.development.example .env.development
-# edit .env.development in your editor of choice
-```
+#### Chrome driver
 
-Install the Ruby and JS dependencies
+Download the correct version of chromedriver.\*
 
-```sh
-$ bundle install
-$ npm install -g yarn
-$ yarn install
-```
-
-Prepare the database
-
-You can set `DATABASE_URL` in `.env.local`, if for instance you use Docker for Postgres. `DATABASE_URL="postgresql://localhost:5432"`
-```sh
-$ bundle exec rails db:setup
-```
-
-Download the correct version of chromedriver, it will try to do it automatically, but if you disable network with webmock/vcr your tests will fail when it does.
 ```sh
 $ bundle exec rails webdrivers:chromedriver:update
 ```
 
-Run the test suite and expect all tests to pass
+\*_It will try to do this automatically when running the tests, but if you disable network with webmock/vcr your tests will fail when it does._
 
-```sh
-$ bundle exec rspec
-```
+### 3. Ensure that tests pass
 
-Start a development server and check out the app in a browser
+Run: `bundle exec rspec`
 
-```sh
-heroku local
-```
+## Day-to-day
 
-## Run the app
+- Run the server: `heroku local` and [http://localhost:5000](http://localhost:5000)
+- Run tests: `bundle exec rspec`
 
-`bundle exec rails s`
+## Debugging
 
-## Run the tests
-
-`bundle exec rspec`
+- Call `byebug` anywhere in the code to stop execution and get a debugger console.
+- Access an IRB console on exception pages or by using `<%= console %>` anywhere in the code.
+- (Of course, [RubyMine](https://www.jetbrains.com/ruby/) includes a great [visual debugger](https://www.jetbrains.com/ruby/features/ruby_debugger.html)).
 
 ## Download production or staging DB
 
 Use [parity](https://github.com/thoughtbot/parity)
 
-## Notable inclusions and Notable exclusions
+# Notable inclusions and Notable exclusions
 
 Inclusions:
 
@@ -155,7 +127,7 @@ Exclusions:
 - Spring
 - Turbolinks
 
-### Devise User Authorization
+## Devise User Authorization
 
 There's a single `user` model with two user levels: **user** and **admin**.
 
