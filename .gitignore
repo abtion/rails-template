@@ -35,5 +35,6 @@ yarn-debug.log*
 # Ignore local environment configs
 .env
 .env.development
+.env.test
 
 /coverage
