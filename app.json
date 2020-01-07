@@ -25,7 +25,7 @@
         }
       ],
       "scripts": {
-        "test-setup": "./script/ci-setup",
+        "test-setup": "./script/setup-ci",
         "test": "./script/ci"
       }
     }
