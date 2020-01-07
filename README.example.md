@@ -1,13 +1,10 @@
-# README
+# PROJECT_NAME_HUMAN
 
 This project is built on top of [Muffi](https://github.com/abtion/muffi).
 
-# Name of the project
-
-1. [README](#readme)
-2. [Name of the project](#name-of-the-project)
-3. [Requirements](#requirements)
-4. [Developing](#developing)
+1. [PROJECT_NAME_HUMAN](#PROJECT_NAME_PARAM)
+2. [Requirements](#requirements)
+3. [Developing](#developing)
    1. [First time setup](#first-time-setup)
       1. [1. Configuration](#1-configuration)
          1. [Database connection](#database-connection)
@@ -17,12 +14,12 @@ This project is built on top of [Muffi](https://github.com/abtion/muffi).
    2. [Day-to-day](#day-to-day)
    3. [Debugging](#debugging)
    4. [Download production or staging DB](#download-production-or-staging-db)
-5. [Notable inclusions and Notable exclusions](#notable-inclusions-and-notable-exclusions)
+4. [Notable inclusions and Notable exclusions](#notable-inclusions-and-notable-exclusions)
    1. [Devise User Authorization](#devise-user-authorization)
-6. [Production](#production)
+5. [Production](#production)
    1. [Deployments](#deployments)
-7. [Staging](#staging)
-8. [Third party services](#third-party-services)
+6. [Staging](#staging)
+7. [Third party services](#third-party-services)
    1. [Name of the third party](#name-of-the-third-party)
 
 Description of the project. What is it solving? Who are the users?
