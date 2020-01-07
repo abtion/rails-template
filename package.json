@@ -1,5 +1,5 @@
 {
-  "name": "PROJECT_NAME_HUMAN",
+  "name": "PROJECT_NAME_PARAM",
   "private": true,
   "scripts": {
     "test": "echo 'No Node.js tests to run!'"
