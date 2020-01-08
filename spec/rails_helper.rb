@@ -75,8 +75,4 @@ RSpec.configure do |config|
   # Include integration helpers for feature tests
   config.include Devise::Test::IntegrationHelpers, type: :feature
   config.include Devise::Test::ControllerHelpers, type: :controller
-
-  config.before(:suite) do
-    Rails.application.load_seed # loading seeds
-  end
 end
