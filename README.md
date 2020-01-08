@@ -59,7 +59,7 @@ your own repository.
 
 1. Login to CodeClimate and add your project
 2. Go to `https://codeclimate.com/repos/<your-project>/settings/test_reporter`
-3. Copy the test reporter ID to `CODE_CLIMATE_TEST_REPORTER_TOKEN` in `app.json`
+3. Copy the test reporter ID to `CC_TEST_REPORTER_ID` in `app.json`
 4. Update https://codeclimate.com/repos/REPO_ID/settings/test_reporter to be at 100% diff coverage
 
 ### Configure CD
