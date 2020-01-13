@@ -19,6 +19,7 @@ Bundler/OrderedGems:
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*_spec.rb"
+    - "config/environments/**/*.rb"
 
 Metrics/LineLength:
   Max: 100
