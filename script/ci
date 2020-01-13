@@ -10,12 +10,12 @@ export GIT_BRANCH="$HEROKU_TEST_RUN_BRANCH"
 export GIT_COMMIT_SHA="$HEROKU_TEST_RUN_COMMIT_VERSION"
 export GIT_COMMITTED_AT="$(date +%s)"
 
-# run linter
-bundle exec rubocop
-
 # run the ruby test suite
 CAPYBARA_DRIVER=headless_chrome bundle exec rake spec
 CAPYBARA_DRIVER=headless_firefox bundle exec rake spec
+
+# run linter
+bundle exec rubocop
 
 # send report to code climate
 ./cc-test-reporter after-build --exit-code $?
