@@ -3,7 +3,7 @@
     "test": {
       "env": {
         "BUNDLE_WITHOUT": "do-not-exclude-gems",
-        "CODE_CLIMATE_TEST_REPORTER_TOKEN": "<YOUR-TEST-REPORTER-ID>",
+        "CC_TEST_REPORTER_ID": { "required": "true" },
         "POSTGRESQL_VERSION": "11",
         "SEED_ADMIN_EMAIL": "admin@example.com",
         "SEED_ADMIN_INITIAL_PASSWORD": "password",
