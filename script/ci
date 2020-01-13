@@ -14,7 +14,8 @@ export GIT_COMMITTED_AT="$(date +%s)"
 bundle exec rubocop
 
 # run the ruby test suite
-bundle exec rake spec
+CAPYBARA_DRIVER=headless_chrome bundle exec rake spec
+CAPYBARA_DRIVER=headless_firefox bundle exec rake spec
 
 # send report to code climate
 ./cc-test-reporter after-build --exit-code $?
