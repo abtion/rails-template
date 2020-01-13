@@ -59,7 +59,8 @@ your own repository.
 
 1. Login to CodeClimate and add your project
 2. Go to `https://codeclimate.com/repos/<your-project>/settings/test_reporter`
-3. Set up a Heroku pipeline test run config var `CC_TEST_REPORTER_ID` with the Code Climate test reporter ID
+3. Set up a Heroku pipeline.  
+4. `heroku config:set CC_TEST_REPORTER_ID=<Code Climate test reporter ID>` 
 4. Update https://codeclimate.com/repos/REPO_ID/settings/test_reporter to be at 100% diff coverage
 
 ### Configure CD
