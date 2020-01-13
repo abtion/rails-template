@@ -18,6 +18,12 @@
           "url": "heroku/google-chrome"
         },
         {
+          "url": "http://github.com/buitron/geckodriver-buildpack"
+        },
+        {
+          "url": "http://github.com/buitron/firefox-buildpack"
+        },
+        {
           "url": "heroku/nodejs"
         },
         {
