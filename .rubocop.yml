@@ -5,6 +5,7 @@ AllCops:
   Exclude:
     - "node_modules/**/*"
     - "bin/**/*"
+    - "vendor/**/*"
 
 Bundler/DuplicatedGem:
   Enabled: true
