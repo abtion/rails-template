@@ -8,11 +8,12 @@ module Api
       private
 
       def require_authentication!
-        user = authenticate_or_request_with_http_token do |token, _options|
-          User.find_by(authentication_token: token)
-        end
+        user = User.find(request.headers["X-User-Id"])
 
-        if user.present?
+        if user.present? && Devise.secure_compare(
+          "Token #{user.authentication_token}",
+          request.headers["Authorization"]
+        )
           sign_in user
         else
           render status: :unauthorized
