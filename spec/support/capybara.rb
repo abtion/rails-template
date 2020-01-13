@@ -5,12 +5,13 @@ require "webdrivers/chromedriver"
 
 Capybara.register_driver :chrome do |app|
   chrome_bin = ENV.fetch("GOOGLE_CHROME_SHIM", nil)
-  chrome_opts = if chrome_bin
-    Selenium::WebDriver::Chrome.path = chrome_bin
-    { "chromeOptions" => { "binary" => chrome_bin } }
-  else
-    {}
-  end
+  chrome_opts =
+    if chrome_bin
+      Selenium::WebDriver::Chrome.path = chrome_bin
+      { "chromeOptions" => { "binary" => chrome_bin } }
+    else
+      {}
+    end
 
   Capybara::Selenium::Driver.new(
     app,
