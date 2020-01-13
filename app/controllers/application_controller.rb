@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def access_denied
-    render :access_denied, status: 403
+    render :access_denied, status: :forbidden
   end
 end
