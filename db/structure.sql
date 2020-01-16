@@ -25,7 +25,7 @@ COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
 
 SET default_tablespace = '';
 
-SET default_table_access_method = heap;
+SET default_with_oids = false;
 
 --
 -- Name: ar_internal_metadata; Type: TABLE; Schema: public; Owner: -
@@ -121,5 +121,3 @@ SET search_path TO "$user", public;
 INSERT INTO "schema_migrations" (version) VALUES
 ('20190521234616'),
 ('20190522002904');
-
-
