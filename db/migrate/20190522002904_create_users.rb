@@ -1,11 +1,17 @@
 # frozen_string_literal: true
 
-class AddDeviseToUsers < ActiveRecord::Migration[6.0]
+class CreateUsers < ActiveRecord::Migration[6.0]
   def self.up
-    change_table :users do |t|
+    create_table :users, id: :uuid do |t|
+      t.string :name
+
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
+
+      t.boolean :admin, default: false, null: false
+
+      t.string :authentication_token, null: false, index: true
 
       ## Recoverable
       t.string   :reset_password_token
@@ -37,7 +43,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[6.0]
       # t.datetime :locked_at
 
       # Uncomment below if timestamps were not included in your original model.
-      # t.timestamps null: false
+      t.timestamps null: false
     end
 
     add_index :users, :email,                unique: true

@@ -23,6 +23,10 @@ Metrics/BlockLength:
 Metrics/LineLength:
   Max: 100
 
+Metrics/MethodLength:
+  Exclude:
+    - "db/migrate/**/*.rb"
+
 Style/FrozenStringLiteralComment:
   EnforcedStyle: always
 
