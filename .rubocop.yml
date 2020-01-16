@@ -1,5 +1,6 @@
 require:
   - rubocop-performance
+  - rubocop-rails
 
 AllCops:
   TargetRubyVersion: 2.6
@@ -27,6 +28,9 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Exclude:
     - "db/migrate/**/*.rb"
+
+Rails/FilePath:
+  EnforcedStyle: arguments
 
 Style/FrozenStringLiteralComment:
   EnforcedStyle: always

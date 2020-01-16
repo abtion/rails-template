@@ -29,6 +29,7 @@ group :development, :test do
   gem "rspec-rails", "~> 3.8"
   gem "rubocop"
   gem "rubocop-performance"
+  gem "rubocop-rails"
   gem "selenium-webdriver"
   gem "shoulda-matchers"
   gem "webdrivers", "~> 4.0"
