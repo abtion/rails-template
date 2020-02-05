@@ -21,6 +21,9 @@ Bundler/DuplicatedGem:
 Bundler/OrderedGems:
   Enabled: true
 
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+  
 Layout/LineLength:
   Max: 100
 
