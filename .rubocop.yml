@@ -19,6 +19,10 @@ Bundler/DuplicatedGem:
 Bundler/OrderedGems:
   Enabled: true
 
+Lint/Debugger:
+  Exclude:
+    - "config/application.rb"
+
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*_spec.rb"
@@ -33,6 +37,10 @@ Metrics/MethodLength:
 
 Rails/FilePath:
   EnforcedStyle: arguments
+
+Naming/ClassAndModuleCamelCase:
+  Exclude:
+    - "config/application.rb"
 
 Style/FrozenStringLiteralComment:
   EnforcedStyle: always
