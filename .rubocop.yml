@@ -9,8 +9,10 @@ AllCops:
   Severity: error
 
   Exclude:
-    - "node_modules/**/*"
     - "bin/**/*"
+    - "log/**/*"
+    - "node_modules/**/*"
+    - "tmp/**/*"
     - "vendor/**/*"
 
 Bundler/DuplicatedGem:
