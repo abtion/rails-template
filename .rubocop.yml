@@ -23,13 +23,17 @@ Bundler/OrderedGems:
 
 Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
-  
+
 Layout/LineLength:
   Max: 100
 
 Lint/Debugger:
   Exclude:
     - "config/application.rb"
+
+Lint/ScriptPermission:
+  Exclude:
+    - "Rakefile"
 
 Metrics/BlockLength:
   Exclude:
