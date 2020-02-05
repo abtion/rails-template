@@ -21,6 +21,9 @@ Bundler/DuplicatedGem:
 Bundler/OrderedGems:
   Enabled: true
 
+Layout/LineLength:
+  Max: 100
+
 Lint/Debugger:
   Exclude:
     - "config/application.rb"
