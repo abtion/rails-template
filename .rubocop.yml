@@ -35,12 +35,16 @@ Metrics/AbcSize:
   Max: 15
   Exclude:
     - "spec/**/*"
+    - "db/migrate/*.rb"
 
 Metrics/BlockLength:
   Max: 25
   Exclude:
     - "spec/**/*_spec.rb"
-    - "config/environments/**/*.rb"
+    - "spec/factories/*.rb"
+    - "db/migrate/*.rb"
+    - "config/environments/*.rb"
+    - "config/routes.rb"
 
 Metrics/ClassLength:
   Max: 100
