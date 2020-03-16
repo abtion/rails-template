@@ -27,10 +27,6 @@ Layout/FirstArrayElementIndentation:
 Layout/LineLength:
   Max: 100
 
-Lint/Debugger:
-  Exclude:
-    - "config/application.rb"
-
 Lint/ScriptPermission:
   Exclude:
     - "Rakefile"
@@ -56,10 +52,6 @@ Metrics/MethodLength:
 
 Rails/FilePath:
   EnforcedStyle: arguments
-
-Naming/ClassAndModuleCamelCase:
-  Exclude:
-    - "config/application.rb"
 
 Style/FrozenStringLiteralComment:
   EnforcedStyle: always
