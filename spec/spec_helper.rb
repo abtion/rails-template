@@ -22,3 +22,32 @@ RSpec.configure do |config|
 
   Kernel.srand config.seed
 end
+
+
+
+
+
+
+
+
+# For easy killing rspec if it does not close down when aborting tests
+# https://github.com/rspec/rspec-rails/issues/1353#issuecomment-93173691
+puts "rspec pid: #{Process.pid}"
+
+trap 'USR1' do
+  threads = Thread.list
+
+  puts
+  puts "=" * 80
+  puts "Received USR1 signal; printing all #{threads.count} thread backtraces."
+
+  threads.each do |thr|
+    description = thr == Thread.main ? "Main thread" : thr.inspect
+    puts
+    puts "#{description} backtrace: "
+    puts thr.backtrace.join("\n")
+  end
+
+  puts "=" * 80
+end
+# $ kill -USR1 <the pid>
