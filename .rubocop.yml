@@ -3,12 +3,16 @@ require:
   - rubocop-rails
 
 AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
   TargetRubyVersion: 2.6
   Severity: error
 
   Exclude:
-    - "node_modules/**/*"
     - "bin/**/*"
+    - "log/**/*"
+    - "node_modules/**/*"
+    - "tmp/**/*"
     - "vendor/**/*"
 
 Bundler/DuplicatedGem:
@@ -17,15 +21,36 @@ Bundler/DuplicatedGem:
 Bundler/OrderedGems:
   Enabled: true
 
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/LineLength:
+  Max: 100
+
+Lint/ScriptPermission:
+  Exclude:
+    - "Rakefile"
+
+Metrics/AbcSize:
+  Max: 15
+  Exclude:
+    - "spec/**/*"
+    - "db/migrate/*.rb"
+
 Metrics/BlockLength:
+  Max: 25
   Exclude:
     - "spec/**/*_spec.rb"
-    - "config/environments/**/*.rb"
+    - "spec/factories/*.rb"
+    - "db/migrate/*.rb"
+    - "config/environments/*.rb"
+    - "config/routes.rb"
 
-Metrics/LineLength:
+Metrics/ClassLength:
   Max: 100
 
 Metrics/MethodLength:
+  Max: 10
   Exclude:
     - "db/migrate/**/*.rb"
 
@@ -43,3 +68,12 @@ Style/StringLiterals:
 
 Style/SymbolArray:
   EnforcedStyle: brackets
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
