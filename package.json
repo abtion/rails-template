@@ -18,6 +18,7 @@
     "webpack-dev-server": "^3.4.1"
   },
   "resolutions": {
-    "mkdirp": "^0.5.5"
+    "mkdirp": "^0.5.5",
+    "kind-of": "^6.0.3"
   }
 }
