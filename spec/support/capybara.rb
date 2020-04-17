@@ -13,6 +13,7 @@ Capybara.configure do |config|
 end
 
 Capybara.default_max_wait_time = 5
+Capybara.server = :puma, { Silent: true }
 
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(
