@@ -20,7 +20,7 @@ RSpec.describe Api::V1::BaseController, type: :controller do
 
         get :index
 
-        expect(response.status).to eq(401)
+        expect(response).to have_http_status(:unauthorized)
       end
     end
 
@@ -31,7 +31,7 @@ RSpec.describe Api::V1::BaseController, type: :controller do
 
         get :index
 
-        expect(response.status).to eq(401)
+        expect(response).to have_http_status(:unauthorized)
       end
     end
 
@@ -43,7 +43,7 @@ RSpec.describe Api::V1::BaseController, type: :controller do
 
         get :index
 
-        expect(response.status).to eq(401)
+        expect(response).to have_http_status(:unauthorized)
       end
     end
 
@@ -54,7 +54,7 @@ RSpec.describe Api::V1::BaseController, type: :controller do
 
         get :index
 
-        expect(response.status).to eq(401)
+        expect(response).to have_http_status(:unauthorized)
       end
     end
 
@@ -65,7 +65,7 @@ RSpec.describe Api::V1::BaseController, type: :controller do
 
         get :index
 
-        expect(response.status).to eq(401)
+        expect(response).to have_http_status(:unauthorized)
       end
     end
 
@@ -73,7 +73,7 @@ RSpec.describe Api::V1::BaseController, type: :controller do
       it "returns a 401 unauthorized" do
         get :index
 
-        expect(response.status).to eq(401)
+        expect(response).to have_http_status(:unauthorized)
       end
     end
   end

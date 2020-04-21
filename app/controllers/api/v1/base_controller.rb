@@ -13,7 +13,7 @@ module Api
         if user.present? && valid_token?(user.authentication_token)
           sign_in user
         else
-          render json: {}, status: :unauthorized
+          head :unauthorized
         end
       end
 
