@@ -71,9 +71,6 @@ RSpec.describe Api::V1::BaseController, type: :controller do
 
     context "when no valid token and user id given" do
       it "returns a 401 unauthorized" do
-        request.headers["X-User-Id"] = "nope"
-        request.headers["Authorization"] = "Token 'nope'"
-
         get :index
 
         expect(response.status).to eq(401)
