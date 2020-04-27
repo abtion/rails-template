@@ -2,4 +2,9 @@
 
 require "simplecov"
 
-SimpleCov.start("rails") unless ENV["DISABLE_SIMPLECOV"] == "true"
+unless ENV["DISABLE_SIMPLECOV"] == "true"
+  SimpleCov.start("rails") do
+    add_filter "spec"
+    add_filter "vendor"
+  end
+end
