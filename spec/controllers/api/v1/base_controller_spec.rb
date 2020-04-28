@@ -76,5 +76,15 @@ RSpec.describe Api::V1::BaseController, type: :controller do
         expect(response).to have_http_status(:unauthorized)
       end
     end
+
+    context "with no user and a sneaky token" do
+      it "returns a 401 unauthorized" do
+        request.headers["Authorization"] = "Token "
+
+        get :index
+
+        expect(response).to have_http_status(:unauthorized)
+      end
+    end
   end
 end
