@@ -12,6 +12,23 @@ RSpec.describe Api::V1::BaseController, type: :controller do
   end
 
   describe "#index" do
+    context "when authentication is successful" do
+      it "signs in" do
+        user = FactoryBot.create(:user)
+        request.headers["X-User-Id"] = user.id
+        request.headers["Authorization"] = "Token #{user.authentication_token}"
+
+        allow(controller).to receive(:sign_in)
+
+        get :index
+
+        expect(controller).to have_received(:sign_in).with(user)
+
+        expect(response).to have_http_status(:ok)
+        expect(response.body).to eq("index called")
+      end
+    end
+
     context "when invalid user id given" do
       it "returns a 401 unauthorized" do
         user = FactoryBot.create(:user)
