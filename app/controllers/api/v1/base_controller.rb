@@ -22,8 +22,6 @@ module Api
       end
 
       def valid_token?(token)
-        return unless token && token_from_headers
-
         ActiveSupport::SecurityUtils.secure_compare(
           "Token #{token}",
           token_from_headers
@@ -35,7 +33,7 @@ module Api
       end
 
       def token_from_headers
-        request.headers["Authorization"]
+        request.headers.fetch("Authorization", "")
       end
     end
   end
