@@ -9,25 +9,22 @@ module Api
 
       def require_authentication!
         id = request.headers["X-User-Id"]
+        token = request.headers.fetch("Authorization", "")
 
         user = User.find_by(id: id)
 
-        if user.present? && valid_token?(user.authentication_token)
+        if user.present? && valid_token?(user.authentication_token, token)
           sign_in user
         else
           head :unauthorized
         end
       end
 
-      def valid_token?(token)
+      def valid_token?(user_token, provided_token)
         ActiveSupport::SecurityUtils.secure_compare(
-          "Token #{token}",
-          token_from_headers
+          "Token #{user_token}",
+          provided_token
         )
-      end
-
-      def token_from_headers
-        request.headers.fetch("Authorization", "")
       end
     end
   end
