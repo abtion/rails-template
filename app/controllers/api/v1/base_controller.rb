@@ -8,7 +8,9 @@ module Api
       private
 
       def require_authentication!
-        user = find_user
+        id = request.headers["X-User-Id"]
+
+        user = User.find_by(id: id)
 
         if user.present? && valid_token?(user.authentication_token)
           sign_in user
@@ -17,19 +19,11 @@ module Api
         end
       end
 
-      def find_user
-        User.find_by(id: user_id_from_headers)
-      end
-
       def valid_token?(token)
         ActiveSupport::SecurityUtils.secure_compare(
           "Token #{token}",
           token_from_headers
         )
-      end
-
-      def user_id_from_headers
-        request.headers["X-User-Id"]
       end
 
       def token_from_headers
