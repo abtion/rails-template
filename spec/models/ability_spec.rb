@@ -12,4 +12,13 @@ RSpec.describe Ability, type: :model do
       expect(ability).to be_able_to(:manage, :all)
     end
   end
+
+  context "when user is user" do
+    it "is not able to manage all" do
+      admin = build(:user)
+      ability = Ability.new(admin)
+
+      expect(ability).to_not be_able_to(:manage, :all)
+    end
+  end
 end
