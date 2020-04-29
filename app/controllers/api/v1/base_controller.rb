@@ -9,11 +9,10 @@ module Api
 
       def require_authentication!
         authenticator = Authenticator.new(
-          user: User.find_by(id: request.headers["X-User-Id"]),
-          provided_token: request.headers["Authorization"]
+          user: User.find_by(id: request.headers["X-User-Id"])
         )
 
-        if authenticator.valid?
+        if authenticator.valid_token?(request.headers["Authorization"])
           sign_in authenticator.user
         else
           head :unauthorized
@@ -21,14 +20,13 @@ module Api
       end
 
       class Authenticator
-        attr_reader :user, :provided_token
+        attr_reader :user
 
-        def initialize(user:, provided_token:)
+        def initialize(user:)
           @user = user
-          @provided_token = provided_token
         end
 
-        def valid?
+        def valid_token?(provided_token)
           return false unless user && provided_token
 
           ActiveSupport::SecurityUtils.secure_compare(
