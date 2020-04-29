@@ -11,7 +11,7 @@ module Constraints
     def matches?(request)
       return false unless request&.headers
 
-      request.headers["X-Api-Version"].presence == version
+      request.headers["X-Api-Version"] == version
     end
   end
 end
