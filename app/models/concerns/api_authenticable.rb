@@ -16,5 +16,14 @@ module ApiAuthenticable
         break token unless self.class.find_by(authentication_token: token)
       end
     end
+
+    def valid_token?(provided_token)
+      return false unless provided_token
+
+      ActiveSupport::SecurityUtils.secure_compare(
+        "Token #{authentication_token}",
+        provided_token
+      )
+    end
   end
 end
