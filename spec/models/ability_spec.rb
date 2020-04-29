@@ -21,4 +21,12 @@ RSpec.describe Ability, type: :model do
       expect(ability).to_not be_able_to(:manage, :all)
     end
   end
+
+  context "when no user given" do
+    it "doesn't explode and isn't able to manage all" do
+      ability = Ability.new(nil)
+
+      expect(ability).to_not be_able_to(:manage, :all)
+    end
+  end
 end
