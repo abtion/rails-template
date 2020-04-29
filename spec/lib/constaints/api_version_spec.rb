@@ -14,6 +14,16 @@ RSpec.describe Constraints::ApiVersion do
       end
     end
 
+    context "when 'X-Api-Version' header doesn't matche version attribute" do
+      it "returns true " do
+        version = "1.33.7"
+        version_constraints = Constraints::ApiVersion.new(version)
+        mock_request = double("Request", headers: { "X-Api-Version" => "7.33.1" })
+
+        expect(version_constraints.matches?(mock_request)).to eq(false)
+      end
+    end
+
     context "when no 'X-Api-Version' header present" do
       it "returns false" do
         version = "1.33.7"
