@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def access_denied
-    render :access_denied, status: :forbidden
+  def access_denied(error)
+    render plain: error.message, status: :forbidden
   end
 end
