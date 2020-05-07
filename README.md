@@ -1,4 +1,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/d0e13853fa82d32e650a/maintainability)](https://codeclimate.com/repos/5dcbb7cd09f28e014c00f396/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/d0e13853fa82d32e650a/test_coverage)](https://codeclimate.com/repos/5dcbb7cd09f28e014c00f396/test_coverage)
 
 # Muffi
 
