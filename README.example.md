@@ -40,7 +40,7 @@ Name, and a short description of any services that the project is using (error t
 
 You must have the following installed and available on your machine:
 
-- **Ruby 2.6.5**
+- **Ruby 2.6.6**
 - **Node JS 12.x**
 - **Yarn 1.x**
 - **PostgreSQL 11.3**
