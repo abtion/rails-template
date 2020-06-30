@@ -27,7 +27,7 @@ All code changes should go through pull requests. Exceptions can be made for
 small changes that do not affect the code base. (For example, a typo in the README)
 
 1. Fork the repository.
-2. Branch out from `master`
+2. Branch out from `main`
 3. Write your code
 4. Commit and push your changes
 5. Open a pull request

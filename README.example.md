@@ -2,7 +2,7 @@
 
 This project is built on top of [Muffi](https://github.com/abtion/muffi).
 
-1. [PROJECT_NAME_HUMAN](#PROJECT_NAME_PARAM)
+1. [PROJECT_NAME_HUMAN](#project_name_human)
 2. [Requirements](#requirements)
 3. [Developing](#developing)
    1. [First time setup](#first-time-setup)
@@ -140,7 +140,7 @@ Current dyno types and add-on plans can be found in the project's [heroku dashbo
 
 ## Deployments
 
-Review apps and CI are enable for PR's. Auto merge setup to staging environment on merging of branches into master.
+Review apps and CI are enable for PR's. Auto merge setup to staging environment on merging of branches into `main`.
 
 Remote (App)
 Staging https://git.heroku.com/PROJECT_NAME_PARAM-staging-eu.git (https://PROJECT_NAME_PARAM-staging-eu.herokuapp.com/)

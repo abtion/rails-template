@@ -64,8 +64,8 @@ your own repository.
 
 1. Login to CodeClimate and add your project
 2. Go to `https://codeclimate.com/repos/<your-project>/settings/test_reporter`
-3. Set up a Heroku pipeline.  
-4. `heroku config:set CC_TEST_REPORTER_ID=<Code Climate test reporter ID>` 
+3. Set up a Heroku pipeline.
+4. `heroku config:set CC_TEST_REPORTER_ID=<Code Climate test reporter ID>`
 5. Update https://codeclimate.com/repos/REPO_ID/settings/test_reporter to be at 100% diff coverage
 
 ### Configure CD
@@ -89,7 +89,7 @@ Muffi is maintained by [_Abtioneers_](#about-abtion), but open for anyone to sug
 
 One abtioneer is currently responsible for the project at Abtion, with support from other employees.
 
-Please see [CONTRIBUTING.md](https://github.com/abtion/muffi/blob/master/CONTRIBUTING.md).
+Please see [CONTRIBUTING.md](https://github.com/abtion/muffi/blob/main/CONTRIBUTING.md).
 
 ## License
 
