@@ -16,5 +16,8 @@ bundle exec rubocop
 # run the ruby test suite
 bundle exec rake spec
 
+# run brakeman
+bundle exec brakeman
+
 # send report to code climate
 ./cc-test-reporter after-build --exit-code $?
