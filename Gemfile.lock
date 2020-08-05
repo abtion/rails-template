@@ -197,6 +197,7 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.4)
+    rollbar (2.27.0)
     rspec-core (3.9.0)
       rspec-support (~> 3.9.0)
     rspec-expectations (3.9.0)
@@ -308,6 +309,7 @@ DEPENDENCIES
   pry
   puma (~> 3.12)
   rails (= 6.0.3.2)
+  rollbar
   rspec-rails (~> 3.8)
   rubocop
   rubocop-performance

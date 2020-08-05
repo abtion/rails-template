@@ -16,6 +16,7 @@ gem "pg", ">= 0.18", "< 2.0"
 gem "pry"
 gem "puma", "~> 3.12"
 gem "rails", "6.0.3.2"
+gem "rollbar"
 gem "sassc-rails"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "webpacker", "~> 4.0"
