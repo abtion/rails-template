@@ -54,7 +54,6 @@ your own repository.
    When the application has been renamed, the comments should be removed.
    (See config/application.rb#L25-27)
 4. `mv README.example.md README.md`
-5. Set `MAIL_FROM` in your Heroku config vars (review, staging and production) or in `.env`.
 
 ### Configure Code Climate
 
@@ -71,6 +70,8 @@ your own repository.
     - Staging: `<PROJECT-NAME>-staging`
     - Production: `<PROJECT-NAME>-production`
 3. Turn on "Review Apps" from the Pipeline's page
+4. Set `MAIL_FROM` in your Heroku config vars (review, staging and production).
+5. Set `DOMAIN_NAME` in your Heroku config vars (staging and production), links in email will point to the provided domain name.
 
 ### Setup mailing
 
