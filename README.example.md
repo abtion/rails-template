@@ -106,7 +106,11 @@ Run: `bundle exec rspec`
 
 ## Download production or staging DB
 
-Use [parity](https://github.com/thoughtbot/parity)
+First of all, don't download production data unless absolutely necessary.
+It contains personal data, and the environment you download it to must be as secure as the production environment.
+Additionally, you must ensure that the data is deleted afterwards.
+
+You might want to use [parity](https://github.com/thoughtbot/parity) to download it.
 
 # Notable inclusions and Notable exclusions
 
