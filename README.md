@@ -54,11 +54,7 @@ your own repository.
    Note: The application name is wrapped around comments used to disable a rubocop check.
    When the application has been renamed, the comments should be removed.
    (See config/application.rb#L25-27)
-4. `cp .env.example .env`
-5. `cp .env.development.example .env.development`
-6. `cp .env.test.example .env.test`
-7. `mv README.example.md README.md`
-8. Add `export DATABASE_URL="postgresql://HOST:@localhost:5432"` to .env.development and .env.test
+4. `mv README.example.md README.md`
 
 ### Configure Code Climate
 

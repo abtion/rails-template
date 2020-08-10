@@ -51,29 +51,23 @@ You must have the following installed and available on your machine:
 
 ### 1. Configuration
 
-There are two main configuration files that are of concern:
+We use [dotenv](https://github.com/bkeepers/dotenv) for configuring env vars.
 
-- `.env` - configuration that's common across all environments that you intend
-  to run on your machine (e.g. [database connection](#database-connection))
-- `.env.development` - configuration that's specific to the development
-  environment that you intend to run on your machine (e.g. API credentials)
+The following files are checked into git:
 
-There exists a `.env.test` which is checked in to source control, used to
-configure the test equivalents for whatever is in `.env.development`. As tests
-will be written such that they don't make any calls to external services, **it
-should not contain any real credentials.** Instead, use dummy credentials and
-stub any external calls using the test suite's features.
+- `.env` - configuration common across all environments
+- `.env.development` - configuration specific to the development environment
+- `.env.test` - configuration specific to the test environment
 
-Setting up the configuration is a matter of copying the supplied examples and
-filling in the gaps, as follows:
+If you need to make local changes to the env files, create a `.env.ENVIRONMENT.local` file (where ENVIRONMENT is test or development).
 
-1. `cp .env.example .env`
-2. `cp .env.development.example .env.development`
-3. Fill in env vars that are local to your setup
+Any env var you specify in such a file will override the configuration for the corresponding environment.
 
 #### Database connection
 
-You can set `DATABASE_URL` in `.env`, if for instance you use Docker for Postgres. `DATABASE_URL="postgresql://localhost:5432"`
+You can set `DATABASE_URL` in `.env.local`, if you for instance use Docker for Postgres: `DATABASE_URL="postgresql://localhost:5432"`
+Or if you just use a local postgres instance:
+`DATABASE_URL=postgresql://user:pass@localhost:5432`
 
 ### 2. Dependencies and database setup
 

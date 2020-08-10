@@ -33,7 +33,7 @@ yarn-debug.log*
 .yarn-integrity
 
 # Ignore local environment configs
-.env
-.env.development
+.env.local
+.env.*.local
 
 /coverage
