@@ -31,8 +31,7 @@
     }
   },
   "addons": [
-    "rollbar:free",
-    "sendgrid:starter"
+    "rollbar:free"
   ],
   "buildpacks": [],
   "env": {
