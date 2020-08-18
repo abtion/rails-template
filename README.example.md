@@ -116,6 +116,7 @@ Inclusions:
 - RSpec runner
   - FactoryBot
   - Capybara for acceptance testing
+- [Rollbar](https://rollbar.com) error monitoring
 
 Exclusions:
 
