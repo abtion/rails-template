@@ -45,7 +45,6 @@ your own repository.
 1. Edit `application.rb` and change the module name and configuration settings.
 2. Edit the database names in `database.yml`
 3. Use "search and replace" to replace project specific strings across all files:
-   - PROJECT_DOMAIN => project-name.com
    - PROJECT_NAME_PARAM => project-name
    - PROJECT_NAME_PASCAL => ProjectName
    - PROJECT_NAME_SNAKE => project_name
@@ -55,6 +54,7 @@ your own repository.
    When the application has been renamed, the comments should be removed.
    (See config/application.rb#L25-27)
 4. `mv README.example.md README.md`
+5. Set `MAIL_FROM` in your Heroku config vars (review, staging and production) or in `.env`.
 
 ### Configure Code Climate
 
