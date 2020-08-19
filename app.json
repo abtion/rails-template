@@ -46,7 +46,7 @@
     }
   },
   "formation": {},
-  "name": "PROJECT_NAME_PARAM",
+  "name": "project-name-param",
   "scripts": {},
   "stack": "heroku-18"
 }

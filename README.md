@@ -45,10 +45,10 @@ your own repository.
 1. Edit `application.rb` and change the module name and configuration settings.
 2. Edit the database names in `database.yml`
 3. Use "search and replace" to replace project specific strings across all files:
-   - PROJECT_NAME_PARAM => project-name
-   - PROJECT_NAME_PASCAL => ProjectName
-   - PROJECT_NAME_SNAKE => project_name
-   - PROJECT_NAME_HUMAN => Project name
+   - project-name-param => project-name
+   - ProjectNamePascal => ProjectName
+   - project_name_snake => project_name
+   - Project Name Human => Project Name
 
    Note: The application name is wrapped around comments used to disable a rubocop check.
    When the application has been renamed, the comments should be removed.
