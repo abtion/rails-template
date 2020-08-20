@@ -1,10 +1,10 @@
 $theme-colors: (
-  "primary": $PROJECT_NAME_PARAM-blue,
-  "secondary": $PROJECT_NAME_PARAM-green,
-  "success": $PROJECT_NAME_PARAM-green,
-  "info": $PROJECT_NAME_PARAM-yellow,
-  "warning": $PROJECT_NAME_PARAM-pink,
-  "dark": $PROJECT_NAME_PARAM-darkblue
+  "primary": $project-name-param-blue,
+  "secondary": $project-name-param-green,
+  "success": $project-name-param-green,
+  "info": $project-name-param-yellow,
+  "warning": $project-name-param-pink,
+  "dark": $project-name-param-darkblue
 );
 
 $grid-breakpoints: (
