@@ -38,6 +38,9 @@
     "HEROKU_APP_NAME": {
       "required": true
     },
+    "MAIL_FROM": {
+      "required": true
+    },
     "SEED_ADMIN_EMAIL": {
       "required": true
     },
