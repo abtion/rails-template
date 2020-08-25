@@ -1,5 +1,7 @@
 # Project Name Human
 
+![Observatory](https://img.shields.io/mozilla-observatory/grade-score/muffi-template.herokuapp.com)
+
 This project is built on top of [Muffi](https://github.com/abtion/muffi).
 
 1. [Project Name Human](#Project Name Human)
@@ -117,6 +119,7 @@ Inclusions:
   - FactoryBot
   - Capybara for acceptance testing
 - [Rollbar](https://rollbar.com) error monitoring
+- CSP header is configured, so if you need to use remotely hosted javascript, you must whitelist it in `config/initializers/content_security_policy.rb`
 
 Exclusions:
 
