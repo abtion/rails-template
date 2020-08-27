@@ -6,13 +6,6 @@ exclude_patterns:
   - public/**/*
 
 plugins:
-  # https://docs.codeclimate.com/docs/brakeman
-  brakeman:
-    enabled: true
-    checks:
-      no_attr_accessible:
-        enabled: false
-
   # https://docs.codeclimate.com/docs/bundler-audit
   bundler-audit:
     enabled: true
