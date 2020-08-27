@@ -13,12 +13,12 @@
       <% else %>
         <li class="nav-item">
           <%- if controller_name != 'sessions' %>
-            <%= link_to "Log in", new_session_path(resource_name), class: 'nav-link' %>
+            <%= link_to "Log in", new_session_path(User), class: 'nav-link' %>
           <% end %>
         </li>
         <li class="nav-item">
-          <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-            <%= link_to "Sign up", new_registration_path(resource_name), class: 'nav-link' %>
+          <%- if controller_name != 'registrations' %>
+            <%= link_to "Sign up", new_registration_path(User), class: 'nav-link' %>
           <% end %>
         </li>
       <% end %>
