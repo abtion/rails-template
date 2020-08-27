@@ -34,3 +34,18 @@ end
 
 Capybara.javascript_driver = ENV.fetch("CAPYBARA_DRIVER", "headless_chrome").to_sym
 Capybara.default_driver = ENV.fetch("CAPYBARA_DRIVER", "headless_chrome").to_sym
+
+# This will fail feature specs on javascript errors/warnings
+RSpec.configure do |config|
+  config.after(:each, type: :feature) do
+    errors = page.driver.browser.manage.logs.get(:browser)
+
+    if errors.present?
+      aggregate_failures "javascript errors/warnings" do
+        errors.each do |error|
+          raise error.message
+        end
+      end
+    end
+  end
+end
