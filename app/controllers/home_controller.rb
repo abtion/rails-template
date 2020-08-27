@@ -2,6 +2,6 @@
 
 class HomeController < ApplicationController
   def index
-    render plain: "abtion-rails"
+    render html: "abtion-rails"
   end
 end
