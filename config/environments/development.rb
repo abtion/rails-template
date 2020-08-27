@@ -60,6 +60,12 @@ Rails.application.configure do
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
 
+  # Make it possible to run the dev-server under other host names than "localhost".
+  # For example in `.env.development.local`:
+  #
+  # ALLOWED_HOSTS=dev-server,xxx.ngrok.io
+  config.hosts += ENV.fetch("ALLOWED_HOSTS", "").split(",")
+
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
