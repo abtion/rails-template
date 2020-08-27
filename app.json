@@ -1,35 +1,4 @@
 {
-  "environments": {
-    "test": {
-      "env": {
-        "BUNDLE_WITHOUT": "do-not-exclude-gems",
-        "CC_TEST_REPORTER_ID": { "required": "true" },
-        "POSTGRESQL_VERSION": "11",
-        "SEED_ADMIN_EMAIL": "admin@example.com",
-        "SEED_ADMIN_INITIAL_PASSWORD": "password",
-        "NODE_ENV": "test",
-        "RAILS_ENV": "test"
-      },
-      "addons": [
-        "heroku-postgresql:in-dyno"
-      ],
-      "buildpacks": [
-        {
-          "url": "heroku/google-chrome"
-        },
-        {
-          "url": "heroku/nodejs"
-        },
-        {
-          "url": "heroku/ruby"
-        }
-      ],
-      "scripts": {
-        "test-setup": "./script/setup-ci",
-        "test": "./script/ci"
-      }
-    }
-  },
   "addons": [
     "rollbar:free"
   ],
