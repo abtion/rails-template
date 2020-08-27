@@ -45,7 +45,7 @@ You must have the following installed and available on your machine:
 - **Ruby 2.6.6**
 - **Node JS 12.x**
 - **Yarn 1.x**
-- **PostgreSQL 11.3**
+- **PostgreSQL 12**
 
 # Developing
 
