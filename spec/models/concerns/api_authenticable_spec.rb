@@ -20,7 +20,7 @@ RSpec.describe ApiAuthenticable, type: :model do
       allow(ActiveSupport::SecurityUtils).to receive(:secure_compare)
         .and_return(:secure_compare_boolean_result)
 
-      expect(user.valid_token?("Token SecurelyRandomToken")).to eq :secure_compare_boolean_result
+      expect(user.valid_token?("Token SecurelyRandomToken")).to eq(:secure_compare_boolean_result)
       expect(ActiveSupport::SecurityUtils).to have_received(:secure_compare)
         .with("Token SecurelyRandomToken", "Token SecurelyRandomToken")
     end
@@ -28,7 +28,7 @@ RSpec.describe ApiAuthenticable, type: :model do
     it "behaves nicely if no token is provided" do
       user = build(:user, authentication_token: nil)
 
-      expect(user.valid_token?(nil)).to eq false
+      expect(user.valid_token?(nil)).to eq(false)
     end
   end
 end

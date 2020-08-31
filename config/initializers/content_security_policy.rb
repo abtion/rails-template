@@ -7,18 +7,18 @@
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 
 Rails.application.config.content_security_policy do |policy|
-  policy.base_uri        :none
-  policy.default_src     :none
-  policy.font_src        :self, :https, :data
-  policy.form_action     :self
-  policy.frame_ancestors :none
-  policy.img_src         :self, :https, :data
-  policy.object_src      :none
-  policy.script_src      :self
-  policy.style_src       :self
+  policy.base_uri(:none)
+  policy.default_src(:none)
+  policy.font_src(:self, :https, :data)
+  policy.form_action(:self)
+  policy.frame_ancestors(:none)
+  policy.img_src(:self, :https, :data)
+  policy.object_src(:none)
+  policy.script_src(:self)
+  policy.style_src(:self)
   # If you are using webpack-dev-server then specify webpack-dev-server host
   if Rails.env.development?
-    policy.connect_src :self, :https, "http://localhost:3035", "ws://localhost:3035"
+    policy.connect_src(:self, :https, "http://localhost:3035", "ws://localhost:3035")
   end
 
   # Specify URI for violation reports

@@ -23,7 +23,7 @@ Bundler.require(*Rails.groups)
 module ProjectNamePascal
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
+    config.load_defaults(6.0)
 
     # Permitted locales available for the application
     I18n.available_locales = [:en, :da]
@@ -41,11 +41,11 @@ module ProjectNamePascal
 
     config.generators do |g|
       # Use UUID primary keys by default
-      g.orm :active_record, primary_key_type: :uuid
+      g.orm(:active_record, primary_key_type: :uuid)
 
       # Set RSpec as the test framework, with FactoryBot covering fixtures/factories
-      g.test_framework :rspec
-      g.fixture_replacement :factory_bot, dir: "spec/factories"
+      g.test_framework(:rspec)
+      g.fixture_replacement(:factory_bot, dir: "spec/factories")
 
       # Don't generate system test files.
       g.system_tests = nil
