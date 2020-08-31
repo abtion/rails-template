@@ -58,10 +58,11 @@ your own repository.
 ### Configure Code Climate
 
 1. Login to CodeClimate and add your project
-2. Go to `https://codeclimate.com/repos/<your-project>/settings/test_reporter`
-3. Set up a Heroku pipeline.
-4. `heroku config:set CC_TEST_REPORTER_ID=<Code Climate test reporter ID>`
-5. Update https://codeclimate.com/repos/REPO_ID/settings/test_reporter to be at 100% diff coverage
+2. Go to the `Repo Settings` -> `Test coverage`
+3. Enable `Enforce Diff Coverage` with a threshold of 100%
+4. Copy the `TEST REPORTER ID`
+5. Visit `https://github.com/abtion/<Project name>/settings/secrets`
+6. Add a new secret: `CC_TEST_REPORTER_ID` with the copied value from codeclimate
 
 ### Configure CD
 
