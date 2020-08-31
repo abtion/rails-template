@@ -7,7 +7,6 @@ ruby "2.6.6"
 
 gem "awesome_print"
 gem "bootsnap", ">= 1.4.2", require: false
-gem "bootstrap", "~> 4.3.1"
 gem "cancancan"
 gem "devise"
 gem "fast_jsonapi"
@@ -17,7 +16,6 @@ gem "pry"
 gem "puma", "~> 3.12"
 gem "rails", "6.0.3.2"
 gem "rollbar"
-gem "sassc-rails"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "webpacker", "~> 4.0"
 
