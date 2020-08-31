@@ -101,3 +101,9 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         run: ./cc-test-reporter after-build --exit-code $?
+      - name: Archive capybara artifacts
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: capybara
+          path: tmp/capybara/
