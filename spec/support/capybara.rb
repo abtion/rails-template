@@ -43,7 +43,8 @@ RSpec.configure do |config|
     if errors.present?
       aggregate_failures "javascript errors/warnings" do
         errors.each do |error|
-          raise error.message
+          expect(error.level).not_to eq("SEVERE"), error.message
+          expect(error.level).not_to eq("WARNING"), error.message
         end
       end
     end
