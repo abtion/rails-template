@@ -72,10 +72,10 @@ your own repository.
     - Production: `<PROJECT-NAME>-production`
 3. Turn on "Review Apps" from the Pipeline's page
 4. Set Heroku config vars:
-   - `SEED_ADMIN_EMAIL` (review, staging and production)
-   - `SEED_ADMIN_INITIAL_PASSWORD` (review, staging and production)
    - `MAIL_FROM` (review, staging and production).
    - `DOMAIN_NAME` (ONLY staging and production)
+   - `SEED_ADMIN_EMAIL` (review)
+   - `SEED_ADMIN_INITIAL_PASSWORD` (review)
 
 ### Setup mailing
 
