@@ -2,7 +2,8 @@
   "name": "project-name-param",
   "private": true,
   "scripts": {
-    "test": "echo 'No Node.js tests to run!'"
+    "test": "echo 'No Node.js tests to run!'",
+    "lint": "eslint frontend/**/*.js"
   },
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
@@ -16,6 +17,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "eslint": "^7.7.0",
     "webpack-dev-server": "^3.4.1"
   }
 }
