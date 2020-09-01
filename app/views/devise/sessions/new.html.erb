@@ -1,19 +1,26 @@
+<h2><%= t('.sign_in') %></h2>
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <img src="<%= asset_path('') %>" class="mb-4">
-  <h3>Please log in</h3>
-  <div>
-    <%= f.label :email, class: 'visually-hidden' %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'user@example.com', class: 'form-control', tabindex: 1 %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div>
-    <%= f.label :password , class: 'visually-hidden'%>
-    <%= f.password_field :password, autocomplete: "current-password", class: 'form-control', placeholder: 'password', tabindex: 2 %>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
-  <div>
-    <%= f.submit "Log in", class: 'btn btn-lg btn-primary btn-block', tabindex: 3 %>
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit t('.sign_in') %>
   </div>
-  <br/>
-  <%= render "devise/shared/error_messages" %>
 <% end %>
+
+<%= render "devise/shared/links" %>

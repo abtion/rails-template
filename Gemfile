@@ -9,6 +9,7 @@ gem "awesome_print"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "cancancan"
 gem "devise"
+gem "devise-i18n"
 gem "fast_jsonapi"
 gem "jquery-rails"
 gem "pg", ">= 0.18", "< 2.0"
