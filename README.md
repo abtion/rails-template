@@ -58,10 +58,11 @@ your own repository.
 ### Configure Code Climate
 
 1. Login to CodeClimate and add your project
-2. Go to `https://codeclimate.com/repos/<your-project>/settings/test_reporter`
-3. Set up a Heroku pipeline.
-4. `heroku config:set CC_TEST_REPORTER_ID=<Code Climate test reporter ID>`
-5. Update https://codeclimate.com/repos/REPO_ID/settings/test_reporter to be at 100% diff coverage
+2. Go to the `Repo Settings` -> `Test coverage`
+3. Enable `Enforce Diff Coverage` with a threshold of 100%
+4. Copy the `TEST REPORTER ID`
+5. Visit `https://github.com/abtion/<Project name>/settings/secrets`
+6. Add a new secret: `CC_TEST_REPORTER_ID` with the copied value from codeclimate
 
 ### Configure CD
 
@@ -70,8 +71,11 @@ your own repository.
     - Staging: `<PROJECT-NAME>-staging`
     - Production: `<PROJECT-NAME>-production`
 3. Turn on "Review Apps" from the Pipeline's page
-4. Set `MAIL_FROM` in your Heroku config vars (review, staging and production).
-5. Set `DOMAIN_NAME` in your Heroku config vars (staging and production), links in email will point to the provided domain name.
+4. Set Heroku config vars:
+   - `MAIL_FROM` (review, staging and production).
+   - `DOMAIN_NAME` (ONLY staging and production)
+   - `SEED_ADMIN_EMAIL` (review)
+   - `SEED_ADMIN_INITIAL_PASSWORD` (review)
 
 ### Setup mailing
 
