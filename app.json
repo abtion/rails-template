@@ -24,5 +24,12 @@
   "formation": {},
   "name": "project-name-param",
   "scripts": {},
-  "stack": "heroku-18"
+  "stack": "heroku-18",
+  "environments": {
+    "review": {
+      "scripts": {
+        "postdeploy": "bin/rake db:schema:load db:seed"
+      }
+    }
+  }
 }
