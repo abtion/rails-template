@@ -93,6 +93,10 @@ This project registers two Capybara drivers.
 Set the environment variable `CAPYBARA_DRIVER` to `headless_chrome` (default) to run specs without
 opening Chrome, or use `chrome` to open the browser automatically.
 
+### Capybara Screenshots in CI
+
+When a spec using Capybara fails in CI a screenshot will be saved under Github Actions Artifacts. If need be you can download the `capybara.zip` file and extract it to get to the screenshots.
+
 ## Contributing
 
 Muffi is maintained by [_Abtioneers_](#about-abtion), but open for anyone to suggest improvements and bugfixes.
