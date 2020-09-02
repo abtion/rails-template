@@ -21,5 +21,12 @@
   "formation": {},
   "name": "project-name-param",
   "scripts": {},
-  "stack": "heroku-18"
+  "stack": "heroku-18",
+  "environments": {
+    "review": {
+      "scripts": {
+        "postdeploy": "bundle exec rails db:seed"
+      }
+    }
+  }
 }
