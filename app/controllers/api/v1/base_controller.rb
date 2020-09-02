@@ -11,9 +11,9 @@ module Api
         user = User.find_by(id: request.headers["X-User-Id"])
 
         if user&.valid_token?(request.headers["Authorization"])
-          sign_in user
+          sign_in(user)
         else
-          head :unauthorized
+          head(:unauthorized)
         end
       end
     end

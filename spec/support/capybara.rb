@@ -15,7 +15,7 @@ end
 Capybara.default_max_wait_time = 5
 Capybara.server = :puma, { Silent: true }
 
-Capybara.register_driver :chrome do |app|
+Capybara.register_driver(:chrome) do |app|
   Capybara::Selenium::Driver.new(
     app,
     browser: :chrome,
@@ -23,7 +23,7 @@ Capybara.register_driver :chrome do |app|
   )
 end
 
-Capybara.register_driver :headless_chrome do |app|
+Capybara.register_driver(:headless_chrome) do |app|
   Capybara::Selenium::Driver.load_selenium
   browser_options = ::Selenium::WebDriver::Chrome::Options.new
   browser_options.args << "--headless"
@@ -43,8 +43,8 @@ RSpec.configure do |config|
     if errors.present?
       aggregate_failures "javascript errors/warnings" do
         errors.each do |error|
-          expect(error.level).not_to eq("SEVERE"), error.message
-          expect(error.level).not_to eq("WARNING"), error.message
+          expect(error.level).not_to(eq("SEVERE"), error.message)
+          expect(error.level).not_to(eq("WARNING"), error.message)
         end
       end
     end
