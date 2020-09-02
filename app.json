@@ -28,7 +28,7 @@
   "environments": {
     "review": {
       "scripts": {
-        "postdeploy": "bin/rake db:schema:load db:seed"
+        "postdeploy": "bundle exec rails db:seed"
       }
     }
   }
