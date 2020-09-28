@@ -4,7 +4,7 @@
 
 This project is built on top of [Muffi](https://github.com/abtion/muffi).
 
-1. [Project Name Human](#Project Name Human)
+1. [Project Name Human](#Project-Name-Human)
 2. [Requirements](#requirements)
 3. [Developing](#developing)
    1. [First time setup](#first-time-setup)
