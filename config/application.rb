@@ -39,6 +39,8 @@ module ProjectNamePascal
     # Record the DB schema in SQL format for accuracy
     config.active_record.schema_format = :sql
 
+    config.active_job.queue_adapter = :sidekiq
+
     config.generators do |g|
       # Use UUID primary keys by default
       g.orm(:active_record, primary_key_type: :uuid)

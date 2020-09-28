@@ -46,6 +46,7 @@ You must have the following installed and available on your machine:
 - **Node JS 12.x**
 - **Yarn 1.x**
 - **PostgreSQL 12**
+- **Redis**
 
 # Developing
 
@@ -120,6 +121,7 @@ Inclusions:
   - Capybara for acceptance testing
 - [Rollbar](https://rollbar.com) error monitoring
 - CSP header is configured, so if you need to use remotely hosted javascript, you must whitelist it in `config/initializers/content_security_policy.rb`
+- Sidekiq for running jobs
 
 Exclusions:
 
@@ -133,6 +135,18 @@ There's a single `user` model with two user levels: **user** and **admin**.
 A boolean `admin` attribute determines which of the two levels a user belongs to.
 
 By default, only admins are authorized to call a controller action.
+
+## Sidekiq
+
+This project is using `Sidekiq` to run background jobs. `Sidekiq` provides a web-interface which gives a nice overview.
+Default credentials for staging are:
+```
+user: abtion
+pass: password
+```
+While the production credentials live in `1Password` under `Selfcast-Sidekiq`.
+
+These can be set via the `SIDEKIQ_USERNAME` and `SIDEKIQ_PASSWORD` config-vars on heroku.
 
 # Production
 
