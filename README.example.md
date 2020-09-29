@@ -86,6 +86,11 @@ $ bundle exec rails webdrivers:chromedriver:update
 
 \*_It will try to do this automatically when running the tests, but if you disable network with webmock/vcr your tests will fail when it does._
 
+If you need to, you can disable the Chrome driver by setting
+`DISABLE_WEBDRIVERS` to `true` in `.env.test` or running
+`DISABLE_WEBDRIVERS=true bundle exec rspec` if you only need to do it
+occasionally.
+
 ### 3. Ensure that tests pass
 
 Run: `bundle exec rspec`
