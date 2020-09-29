@@ -1,4 +1,16 @@
 {
+  "environments": {
+    "review":{
+      "env": {
+        "HTTP_AUTH_PASSWORD": {
+          "required": true
+        },
+        "HTTP_AUTH_USERNAME": {
+          "required": true
+        }
+      }
+    }
+  },
   "addons": [
     "rollbar:free",
     {

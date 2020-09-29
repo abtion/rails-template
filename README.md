@@ -86,6 +86,15 @@ your own repository.
 5. Go to staging and repeat the above steps.
 6. If you want the review apps to send emails: Copy the staging app's Sendgrid credentials and add them to the review apps config vars. Do not add the Sendgrid addon to review apps in `app.json` (Sendgrid will ban our account).
 
+### Setup basic auth
+
+For added security we want to add basic auth to our review/staging environments.
+
+1. Go to the Review/Staging app in the Heroku dashboard.
+2. Add environment variables for:
+  1. `HTTP_AUTH_USERNAME`
+  2. `HTTP_AUTH_PASSWORD`
+
 ### Capybara drivers
 
 This project registers two Capybara drivers.
