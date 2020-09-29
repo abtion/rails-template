@@ -49,10 +49,6 @@ your own repository.
    - ProjectNamePascal => ProjectName
    - project_name_snake => project_name
    - Project Name Human => Project Name
-
-   Note: The application name is wrapped around comments used to disable a rubocop check.
-   When the application has been renamed, the comments should be removed.
-   (See config/application.rb#L25-27)
 4. `mv README.example.md README.md`
 
 ### Configure Code Climate
