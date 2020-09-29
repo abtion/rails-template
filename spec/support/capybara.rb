@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "capybara/rspec"
-require "webdrivers/chromedriver" unless ENV.key?("DISABLE_WEBDRIVERS")
+require "webdrivers/chromedriver" if ENV["DISABLE_WEBDRIVERS"]
 
 chrome_bin = ENV.fetch("GOOGLE_CHROME_SHIM", nil)
 
