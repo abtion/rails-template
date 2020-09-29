@@ -25,7 +25,7 @@ Ruby on Rails applications.
 
 * Heroku ready - Review apps, staging and production
 * Uses [devise](https://github.com/plataformatec/devise)
-* Uses [Heroku CI](https://heroku.com)
+* Uses [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions)
 * Uses [rspec](https://github.com/rspec/rspec-rails)
 * Uses [simplecov](https://github.com/colszowka/simplecov)
 * Uses [rubocop](https://github.com/bbatsov/rubocop)
