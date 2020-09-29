@@ -4,7 +4,8 @@
     {
       "plan": "heroku-postgresql",
       "options": { "version": "12" }
-    }
+    },
+    "heroku-redis:hobby-dev"
   ],
   "buildpacks": [],
   "env": {
