@@ -115,6 +115,7 @@ Inclusions:
 
 - [Devise](#devise-user-authorization)
 - Webpacker
+- Jest
 - PostgreSQL database (11.x)
 - RSpec runner
   - FactoryBot

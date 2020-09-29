@@ -107,3 +107,5 @@ jobs:
         with:
           name: capybara
           path: tmp/capybara/
+      - name: jest
+        run: yarn test
