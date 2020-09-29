@@ -5,6 +5,7 @@ require:
 AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
+  NewCops: enable
   TargetRubyVersion: 2.6
   Severity: error
 
@@ -92,12 +93,3 @@ Style/StringLiterals:
 
 Style/SymbolArray:
   EnforcedStyle: brackets
-
-Style/HashEachMethods:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
