@@ -104,7 +104,7 @@ jobs:
       - name: setup database
         run: |
           bundle exec rake db:create
-          bundle exec rake db:structure:load
+          bundle exec rake db:schema:load
       - name: Set up Code Climate test reporter
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
