@@ -37,7 +37,7 @@ module ProjectNamePascal
     # the framework and any gems in your application.
 
     # Record the DB schema in SQL format for accuracy
-    config.active_record.schema_format = :sql
+    config.active_record.schema_format = :ruby
 
     config.active_job.queue_adapter = :sidekiq
 
