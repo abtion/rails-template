@@ -70,7 +70,13 @@ jobs:
         run: yarn --frozen-lockfile
       - name: test
         run: yarn test
-
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+      - name: prettier
+        run: bin/prettier --check
   rspec:
     runs-on: ubuntu-latest
 
