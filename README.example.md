@@ -100,6 +100,7 @@ Run: `bundle exec rspec`
 - Run the server: `heroku local` and [http://localhost:5000](http://localhost:5000)
 - Run tests: `bundle exec rspec`
 - Run rubocop: `bundle exec rubocop`
+- Run prettier: `bin/prettier`
 
 ## Debugging
 
@@ -124,6 +125,7 @@ Inclusions:
 - Jest
 - PostgreSQL database (11.x)
 - [Rollbar](https://rollbar.com) error monitoring
+- Prettier for linting javascript files
 - RSpec runner
   - FactoryBot
   - Capybara for acceptance testing
