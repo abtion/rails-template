@@ -27,6 +27,7 @@ group :development, :test do
   gem "bundler-audit"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "dotenv-rails"
+  gem "i18n-tasks"
   gem "rspec-rails", "~> 4.0"
   gem "rubocop", "0.83.0"
   gem "rubocop-performance"

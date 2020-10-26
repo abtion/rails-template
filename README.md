@@ -11,8 +11,9 @@
       2. [Configure the project](#configure-the-project)
       3. [Configure Code Climate](#configure-code-climate)
       4. [Configure CD](#configure-cd)
-      5. [Capybara drivers](#capybara-drivers)
-      6. [Set up Dependabot](#set-up-dependabot)
+      5. [Configure i18n tasks](#configure-i18n-tasks)
+      6. [Capybara drivers](#capybara-drivers)
+      7. [Set up Dependabot](#set-up-dependabot)
    4. [Contributing](#contributing)
    5. [License](#license)
    6. [About Abtion](#about-abtion)
@@ -31,6 +32,7 @@ Ruby on Rails applications.
 * Uses [rspec](https://github.com/rspec/rspec-rails)
 * Uses [rubocop](https://github.com/bbatsov/rubocop)
 * Uses [simplecov](https://github.com/colszowka/simplecov)
+* Uses [i18n-tasks](https://github.com/glebm/i18n-tasks)
 
 ## Getting Started
 
@@ -74,6 +76,17 @@ your own repository.
    - `DOMAIN_NAME` (ONLY staging and production)
    - `SEED_ADMIN_EMAIL` (review)
    - `SEED_ADMIN_INITIAL_PASSWORD` (review)
+
+### Configure i18n tasks
+
+If you need to ignore specific translation keys, follow this process:
+
+1. Open `config/i18n-tasks.yml`.
+2. Go to `ignore_unused` or `ignore_missing` depending on whether you need to
+   ignore unused translations, e.g., if a gem adds new translation keys, or
+   missing translations.
+3. Add your key(s) to the section in the YAML file.
+4. See the configuration file for examples on more advanced usages.
 
 ### Setup mailing
 

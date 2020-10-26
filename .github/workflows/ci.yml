@@ -42,6 +42,17 @@ jobs:
         run: yarn --frozen-lockfile
       - name: lint
         run: yarn lint
+  i18n-tasks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+      - name: set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: i18n-tasks
+        run: bundle exec i18n-tasks check-normalized
   jest:
     runs-on: ubuntu-latest
     steps:
