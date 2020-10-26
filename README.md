@@ -12,6 +12,7 @@
       3. [Configure Code Climate](#configure-code-climate)
       4. [Configure CD](#configure-cd)
       5. [Capybara drivers](#capybara-drivers)
+      6. [Set up Dependabot](#set-up-dependabot)
    4. [Contributing](#contributing)
    5. [License](#license)
    6. [About Abtion](#about-abtion)
@@ -102,6 +103,17 @@ opening Chrome, or use `chrome` to open the browser automatically.
 ### Capybara Screenshots in CI
 
 When a spec using Capybara fails in CI a screenshot will be saved under Github Actions Artifacts. If need be you can download the `capybara.zip` file and extract it to get to the screenshots.
+
+### Set up Dependabot
+
+To allow Dependabot to auto-merge security updates, you need to add a secret
+token to the settings of your project on GitHub. Follow these steps:
+
+1. Go to "Settings" > "Secrets".
+2. Click "New secret".
+3. Set the name to `DEPENDABOT_TOKEN` and insert a secret key (must be maximum
+   64 kb).
+4. Click "Add secret".
 
 ## Contributing
 
