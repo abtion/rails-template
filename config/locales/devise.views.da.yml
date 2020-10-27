@@ -1,0 +1,72 @@
+---
+da:
+  devise:
+    confirmations:
+      new:
+        resend_confirmation_instructions: Gensend bekræftelsesinstruktioner
+    mailer:
+      confirmation_instructions:
+        action: Bekræft min konto
+        greeting: Velkommen %{recipient}
+        instruction: 'Du kan bekræfte din konto og e-mail via linket herunder:'
+      email_changed:
+        greeting: Hej %{recipient}
+        message: Vi skriver til dig for at oplyse dig om, at din e-mail er blevet ændret til %{email}.
+      password_change:
+        greeting: Hej %{recipient}
+        message: Vi skriver til dig for at oplyse dig om, at din adgangskode er blevet ændret.
+      reset_password_instructions:
+        action: Skift adgangskode
+        greeting: Hej %{recipient}
+        instruction: Der er blevet anmodet om at ændre din adgangskode. Du kan ændre den via linket herunder.
+        instruction_2: Hvis du ikke har anmodet om dette, så se venligst bort fra denne mail.
+        instruction_3: Din adgangskode forbliver uændret, indtil du laver en ny via linket herover.
+      unlock_instructions:
+        action: Lås min konto op
+        greeting: Hej %{recipient}
+        instruction: 'Klik på linket herunder for at låse din konto op:'
+        message: Din konto er blevet låst efter for mange forkerte forsøg på at logge ind.
+    passwords:
+      edit:
+        change_my_password: Skift min adgangskode
+        change_your_password: Skift din adgangskode
+        confirm_new_password: Bekræft ny adgangskode
+        new_password: Ny adgangskode
+      new:
+        forgot_your_password: Glemt adgangskode?
+        send_me_reset_password_instructions: Send mig instruktioner om at skifte adgangskode
+    registrations:
+      edit:
+        are_you_sure: Er du sikker?
+        cancel_my_account: Luk min konto
+        currently_waiting_confirmation_for_email: 'Afventer bekræftelse af: %{email}'
+        leave_blank_if_you_don_t_want_to_change_it: 'lad være tomt, hvis du ikke ønsker at ændre '
+        title: Rediger %{resource}
+        unhappy: Utilfreds?
+        update: Opdater
+        we_need_your_current_password_to_confirm_your_changes: vi skal bruge din nuværende adgangskode for at bekræfte ændringerne.
+      new:
+        sign_up: Opret konto
+    sessions:
+      new:
+        sign_in: Log ind
+    shared:
+      links:
+        back: Tilbage
+        didn_t_receive_confirmation_instructions: Har du ikke modtaget bekræftelsesinstruktioner?
+        didn_t_receive_unlock_instructions: Har du ikke modtaget låse-op-instruktioner?
+        forgot_your_password: Glemt adgangskode?
+        sign_in: Log ind
+        sign_in_with_provider: Log ind med %{provider}
+        sign_up: Opret konto
+      minimum_password_length:
+        one: "(Mindst %{count} tegn)"
+        other: "(Mindst %{count} tegn)"
+    unlocks:
+      new:
+        resend_unlock_instructions: Gensend låse-op-instruktioner
+  errors:
+    messages:
+      not_saved:
+        one: 'En fejl medførte, at denne %{resource} ikke kunne gemmes:'
+        other: "%{count} fejl medførte, at denne %{resource} ikke kunne gemmes:"
