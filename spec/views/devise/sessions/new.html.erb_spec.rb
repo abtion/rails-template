@@ -21,14 +21,14 @@ RSpec.describe "devise/sessions/new", type: :view do
     expect(rendered).to have_css(logo_selector)
   end
 
-  it "renders the muffi image" do
+  it "renders the placeholder image" do
     stub_devise_helpers
 
     render
 
-    image_selector = "img[src*='muffi-background-image']"
+    placeholder_image_div = ".placeholder-image"
 
-    expect(rendered).to have_css(image_selector)
+    expect(rendered).to have_css(placeholder_image_div)
   end
 
   context "with danish locale" do
