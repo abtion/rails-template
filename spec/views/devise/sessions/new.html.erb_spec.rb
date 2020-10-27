@@ -31,7 +31,15 @@ RSpec.describe "devise/sessions/new", type: :view do
     expect(rendered).to have_css(placeholder_image_div)
   end
 
-  context "with danish locale" do
+  it "shows a remember me checkbox" do
+    stub_devise_helpers
+
+    render
+
+    expect(rendered).to have_css("input[type=checkbox][name='user[remember_me]']")
+  end
+
+  context "with Danish locale" do
     before { I18n.locale = :da }
 
     after { I18n.locale = I18n.default_locale }
@@ -63,12 +71,6 @@ RSpec.describe "devise/sessions/new", type: :view do
         "[placeholder='Indtast kodeord']"
       ].join
 
-      remember_me_selector = [
-        "input",
-        "[type=checkbox]",
-        "[name='user[remember_me]']"
-      ].join
-
       submit_selector = [
         "input",
         "[type=submit]",
@@ -77,22 +79,40 @@ RSpec.describe "devise/sessions/new", type: :view do
 
       expect(rendered).to have_css(email_selector)
       expect(rendered).to have_css(password_selector)
-      expect(rendered).to have_css(remember_me_selector)
       expect(rendered).to have_css(submit_selector)
     end
-  end
 
-  context "with english locale" do
-    before { I18n.locale = :en }
-
-    after { I18n.locale = I18n.default_locale }
-
-    it "displays english text" do
+    it "shows a link to the forgotten password page" do
       stub_devise_helpers
 
       render
 
-      expect(rendered).to have_selector("h2", exact_text: "Log in")
+      expect(rendered).to have_css("a", exact_text: "Glemt dit kodeord?", normalize_ws: true)
+    end
+
+    it "shows a sign up text" do
+      stub_devise_helpers
+
+      render
+
+      expect(rendered).to(
+        have_css("small", exact_text: "Har du ikke en konto? Tilmeld dig her.", normalize_ws: true)
+      )
+      expect(rendered).to have_link("Tilmeld dig her", href: new_user_registration_path)
+    end
+  end
+
+  context "with English locale" do
+    before { I18n.locale = :en }
+
+    after { I18n.locale = I18n.default_locale }
+
+    it "displays English text" do
+      stub_devise_helpers
+
+      render
+
+      expect(rendered).to have_selector("h2", exact_text: "Sign in")
     end
 
     it "renders a login form" do
@@ -114,22 +134,34 @@ RSpec.describe "devise/sessions/new", type: :view do
         "[placeholder='Enter password']"
       ].join
 
-      remember_me_selector = [
-        "input",
-        "[type=checkbox]",
-        "[name='user[remember_me]']"
-      ].join
-
       submit_selector = [
         "input",
         "[type=submit]",
-        "[value='Log in']"
+        "[value='Sign in']"
       ].join
 
       expect(rendered).to have_css(email_selector)
       expect(rendered).to have_css(password_selector)
-      expect(rendered).to have_css(remember_me_selector)
       expect(rendered).to have_css(submit_selector)
+    end
+
+    it "shows a link to the forgotten password page" do
+      stub_devise_helpers
+
+      render
+
+      expect(rendered).to have_css("a", exact_text: "Forgot your password?")
+    end
+
+    it "shows a sign up text" do
+      stub_devise_helpers
+
+      render
+
+      expect(rendered).to(
+        have_css("small", exact_text: "Don't have an account yet? Sign up.", normalize_ws: true)
+      )
+      expect(rendered).to have_link("Sign up", href: new_user_registration_path)
     end
   end
 end

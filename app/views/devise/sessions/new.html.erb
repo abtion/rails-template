@@ -1,9 +1,11 @@
-<div class="row">
+<div class="row vh-100">
   <div class="col-12 col-md-6 p-5">
-    <%= image_pack_tag("media/images/muffi-logo.svg", class: "mb-5") %>
+    <%= image_pack_tag("media/images/muffi-logo.svg", class: "position-absolute") %>
 
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <h2><%= t('.sign_in') %></h2>
+    <div class="d-flex justify-content-center align-items-center h-100">
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "mx-auto w-75" }) do |f| %>
+    <h2 class="mb-5"><%= t('.sign_in') %></h2>
 
       <div class="form-group">
         <%= f.label(:email) %><br />
@@ -11,7 +13,10 @@
       </div>
 
       <div class="form-group">
-        <%= f.label(:password) %><br />
+        <div class="d-flex justify-content-between align-items-center">
+          <%= f.label(:password) %>
+          <small class="mb-2"><%= link_to t(".forgot_your_password"), new_password_path(resource_name) %></small>
+        </div>
         <%= f.password_field(:password, autocomplete: "current-password", placeholder: true, class: "form-control") %>
       </div>
 
@@ -22,11 +27,16 @@
         </div>
       <% end %>
 
-      <div class="actions">
-        <%= f.submit(t('.sign_in'), class: "btn btn-primary") %>
+      <div class="actions mt-3">
+        <%= f.submit(t('.sign_in'), class: "btn btn-primary w-100 py-3") %>
       </div>
 
-      <%= render "devise/shared/links" %>
+      <div class="pt-2">
+        <small class="text-muted">
+          <%= t(".dont_have_an_account") %>
+          <%= link_to(t(".sign_up"), new_registration_path(resource_name)) %>.
+        </small>
+      </div>
     <% end %>
   </div>
   </div>
