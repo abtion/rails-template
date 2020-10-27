@@ -1,26 +1,33 @@
-<h2><%= t(".sign_in") %></h2>
+<div class="row">
+  <div class="col-6">
+    <h2><%= t('.sign_in') %></h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-group">
-    <%= f.label(:email) %><br />
-    <%= f.email_field(:email, autofocus: true, autocomplete: "email", placeholder: true, class: "form-control") %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <%= f.label(:email) %><br />
+        <%= f.email_field(:email, autofocus: true, autocomplete: "email", placeholder: true, class: "form-control") %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label(:password) %><br />
+        <%= f.password_field(:password, autocomplete: "current-password", placeholder: true, class: "form-control") %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="form-check">
+          <%= f.check_box(:remember_me, class: "form-check-input") %>
+          <%= f.label(:remember_me, class: "form-check-label") %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit(t('.sign_in'), class: "btn btn-primary") %>
+      </div>
+    <% end %>
+
+    <%= render("devise/shared/links") %>
   </div>
-
-  <div class="form-group">
-    <%= f.label(:password) %><br />
-    <%= f.password_field(:password, autocomplete: "current-password", placeholder: true, class: "form-control") %>
+  <div class="col-6">
+    <%= image_pack_tag("media/images/muffi-background-image.jpg") %>
   </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="form-check">
-      <%= f.check_box(:remember_me, class: "form-check-input") %>
-      <%= f.label(:remember_me, class: "form-check-label") %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit(t('.sign_in'), class: "btn btn-primary") %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

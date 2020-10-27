@@ -11,6 +11,16 @@ RSpec.describe "devise/sessions/new", type: :view do
     end
   end
 
+  it "renders the muffi image" do
+    stub_devise_helpers
+
+    render
+
+    image_selector = "img[src*='muffi-background-image']"
+
+    expect(rendered).to have_css(image_selector)
+  end
+
   context "with danish locale" do
     before { I18n.locale = :da }
 
