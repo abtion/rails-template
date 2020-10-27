@@ -1,4 +1,5 @@
-.sessions form, .registrations form {
+.sessions form,
+.registrations form {
   width: 100%;
   max-width: 20rem;
   padding: 1rem;
@@ -8,7 +9,7 @@
     position: relative;
     box-sizing: border-box;
     height: auto;
-    padding: .75rem;
+    padding: 0.75rem;
     font-size: 1rem;
 
     &:focus {
@@ -27,9 +28,8 @@
   }
 
   input[type="password"] {
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
-
 }

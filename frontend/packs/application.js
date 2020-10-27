@@ -16,4 +16,3 @@ require("bootstrap")
 require.context("../images", true)
 
 require("../stylesheets/application.scss")
-

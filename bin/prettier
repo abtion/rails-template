@@ -1,0 +1,3 @@
+#!/bin/sh
+
+npx prettier@2.0.5 frontend $@

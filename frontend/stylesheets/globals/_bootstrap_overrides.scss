@@ -4,7 +4,7 @@ $theme-colors: (
   "success": $project-name-param-green,
   "info": $project-name-param-yellow,
   "warning": $project-name-param-pink,
-  "dark": $project-name-param-darkblue
+  "dark": $project-name-param-darkblue,
 );
 
 $grid-breakpoints: (
@@ -12,9 +12,9 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
 );
 
-$font-family-sans-serif: 'd-din';
+$font-family-sans-serif: "d-din";
 
 @import "bootstrap";
