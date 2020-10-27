@@ -1,0 +1,7 @@
+---
+da:
+  helpers:
+    placeholder:
+      user:
+        email: navn@domæne.dk
+        password: Indtast kodeord

@@ -1,3 +1,7 @@
 ---
 en:
-  hello: Hello world
+  helpers:
+    placeholder:
+      user:
+        email: name@address.com
+        password: Enter password
