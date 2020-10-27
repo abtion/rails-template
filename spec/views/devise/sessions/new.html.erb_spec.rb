@@ -23,6 +23,43 @@ RSpec.describe "devise/sessions/new", type: :view do
 
       expect(rendered).to have_selector("h2", exact_text: "Log ind")
     end
+
+    it "renders a login form" do
+      stub_devise_helpers
+
+      render
+
+      email_selector = [
+        "input",
+        "[type=email]",
+        "[name='user[email]']",
+        "[placeholder='navn@domæne.dk']"
+      ].join
+
+      password_selector = [
+        "input",
+        "[type=password]",
+        "[name='user[password]']",
+        "[placeholder='Indtast kodeord']"
+      ].join
+
+      remember_me_selector = [
+        "input",
+        "[type=checkbox]",
+        "[name='user[remember_me]']"
+      ].join
+
+      submit_selector = [
+        "input",
+        "[type=submit]",
+        "[value='Log ind']"
+      ].join
+
+      expect(rendered).to have_css(email_selector)
+      expect(rendered).to have_css(password_selector)
+      expect(rendered).to have_css(remember_me_selector)
+      expect(rendered).to have_css(submit_selector)
+    end
   end
 
   context "with english locale" do
@@ -36,6 +73,43 @@ RSpec.describe "devise/sessions/new", type: :view do
       render
 
       expect(rendered).to have_selector("h2", exact_text: "Log in")
+    end
+
+    it "renders a login form" do
+      stub_devise_helpers
+
+      render
+
+      email_selector = [
+        "input",
+        "[type=email]",
+        "[name='user[email]']",
+        "[placeholder='name@address.com']"
+      ].join
+
+      password_selector = [
+        "input",
+        "[type=password]",
+        "[name='user[password]']",
+        "[placeholder='Enter password']"
+      ].join
+
+      remember_me_selector = [
+        "input",
+        "[type=checkbox]",
+        "[name='user[remember_me]']"
+      ].join
+
+      submit_selector = [
+        "input",
+        "[type=submit]",
+        "[value='Log in']"
+      ].join
+
+      expect(rendered).to have_css(email_selector)
+      expect(rendered).to have_css(password_selector)
+      expect(rendered).to have_css(remember_me_selector)
+      expect(rendered).to have_css(submit_selector)
     end
   end
 end
