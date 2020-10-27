@@ -11,6 +11,16 @@ RSpec.describe "devise/sessions/new", type: :view do
     end
   end
 
+  it "renders the muffi logo" do
+    stub_devise_helpers
+
+    render
+
+    logo_selector = "img[src*='muffi-logo']"
+
+    expect(rendered).to have_css(logo_selector)
+  end
+
   it "renders the muffi image" do
     stub_devise_helpers
 
