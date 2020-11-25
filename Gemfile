@@ -15,7 +15,7 @@ gem "jquery-rails"
 gem "pg", ">= 0.18", "< 2.0"
 gem "pry"
 gem "puma", "~> 3.12"
-gem "rails", "6.0.3.3"
+gem "rails", "6.0.3.4"
 gem "rollbar"
 gem "sidekiq"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
