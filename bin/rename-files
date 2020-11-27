@@ -1,0 +1,59 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+
+class String
+  def param_case
+    gsub(/::/, "/")
+      .gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
+      .gsub(/([a-z\d])([A-Z])/, '\1_\2')
+      .downcase
+  end
+
+  def pascal_case
+    param_case.split("-").map(&:capitalize).join
+  end
+
+  def snake_case
+    param_case.tr("-", "_")
+  end
+
+  def human_case
+    param_case.tr("-", " ").split(/ |\_/).map(&:capitalize).join(" ")
+  end
+
+  def human_param_case
+    human_case.split(" ").join("-")
+  end
+end
+
+module MuffiFileRenamer
+  class << self
+    def call
+      files.each do |file|
+        replace_in_file("project-name-param", project_name.param_case, file)
+        replace_in_file("ProjectNamePascal", project_name.pascal_case, file)
+        replace_in_file("project_name_snake", project_name.snake_case, file)
+        replace_in_file("Project Name Human", project_name.human_case, file)
+        replace_in_file("Project-Name-Human", project_name.human_param_case, file)
+      end
+    end
+
+    private
+
+    def files
+      files = `git ls-tree -r main --name-only`.split("\n")
+      files - ["README.md", "bin/rename-files"]
+    end
+
+    def project_name
+      File.basename(Dir.getwd)
+    end
+
+    def replace_in_file(initial_string, replacement_string, file)
+      text = File.read(file)
+      File.write(file, text.gsub(initial_string, replacement_string))
+    end
+  end
+end
+
+MuffiFileRenamer.call
