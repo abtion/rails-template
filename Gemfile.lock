@@ -243,10 +243,16 @@ GEM
       rubocop (>= 0.72.0)
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
+    ruby_http_client (3.5.1)
     rubyzip (2.0.0)
     selenium-webdriver (3.142.6)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    sendgrid-actionmailer (3.1.1)
+      mail (~> 2.7)
+      sendgrid-ruby (~> 6.0)
+    sendgrid-ruby (6.3.7)
+      ruby_http_client (~> 3.4)
     shoulda-matchers (4.1.2)
       activesupport (>= 4.2.0)
     sidekiq (6.1.2)
@@ -327,6 +333,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   selenium-webdriver
+  sendgrid-actionmailer
   shoulda-matchers
   sidekiq
   simplecov
