@@ -93,7 +93,7 @@ If you need to ignore specific translation keys, follow this process:
 1. Go to the production app in the Heroku dashboard.
 2. Add Sendgrid addon.
 3. Click the added Sendgrid resource, go through the confirmation steps.
-4. Set up DKIM (under sender authentication -> domain authentication).
+4. Set up DKIM on the client's domain (under sender authentication -> domain authentication).
 5. Go to staging and repeat the above steps.
 6. If you want the review apps to send emails: Copy the staging app's Sendgrid credentials and add them to the review apps config vars. Do not add the Sendgrid addon to review apps in `app.json` (Sendgrid will ban our account).
 
