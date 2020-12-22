@@ -15,6 +15,7 @@ AllCops:
     - "node_modules/**/*"
     - "tmp/**/*"
     - "vendor/**/*"
+    - "db/schema.rb"
 
 Bundler/DuplicatedGem:
   Enabled: true
