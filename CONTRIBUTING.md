@@ -31,3 +31,7 @@ small changes that do not affect the code base. (For example, a typo in the READ
 3. Write your code
 4. Commit and push your changes
 5. Open a pull request
+
+Notes:
+- If there's no need for reviews, PRs should be merged when CI has passed.
+- If you want reviews on your PR, add the "reviewable" tag.
