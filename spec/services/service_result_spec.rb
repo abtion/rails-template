@@ -14,7 +14,7 @@ describe ServiceResult do
     context "with errors" do
       it "returns false" do
         result = ServiceResult.new(errors: ["Wow!"])
-        expect(result).to_not be_successful
+        expect(result).not_to(be_successful)
       end
     end
   end

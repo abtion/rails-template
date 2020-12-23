@@ -14,7 +14,7 @@ RSpec.describe User, type: :model do
     context "without 8 character long password" do
       it "user is not valid" do
         user = build(:user, password: "1234567")
-        expect(user).to_not be_valid
+        expect(user).not_to(be_valid)
         expect(user.errors[:password]).to eq(["is too short (minimum is 8 characters)"])
       end
     end
@@ -24,12 +24,12 @@ RSpec.describe User, type: :model do
     let(:user) { create(:user) }
 
     it "defaults to false" do
-      expect(user.admin?).to be_falsy
+      expect(user).not_to(be_admin)
     end
 
     it "can be set" do
       user.update(admin: true)
-      expect(user.admin?).to be_truthy
+      expect(user).to be_admin
     end
   end
 end

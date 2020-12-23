@@ -8,7 +8,7 @@ RSpec.describe ApiAuthenticable, type: :model do
       user = build(:user, authentication_token: nil)
       user.save
 
-      expect(user.authentication_token).to_not be_nil
+      expect(user.authentication_token).not_to(be_nil)
       expect(user.authentication_token.length).to eq(ApiAuthenticable::AUTHENTICATION_TOKEN_LENGTH)
     end
   end
