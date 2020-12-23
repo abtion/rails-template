@@ -1,6 +1,7 @@
 require:
   - rubocop-performance
   - rubocop-rails
+  - rubocop-rspec
 
 AllCops:
   DisplayCopNames: true
@@ -94,3 +95,41 @@ Style/StringLiterals:
 
 Style/SymbolArray:
   EnforcedStyle: brackets
+
+RSpec/DescribedClass:
+  EnforcedStyle: explicit
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 5
+
+RSpec/LeadingSubject:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/ContextWording:
+  Prefixes:
+    - when
+    - with
+    - without
+
+RSpec/DescribeClass:
+  IgnoredMetadata:
+    type:
+      - feature
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/MessageChain:
+  Enabled: false
+
+RSpec/InstanceVariable:
+  AssignmentOnly: false
