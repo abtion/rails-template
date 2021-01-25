@@ -26,7 +26,7 @@
 Muffi is a project template maintained by [Abtion](https://abtion.com/) and used to kick start
 Ruby on Rails applications.
 
-## What are the benefits of using Muffi
+## What are the benefits of using Muffi?
 
 * Much less time spent on "first time setup"
 * Lots of decisions are already made
