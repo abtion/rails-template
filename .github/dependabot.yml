@@ -1,0 +1,25 @@
+version: 2
+updates:
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      # Pull in new security threat patterns
+      - dependency-name: "brakeman"
+      # Pull in new linting patterns
+      - dependency-name: "scss-lint"
+      # Actually keep everything updated (if you remove this, keep the above ones).
+      - dependency-type: "all"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-type: "all"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
