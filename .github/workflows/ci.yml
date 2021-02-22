@@ -59,6 +59,17 @@ jobs:
         run: yarn --frozen-lockfile
       - name: stylelint
         run: npx stylelint "frontend/**/*.scss"
+  erb-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+      - name: set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: erb-lint
+        run: bundle exec erblint --lint-all
   i18n-tasks:
     runs-on: ubuntu-latest
     steps:
