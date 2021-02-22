@@ -7,7 +7,7 @@ AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
   NewCops: enable
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 2.7
   Severity: error
 
   Exclude:
@@ -96,6 +96,9 @@ Style/StringLiterals:
 Style/SymbolArray:
   EnforcedStyle: brackets
 
+RSpec/DescribeClass:
+  Enabled: true
+
 RSpec/DescribedClass:
   EnforcedStyle: explicit
 
@@ -116,11 +119,6 @@ RSpec/ContextWording:
     - when
     - with
     - without
-
-RSpec/DescribeClass:
-  IgnoredMetadata:
-    type:
-      - feature
 
 RSpec/VerifiedDoubles:
   Enabled: false
