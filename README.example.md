@@ -7,15 +7,16 @@ This project is built on top of [Muffi](https://github.com/abtion/muffi).
 1. [Project Name Human](#Project-Name-Human)
 2. [Requirements](#requirements)
 3. [Developing](#developing)
-   1. [First time setup](#first-time-setup)
-      1. [1. Configuration](#1-configuration)
-         1. [Database connection](#database-connection)
-      2. [2. Dependencies and database setup](#2-dependencies-and-database-setup)
-         1. [Chrome driver](#chrome-driver)
-      3. [3. Ensure that tests pass](#3-ensure-that-tests-pass)
-   2. [Day-to-day](#day-to-day)
-   3. [Debugging](#debugging)
-   4. [Download production or staging DB](#download-production-or-staging-db)
+   - [First time setup](#first-time-setup)
+      - [1. Configuration](#1-configuration)
+         - [Database connection](#database-connection)
+      - [2. Dependencies and database setup](#2-dependencies-and-database-setup)
+         - [Chrome driver](#chrome-driver)
+      - [3. Ensure that linting and tests pass](#3-ensure-that-linting-and-tests-pass)
+      - [4. Git hooks](#4-git-hooks)
+   - [Day-to-day](#day-to-day)
+   - [Debugging](#debugging)
+   - [Download production or staging DB](#download-production-or-staging-db)
 4. [Notable inclusions and Notable exclusions](#notable-inclusions-and-notable-exclusions)
    1. [Devise User Authorization](#devise-user-authorization)
 5. [Production](#production)
@@ -91,9 +92,30 @@ If you need to, you can disable the Chrome driver by setting
 `DISABLE_WEBDRIVERS=true bundle exec rspec` if you only need to do it
 occasionally.
 
-### 3. Ensure that tests pass
+### 3. Ensure that linting and tests pass
 
-Run: `bundle exec rspec`
+Run:
+
+```sh
+bundle exec rspec
+bundle exec rubocop
+bundle exec brakeman --quiet --no-summary
+bundle exec erblint --lint-all
+bundle exec bundle-audit update
+bundle exec bundle-audit
+yarn lint
+```
+
+Or instead, you can run `rails test_all_strict`
+
+### 4. Git hooks
+
+Run: `bin/install_hooks`
+
+This way you are getting all our git hooks for both pushing and committing.
+If for some reason you don't want one of the hooks (push/commit) you can specify it by with `--no-commit` and `--no-push`.
+
+The hooks are symlinked meaning all the changes to the repo hooks will automatically be updated in all local environments, in the case of a change.
 
 ## Day-to-day
 

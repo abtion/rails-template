@@ -1,0 +1,40 @@
+#! /bin/bash
+
+GIT_DIR=$(git rev-parse --git-dir)
+TIMESTAMP=$(date +%s)
+INSTALL_PRE_COMMIT_HOOK=1
+INSTALL_PRE_PUSH_HOOK=1
+
+
+for arg in "$@"; do
+  case $arg in
+    --no-commit)
+      INSTALL_PRE_COMMIT_HOOK=0
+      shift
+      ;;
+    --no-push)
+      INSTALL_PRE_PUSH_HOOK=0
+      shift
+      ;;
+  esac
+done
+
+
+echo "Installing hooks..."
+# backup pre-existing file if it exists and symlink new git-hook
+
+if ((INSTALL_PRE_COMMIT_HOOK)); then
+  echo " * pre-commit"
+  [ -f $GIT_DIR/hooks/pre-commit ] || [ -L $GIT_DIR/hooks/pre-commit ] && mv $GIT_DIR/hooks/pre-commit $GIT_DIR/hooks/pre-commit.$TIMESTAMP.old
+  ln -s ../../bin/pre-commit $GIT_DIR/hooks/pre-commit
+fi
+
+if ((INSTALL_PRE_PUSH_HOOK)); then
+  echo " * push"
+  [ -f $GIT_DIR/hooks/pre-push ] || [ -L $GIT_DIR/hooks/pre-push ] && mv $GIT_DIR/hooks/pre-push $GIT_DIR/hooks/pre-push.$TIMESTAMP.old
+  ln -s ../../bin/pre-push $GIT_DIR/hooks/pre-push
+fi
+
+((INSTALL_PRE_PUSH_HOOK)) || ((INSTALL_PRE_COMMIT_HOOK)) || echo "or not..."
+
+echo "Done!"

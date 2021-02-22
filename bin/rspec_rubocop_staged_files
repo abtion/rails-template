@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+
+# frozen_string_literal: true
+
+module RspecRubocopStagedFiles
+  class << self
+    def execute
+      rubocop(rb_files) or exit(1)
+      erb_lint(erb_files) or exit(2)
+      rspec(spec_files) or exit(3)
+
+      puts "Done"
+    end
+
+    private
+
+    def rubocop(files)
+      return true unless files.any?
+
+      puts "Running rubocop"
+      system "bundle exec rubocop #{files.join(' ')}"
+    end
+
+    def erb_lint(files)
+      return true unless files.any?
+
+      puts "Running erb_lint"
+      system "bundle exec erblint #{files.join(' ')}"
+    end
+
+    def rspec(files)
+      return true unless files.any?
+
+      puts "Running Rspec"
+      system "bundle exec rspec #{files.join(' ')}"
+    end
+
+    def staged_files
+      @staged_files ||=
+        `git diff --cached --name-only --diff-filter=d`.split("\n")
+    end
+
+    def spec_files
+      staged_spec_files + deduced_spec_files
+    end
+
+    def deduced_spec_files
+      (rb_files + erb_files).map do |file|
+        spec_file = file.sub(%r{\Aapp/}, "spec/")
+        spec_file.sub!(/.rb\z/, "_spec.rb")
+        spec_file.sub!(/.erb\z/, ".erb_spec.rb")
+        spec_file if File.exist?(spec_file)
+      end.compact
+    end
+
+    def erb_files
+      staged_files.grep(/\.erb$/)
+    end
+
+    def rb_files
+      staged_files.grep(/\.rb$/)
+    end
+
+    def staged_spec_files
+      staged_files.grep(/_spec.rb$/)
+    end
+  end
+end
+RspecRubocopStagedFiles.execute
