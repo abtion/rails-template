@@ -1,0 +1,13 @@
+#! /bin/bash
+
+echo "Running pre-push hook"
+
+git remote update
+status=$(git status --untracked-files=no)
+
+if [[ "$status" == *"behind"* ]]; then
+  echo "You need to update the remote"
+  exit 1
+fi
+
+bundle exec rake test_all_strict
