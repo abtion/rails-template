@@ -333,7 +333,7 @@ DEPENDENCIES
   pivotal_git_scripts
   pry
   puma (~> 3.12)
-  rails (= 6.1.0)
+  rails (~> 6.1.0)
   rollbar
   rspec-rails (~> 4.0)
   rubocop (= 0.83.0)
