@@ -1,0 +1,7 @@
+- match:
+    dependency_name: rails
+    update_type: semver:patch # Because Rails requires manual updates for minor versions.
+
+- match:
+    dependency_type: all
+    update_type: semver:minor
