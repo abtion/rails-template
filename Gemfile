@@ -6,13 +6,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.7.2"
 
 gem "awesome_print"
-gem "bootsnap", ">= 1.4.2", require: false
+gem "bootsnap", ">= 1.4.4", require: false
 gem "cancancan"
 gem "devise"
 gem "devise-i18n"
 gem "fast_jsonapi"
 gem "jquery-rails"
-gem "pg", ">= 0.18", "< 2.0"
+gem "pg", "~> 1.0"
 gem "pry"
 gem "puma", "~> 5.2"
 gem "rails", "~> 6.1.0"
@@ -20,7 +20,7 @@ gem "rollbar"
 gem "sendgrid-actionmailer"
 gem "sidekiq"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "webpacker", "~> 4.0"
+gem "webpacker", "~> 5.0"
 
 group :development, :test do
   gem "abtion-scripts"
@@ -41,9 +41,10 @@ group :development, :test do
 end
 
 group :development do
-  gem "listen", ">= 3.0.5", "< 3.2"
+  gem "listen", "~> 3.3"
   gem "pivotal_git_scripts"
-  gem "web-console", ">= 3.3.0"
+  gem "rack-mini-profiler", "~> 2.0"
+  gem "web-console"
 end
 
 group :test do
