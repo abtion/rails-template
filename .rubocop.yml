@@ -30,6 +30,9 @@ Layout/FirstArrayElementIndentation:
 Layout/LineLength:
   Max: 100
 
+Lint/EmptyClass:
+  Enabled: false
+
 Lint/ScriptPermission:
   Exclude:
     - "Rakefile"

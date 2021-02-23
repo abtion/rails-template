@@ -31,10 +31,10 @@ group :development, :test do
   gem "erb_lint", require: false
   gem "i18n-tasks"
   gem "rspec-rails", "~> 4.0"
-  gem "rubocop", "0.90.0"
+  gem "rubocop"
   gem "rubocop-performance"
   gem "rubocop-rails"
-  gem "rubocop-rspec", "1.44.1"
+  gem "rubocop-rspec"
   gem "selenium-webdriver"
   gem "shoulda-matchers"
   gem "webdrivers", "~> 4.0", require: false
