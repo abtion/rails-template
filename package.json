@@ -6,22 +6,23 @@
     "lint": "eslint frontend/**/*.js"
   },
   "dependencies": {
-    "@rails/activestorage": "^6.0.0-alpha",
-    "@rails/ujs": "^6.0.0-alpha",
-    "@rails/webpacker": "^4.0.2",
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "^5.2.1",
     "bootstrap": "4.3.1",
     "dot-prop": "^5.2.0",
     "jquery": "^3.5.0",
     "popper.js": "^1.15.0",
-    "webpack": "^4.44.1"
+    "webpack": "^5.0.0"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "devDependencies": {
     "eslint": "^7.7.0",
     "jest": "^26.4.2",
     "prettier": "^2.1.2",
     "stylelint": "^13.8.0",
     "stylelint-config-sass-guidelines": "^7.1.0",
-    "webpack-dev-server": "^3.4.1"
+    "webpack-dev-server": "^3.11.2"
   }
 }
