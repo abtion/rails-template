@@ -48,6 +48,7 @@ unless Rails.env.production?
     Rake::Task[:erblint].invoke
     Rake::Task[:brakeman].invoke
     Rake::Task[:bundle_audit].invoke
+    Rake::Task["webpacker:compile"].invoke
     Rake::Task[:spec].invoke
   end
 end
