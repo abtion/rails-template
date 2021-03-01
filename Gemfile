@@ -37,7 +37,7 @@ group :development, :test do
   gem "rubocop-rspec"
   gem "selenium-webdriver"
   gem "shoulda-matchers"
-  gem "webdrivers", "~> 4.0", require: false
+  gem "webdrivers", "~> 4.6", require: false
 end
 
 group :development do
