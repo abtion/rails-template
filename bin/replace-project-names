@@ -1,28 +1,32 @@
 #!/usr/bin/env ruby
 require 'fileutils'
 
-class String
-  def param_case
-    gsub(/::/, "/")
-      .gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
-      .gsub(/([a-z\d])([A-Z])/, '\1_\2')
-      .downcase
+class ProjectName < String
+  def initialize(*_args)
+    super
+    ensure_valid!
   end
 
   def pascal_case
-    param_case.split("-").map(&:capitalize).join
+    split("-").map(&:capitalize).join
   end
 
   def snake_case
-    param_case.tr("-", "_")
+    tr("-", "_")
   end
 
   def human_case
-    param_case.tr("-", " ").split(/ |\_/).map(&:capitalize).join(" ")
+    tr("-", " ").split(/ |\_/).map(&:capitalize).join(" ")
   end
 
   def human_param_case
     human_case.split(" ").join("-")
+  end
+
+  def ensure_valid!
+    return if self =~ /^[a-z][a-z\-]+[a-z]$/
+    warn "Invalid project name: #{self}"
+    abort 'Project name must be "param-case". Valid chars are lowercase letters and -'
   end
 end
 
@@ -30,7 +34,7 @@ module MuffiFileRenamer
   class << self
     def call
       files.each do |file|
-        replace_in_file("project-name-param", project_name.param_case, file)
+        replace_in_file("project-name-param", project_name, file)
         replace_in_file("ProjectNamePascal", project_name.pascal_case, file)
         replace_in_file("project_name_snake", project_name.snake_case, file)
         replace_in_file("Project Name Human", project_name.human_case, file)
@@ -47,7 +51,7 @@ module MuffiFileRenamer
 
     def project_name
       @project_name ||= begin
-        name = (ARGV[0] || File.basename(Dir.getwd)).param_case
+        name = ProjectName.new(ARGV[0] || File.basename(Dir.getwd))
         puts "Replace project names with inflections of: \"#{name}\"?"
 
         loop do
@@ -69,4 +73,8 @@ module MuffiFileRenamer
   end
 end
 
-MuffiFileRenamer.call
+begin
+  MuffiFileRenamer.call
+rescue Interrupt
+  abort 'Aborted'
+end
