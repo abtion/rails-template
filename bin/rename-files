@@ -46,7 +46,20 @@ module MuffiFileRenamer
     end
 
     def project_name
-      File.basename(Dir.getwd)
+      @project_name ||= begin
+        name = (ARGV[0] || File.basename(Dir.getwd)).param_case
+        puts "Replace project names with inflections of: \"#{name}\"?"
+
+        loop do
+          print '(y)/n: '
+          input = STDIN.gets&.strip
+
+          break if input.empty? || input == 'y'
+          abort 'Aborted' if input == 'n'
+        end
+
+        name
+      end
     end
 
     def replace_in_file(initial_string, replacement_string, file)
