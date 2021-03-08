@@ -1,8 +1,7 @@
 .sessions form,
 .registrations form {
   width: 100%;
-  max-width: 20rem;
-  padding: 1rem;
+  max-width: 22.5rem;
   margin: auto;
 
   .form-control {
@@ -23,13 +22,9 @@
 
   input[type="email"] {
     margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
   }
 
   input[type="password"] {
     margin-bottom: 0.75rem;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
   }
 }

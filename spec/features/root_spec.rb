@@ -18,7 +18,7 @@ RSpec.describe "Log in as a user", type: :feature do
       fill_in "Email", with: user.email
       fill_in "Password", with: "passw0rd"
 
-      click_button "Log in"
+      click_button "Sign in"
 
       expect(page).to have_current_path("/")
     end
