@@ -189,6 +189,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
+    rack-attack (6.5.0)
+      rack (>= 1.0, < 3)
     rack-mini-profiler (2.3.1)
       rack (>= 1.2.0)
     rack-proxy (0.6.5)
@@ -362,6 +364,7 @@ DEPENDENCIES
   pivotal_git_scripts
   pry
   puma (~> 5.2)
+  rack-attack
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.0)
   rollbar
@@ -384,4 +387,4 @@ RUBY VERSION
    ruby 2.7.2p137
 
 BUNDLED WITH
-   2.2.11
+   2.2.13
