@@ -11,7 +11,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "^5.2.1",
     "bootstrap": "4.6.0",
-    "dot-prop": "^5.2.0",
+    "dot-prop": "^6.0.1",
     "jquery": "^3.5.0",
     "popper.js": "^1.15.0",
     "webpack": "^4.0.0"
