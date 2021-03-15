@@ -198,21 +198,18 @@ jobs:
           bundle exec rake db:schema:load
       - name: run bin/webpack
         run: bin/webpack
-      - name: Set up Code Climate test reporter
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        run: |
-          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-          chmod +x ./cc-test-reporter
-          ./cc-test-reporter before-build
       - name: rspec
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          # If we don't supply a CC_TEST_REPORTER_ID simplecov won't output coverage in a way that
+          # code climate understands
+          CC_TEST_REPORTER_ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
         run: bundle exec rspec
-      - name: Code Climate test reporter
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        run: ./cc-test-reporter after-build --exit-code $?
+      - name: Archive coverage
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: |
+            coverage
       - name: Archive capybara artifacts
         uses: actions/upload-artifact@v2
         if: failure()
