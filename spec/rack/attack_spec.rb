@@ -55,8 +55,6 @@ RSpec.describe Rack::Attack, type: :request do
           get "/", env: { REMOTE_ADDR: "1.2.3.5" }
           expect(response.status).to eq(429) if i == request_count - 1
         end
-
-        puts(Rails.cache.instance_variable_get(:@data).keys)
       end
 
       context "when the IP-adresses are not the same" do
