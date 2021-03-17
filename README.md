@@ -5,8 +5,9 @@
 
 1. [Muffi](#muffi)
    1. [What is Muffi?](#what-is-muffi)
-   2. [Key features](#key-features)
-   3. [Getting Started](#getting-started)
+   2. [What are the benefits of using Muffi?](#what-are-the-benefits-of-using-muffi)
+   3. [Key features](#key-features)
+   4. [Getting Started](#getting-started)
       1. [Start a new project](#start-a-new-project)
       2. [Configure the project](#configure-the-project)
       3. [Configure Code Climate](#configure-code-climate)
@@ -17,9 +18,9 @@
       8. [Capybara drivers](#capybara-drivers)
       9. [Capybara Screenshots in CI](#capybara-screenshots-in-ci)
       10. [Set up Dependabot](#set-up-dependabot)
-   4. [Contributing](#contributing)
-   5. [License](#license)
-   6. [About Abtion](#about-abtion)
+   5. [Contributing](#contributing)
+   6. [License](#license)
+   7. [About Abtion](#about-abtion)
 
 ## What is Muffi?
 
@@ -28,11 +29,17 @@ Ruby on Rails applications.
 
 ## What are the benefits of using Muffi?
 
-* Much less time spent on "first time setup"
-* Lots of decisions are already made
-* User login is there from the start
-* Fully functional test setup
-* Easy for developers to switch between similar projects
+* Much less time spent on "first-time setup":
+   * Projects starting from the Muffi template include all the libraries we typically use at Abtion on the latest version.
+   * Basic functionality is there from the start; we can have the app live from the moment we start, start sending emails, or log in with a user to the system.
+* Lots of decisions are already made:
+   * We've made these same decisions many times - now we know which decisions are the right ones.
+* Fully functional test setup.
+   * Tests are not an afterthought. They are an integrated part of the development flow.
+   * Reliable software from day one.
+* Easy for developers to switch between similar projects.
+   * Easy to scale projects up and down. Developers know what to expect when they join the project. They've seen similar things before.
+   * Less reliance on specific people - the whole team can contribute even when a team member is not present.
 
 ## Key features
 
