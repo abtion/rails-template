@@ -1,0 +1,14 @@
+---
+asana:
+  path: "1142794766483633"
+  wip_section_gid: "1142794766483660"
+  finalized_section_gid: "1142794766483662"
+harvest:
+  path: 26520415/14628589
+aliases:
+  start: "$0 pick asana | $0 start harvest $@"
+  finalize: "$0 finalize asana $@"
+  stop: "$0 stop harvest"
+  continue: "$0 track asana harvest $@"
+  current: "$0 current asana"
+  branch: "$0 branch git asana"
