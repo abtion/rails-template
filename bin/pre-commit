@@ -2,4 +2,4 @@
 
 echo "Running pre-commit hook"
 
-./bin/rspec_rubocop_staged_files
+./bin/rspec-rubocop-staged-files

@@ -110,7 +110,7 @@ Or instead, you can run `rails test_all_strict`
 
 ### 4. Git hooks
 
-Run: `bin/install_hooks`
+Run: `bin/install-hooks`
 
 This way you are getting all our git hooks for both pushing and committing.
 If for some reason you don't want one of the hooks (push/commit) you can specify it by with `--no-commit` and `--no-push`.
