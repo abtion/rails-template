@@ -37,7 +37,8 @@ module RspecRubocopStagedFiles
 
     def staged_files
       @staged_files ||=
-        `git diff --cached --name-only --diff-filter=d`.split("\n")
+        `git diff --cached --name-only --diff-filter=d`.
+        split("\n") - ['db/schema.rb']
     end
 
     def spec_files
