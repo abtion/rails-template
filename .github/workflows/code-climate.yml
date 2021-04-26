@@ -19,7 +19,7 @@ jobs:
           chmod +x ./cc-test-reporter
           ./cc-test-reporter before-build
       - name: Download coverage
-        uses: actions/github-script@v3.1.1
+        uses: actions/github-script@v4.0.2
         with:
           script: |
             var artifacts = await github.actions.listWorkflowRunArtifacts({
