@@ -176,7 +176,6 @@ Default credentials for staging are:
 user: abtion
 pass: password
 ```
-While the production credentials live in `1Password` under `Selfcast-Sidekiq`.
 
 These can be set via the `SIDEKIQ_USERNAME` and `SIDEKIQ_PASSWORD` config-vars on heroku.
 
