@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: get yarn cache directory path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: get yarn cache directory path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -63,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -74,7 +74,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -85,7 +85,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -96,7 +96,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: get yarn cache directory path
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -113,7 +113,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: prettier
         run: bin/prettier --check
   schema:
@@ -136,7 +136,7 @@ jobs:
 
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -171,7 +171,7 @@ jobs:
 
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
