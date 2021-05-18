@@ -3,8 +3,7 @@
 class User < ApplicationRecord
   include ApiAuthenticable
 
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  # Included devise modules. Others available are:
+  # :registerable, :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :recoverable, :rememberable, :validatable
 end

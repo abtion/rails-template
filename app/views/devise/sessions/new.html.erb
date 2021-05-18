@@ -31,12 +31,14 @@
         <%= f.submit(t(".sign_in"), class: "btn btn-primary w-100 py-3") %>
       </div>
 
-      <div class="pt-2">
-        <small class="text-muted">
-          <%= t(".dont_have_an_account") %>
-          <%= link_to(t(".sign_up"), new_registration_path(resource_name)) %>.
-        </small>
-      </div>
+      <% if devise_mapping.registerable? %>
+        <div class="pt-2">
+          <small class="text-muted">
+            <%= t(".dont_have_an_account") %>
+            <%= link_to(t(".sign_up"), new_registration_path(resource_name)) %>.
+          </small>
+        </div>
+      <% end %>
     <% end %>
   </div>
   </div>
