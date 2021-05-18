@@ -119,7 +119,7 @@ The hooks are symlinked meaning all the changes to the repo hooks will automatic
 
 ## Day-to-day
 
-- Run the server: `heroku local` and [http://localhost:5000](http://localhost:5000)
+- Run the server: `bin/rails server` and [http://localhost:3000](http://localhost:3000)
 - Run tests: `bundle exec rspec`
 - Run rubocop: `bundle exec rubocop`
 - Run prettier: `bin/prettier`
