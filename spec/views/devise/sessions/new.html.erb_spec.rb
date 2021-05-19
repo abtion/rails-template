@@ -89,17 +89,6 @@ RSpec.describe "devise/sessions/new", type: :view do
 
       expect(rendered).to have_css("a", exact_text: "Glemt dit kodeord?", normalize_ws: true)
     end
-
-    it "shows a sign up text" do
-      stub_devise_helpers
-
-      render
-
-      expect(rendered).to(
-        have_css("small", exact_text: "Har du ikke en konto? Tilmeld dig her.", normalize_ws: true)
-      )
-      expect(rendered).to have_link("Tilmeld dig her", href: new_user_registration_path)
-    end
   end
 
   context "with English locale" do
@@ -151,17 +140,6 @@ RSpec.describe "devise/sessions/new", type: :view do
       render
 
       expect(rendered).to have_css("a", exact_text: "Forgot your password?")
-    end
-
-    it "shows a sign up text" do
-      stub_devise_helpers
-
-      render
-
-      expect(rendered).to(
-        have_css("small", exact_text: "Don't have an account yet? Sign up.", normalize_ws: true)
-      )
-      expect(rendered).to have_link("Sign up", href: new_user_registration_path)
     end
   end
 end
