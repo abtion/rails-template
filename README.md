@@ -9,15 +9,16 @@
    3. [Key features](#key-features)
    4. [Getting Started](#getting-started)
       1. [Start a new project](#start-a-new-project)
-      2. [Configure the project](#configure-the-project)
-      3. [Configure Code Climate](#configure-code-climate)
-      4. [Configure CD](#configure-cd)
-      5. [Configure i18n tasks](#configure-i18n-tasks)
-      6. [Setup mailing](#setup-mailing)
-      7. [Setup basic auth](#setup-basic-auth)
-      8. [Capybara drivers](#capybara-drivers)
-      9. [Capybara Screenshots in CI](#capybara-screenshots-in-ci)
-      10. [Set up Dependabot](#set-up-dependabot)
+      2. [Replace license](#replace-license)
+      3. [Configure the project](#configure-the-project)
+      4. [Configure Code Climate](#configure-code-climate)
+      5. [Configure CD](#configure-cd)
+      6. [Configure i18n tasks](#configure-i18n-tasks)
+      7. [Setup mailing](#setup-mailing)
+      8. [Setup basic auth](#setup-basic-auth)
+      9. [Capybara drivers](#capybara-drivers)
+      10. [Capybara Screenshots in CI](#capybara-screenshots-in-ci)
+      11. [Set up Dependabot](#set-up-dependabot)
    5. [Contributing](#contributing)
    6. [License](#license)
    7. [About Abtion](#about-abtion)
@@ -61,6 +62,16 @@ using this repository as a template.
 
 Alternatively, clone this repository and change the git remote to point to
 your own repository.
+
+### Replace license
+
+Replace the contents of `LICENSE.md` with the following:
+
+```
+Copyright (C) Abtion - All Rights Reserved
+Unauthorized copying of this project, via any medium is strictly prohibited.
+Proprietary and confidential.
+```
 
 ### Configure the project
 
