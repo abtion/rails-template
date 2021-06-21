@@ -22,6 +22,14 @@ unless Rails.env.production?
     sh "bundle exec bundle-audit --update --ignore CVE-2015-9284"
   end
 
+  task yarn_lint: :environment do
+    sh "yarn lint"
+  end
+
+  task yarn_test: :environment do
+    sh "yarn test"
+  end
+
   # Configure our own default.
   Rake::Task["default"].clear
 
@@ -44,6 +52,8 @@ unless Rails.env.production?
   # Run EVERYTHING
   task test_all_strict: :environment do
     ENV["CODE_COVERAGE_PERCENTAGE"] = "100"
+    Rake::Task[:yarn_lint].invoke
+    Rake::Task[:yarn_test].invoke
     Rake::Task[:rubocop].invoke
     Rake::Task[:erblint].invoke
     Rake::Task[:brakeman].invoke

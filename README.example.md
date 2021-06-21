@@ -8,12 +8,12 @@ This project is built on top of [Muffi](https://github.com/abtion/muffi).
 2. [Requirements](#requirements)
 3. [Developing](#developing)
    - [First time setup](#first-time-setup)
-      - [1. Configuration](#1-configuration)
-         - [Database connection](#database-connection)
-      - [2. Dependencies and database setup](#2-dependencies-and-database-setup)
-         - [Chrome driver](#chrome-driver)
-      - [3. Ensure that linting and tests pass](#3-ensure-that-linting-and-tests-pass)
-      - [4. Git hooks](#4-git-hooks)
+     - [1. Configuration](#1-configuration)
+       - [Database connection](#database-connection)
+     - [2. Dependencies and database setup](#2-dependencies-and-database-setup)
+       - [Chrome driver](#chrome-driver)
+     - [3. Ensure that linting and tests pass](#3-ensure-that-linting-and-tests-pass)
+     - [4. Git hooks](#4-git-hooks)
    - [Day-to-day](#day-to-day)
    - [Debugging](#debugging)
    - [Download production or staging DB](#download-production-or-staging-db)
@@ -121,8 +121,9 @@ The hooks are symlinked meaning all the changes to the repo hooks will automatic
 
 - Run the server: `bin/rails server` and [http://localhost:3000](http://localhost:3000)
 - Run tests: `bundle exec rspec`
-- Run rubocop: `bundle exec rubocop`
-- Run prettier: `bin/prettier`
+- Run rubocop: `bundle exec rubocop -a`
+- Run erblint: `bundle exec erblint --lint-all --autocorrect`
+- Run frontend linters: `yarn lint-fix`
 
 ## Debugging
 
@@ -172,6 +173,7 @@ By default, only admins are authorized to call a controller action.
 
 This project is using `Sidekiq` to run background jobs. `Sidekiq` provides a web-interface which gives a nice overview.
 Default credentials for staging are:
+
 ```
 user: abtion
 pass: password
