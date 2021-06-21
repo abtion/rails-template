@@ -9,15 +9,16 @@
    3. [Key features](#key-features)
    4. [Getting Started](#getting-started)
       1. [Start a new project](#start-a-new-project)
-      2. [Configure the project](#configure-the-project)
-      3. [Configure Code Climate](#configure-code-climate)
-      4. [Configure CD](#configure-cd)
-      5. [Configure i18n tasks](#configure-i18n-tasks)
-      6. [Setup mailing](#setup-mailing)
-      7. [Setup basic auth](#setup-basic-auth)
-      8. [Capybara drivers](#capybara-drivers)
-      9. [Capybara Screenshots in CI](#capybara-screenshots-in-ci)
-      10. [Set up Dependabot](#set-up-dependabot)
+      2. [Replace license](#replace-license)
+      3. [Configure the project](#configure-the-project)
+      4. [Configure Code Climate](#configure-code-climate)
+      5. [Configure CD](#configure-cd)
+      6. [Configure i18n tasks](#configure-i18n-tasks)
+      7. [Setup mailing](#setup-mailing)
+      8. [Setup basic auth](#setup-basic-auth)
+      9. [Capybara drivers](#capybara-drivers)
+      10. [Capybara Screenshots in CI](#capybara-screenshots-in-ci)
+      11. [Set up Dependabot](#set-up-dependabot)
    5. [Contributing](#contributing)
    6. [License](#license)
    7. [About Abtion](#about-abtion)
@@ -29,28 +30,28 @@ Ruby on Rails applications.
 
 ## What are the benefits of using Muffi?
 
-* Much less time spent on "first-time setup":
-   * Projects starting from the Muffi template include all the libraries we typically use at Abtion on the latest version.
-   * Basic functionality is there from the start; we can have the app live from the moment we start, start sending emails, or log in with a user to the system.
-* Lots of decisions are already made:
-   * We've made these same decisions many times - now we know which decisions are the right ones.
-* Fully functional test setup.
-   * Tests are not an afterthought. They are an integrated part of the development flow.
-   * Reliable software from day one.
-* Easy for developers to switch between similar projects.
-   * Easy to scale projects up and down. Developers know what to expect when they join the project. They've seen similar things before.
-   * Less reliance on specific people - the whole team can contribute even when a team member is not present.
+- Much less time spent on "first-time setup":
+  - Projects starting from the Muffi template include all the libraries we typically use at Abtion on the latest version.
+  - Basic functionality is there from the start; we can have the app live from the moment we start, start sending emails, or log in with a user to the system.
+- Lots of decisions are already made:
+  - We've made these same decisions many times - now we know which decisions are the right ones.
+- Fully functional test setup.
+  - Tests are not an afterthought. They are an integrated part of the development flow.
+  - Reliable software from day one.
+- Easy for developers to switch between similar projects.
+  - Easy to scale projects up and down. Developers know what to expect when they join the project. They've seen similar things before.
+  - Less reliance on specific people - the whole team can contribute even when a team member is not present.
 
 ## Key features
 
-* Heroku ready - Review apps, staging and production
-* Uses [devise](https://github.com/plataformatec/devise)
-* Uses [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions)
-* Uses [Jest](https://github.com/facebook/jest)
-* Uses [rspec](https://github.com/rspec/rspec-rails)
-* Uses [rubocop](https://github.com/bbatsov/rubocop)
-* Uses [simplecov](https://github.com/colszowka/simplecov)
-* Uses [i18n-tasks](https://github.com/glebm/i18n-tasks)
+- Heroku ready - Review apps, staging and production
+- Uses [devise](https://github.com/plataformatec/devise)
+- Uses [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions)
+- Uses [Jest](https://github.com/facebook/jest)
+- Uses [rspec](https://github.com/rspec/rspec-rails)
+- Uses [rubocop](https://github.com/bbatsov/rubocop)
+- Uses [simplecov](https://github.com/colszowka/simplecov)
+- Uses [i18n-tasks](https://github.com/glebm/i18n-tasks)
 
 ## Getting Started
 
@@ -61,6 +62,16 @@ using this repository as a template.
 
 Alternatively, clone this repository and change the git remote to point to
 your own repository.
+
+### Replace license
+
+Replace the contents of `LICENSE.md` with the following:
+
+```
+Copyright (C) Abtion - All Rights Reserved
+Unauthorized copying of this project, via any medium is strictly prohibited.
+Proprietary and confidential.
+```
 
 ### Configure the project
 
@@ -84,8 +95,8 @@ your own repository.
 
 1. Log in to the [Heroku dashboard](https://dashboard.heroku.com)
 2. Create a Pipeline, and two new applications
-    - Staging: `<PROJECT-NAME>-staging`
-    - Production: `<PROJECT-NAME>-production`
+   - Staging: `<PROJECT-NAME>-staging`
+   - Production: `<PROJECT-NAME>-production`
 3. Turn on "Review Apps" from the Pipeline's page
 4. Set Heroku config vars:
    - `MAIL_FROM` (review, staging and production).
@@ -119,8 +130,8 @@ For added security we want to add basic auth to our review/staging environments.
 
 1. Go to the Review/Staging app in the Heroku dashboard.
 2. Add environment variables for:
-  1. `HTTP_AUTH_USERNAME`
-  2. `HTTP_AUTH_PASSWORD`
+3. `HTTP_AUTH_USERNAME`
+4. `HTTP_AUTH_PASSWORD`
 
 ### Capybara drivers
 
@@ -154,7 +165,7 @@ Please see [CONTRIBUTING.md](https://github.com/abtion/muffi/blob/main/CONTRIBUT
 
 ## License
 
-[MIT](https://opensource.org/licenses/MIT)
+[Unlicense](https://unlicense.org/)
 
 ## About Abtion
 
