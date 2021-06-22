@@ -14,6 +14,7 @@ module.exports = {
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "double"],
     "quote-props": ["error", "consistent"],
+    "camelcase": ["error"],
 
     // Don't allow console.log
     "no-console": ["error"]
