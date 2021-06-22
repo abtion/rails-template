@@ -5,16 +5,6 @@
     "max-nesting-depth": 3,
     "selector-max-compound-selectors": 4,
     "selector-no-qualifying-type": null,
-    "string-quotes": "double",
-    "order/properties-alphabetical-order": null,
-    "declaration-bang-space-before": null,
-    "declaration-colon-space-after": null,
-    "no-missing-end-of-source-newline": null,
-    "number-leading-zero": null,
-    "selector-list-comma-newline-after": null,
-    "indentation": null,
-    "color-hex-case": null,
-    "function-comma-space-after": null
+    "string-quotes": "double"
   }
 }
-
