@@ -3,8 +3,12 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
+    jest: true,
   },
-  "extends": "eslint:recommended",
+  "extends": [
+    "eslint:recommended",
+    "plugin:jest-dom/recommended",
+  ],
   "parserOptions": {
     sourceType: "module",
   },
