@@ -27,7 +27,7 @@ unless Rails.env.production?
   end
 
   task bundle_audit: :environment do
-    sh "bundle exec bundle-audit --update --ignore CVE-2015-9284"
+    sh "bundle exec bundle-audit --update"
   end
 
   task yarn_lint: :environment do
