@@ -14,6 +14,14 @@ unless Rails.env.production?
     sh "bundle exec erblint --lint-all"
   end
 
+  task erblint_fix: :environment do
+    sh "bundle exec erblint --lint-all --autocorrect"
+  end
+
+  task rubocop_fix: :environment do
+    sh "bundle exec rubocop --auto-correct"
+  end
+
   task brakeman: :environment do
     sh "bundle exec brakeman --quiet --no-summary"
   end
@@ -47,6 +55,17 @@ unless Rails.env.production?
   task test_strict: :environment do
     ENV["CODE_COVERAGE_PERCENTAGE"] = "100"
     Rake::Task[:spec].invoke
+  end
+
+  task lint: :environment do
+    Rake::Task[:rubocop].invoke
+    Rake::Task[:erblint].invoke
+    Rake::Task[:brakeman].invoke
+  end
+
+  task lint_fix: :environment do
+    Rake::Task[:rubocop_fix].invoke
+    Rake::Task[:erblint_fix].invoke
   end
 
   # Run EVERYTHING

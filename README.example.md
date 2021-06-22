@@ -121,8 +121,7 @@ The hooks are symlinked meaning all the changes to the repo hooks will automatic
 
 - Run the server: `bin/rails server` and [http://localhost:3000](http://localhost:3000)
 - Run tests: `bundle exec rspec`
-- Run rubocop: `bundle exec rubocop -a`
-- Run erblint: `bundle exec erblint --lint-all --autocorrect`
+- Run backend linters: `bin/rails lint_fix`
 - Run frontend linters: `yarn lint-fix`
 
 ## Debugging
