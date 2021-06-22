@@ -23,4 +23,4 @@ plugins:
   # https://docs.codeclimate.com/docs/rubocop
   rubocop:
     enabled: true
-    channel: rubocop-0-74
+    channel: rubocop-1-10-0
