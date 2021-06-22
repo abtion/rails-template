@@ -40,9 +40,7 @@ RSpec.describe "devise/sessions/new", type: :view do
   end
 
   context "with Danish locale" do
-    before { I18n.locale = :da }
-
-    after { I18n.locale = I18n.default_locale }
+    around { |example| I18n.with_locale(:da) { example.run } }
 
     it "displays danish text" do
       stub_devise_helpers
@@ -92,9 +90,7 @@ RSpec.describe "devise/sessions/new", type: :view do
   end
 
   context "with English locale" do
-    before { I18n.locale = :en }
-
-    after { I18n.locale = I18n.default_locale }
+    around { |example| I18n.with_locale(:en) { example.run } }
 
     it "displays English text" do
       stub_devise_helpers
