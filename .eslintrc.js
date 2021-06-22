@@ -12,7 +12,7 @@ module.exports = {
     // enable additional rules
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "double"],
+    "quotes": ["error", "double", { "avoidEscape": true }],
     "quote-props": ["error", "consistent"],
 
     // Don't allow console.log
