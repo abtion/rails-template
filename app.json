@@ -19,7 +19,14 @@
     },
     "heroku-redis:hobby-dev"
   ],
-  "buildpacks": [],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
   "env": {
     "MAIL_FROM": {
       "required": true
