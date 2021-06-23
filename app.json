@@ -8,6 +8,9 @@
         "HTTP_AUTH_USERNAME": {
           "required": true
         }
+      },
+      "scripts": {
+        "postdeploy": "bundle exec rails db:seed"
       }
     }
   },
@@ -41,12 +44,5 @@
   "formation": {},
   "name": "project-name-param",
   "scripts": {},
-  "stack": "heroku-18",
-  "environments": {
-    "review": {
-      "scripts": {
-        "postdeploy": "bundle exec rails db:seed"
-      }
-    }
-  }
+  "stack": "heroku-18"
 }
