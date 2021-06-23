@@ -159,10 +159,10 @@ Inclusions:
 - Rubocop for linting ruby files
 - CSP header is configured, so if you need to use remotely hosted javascript, you must whitelist it in `config/initializers/content_security_policy.rb`
 - Sidekiq for running jobs
+- Spring (without binstubs)
 
 Exclusions:
 
-- Spring
 - Turbolinks
 
 ## Devise User Authorization
