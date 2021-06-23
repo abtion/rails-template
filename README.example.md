@@ -124,6 +124,11 @@ The hooks are symlinked meaning all the changes to the repo hooks will automatic
 - Run backend linters: `bin/rails lint_fix`
 - Run frontend linters: `yarn lint-fix`
 
+Spring has also been installed for development. The binstubs have not been generated but you can run it with:
+```sh
+bundle exec spring rspec
+```
+
 ## Debugging
 
 - Call `byebug` anywhere in the code to stop execution and get a debugger console.
