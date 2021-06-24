@@ -32,7 +32,7 @@ module RspecRubocopStagedFiles
       return true unless files.any?
 
       puts "Running Rspec"
-      system "bundle exec rspec #{files.join(' ')}"
+      system "DISABLE_SIMPLECOV=true bundle exec rspec #{files.join(' ')}"
     end
 
     def staged_files
