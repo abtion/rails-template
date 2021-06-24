@@ -1,4 +1,5 @@
 module.exports = {
+  collectCoverage: true,
   roots: [
     "spec/javascript",
   ],
