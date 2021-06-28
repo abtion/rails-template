@@ -8,7 +8,7 @@
     "lint-fix": "prettier frontend --write; eslint --fix frontend; stylelint --fix 'frontend/**/*.scss'"
   },
   "dependencies": {
-    "@rails/actioncable": "^6.0.0",
+    "@rails/actioncable": "^6.1.4",
     "@rails/activestorage": "^6.1.4",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "^5.2.1",
