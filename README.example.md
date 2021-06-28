@@ -44,7 +44,7 @@ Name, and a short description of any services that the project is using (error t
 You must have the following installed and available on your machine:
 
 - **Ruby 2.7.x**
-- **Node JS 12.x**
+- **Node JS 14.x**
 - **Yarn 1.x**
 - **PostgreSQL 12**
 - **Redis**
