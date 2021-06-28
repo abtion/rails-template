@@ -39,6 +39,9 @@
     },
     "SEED_ADMIN_INITIAL_PASSWORD": {
       "required": true
+    },
+    "REDIS_URL": {
+      "required": true
     }
   },
   "formation": {},
