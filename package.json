@@ -8,14 +8,14 @@
     "lint-fix": "prettier frontend --write; eslint --fix frontend; stylelint --fix 'frontend/**/*.scss'"
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
     "@rails/actioncable": "^6.1.4",
     "@rails/activestorage": "^6.1.4",
     "@rails/ujs": "^6.1.4",
     "@rails/webpacker": "^5.2.1",
-    "bootstrap": "4.6.0",
+    "bootstrap": "5.0.2",
     "dot-prop": "^6.0.1",
     "jquery": "^3.6.0",
-    "popper.js": "^1.15.0",
     "webpack": "^4.0.0"
   },
   "engines": {
