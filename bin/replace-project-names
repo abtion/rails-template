@@ -51,7 +51,7 @@ module MuffiFileRenamer
 
     def files
       files = `git ls-tree -r main --name-only`.split("\n")
-      files - ["README.md", "bin/rename-files"]
+      files - ["README.md", "bin/replace-project-names"]
     end
 
     def project_name
