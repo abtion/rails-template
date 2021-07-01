@@ -1,0 +1,5 @@
+---
+en:
+  policies:
+    application:
+      you_are_not_logged_in: You are not logged in
