@@ -3,10 +3,10 @@
 require "rails_helper"
 
 RSpec.describe ApplicationController, type: :controller do
-  context "when CanCan::AccessDenied error is risen" do
+  context "when Pundit::NotAuthorizedError error is risen" do
     controller do
       def index
-        raise CanCan::AccessDenied.new("Not authorized!", :manage, :all)
+        raise Pundit::NotAuthorizedError, "Not authorized!"
       end
     end
 

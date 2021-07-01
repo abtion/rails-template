@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  rescue_from CanCan::AccessDenied, with: :access_denied
+  include Pundit
+  rescue_from Pundit::NotAuthorizedError, with: :access_denied
   before_action :basic_auth_wall, if: -> { ENV["HTTP_AUTH_PASSWORD"].present? }
 
   protected
