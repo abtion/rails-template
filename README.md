@@ -63,6 +63,13 @@ using this repository as a template.
 Alternatively, clone this repository and change the git remote to point to
 your own repository.
 
+####
+
+Set up branch protection rules:
+* Require status checks before merging (all except bundle-audit).
+* Require branches to be up to date.
+* Require signed commits.
+
 ### Replace license
 
 Replace the contents of `LICENSE.md` with the following:
