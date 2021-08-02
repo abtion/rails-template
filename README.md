@@ -5,9 +5,10 @@
 
 1. [Muffi](#muffi)
    1. [What is Muffi?](#what-is-muffi)
-   2. [What are the benefits of using Muffi?](#what-are-the-benefits-of-using-muffi)
-   3. [Key features](#key-features)
-   4. [Getting Started](#getting-started)
+      1. [What are the benefits of using Muffi?](#what-are-the-benefits-of-using-muffi)
+      2. [Muffi challenges](#muffi-challenges)
+   2. [Key features](#key-features)
+   3. [Getting Started](#getting-started)
       1. [Start a new project](#start-a-new-project)
       2. [Replace license](#replace-license)
       3. [Configure the project](#configure-the-project)
@@ -19,16 +20,16 @@
       9. [Capybara drivers](#capybara-drivers)
       10. [Capybara Screenshots in CI](#capybara-screenshots-in-ci)
       11. [Set up Dependabot](#set-up-dependabot)
-   5. [Contributing](#contributing)
-   6. [License](#license)
-   7. [About Abtion](#about-abtion)
+   4. [Contributing](#contributing)
+   5. [License](#license)
+   6. [About Abtion](#about-abtion)
 
 ## What is Muffi?
 
 Muffi is a project template maintained by [Abtion](https://abtion.com/) and used to kick start
 Ruby on Rails applications.
 
-## What are the benefits of using Muffi?
+### What are the benefits of using Muffi?
 
 - Much less time spent on "first-time setup":
   - Projects starting from the Muffi template include all the libraries we typically use at Abtion on the latest version.
@@ -41,6 +42,11 @@ Ruby on Rails applications.
 - Easy for developers to switch between similar projects.
   - Easy to scale projects up and down. Developers know what to expect when they join the project. They've seen similar things before.
   - Less reliance on specific people - the whole team can contribute even when a team member is not present.
+
+### Muffi challenges
+
+- We want to be open to multiple unknown futures, with one single template.
+- It is difficult to decide what belongs to Muffi (feature creep)
 
 ## Key features
 
@@ -66,9 +72,10 @@ your own repository.
 ####
 
 Set up branch protection rules:
-* Require status checks before merging (all except bundle-audit).
-* Require branches to be up to date.
-* Require signed commits.
+
+- Require status checks before merging (all except bundle-audit).
+- Require branches to be up to date.
+- Require signed commits.
 
 ### Replace license
 
