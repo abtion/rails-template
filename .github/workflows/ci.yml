@@ -216,6 +216,7 @@ jobs:
         run: bundle exec rspec
       - name: Archive coverage
         uses: actions/upload-artifact@v2
+        if: always()
         with:
           name: coverage
           path: |
