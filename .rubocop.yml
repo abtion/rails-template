@@ -57,9 +57,6 @@ Metrics/MethodLength:
 Rails/FilePath:
   EnforcedStyle: arguments
 
-Style/FrozenStringLiteralComment:
-  EnforcedStyle: always
-
 Style/Documentation:
   Enabled: false
 
