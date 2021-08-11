@@ -99,9 +99,6 @@ Style/StringLiterals:
 Style/SymbolArray:
   EnforcedStyle: brackets
 
-RSpec/DescribeClass:
-  Enabled: true
-
 RSpec/DescribedClass:
   EnforcedStyle: explicit
 
