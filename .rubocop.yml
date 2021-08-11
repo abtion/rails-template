@@ -18,9 +18,6 @@ AllCops:
     - "vendor/**/*"
     - "db/schema.rb"
 
-Bundler/DuplicatedGem:
-  Enabled: true
-
 Bundler/OrderedGems:
   Enabled: true
 
