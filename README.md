@@ -65,9 +65,10 @@ Ruby on Rails applications.
 
 To start a new project with Muffi, simply create a new repository on GitHub
 using this repository as a template.
+(You loose the Muffi history, adding everything in Muffi at that time as a single initial commit)
 
-Alternatively, clone this repository and change the git remote to point to
-your own repository.
+Alternatively, import Muffi into a new repository by going to https://github.com/new/import and specify https://github.com/abtion/muffi.git
+(You retain all the Muffi history)
 
 ####
 
