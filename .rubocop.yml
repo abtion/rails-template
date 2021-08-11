@@ -114,12 +114,6 @@ RSpec/LeadingSubject:
 RSpec/NestedGroups:
   Max: 5
 
-RSpec/ContextWording:
-  Prefixes:
-    - when
-    - with
-    - without
-
 RSpec/VerifiedDoubles:
   Enabled: false
 
