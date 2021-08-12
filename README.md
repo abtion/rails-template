@@ -108,16 +108,27 @@ Proprietary and confidential.
 
 ### Configure CD
 
-1. Log in to the [Heroku dashboard](https://dashboard.heroku.com)
-2. Create a Pipeline, and two new applications
-   - Staging: `<PROJECT-NAME>-staging`
-   - Production: `<PROJECT-NAME>-production`
-3. Turn on "Review Apps" from the Pipeline's page
-4. Set Heroku config vars:
-   - `MAIL_FROM` (review, staging and production).
-   - `DOMAIN_NAME` (ONLY staging and production)
-   - `SEED_ADMIN_EMAIL` (review)
-   - `SEED_ADMIN_INITIAL_PASSWORD` (review)
+1. Create staging heroku app based on the muffi template.
+   1. Visit: https://dashboard.heroku.com/new?org=abtion&template=https%3A%2F%2Fgithub.com%2Fabtion%2Fmuffi
+   2. Fill in the name with `<PROJECT-NAME>-staging`.
+   3. Select europe as region.
+   4. Create a new pipeline for the project `<PROJECT-NAME>`.
+   5. Fill in required env vars (read the field descriptions for guidance).
+   6. Press the deploy button.
+   7. Take a 5 minute break while heroku sets up app and pipeline.
+   8. Sometimes the app will build, but it doesn't go on with the next steps and there is a not very informative error message. If so the app has likely been deployed, but not added to the pipeline. You will then have to manually create the pipeline and add the app to it.
+2. Create the production app the same way as the staging app, only this time:
+   - Name the app `<PROJECT-NAME>-production`.
+   - Add the app the `<PROJECT-NAME>` pipeline rather than creating one.
+3. Go to the pipeline "manage app" -> select the pipeline in the breadcrump.
+4. Connect the pipeline to the project's github repo. (There should be a "Connect to Github" button).
+5. Enable review apps.
+6. Add config vars for review apps:
+   - `SEED_ADMIN_EMAIL`
+   - `SEED_ADMIN_INITIAL_PASSWORD`
+   - `HTTP_AUTH_USERNAME`
+   - `HTTP_AUTH_PASSWORD`
+   - `MAIL_FROM`
 
 ### Configure i18n tasks
 
