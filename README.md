@@ -120,7 +120,7 @@ Proprietary and confidential.
 2. Create the production app the same way as the staging app, only this time:
    - Name the app `<PROJECT-NAME>-production`.
    - Add the app the `<PROJECT-NAME>` pipeline rather than creating one.
-3. Go to the pipeline "manage app" -> select the pipeline in the breadcrump.
+3. Go to the pipeline "manage app" -> select the pipeline in the breadcrumb.
 4. Connect the pipeline to the project's github repo. (There should be a "Connect to Github" button).
 5. Enable review apps.
 6. Add config vars for review apps:
