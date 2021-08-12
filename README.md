@@ -116,7 +116,8 @@ Proprietary and confidential.
    5. Fill in required env vars (read the field descriptions for guidance).
    6. Press the deploy button.
    7. Take a 5 minute break while heroku sets up app and pipeline.
-   8. Sometimes the app will build, but it doesn't go on with the next steps and there is a not very informative error message. If so the app has likely been deployed, but not added to the pipeline. You will then have to manually create the pipeline and add the app to it.
+   8. Sometimes the app will build, but it doesn't go on with the next steps and there is a not very informative error message.
+      - If so the app has likely been deployed, but not added to the pipeline. You will then have to manually create the pipeline and add the app to it.
 2. Create the production app the same way as the staging app, only this time:
    - Name the app `<PROJECT-NAME>-production`.
    - Add the app to the `<PROJECT-NAME>` pipeline rather than creating one.
