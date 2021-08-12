@@ -16,6 +16,7 @@ Rails.application.configure do
 
     if Rails.env.test?
       Bullet.raise = true # raise an error if n+1 query occurs
+      Bullet.unused_eager_loading_enable = false
     end
   end
 end
