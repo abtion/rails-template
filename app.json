@@ -44,5 +44,5 @@
   "formation": {},
   "name": "project-name-param",
   "scripts": {},
-  "stack": "heroku-18"
+  "stack": "heroku-20"
 }
