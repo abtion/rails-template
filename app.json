@@ -13,6 +13,9 @@
         },
         "SEED_ADMIN_INITIAL_PASSWORD": {
           "required": true
+        },
+        "DOMAIN_NAME": {
+          "required": false
         }
       },
       "scripts": {
@@ -38,6 +41,11 @@
   ],
   "env": {
     "MAIL_FROM": {
+      "description": "Sender address for emails",
+      "required": true
+    },
+    "DOMAIN_NAME": {
+      "description": "The domain for the app. If this has not been decided yet, use <App name>.herokuapp.com",
       "required": true
     }
   },
