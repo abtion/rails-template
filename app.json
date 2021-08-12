@@ -7,6 +7,12 @@
         },
         "HTTP_AUTH_USERNAME": {
           "required": true
+        },
+        "SEED_ADMIN_EMAIL": {
+          "required": true
+        },
+        "SEED_ADMIN_INITIAL_PASSWORD": {
+          "required": true
         }
       },
       "scripts": {
@@ -32,12 +38,6 @@
   ],
   "env": {
     "MAIL_FROM": {
-      "required": true
-    },
-    "SEED_ADMIN_EMAIL": {
-      "required": true
-    },
-    "SEED_ADMIN_INITIAL_PASSWORD": {
       "required": true
     }
   },
