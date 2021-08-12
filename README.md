@@ -119,7 +119,7 @@ Proprietary and confidential.
    8. Sometimes the app will build, but it doesn't go on with the next steps and there is a not very informative error message. If so the app has likely been deployed, but not added to the pipeline. You will then have to manually create the pipeline and add the app to it.
 2. Create the production app the same way as the staging app, only this time:
    - Name the app `<PROJECT-NAME>-production`.
-   - Add the app the `<PROJECT-NAME>` pipeline rather than creating one.
+   - Add the app to the `<PROJECT-NAME>` pipeline rather than creating one.
 3. Go to the pipeline "manage app" -> select the pipeline in the breadcrumb.
 4. Connect the pipeline to the project's github repo. (There should be a "Connect to Github" button).
 5. Enable review apps.
