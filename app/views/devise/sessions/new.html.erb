@@ -15,7 +15,7 @@
       <div class="mb-4">
         <%= f.label(:password, class: "form-label") %>
         <%= f.password_field(:password, autocomplete: "current-password", placeholder: true, class: "form-control") %>
-        <small class="mt-2 d-flex justify-content-end"><%= link_to t(".forgot_your_password"), new_password_path(resource_name), class: "link-secondary" %></small>
+        <small class="mt-2 d-flex justify-content-end"><%= link_to t(".forgot_your_password"), new_password_path(resource_name), class: "link-primary" %></small>
       </div>
 
       <% if devise_mapping.rememberable? %>
