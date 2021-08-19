@@ -43,7 +43,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "listen", "~> 3.6"
+  gem "listen", "~> 3.7"
   gem "pivotal_git_scripts"
   gem "rack-mini-profiler", "~> 2.3"
   gem "spring", require: false
