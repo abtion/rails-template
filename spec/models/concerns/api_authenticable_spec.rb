@@ -4,12 +4,33 @@ require "rails_helper"
 
 RSpec.describe ApiAuthenticable, type: :model do
   describe "before_create" do
-    it "sets an authentication_token automatically" do
-      user = build(:user, authentication_token: nil)
-      user.save
+    context "when class can be found by token" do
+      it "sets an authentication_token automatically" do
+        user = build(:user, authentication_token: nil)
+        user.save
 
-      expect(user.authentication_token).to_not be_nil
-      expect(user.authentication_token.length).to eq(ApiAuthenticable::AUTHENTICATION_TOKEN_LENGTH)
+        expect(user.authentication_token).to_not be_nil
+        expect(user.authentication_token.length).to eq(
+          ApiAuthenticable::AUTHENTICATION_TOKEN_LENGTH
+        )
+      end
+    end
+
+    context "when class already has token" do
+      it "does not alter theauthentication_token" do
+        old_token = Devise.friendly_token(ApiAuthenticable::AUTHENTICATION_TOKEN_LENGTH)
+        new_token = Devise.friendly_token(ApiAuthenticable::AUTHENTICATION_TOKEN_LENGTH)
+        user = build(:user, authentication_token: old_token)
+
+        allow(Devise).to receive(:friendly_token).and_return(old_token, new_token)
+        allow(User).to receive(:find_by).and_return(true, false)
+
+        user.save
+
+        expect(user.authentication_token).to eq(new_token)
+        expect(User).to have_received(:find_by).twice
+        expect(Devise).to have_received(:friendly_token).twice
+      end
     end
   end
 
