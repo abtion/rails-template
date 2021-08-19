@@ -42,7 +42,7 @@ RSpec.describe Rack::Attack, type: :request do
       it "does not change the request status" do
         limit.times do
           get "/", env: { REMOTE_ADDR: "1.2.3.4" }
-          expect(response.status).not_to(eq(429))
+          expect(response.status).to_not eq(429)
         end
       end
     end
@@ -61,7 +61,7 @@ RSpec.describe Rack::Attack, type: :request do
         it "doesn't throttle the requests" do
           requests_to_force_limit(limit).times do |i|
             get "/", env: { REMOTE_ADDR: "1.2.3.#{i}" }
-            expect(response.status).not_to(eq(429))
+            expect(response.status).to_not eq(429)
           end
         end
       end

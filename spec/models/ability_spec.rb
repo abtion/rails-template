@@ -18,7 +18,7 @@ RSpec.describe Ability, type: :model do
       admin = build(:user)
       ability = Ability.new(admin)
 
-      expect(ability).not_to(be_able_to(:manage, :all))
+      expect(ability).to_not be_able_to(:manage, :all)
     end
   end
 
@@ -26,7 +26,7 @@ RSpec.describe Ability, type: :model do
     it "doesn't explode and isn't able to manage all" do
       ability = Ability.new(nil)
 
-      expect(ability).not_to(be_able_to(:manage, :all))
+      expect(ability).to_not be_able_to(:manage, :all)
     end
   end
 end
