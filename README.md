@@ -183,7 +183,7 @@ token to the settings of your project on GitHub. Follow these steps:
 2. Set up the token
    1. Go to "Settings" > "Secrets" for the repository.
    2. Click "New secret".
-   3. Set the name to `DEPENDABOT_TOKEN` and insert the token.
+   3. Set the name to `AUTO_MERGE_TOKEN` and insert the token.
    4. Click "Add secret".
 
 ## Contributing
