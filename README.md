@@ -177,11 +177,14 @@ When a spec using Capybara fails in CI a screenshot will be saved under Github A
 To allow Dependabot to auto-merge security updates, you need to add a secret
 token to the settings of your project on GitHub. Follow these steps:
 
-1. Go to "Settings" > "Secrets".
-2. Click "New secret".
-3. Set the name to `DEPENDABOT_TOKEN` and insert a secret key (must be maximum
-   64 kb).
-4. Click "Add secret".
+1. Acquire a token
+   1. Sign into github using the client github account (for more info, see: https://inside.abtion.com/tools_and_services/access_and_permissions.html#github).
+   2. Create an access token (use this guide: https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+2. Set up the token
+   1. Go to "Settings" > "Secrets" for the repository.
+   2. Click "New secret".
+   3. Set the name to `DEPENDABOT_TOKEN` and insert the token.
+   4. Click "Add secret".
 
 ## Contributing
 
