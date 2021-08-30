@@ -70,7 +70,7 @@ RSpec.describe Rack::Attack, type: :request do
             statuses[i] = response.status
           end
 
-          expect(statuses).not_to(include(429))
+          expect(statuses).to_not include(429)
         end
       end
     end
