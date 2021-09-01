@@ -40,7 +40,7 @@ RSpec.describe Rack::Attack, type: :request do
   describe "IP address throttling" do
     let(:limit) { 20 }
 
-    context "when the number of requests is lower than the limit" do
+    context "when the number of requests does not exceed the limit" do
       it "does not change the request status" do
         limit.times do
           get "/", env: { REMOTE_ADDR: "1.2.3.4" }
