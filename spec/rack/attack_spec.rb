@@ -22,9 +22,11 @@ RSpec.describe Rack::Attack, type: :request do
     # bucket will be emptied next. So it is not certain that throwing 21 balls at the bucket will
     # make it overflow.
     #
-    # If we however throw 41 balls, we are sure to make the bucket overflow.
-    # Even if the bucket is after we've thrown our first 20 balls, that still leaves 21 more balls
-    # to fill the bucket afterwards
+    # If we however throw 41 balls, we are sure to make one of the bucket overflow.
+    # Even if the bucket is emptied after we've thrown our first 20 balls,
+    # that still leaves 21 more balls which are certain to go into the same bucket and fill it.
+    # If the bucket is emptied after throwing 40 balls, the last ball will go into an empty bucket
+    # and not overflow it. However, then the previous bucket should have overflowed.
     limit * 2 + 1
   end
 
@@ -38,7 +40,7 @@ RSpec.describe Rack::Attack, type: :request do
   describe "IP address throttling" do
     let(:limit) { 20 }
 
-    context "when the number of requests is lower than the limit" do
+    context "when the number of requests does not exceed the limit" do
       it "does not change the request status" do
         limit.times do
           get "/", env: { REMOTE_ADDR: "1.2.3.4" }
@@ -49,20 +51,26 @@ RSpec.describe Rack::Attack, type: :request do
 
     context "when the number of requests is higher than the limit" do
       it "changes the request status to 429" do
-        request_count = requests_to_force_limit(limit)
+        statuses = []
 
-        request_count.times do |i|
+        requests_to_force_limit(limit).times do |i|
           get "/", env: { REMOTE_ADDR: "1.2.3.5" }
-          expect(response.status).to eq(429) if i == request_count - 1
+          statuses[i] = response.status
         end
+
+        expect(statuses).to include(429)
       end
 
       context "when the IP-adresses are not the same" do
         it "doesn't throttle the requests" do
+          statuses = []
+
           requests_to_force_limit(limit).times do |i|
             get "/", env: { REMOTE_ADDR: "1.2.3.#{i}" }
-            expect(response.status).to_not eq(429)
+            statuses[i] = response.status
           end
+
+          expect(statuses).to_not include(429)
         end
       end
     end
