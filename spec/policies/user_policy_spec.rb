@@ -21,7 +21,7 @@ RSpec.describe UserPolicy, type: :policy do
   context "when user is not admin" do
     permissions :index?, :new?, :create?, :edit?, :update?, :destroy?, :show? do
       it "denies access" do
-        expect(UserPolicy).not_to permit(build(:user))
+        expect(UserPolicy).to_not(permit(build(:user)))
       end
     end
 
