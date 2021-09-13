@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
-# Permitted locales available for the application
-I18n.available_locales = [:en, :da]
-# Set default locale to something other than :en
-I18n.default_locale = :en
+module ProjectNamePascal
+  class Application < Rails::Application
+    config.i18n.available_locales = [:da, :en]
+    config.i18n.default_locale = ENV.fetch("LOCALE", "en")
+    config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**", "*.yml")]
+  end
+end
