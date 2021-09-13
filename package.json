@@ -8,7 +8,7 @@
     "lint-fix": "prettier frontend --write; eslint --fix frontend; stylelint --fix 'frontend/**/*.scss'"
   },
   "dependencies": {
-    "@popperjs/core": "^2.9.2",
+    "@popperjs/core": "^2.10.1",
     "@rails/actioncable": "^6.1.4",
     "@rails/activestorage": "^6.1.4",
     "@rails/ujs": "^6.1.4",
