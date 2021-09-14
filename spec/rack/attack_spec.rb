@@ -27,7 +27,7 @@ RSpec.describe Rack::Attack, type: :request do
     # that still leaves 21 more balls which are certain to go into the same bucket and fill it.
     # If the bucket is emptied after throwing 40 balls, the last ball will go into an empty bucket
     # and not overflow it. However, then the previous bucket should have overflowed.
-    limit * 2 + 1
+    (limit * 2) + 1
   end
 
   before do
