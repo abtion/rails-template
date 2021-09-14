@@ -16,7 +16,7 @@ data:
   # Locale files or `File.find` patterns where translations are read from:
   read:
     ## Default:
-    - config/locales/%{locale}.yml
+    - config/locales/**/%{locale}.yml
     ## More files:
     - config/locales/**/*.%{locale}.yml
 
