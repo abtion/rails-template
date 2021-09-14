@@ -20,6 +20,7 @@
       9. [Capybara drivers](#capybara-drivers)
       10. [Capybara Screenshots in CI](#capybara-screenshots-in-ci)
       11. [Set up Dependabot](#set-up-dependabot)
+      12. [Set up database backups](#set-up-database-backups)
    4. [Contributing](#contributing)
    5. [License](#license)
    6. [About Abtion](#about-abtion)
@@ -185,6 +186,10 @@ token to the settings of your project on GitHub. Follow these steps:
    2. Click "New secret".
    3. Set the name to `AUTO_MERGE_TOKEN` and insert the token.
    4. Click "Add secret".
+
+### Set up database backups
+
+To enable DB backups, see this guide: https://github.com/abtion/heroku-db-backup-s3
 
 ## Contributing
 
