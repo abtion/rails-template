@@ -4,8 +4,8 @@
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
-    "lint": "prettier frontend --check && eslint frontend && stylelint 'frontend/**/*.scss'",
-    "lint-fix": "prettier frontend --write; eslint --fix frontend; stylelint --fix 'frontend/**/*.scss'"
+    "lint": "prettier app/packs --check && eslint app/packs && stylelint 'app/packs/**/*.scss'",
+    "lint-fix": "prettier app/packs --write; eslint --fix app/packs; stylelint --fix 'app/packs/**/*.scss'"
   },
   "dependencies": {
     "@popperjs/core": "^2.10.1",
