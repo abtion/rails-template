@@ -16,7 +16,7 @@ RSpec.describe "devise/sessions/new", type: :view do
 
     render
 
-    logo_selector = "img[src*='muffi-logo']"
+    logo_selector = "img[src*='.svg']"
 
     expect(rendered).to have_css(logo_selector)
   end
