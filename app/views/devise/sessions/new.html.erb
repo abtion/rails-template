@@ -1,46 +1,47 @@
-<div class="row vh-100">
-  <div class="col-12 col-md-6 p-4">
-    <%= image_pack_tag("muffi-logo.svg", class: "position-absolute") %>
+<div class="w-full h-full md:flex">
+  <div class="w-full h-full p-6 md:w-1/2">
+    <%= image_pack_tag("muffi-logo.svg", class: "absolute") %>
 
-    <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="flex items-center justify-center h-full">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "mx-auto max-w-sm w-full" }) do |f| %>
+        <h2 class="text-3xl font-semibold mb-12"><%= t(".sign_in") %></h2>
 
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "mx-auto" }) do |f| %>
-      <h2 class="mb-5"><%= t(".sign_in") %></h2>
-
-      <div class="mb-4">
-        <%= f.label(:email, class: "form-label") %>
-        <%= f.email_field(:email, autofocus: true, autocomplete: "email", placeholder: true, class: "form-control") %>
-      </div>
-
-      <div class="mb-4">
-        <%= f.label(:password, class: "form-label") %>
-        <%= f.password_field(:password, autocomplete: "current-password", placeholder: true, class: "form-control") %>
-        <small class="mt-2 d-flex justify-content-end"><%= link_to t(".forgot_your_password"), new_password_path(resource_name), class: "link-primary" %></small>
-      </div>
-
-      <% if devise_mapping.rememberable? %>
-        <div class="form-check mb-2">
-          <%= f.check_box(:remember_me, class: "form-check-input") %>
-          <%= f.label(:remember_me, class: "form-check-label") %>
+        <div class="mb-6">
+          <%= f.label(:email, class: "mb-2 inline-block") %>
+          <%= f.email_field(:email, autofocus: true, autocomplete: "email", placeholder: true, class: "block w-full border-2 border-gray-300 rounded-md px-2 py-2 md:px-3 md:py-3 focus:outline-none focus:ring-blue-500 focus:ring-1 focus:border-blue-500") %>
         </div>
-      <% end %>
 
-      <div class="actions">
-        <%= f.submit(t(".sign_in"), class: "btn btn-primary w-100 py-3") %>
-      </div>
-
-      <% if devise_mapping.registerable? %>
-        <div class="pt-2">
-          <small class="text-muted">
-            <%= t(".dont_have_an_account") %>
-            <%= link_to(t(".sign_up"), new_registration_path(resource_name)) %>.
+        <div class="mb-6">
+          <%= f.label(:password, class: "mb-2 inline-block") %>
+          <%= f.password_field(:password, autocomplete: "current-password", placeholder: true, class: "block w-full border-2 border-gray-300 rounded-md px-2 py-2 md:px-3 md:py-3 focus:outline-none focus:ring-blue-500 focus:ring-1 focus:border-blue-500") %>
+          <small class="text-sm block text-right mt-3">
+            <%= link_to t(".forgot_your_password"), new_password_path(resource_name) %>
           </small>
         </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="flex items-center mb-3">
+            <%= f.check_box(:remember_me, class: "form-check-input mr-2 h-4 w-4") %>
+            <%= f.label(:remember_me, class: "form-check-label") %>
+          </div>
+        <% end %>
+
+        <div class="actions">
+          <%= f.submit(t(".sign_in"), class: "w-full px-4 py-3 border border-transparent text-base rounded-md text-white bg-blue-600 hover:bg-blue-700 md:text-lg md:px-8") %>
+        </div>
+
+        <% if devise_mapping.registerable? %>
+          <div class="mt-3">
+            <small class="text-sm block text-right">
+              <%= t(".dont_have_an_account") %>
+              <%= link_to(t(".sign_up"), new_registration_path(resource_name)) %>.
+            </small>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
   </div>
 
-  <div class="col-6 p-0 d-md-block d-none placeholder-image">
+  <div class="hidden md:w-1/2 md:block md:h-full placeholder-image">
   </div>
 </div>
