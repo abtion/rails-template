@@ -9,6 +9,4 @@ webpackConfig.plugins.unshift(
   })
 )
 
-webpackConfig.resolve.extensions.unshift(".css")
-
 module.exports = webpackConfig
