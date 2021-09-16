@@ -21,7 +21,7 @@ gem "rollbar"
 gem "sendgrid-actionmailer"
 gem "sidekiq"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "webpacker", "~> 5.4"
+gem "webpacker", "~> 6.0.0.rc5"
 
 group :development, :test do
   gem "abtion-scripts"

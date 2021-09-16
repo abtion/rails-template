@@ -58,7 +58,7 @@ jobs:
       - name: yarn
         run: yarn --frozen-lockfile
       - name: stylelint
-        run: npx stylelint "frontend/**/*.scss"
+        run: npx stylelint "app/packs/**/*.scss"
   bundle-audit:
     runs-on: ubuntu-latest
     steps:
@@ -125,7 +125,7 @@ jobs:
       - name: yarn
         run: yarn --frozen-lockfile
       - name: prettier
-        run: yarn prettier frontend --check
+        run: yarn prettier app/packs --check
   schema:
     runs-on: ubuntu-latest
 
