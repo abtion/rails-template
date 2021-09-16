@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en-US'>
+<html lang='en-US' class="h-full">
   <head>
     <title>Project Name Human</title>
     <meta charset='UTF-8'>
@@ -10,8 +10,8 @@
     <%= stylesheet_pack_tag "application" %>
   </head>
 
-  <body class="<%= "#{controller.controller_name} #{@body_class}".strip %>">
-    <main class="container-fluid">
+  <body class="<%= "#{controller.controller_name} #{@body_class}".strip %> h-full">
+    <main class="w-full h-full">
       <%= yield %>
     </main>
   </body>
