@@ -15,3 +15,11 @@ require("@rails/activestorage").start()
 require.context("../images", true)
 
 require("../stylesheets/application.scss")
+
+// Define CSS variables for all colors
+// These variables are used by tailwind.
+// We use variables because they are easy to override in dev tools, or local selectors
+const colorCssVariables = require("../const/colors").cssVariables
+const cssRoot = document.querySelector(":root")
+
+Object.entries(colorCssVariables).forEach(([name, value]) => cssRoot.style.setProperty(name, value))
