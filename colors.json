@@ -1,4 +1,6 @@
 {
+  "transparent": "transparent",
+  "current": "currentColor",
   "neutral": {
     "DEFAULT": "#6B7280",
     "100": "#F3F4F6",

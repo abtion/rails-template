@@ -1,11 +1,13 @@
 const colors = require('../../../colors.json')
 
+// Prepare colors for usage in tailwind config and as css variables
 const tailwindConfig = {}
 const cssVariables = {}
 
-// Prepare colors for usage in tailwind config and as css variables
 for (let [colorName, shades] of Object.entries(colors)) {
   let tailwindColor = {}
+
+  if (typeof shades === 'string') shades = { DEFAULT: shades }
 
   for (let [shade, color] of Object.entries(shades)) {
     const variableName = `--color-${colorName}-${shade}`
