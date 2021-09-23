@@ -1,6 +1,6 @@
 {
-  "transparent": "transparent",
-  "current": "currentColor",
+  "dark": "#111827",
+  "light": "#F3F4F6",
   "neutral": {
     "DEFAULT": "#6B7280",
     "100": "#F3F4F6",
