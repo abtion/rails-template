@@ -26,7 +26,7 @@ RSpec.describe "devise/sessions/new", type: :view do
 
     render
 
-    placeholder_image_div = ".placeholder-image"
+    placeholder_image_div = ".PlaceholderImage"
 
     expect(rendered).to have_css(placeholder_image_div)
   end

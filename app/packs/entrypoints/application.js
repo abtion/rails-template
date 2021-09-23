@@ -14,7 +14,7 @@ require("@rails/activestorage").start()
 // const imagePath = (name) => images(name, true)
 require.context("../images", true)
 
-require("../stylesheets/application.scss")
+require("../application.scss")
 
 // Define CSS variables for all colors
 // These variables are used by tailwind.
