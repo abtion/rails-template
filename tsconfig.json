@@ -12,9 +12,12 @@
     "jsx": "react",
     "noEmit": true,
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "jest",
+      "@testing-library/jest-dom"
     ]
   },
-  "exclude": ["**/*.spec.ts", "node_modules", "vendor", "public"],
+  "include": ["app/packs/**/*"],
+  "exclude": ["**/*.test.{ts,tsx}", "node_modules", "vendor", "public"],
   "compileOnSave": false
 }
