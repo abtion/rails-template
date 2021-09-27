@@ -22,4 +22,6 @@ require("../application.scss")
 const colorCssVariables = require("../const/colors").cssVariables
 const cssRoot = document.querySelector(":root")
 
-Object.entries(colorCssVariables).forEach(([name, value]) => cssRoot.style.setProperty(name, value))
+Object.entries(colorCssVariables).forEach(([name, value]) =>
+  cssRoot.style.setProperty(name, value)
+)
