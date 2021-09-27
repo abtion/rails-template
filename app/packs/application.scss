@@ -2,8 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+// stylelint-disable scss/at-import-partial-extension-blacklist
 @import "fonts/**/*.scss";
 @import "components/**/*.scss";
+// stylelint-enable scss/at-import-partial-extension-blacklist
 
 a {
   @apply underline text-primary;
