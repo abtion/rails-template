@@ -1,7 +1,9 @@
-// We use js and commonjs to be compatible with tailwind config
+// This file uses js and commonjs to be compatible with tailwind config
 
+/* eslint-disable @typescript-eslint/no-var-requires */
 const colors = require("../../../colors.json")
 const getContrastColor = require("../util/getContrastColor")
+/* eslint-enable @typescript-eslint/no-var-requires */
 
 // Prepare colors for usage in tailwind config and as css variables
 const tailwindConfig = {}
