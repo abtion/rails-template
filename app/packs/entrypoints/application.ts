@@ -1,3 +1,5 @@
+import { cssVariables } from "../const/colors"
+
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
@@ -19,9 +21,7 @@ require("../application.scss")
 // Define CSS variables for all colors
 // These variables are used by tailwind.
 // We use variables because they are easy to override in dev tools, or local selectors
-const colorCssVariables = require("../const/colors").cssVariables
-const cssRoot = document.querySelector(":root")
-
-Object.entries(colorCssVariables).forEach(([name, value]) =>
+const cssRoot: HTMLElement = document.querySelector(":root")
+Object.entries(cssVariables).forEach(([name, value]) =>
   cssRoot.style.setProperty(name, value)
 )

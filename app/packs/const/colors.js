@@ -1,3 +1,5 @@
+// We use js and commonjs to be compatible with tailwind config
+
 const colors = require("../../../colors.json")
 const getContrastColor = require("../util/getContrastColor")
 
@@ -36,7 +38,7 @@ for (let [colorName, shades] of Object.entries(colors)) {
       contrastColor === colors.dark ? "--color-dark" : "--color-light"
 
     if (shade === "DEFAULT") {
-      tailwindColor.contrast = `var(${contrastVariableName})`
+      tailwindColor["contrast"] = `var(${contrastVariableName})`
     } else {
       tailwindColor[`${shade}-contrast`] = `var(${contrastVariableName})`
     }
@@ -45,7 +47,6 @@ for (let [colorName, shades] of Object.entries(colors)) {
   tailwindConfig[colorName] = tailwindColor
 }
 
-// We use commonjs to be compatible with both node and webpack
 module.exports = {
   colors,
   tailwindConfig,
