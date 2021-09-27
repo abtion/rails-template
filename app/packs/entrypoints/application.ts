@@ -1,5 +1,5 @@
-import ujs from "@rails/ujs"
-import activestorage from "@rails/activestorage"
+import * as ujs from "@rails/ujs"
+import * as activestorage from "@rails/activestorage"
 
 import { cssVariables } from "../const/colors"
 import "../application.scss"
