@@ -1,0 +1,69 @@
+.Button {
+  @apply border-2 border-transparent text-base font-medium rounded-md leading-4;
+
+  // Sizes
+  &--sm {
+    @apply px-2 py-1 text-sm xl:py-2 xl:px-4 xl:text-base;
+  }
+
+  &--md {
+    @apply px-4 py-2 text-base xl:py-3 xl:px-8 xl:text-lg;
+  }
+
+  &--lg {
+    @apply px-6 py-3 text-lg xl:py-4 xl:px-16 xl:text-xl;
+  }
+
+  // Colors
+  &:not(&--outline) {
+    &.Button--neutral {
+      @apply text-neutral-500-contrast bg-neutral-500 hover:bg-neutral-600;
+    }
+
+    &.Button--primary {
+      @apply text-primary-500-contrast bg-primary-500 hover:bg-primary-600;
+    }
+
+    &.Button--success {
+      @apply text-success-500-contrast bg-success-500 hover:bg-success-600;
+    }
+
+    &.Button--danger {
+      @apply text-danger-500-contrast bg-danger-500 hover:bg-danger-600;
+    }
+
+    &.Button--warning {
+      @apply text-warning-500-contrast bg-warning-500 hover:bg-warning-600;
+    }
+
+    &.Button--info {
+      @apply text-info-500-contrast bg-info-500 hover:bg-info-600;
+    }
+  }
+
+  &--outline {
+    &.Button--neutral {
+      @apply text-neutral border-neutral-500 hover:text-neutral-700 hover:border-neutral-600;
+    }
+
+    &.Button--primary {
+      @apply text-primary border-primary-500 hover:text-primary-700 hover:border-primary-600;
+    }
+
+    &.Button--success {
+      @apply text-success border-success-500 hover:text-success-700 hover:border-success-600;
+    }
+
+    &.Button--danger {
+      @apply text-danger border-danger-500 hover:text-danger-700 hover:border-danger-600;
+    }
+
+    &.Button--warning {
+      @apply text-warning border-warning-500 hover:text-warning-700 hover:border-warning-600;
+    }
+
+    &.Button--info {
+      @apply text-info border-info-500 hover:text-info-700 hover:border-info-600;
+    }
+  }
+}
