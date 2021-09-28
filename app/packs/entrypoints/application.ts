@@ -1,7 +1,9 @@
 import * as ujs from "@rails/ujs"
 import * as activestorage from "@rails/activestorage"
 
+import mountComponents from "../util/mountComponents"
 import { cssVariables } from "../const/colors"
+
 import "../application.scss"
 
 ujs.start()
@@ -11,7 +13,7 @@ activestorage.start()
 require.context("../images", true)
 
 // Add all component CSS files to bundle (required for components with no JS files)
-require.context("../components", true, /(?<=scss)$/) // Exclude tests and scss files
+require.context("../components", true, /(?<=\.scss)$/) // Only include scss files
 
 // Define CSS variables for all colors
 // These variables are used by tailwind.
@@ -20,3 +22,11 @@ const cssRoot: HTMLElement = document.querySelector(":root")
 Object.entries(cssVariables).forEach(([name, value]) =>
   cssRoot.style.setProperty(name, value)
 )
+
+// Make components available for react_component helper
+const componentsContext = require.context(
+  "../components",
+  true,
+  /(?<!(test|test\.[jt]sx?|\.scss))$/ // Exclude tests and scss files
+)
+mountComponents(componentsContext)
