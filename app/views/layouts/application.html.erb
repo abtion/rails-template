@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= javascript_pack_tag "application" %>
     <%= stylesheet_pack_tag "application" %>
   </head>
 
@@ -14,5 +13,7 @@
     <main class="w-full h-full">
       <%= yield %>
     </main>
+
+    <%= javascript_pack_tag "application" %>
   </body>
 </html>
