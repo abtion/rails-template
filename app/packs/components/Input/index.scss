@@ -1,0 +1,41 @@
+.Input {
+  @apply border-2 border-transparent text-base rounded-md leading-4 focus:ring-1 focus:outline-none;
+
+  // Sizes
+  &--sm {
+    @apply px-1 py-1 text-sm xl:py-2 xl:px-2 xl:text-base;
+  }
+
+  &--md {
+    @apply px-2 py-2 text-base xl:px-3 xl:py-3 xl:text-lg;
+  }
+
+  &--lg {
+    @apply px-3 py-3 text-lg xl:py-4 xl:px-4 xl:text-xl;
+  }
+
+  // Colors
+  &--neutral {
+    @apply border-neutral-300 focus:ring-neutral-300 focus:border-neutral-300;
+  }
+
+  &--primary {
+    @apply border-primary-300 focus:ring-primary-300 focus:border-primary-300;
+  }
+
+  &--success {
+    @apply border-success-300 focus:ring-success-300 focus:border-success-300;
+  }
+
+  &--danger {
+    @apply border-danger-300 focus:ring-danger-300 focus:border-danger-300;
+  }
+
+  &--warning {
+    @apply border-warning-300 focus:ring-warning-300 focus:border-warning-300;
+  }
+
+  &--info {
+    @apply border-info-300 focus:ring-info-300 focus:border-info-300;
+  }
+}
