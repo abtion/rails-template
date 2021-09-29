@@ -5,7 +5,7 @@ const getLuminance = require("./getLuminance")
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 // Based on luminance, pick the best suited contrast color (dark/light) to the target color
-module.exports = function contrastColor(target, dark, light) {
+module.exports = function getContrastColor(target, dark, light) {
   const targetLuminance = getLuminance(target)
   const darkLuminance = getLuminance(dark)
   const lightLuminance = getLuminance(light)
