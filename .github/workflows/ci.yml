@@ -41,7 +41,7 @@ jobs:
       - name: yarn
         run: yarn --frozen-lockfile
       - name: lint
-        run: yarn lint
+        run: yarn eslint frontend
   stylelint:
     runs-on: ubuntu-latest
     steps:
@@ -193,7 +193,7 @@ jobs:
         run: yarn --frozen-lockfile
       - name: run bin/rails assets:precompile
         run: bin/rails assets:precompile
-        
+
   rspec:
     runs-on: ubuntu-latest
 
