@@ -1,27 +1,38 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-  <a class="navbar-brand" href="#">Project Name Human</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="bg-white shadow-md sticky inset-x-0">
+  <div class="container mx-auto">
+    <div class="flex justify-between flex-wrap">
+      <div class="flex">
+        <div>
+          <%= link_to "Care1 VCI", root_path, { class: "NavLink flex items-center py-4 px-2 font-semibold" } %>
+        </div>
+      </div>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <% if user_signed_in? %>
-      <li class="nav-item">
-        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-      </li>
-      <% else %>
-        <li class="nav-item">
-          <%- if controller_name != 'sessions' %>
-            <%= link_to "Log in", new_session_path(User), class: "nav-link" %>
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%- if controller_name != 'registrations' %>
-            <%= link_to "Sign up", new_registration_path(User), class: "nav-link" %>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
+      <div class="md:hidden flex items-center">
+        <button class="focus:outline-none py-4 px-4" onclick="this.closest('nav').querySelector('ul').classList.toggle('hidden')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <ul class="w-full md:w-auto md:flex items-center hidden">
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "NavLink" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%- if controller_name != 'sessions' %>
+              <%= link_to "Log in", new_session_path(User), class: "NavLink" %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%- if Devise.mappings[:user].registerable? && controller_name != 'registrations' %>
+              <%= link_to "Sign up", new_registration_path(User), class: "NavLink" %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </nav>

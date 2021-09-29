@@ -11,6 +11,7 @@
 
   <body class="<%= "#{controller.controller_name} #{@body_class}".strip %> h-full">
     <main class="w-full h-full">
+      <%= render "shared/nav" if controller_name != "sessions" %>
       <%= yield %>
     </main>
 
