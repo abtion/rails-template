@@ -1,0 +1,28 @@
+.Alert {
+  @apply border border-transparent text-base rounded-md leading-4 px-4 py-4;
+
+  // Colors
+  &--neutral {
+    @apply text-neutral-800 border-neutral-500 bg-neutral-50;
+  }
+
+  &--primary {
+    @apply text-primary-800 border-primary-500 bg-primary-50;
+  }
+
+  &--success {
+    @apply text-success-800 border-success-500 bg-success-50;
+  }
+
+  &--danger {
+    @apply text-danger-800 border-danger-500 bg-danger-50;
+  }
+
+  &--warning {
+    @apply text-warning-800 border-warning-500 bg-warning-50;
+  }
+
+  &--info {
+    @apply text-info-800 border-info-500 bg-info-50;
+  }
+}
