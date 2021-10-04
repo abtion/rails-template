@@ -12,15 +12,16 @@
       1. [Start a new project](#start-a-new-project)
       2. [Replace license](#replace-license)
       3. [Configure the project](#configure-the-project)
-      4. [Configure Code Climate](#configure-code-climate)
-      5. [Configure CD](#configure-cd)
-      6. [Configure i18n tasks](#configure-i18n-tasks)
-      7. [Setup mailing](#setup-mailing)
-      8. [Setup basic auth](#setup-basic-auth)
-      9. [Capybara drivers](#capybara-drivers)
-      10. [Capybara Screenshots in CI](#capybara-screenshots-in-ci)
-      11. [Set up Dependabot](#set-up-dependabot)
-      12. [Set up database backups](#set-up-database-backups)
+      4. [Setup colors](#setup-colors)
+      5. [Configure Code Climate](#configure-code-climate)
+      6. [Configure CD](#configure-cd)
+      7. [Configure i18n tasks](#configure-i18n-tasks)
+      8. [Setup mailing](#setup-mailing)
+      9. [Setup basic auth](#setup-basic-auth)
+      10. [Capybara drivers](#capybara-drivers)
+      11. [Capybara Screenshots in CI](#capybara-screenshots-in-ci)
+      12. [Set up Dependabot](#set-up-dependabot)
+      13. [Set up database backups](#set-up-database-backups)
    4. [Contributing](#contributing)
    5. [License](#license)
    6. [About Abtion](#about-abtion)
@@ -97,6 +98,20 @@ Proprietary and confidential.
    - `bin/replace-project-names` (uses the folder name)
    - Or `bin/replace-project-names <param-case-name>`
 4. `mv README.example.md README.md`
+
+### Setup colors
+
+`colors.json` must be updated so match the client's company colors/design guide.
+
+If there's a designer on the project, get that person to fill in all the colors and nuances.
+
+If there's no designer present, replace the colors with company colors where it makes sense. Use a tool like the following for creating nuances:
+https://tailwind.simeongriggs.dev/
+
+All the predefined colors are required for the built-in components to work:
+
+- Contrast colors are picked from the "light" and "dark" colours.
+- Contextual colors (primary, secondary, etc.) are used for component variants.
 
 ### Configure Code Climate
 
