@@ -1,5 +1,4 @@
-export type CssVariableDefinition = {
-  [name: string]: string
-}
+import prepareColorVariables from "../util/prepareColorVariables"
 
-export const cssVariables: CssVariableDefinition
+export const cssVariables: prepareColorVariables.CssVariableDefinition
+export const tailwindConfig: prepareColorVariables.TailwindConfig
