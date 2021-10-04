@@ -108,7 +108,7 @@ jobs:
       - name: yarn
         run: yarn --frozen-lockfile
       - name: test
-        run: yarn test
+        run: yarn test --coverage
   prettier:
     runs-on: ubuntu-latest
     steps:
