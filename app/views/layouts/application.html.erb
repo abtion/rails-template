@@ -7,6 +7,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_pack_tag "application" %>
+    <%= javascript_pack_tag "application" %>
   </head>
 
   <body class="<%= "#{controller.controller_name} #{@body_class}".strip %> h-full">
@@ -15,6 +16,5 @@
       <%= yield %>
     </main>
 
-    <%= javascript_pack_tag "application" %>
   </body>
 </html>
