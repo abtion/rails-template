@@ -35,7 +35,7 @@ unless Rails.env.production?
   end
 
   task yarn_test: :environment do
-    sh "yarn test"
+    sh "yarn test --coverage"
   end
 
   # Configure our own default.
