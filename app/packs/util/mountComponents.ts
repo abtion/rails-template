@@ -61,8 +61,7 @@ export default function mountComponent(...contexts: RequireContext[]): void {
 
   for (let i = 0; i < nodes.length; ++i) {
     const node = nodes[i]
-    const className = node.getAttribute("data-react-component")
-    if (!className) throw new Error("React component class name missing")
+    const className = node.getAttribute("data-react-component") as string
 
     const constructor = getConstructor(className, contexts)
 
