@@ -166,7 +166,11 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      RAILS_ENV: test
+      RAILS_ENV: production
+      HEROKU_APP_NAME: dummy
+      MAIL_FROM: dummy
+      REDIS_URL: dummy
+      SECRET_KEY_BASE: dummy
 
     steps:
       - name: checkout repository
