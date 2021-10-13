@@ -1,0 +1,38 @@
+// SCSS-files can be useful:
+// - when tailwind classes don't do what we need
+// - for defining css classes which we can use in our erb templates (e.g. "Button")
+//
+// Use BEM to avoid conflicts with tailwind/other components:
+//   ExampleComponent__heading--success
+//   ^                 ^        ^
+//   Block             Element  Modifier
+.ExampleComponent {
+  &--neutral {
+    // Use "apply" to mix in tailwind utilities
+    @apply text-neutral-200-contrast bg-neutral-200;
+  }
+
+  &--primary {
+    @apply text-primary-200-contrast bg-primary-200;
+  }
+
+  &--success {
+    @apply text-success-200-contrast bg-success-200;
+  }
+
+  &--danger {
+    @apply text-danger-200-contrast bg-danger-200;
+  }
+
+  &--warning {
+    @apply text-warning-200-contrast bg-warning-200;
+  }
+
+  &--info {
+    @apply text-info-200-contrast bg-info-200;
+  }
+
+  &__heading {
+    font-size: 1.232rem;
+  }
+}
