@@ -19,7 +19,7 @@ const buildContextMock = (componentsByPath: ComponentsByPath) => {
   return context
 }
 
-function TestComponent({ title }) {
+function TestComponent({ title }: { title: string }) {
   return <h1 className="TestComponent">{title}</h1>
 }
 
@@ -40,7 +40,7 @@ describe(mountComponents, () => {
 
     mountComponents(context)
 
-    expect(document.body.querySelector(".TestComponent").tagName).toBe("H1")
+    expect(document.body.querySelector(".TestComponent")?.tagName).toBe("H1")
     expect(document.body.querySelector(".TestComponent")).toHaveTextContent(
       "Title"
     )
@@ -58,7 +58,7 @@ describe(mountComponents, () => {
 
     mountComponents(context)
 
-    expect(document.body.querySelector(".TestComponent").tagName).toBe("H1")
+    expect(document.body.querySelector(".TestComponent")?.tagName).toBe("H1")
     expect(document.body.querySelector(".TestComponent")).toHaveTextContent(
       "Title"
     )
@@ -77,7 +77,7 @@ describe(mountComponents, () => {
 
     mountComponents(contextA, contextB)
 
-    expect(document.body.querySelector(".TestComponent").tagName).toBe("H1")
+    expect(document.body.querySelector(".TestComponent")?.tagName).toBe("H1")
   })
 
   describe("when component name is invalid", () => {

@@ -1797,6 +1797,16 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
 
+"@types/rails__activestorage@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@types/rails__activestorage/-/rails__activestorage-6.0.1.tgz#edabdb81fd19dae291334f2cefc4c7d4e5283683"
+  integrity sha512-3BuX2qYTNVMaGtt+9qy1AUB4Y3jCEPkHPnNDf7mPY2M6dOTGcFKKJeXWiAYMYF7u4ll9JnC/hXTyjkwgAk3Z/A==
+
+"@types/rails__ujs@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@types/rails__ujs/-/rails__ujs-6.0.1.tgz#83c5aa1dad88ca869de05a9523eff58041ab307a"
+  integrity sha512-CVwNOdzTQ9qn6X6HPwx6ikH1T9ueJTdfjwFlXFhGvzXsQuESUksibfSosgxs1D/Q1kVEpjxeXD2RzqJv0Ma5Gw==
+
 "@types/react-dom@^17.0.9":
   version "17.0.9"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.9.tgz#441a981da9d7be117042e1a6fd3dac4b30f55add"

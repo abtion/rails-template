@@ -2,12 +2,16 @@ import React from "react"
 import ReactDOM from "react-dom"
 
 interface RequireContext {
-  (id: string)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (id: string): any
   keys(): string[]
 }
 
 function getValidPaths(contexts: RequireContext[]): string[] {
-  return contexts.reduce((res, context) => res.concat(context.keys()), [])
+  return contexts.reduce(
+    (res, context) => res.concat(context.keys()),
+    [] as string[]
+  )
 }
 
 function requireComponent(requirePath: string, contexts: RequireContext[]) {
@@ -17,8 +21,10 @@ function requireComponent(requirePath: string, contexts: RequireContext[]) {
       // but we want to be able to try multiple contexts
       return context(requirePath)
     } catch (error) {
-      if (error.message.includes("Cannot find module")) continue
-      throw error
+      if (error instanceof Error) {
+        if (error.message.includes("Cannot find module")) continue
+        throw error
+      }
     }
   }
 }
@@ -56,6 +62,8 @@ export default function mountComponent(...contexts: RequireContext[]): void {
   for (let i = 0; i < nodes.length; ++i) {
     const node = nodes[i]
     const className = node.getAttribute("data-react-component")
+    if (!className) throw new Error("React component class name missing")
+
     const constructor = getConstructor(className, contexts)
 
     if (!constructor) continue

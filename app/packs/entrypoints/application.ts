@@ -19,10 +19,10 @@ require.context("../components", true, /(?<=\.scss)$/) // Only include scss file
 // Define CSS variables for all colors
 // These variables are used by tailwind.
 // We use variables because they are easy to override in dev tools or in local selectors
-const cssRoot: HTMLElement = document.querySelector(":root")
+const cssRoot: HTMLElement | null = document.querySelector(":root")
 const cssVariables = prepareColorVariables(colors).cssVariables
 Object.entries(cssVariables).forEach(([name, value]) =>
-  cssRoot.style.setProperty(name, value)
+  cssRoot?.style.setProperty(name, value)
 )
 
 // Make components available for react_component helper

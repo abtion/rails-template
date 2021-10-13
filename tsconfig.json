@@ -11,13 +11,14 @@
     "target": "es5",
     "jsx": "react",
     "noEmit": true,
-    "types": [
-      "webpack-env",
-      "jest",
-      "@testing-library/jest-dom"
-    ],
+    "types": ["webpack-env", "jest", "@testing-library/jest-dom"],
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "paths": {
+      "~/*": ["./app/packs/*"]
+    }
   },
   "include": ["app/packs/**/*"],
   "exclude": ["**/*.test.{ts,tsx}", "node_modules", "vendor", "public"],
