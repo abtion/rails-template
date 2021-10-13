@@ -21,10 +21,14 @@ function requireComponent(requirePath: string, contexts: RequireContext[]) {
       // but we want to be able to try multiple contexts
       return context(requirePath)
     } catch (error) {
-      if (error instanceof Error) {
-        if (error.message.includes("Cannot find module")) continue
-        throw error
+      if (
+        error instanceof Error &&
+        error.message.includes("Cannot find module")
+      ) {
+        continue
       }
+
+      throw error
     }
   }
 }
