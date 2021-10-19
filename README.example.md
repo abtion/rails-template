@@ -69,9 +69,9 @@ Any env var you specify in such a file will override the configuration for the c
 
 #### Database connection
 
-You can set `DATABASE_URL` in `.env.local`, if you for instance use Docker for Postgres: `DATABASE_URL="postgresql://localhost:5432"`
+You can set `DATABASE_SERVER` in `.env.local`, if you for instance use Docker for Postgres: `DATABASE_SERVER="postgresql://localhost:5432"`
 Or if you just use a local postgres instance:
-`DATABASE_URL=postgresql://user:pass@localhost:5432`
+`DATABASE_SERVER=postgresql://user:pass@localhost:5432`
 
 ### 2. Dependencies and database setup
 

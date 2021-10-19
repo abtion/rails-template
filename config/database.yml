@@ -8,10 +8,10 @@ default: &default
 
 local: &local
   <<: *default
-  username: <%= ENV.key?("DATABASE_URL") ? URI(ENV.fetch("DATABASE_URL")).user : "" %>
-  password: <%= ENV.key?("DATABASE_URL") ? URI(ENV.fetch("DATABASE_URL")).password : "" %>
-  host: <%= ENV.key?("DATABASE_URL") ? URI(ENV.fetch("DATABASE_URL")).host : "" %>
-  port: <%= ENV.key?("DATABASE_URL") ? URI(ENV.fetch("DATABASE_URL")).port : "" %>
+  username: <%= ENV.key?("DATABASE_SERVER") ? URI(ENV.fetch("DATABASE_SERVER")).user : "" %>
+  password: <%= ENV.key?("DATABASE_SERVER") ? URI(ENV.fetch("DATABASE_SERVER")).password : "" %>
+  host: <%= ENV.key?("DATABASE_SERVER") ? URI(ENV.fetch("DATABASE_SERVER")).host : "" %>
+  port: <%= ENV.key?("DATABASE_SERVER") ? URI(ENV.fetch("DATABASE_SERVER")).port : "" %>
 
 # Development config
 development:
