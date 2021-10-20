@@ -198,7 +198,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DATABASE_URL: postgres://postgres:postgres@localhost:5432
+      DATABASE_SERVER: postgres://postgres:postgres@localhost:5432
       RAILS_ENV: test
 
     services:
