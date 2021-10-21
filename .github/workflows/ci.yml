@@ -193,8 +193,6 @@ jobs:
         run: |
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
-      - name: yarn
-        run: yarn --frozen-lockfile
       - name: run bin/rails assets:precompile
         run: bin/rails assets:precompile
 
