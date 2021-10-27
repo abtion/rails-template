@@ -23,10 +23,6 @@ class ProjectName < String
     human_case.split(" ").join("-")
   end
 
-  def app_name
-    "#{self}-production"
-  end
-
   def ensure_valid!
     return if self =~ /^[a-z][a-z\-]+[a-z]$/
     warn "Invalid project name: #{self}"
@@ -38,7 +34,6 @@ module MuffiFileRenamer
   class << self
     def call
       files.each do |file|
-        replace_in_file("project-name-production", project_name.app_name, file)
         replace_in_file("project-name-param", project_name, file)
         replace_in_file("ProjectNamePascal", project_name.pascal_case, file)
         replace_in_file("project_name_snake", project_name.snake_case, file)
