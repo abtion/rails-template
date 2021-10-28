@@ -1,4 +1,4 @@
-# Project Name Human
+ Project Name Human
 
 ![Observatory](https://img.shields.io/mozilla-observatory/grade-score/muffi-template.herokuapp.com)
 
@@ -29,15 +29,22 @@ Description of the project. What is it solving? Who are the users?
 
 This section should include any business related explanation that helps understand the context of the project. It could be an excellent idea to include a dictionary of terms, a color legend or a user roles explanation.
 
-- URL to the project
+- App: [staging](https://<project-name-param>-staging.herokuapp.com/) | [production](https://<project-name-param>-production.herokuapp.com/)
+- Heroku: [staging](https://dashboard.heroku.com/apps/<project-name-param>-staging) | [production](https://dashboard.heroku.com/apps/<project-name-param>-production)
 - Asana:
 - URL to Abtion's own related git repositories (frontend / backend / admin area / microservices)
 - Harvest:
 - CI:
 - Client name, and if possible, contact details.
-- IT person contact details
+- 1Password:
+- Error Tracking:
+- Activity Monitoring:
+- Logging:
+- Email Service:
+- Client: IT person contact details
 
-Name, and a short description of any services that the project is using (error tracking, activity monitoring, log registry, email service, etc). Include where to get the credentials. E.g., 1Password under admin+project@abtion.com.
+If the project is using some special external services (NemID, oAuth, Customer API, etc.) give a short description here.
+Example: The app is using NemID to authenticate all its users.
 
 # Requirements
 
