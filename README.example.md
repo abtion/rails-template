@@ -29,8 +29,8 @@ Description of the project. What is it solving? Who are the users?
 
 This section should include any business related explanation that helps understand the context of the project. It could be an excellent idea to include a dictionary of terms, a color legend or a user roles explanation.
 
-- [staging](https://<porect-name-param>-staging.herokuapp.com/) | [production](https://<porect-name-param>-production.herokuapp.com/)
-- Heroku: [staging](https://dashboard.heroku.com/apps/<porect-name-param>-staging) | [production](https://dashboard.heroku.com/apps/<porect-name-param>-production)
+- [staging](https://<project-name-param>-staging.herokuapp.com/) | [production](https://<project-name-param>-production.herokuapp.com/)
+- Heroku: [staging](https://dashboard.heroku.com/apps/<project-name-param>-staging) | [production](https://dashboard.heroku.com/apps/<project-name-param>-production)
 - Asana:
 - URL to Abtion's own related git repositories (frontend / backend / admin area / microservices)
 - Harvest:
