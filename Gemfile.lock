@@ -138,7 +138,7 @@ GEM
       activesupport (>= 5.0)
     highline (2.0.3)
     html_tokenizer (0.0.7)
-    i18n (1.8.10)
+    i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     i18n-tasks (0.9.34)
       activesupport (>= 4.0.2)
