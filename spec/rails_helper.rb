@@ -65,6 +65,10 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   # Include integration helpers for feature tests
-  config.include(Devise::Test::IntegrationHelpers, type: :feature)
+  config.include(Devise::Test::IntegrationHelpers, type: :system)
   config.include(Devise::Test::ControllerHelpers, type: :controller)
+
+  config.before(:each, type: :system) do
+    driven_by(:selenium_chrome_headless)
+  end
 end
