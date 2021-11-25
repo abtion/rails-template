@@ -3,7 +3,7 @@
 #
 # This will fail feature specs on javascript errors/warnings
 RSpec.configure do |config|
-  config.after(:each, type: :feature) do
+  config.after(:each, type: :system) do
     errors = page.driver.browser.manage.logs.get(:browser)
 
     if errors.present?
