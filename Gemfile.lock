@@ -358,7 +358,6 @@ DEPENDENCIES
   bullet
   bundler-audit
   byebug
-  capybara
   capybara-screenshot
   devise
   devise-i18n
@@ -384,7 +383,6 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rspec
-  selenium-webdriver
   sendgrid-actionmailer
   shoulda-matchers
   sidekiq
@@ -400,4 +398,4 @@ RUBY VERSION
    ruby 3.0.2p107
 
 BUNDLED WITH
-   2.2.23
+   2.2.27

@@ -37,7 +37,6 @@ group :development, :test do
   gem "rubocop-performance"
   gem "rubocop-rails"
   gem "rubocop-rspec"
-  gem "selenium-webdriver"
   gem "shoulda-matchers"
   gem "webdrivers", "~> 5.0", require: false
 end
@@ -52,7 +51,6 @@ group :development do
 end
 
 group :test do
-  gem "capybara"
   gem "capybara-screenshot"
   gem "factory_bot_rails"
   gem "faker"
