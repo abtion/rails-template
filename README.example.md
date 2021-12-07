@@ -1,4 +1,4 @@
- Project Name Human
+Project Name Human
 
 ![Observatory](https://img.shields.io/mozilla-observatory/grade-score/muffi-template.herokuapp.com)
 
@@ -51,7 +51,7 @@ Example: The app is using NemID to authenticate all its users.
 You must have the following installed and available on your machine:
 
 - **Ruby 3.0.x**
-- **Node JS 14.x**
+- **Node JS 16.x**
 - **Yarn 1.x**
 - **PostgreSQL 12**
 - **Redis**
@@ -132,6 +132,7 @@ The hooks are symlinked meaning all the changes to the repo hooks will automatic
 - Run frontend linters: `yarn lint-fix`
 
 Spring has also been installed for development. The binstubs have not been generated but you can run it with:
+
 ```sh
 bundle exec spring rspec
 ```
