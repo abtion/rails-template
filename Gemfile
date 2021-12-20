@@ -51,7 +51,7 @@ group :development do
 end
 
 group :test do
-  gem "capybara-screenshot"
+  gem "capybara"
   gem "factory_bot_rails"
   gem "faker"
   gem "simplecov"
