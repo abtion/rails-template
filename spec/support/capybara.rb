@@ -9,7 +9,6 @@ require "webdrivers/chromedriver" unless ENV.key?("DISABLE_WEBDRIVERS")
 Capybara.configure do |config|
   config.server_port = 9887 + ENV["TEST_ENV_NUMBER"].to_i
   config.default_max_wait_time = 5
-  config.server = :puma, { Silent: true }
 end
 
 # Rails doesn't respect the driver settings provided directly to capybara:
