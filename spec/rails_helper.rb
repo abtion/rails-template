@@ -67,8 +67,4 @@ RSpec.configure do |config|
   # Include integration helpers for feature tests
   config.include(Devise::Test::IntegrationHelpers, type: :system)
   config.include(Devise::Test::ControllerHelpers, type: :controller)
-
-  config.before(:each, type: :system) do
-    driven_by(:selenium_chrome_headless)
-  end
 end
