@@ -14,7 +14,7 @@ end
 # Rails doesn't respect the driver settings provided directly to capybara:
 # https://github.com/rails/rails/issues/34379
 #
-# So we set it the "rails™" way instead of the capybara way
+# So we set it the rails way instead of the capybara way
 RSpec.configure do |config|
   config.before(:each, type: :system) do
     driven_by(ENV.fetch("CAPYBARA_DRIVER", "selenium_chrome_headless").to_sym)
