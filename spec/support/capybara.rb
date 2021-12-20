@@ -9,7 +9,14 @@ require "webdrivers/chromedriver" unless ENV.key?("DISABLE_WEBDRIVERS")
 Capybara.configure do |config|
   config.server_port = 9887 + ENV["TEST_ENV_NUMBER"].to_i
   config.default_max_wait_time = 5
-  config.server = :puma, { Silent: true }
-  config.default_driver = ENV.fetch("CAPYBARA_DRIVER", "selenium_chrome_headless").to_sym
-  config.javascript_driver = ENV.fetch("CAPYBARA_DRIVER", "selenium_chrome_headless").to_sym
+end
+
+# Rails doesn't respect the driver settings provided directly to capybara:
+# https://github.com/rails/rails/issues/34379
+#
+# So we set it the rails way instead of the capybara way
+RSpec.configure do |config|
+  config.before(:each, type: :system) do
+    driven_by(ENV.fetch("CAPYBARA_DRIVER", "selenium_chrome_headless").to_sym)
+  end
 end
