@@ -92,6 +92,11 @@ RSpec/ContextWording:
   Exclude:
     - "spec/support/shared_contexts/*.rb"
 
+RSpec/DescribeClass:
+  Enabled: true
+  Exclude:
+    - "spec/lib/tasks/**/*_spec.rb"
+
 RSpec/DescribedClass:
   EnforcedStyle: explicit
 
