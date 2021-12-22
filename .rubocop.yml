@@ -87,6 +87,11 @@ Style/StringLiterals:
 Style/SymbolArray:
   EnforcedStyle: brackets
 
+RSpec/ContextWording:
+  Enabled: true
+  Exclude:
+    - "spec/support/shared_contexts/*.rb"
+
 RSpec/DescribedClass:
   EnforcedStyle: explicit
 
