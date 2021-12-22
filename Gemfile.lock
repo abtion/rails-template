@@ -153,6 +153,10 @@ GEM
       thor (>= 0.14, < 2.0)
     jsonapi-serializer (2.2.0)
       activesupport (>= 4.2)
+    launchy (2.5.0)
+      addressable (~> 2.7)
+    letter_opener (1.7.0)
+      launchy (~> 2.2)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -363,6 +367,7 @@ DEPENDENCIES
   i18n-tasks
   jquery-rails
   jsonapi-serializer
+  letter_opener
   listen (~> 3.7)
   pg (~> 1.0)
   pivotal_git_scripts
