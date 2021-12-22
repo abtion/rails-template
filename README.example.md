@@ -14,6 +14,7 @@ This project is built on top of [Muffi](https://github.com/abtion/muffi).
        - [Chrome driver](#chrome-driver)
      - [3. Ensure that linting and tests pass](#3-ensure-that-linting-and-tests-pass)
      - [4. Git hooks](#4-git-hooks)
+     - [5. Mails (letter_opener)](#5-mails-letter_opener)
    - [Day-to-day](#day-to-day)
    - [Debugging](#debugging)
    - [Download production or staging DB](#download-production-or-staging-db)
@@ -123,6 +124,10 @@ This way you are getting all our git hooks for both pushing and committing.
 If for some reason you don't want one of the hooks (push/commit) you can specify it by with `--no-commit` and `--no-push`.
 
 The hooks are symlinked meaning all the changes to the repo hooks will automatically be updated in all local environments, in the case of a change.
+### 5. Mails (letter_opener)
+
+Mail sent while working in development environment is displayed with letter_opener.
+To disable letter_opener set `USE_LETTER_OPENER` variable in `.env.development` file to `false` (true by default)
 
 ## Day-to-day
 
