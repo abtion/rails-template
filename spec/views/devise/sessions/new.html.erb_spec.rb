@@ -11,26 +11,6 @@ RSpec.describe "devise/sessions/new", type: :view do
     end
   end
 
-  it "renders the muffi logo" do
-    stub_devise_helpers
-
-    render
-
-    logo_selector = "img[src*='.svg']"
-
-    expect(rendered).to have_css(logo_selector)
-  end
-
-  it "renders the placeholder image" do
-    stub_devise_helpers
-
-    render
-
-    placeholder_image_div = ".PlaceholderImage"
-
-    expect(rendered).to have_css(placeholder_image_div)
-  end
-
   it "shows a remember me checkbox" do
     stub_devise_helpers
 
