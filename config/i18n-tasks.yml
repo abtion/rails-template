@@ -98,12 +98,17 @@ search:
 
 ## Consider these keys used:
 ignore_unused:
+  - "activerecord.errors.messages.record_invalid"
+  - "activerecord.errors.messages.restrict_dependent_destroy.*"
   - 'helpers.placeholder.*'
-# - 'activerecord.attributes.*'
-# - '{devise,kaminari,will_paginate}.*'
-# - 'simple_form.{yes,no}'
-# - 'simple_form.{placeholders,hints,labels}.*'
-# - 'simple_form.{error_notification,required}.:'
+  - 'helpers.select.*'
+  - 'helpers.submit.*'
+  - "date.*"
+  - "datetime.*"
+  - "errors.*"
+  - "number.*"
+  - "support.*"
+  - "time.*"
 
 ## Exclude these keys from the `i18n-tasks eq-base' report:
 # ignore_eq_base:

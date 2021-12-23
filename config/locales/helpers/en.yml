@@ -5,3 +5,9 @@ en:
       user:
         email: name@address.com
         password: Enter password
+    select:
+      prompt: Please select
+    submit:
+      create: Create %{model}
+      submit: Save %{model}
+      update: Update %{model}
