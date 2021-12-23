@@ -6,6 +6,7 @@ This project is built on top of [Muffi](https://github.com/abtion/muffi).
 
 1. [Project Name Human](#project-name-param)
 2. [Requirements](#requirements)
+   - [Installing requirements](#installing-requirements)
 3. [Developing](#developing)
    - [First time setup](#first-time-setup)
      - [1. Configuration](#1-configuration)
@@ -57,6 +58,22 @@ You must have the following installed and available on your machine:
 - **PostgreSQL 12**
 - **Redis**
 
+## Installing requirements
+
+With [asdf](https://asdf-vm.com/) and [docker](https://www.docker.com/) (or [podman](https://podman.io/)) you can easily install/run the required versions of runtimes and services.
+
+Install runtimes with `asdf`:
+
+```
+asdf install
+```
+
+Start services with `docker-compose`:
+
+```
+docker-compose up
+```
+
 # Developing
 
 ## First time setup
@@ -77,7 +94,7 @@ Any env var you specify in such a file will override the configuration for the c
 
 #### Database connection
 
-You can set `DATABASE_SERVER` in `.env.local`, if you for instance use Docker for Postgres: `DATABASE_SERVER="postgresql://localhost:5432"`
+You can set `DATABASE_SERVER` in `.env.local`, if you for instance use Docker for Postgres: `DATABASE_SERVER="postgresql://postgres@localhost:5432"`
 Or if you just use a local postgres instance:
 `DATABASE_SERVER=postgresql://user:pass@localhost:5432`
 
@@ -124,6 +141,7 @@ This way you are getting all our git hooks for both pushing and committing.
 If for some reason you don't want one of the hooks (push/commit) you can specify it by with `--no-commit` and `--no-push`.
 
 The hooks are symlinked meaning all the changes to the repo hooks will automatically be updated in all local environments, in the case of a change.
+
 ### 5. Mails (letter_opener)
 
 Mail sent while working in development environment is displayed with letter_opener.
