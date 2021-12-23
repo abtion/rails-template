@@ -293,7 +293,7 @@ GEM
       sendgrid-ruby (~> 6.4)
     sendgrid-ruby (6.6.0)
       ruby_http_client (~> 3.4)
-    shoulda-matchers (5.0.0)
+    shoulda-matchers (5.1.0)
       activesupport (>= 5.2.0)
     sidekiq (6.3.1)
       connection_pool (>= 2.2.2)
