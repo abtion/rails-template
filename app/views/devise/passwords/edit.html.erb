@@ -1,25 +1,28 @@
-<h2><%= t(".change_your_password") %></h2>
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "mx-auto max-w-sm w-full" }) do |f| %>
+  <h2 class="text-3xl font-semibold mb-12"><%= t(".change_your_password") %></h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <%= f.hidden_field(:reset_password_token) %>
 
-  <div class="field">
-    <%= f.label(:password, t(".new_password")) %><br>
+  <div class="field mb-6">
+    <%= f.label(:password, t(".new_password"), class: "mb-2 inline-block") %><br>
     <% if @minimum_password_length %>
       <em><%= t("devise.shared.minimum_password_length", count: @minimum_password_length) %></em><br>
     <% end %>
-    <%= f.password_field(:password, autofocus: true, autocomplete: "new-password") %>
+    <%= f.password_field(:password, autofocus: true, autocomplete: "new-password", placeholder: true, class: "Input Input--neutral Input--md block w-full") %>
   </div>
 
-  <div class="field">
-    <%= f.label(:password_confirmation, t(".confirm_new_password")) %><br>
-    <%= f.password_field(:password_confirmation, autocomplete: "new-password") %>
+  <div class="field mb-6">
+    <%= f.label(:password_confirmation, t(".confirm_new_password"), class: "mb-2 inline-block") %><br>
+    <%= f.password_field(:password_confirmation, autocomplete: "new-password", placeholder: true, class: "Input Input--neutral Input--md block w-full") %>
   </div>
 
   <div class="actions">
-    <%= f.submit(t(".change_my_password")) %>
+    <%= f.submit(t(".change_my_password"), class: "Button Button--md Button--primary w-full") %>
+  </div>
+  <div class="mt-3">
+    <small class="text-sm block text-right">
+        <%= render "devise/shared/links" %>
+    </small>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
