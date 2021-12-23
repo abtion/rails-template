@@ -5,3 +5,9 @@ da:
       user:
         email: navn@domæne.dk
         password: Indtast kodeord
+    select:
+      prompt: Vælg...
+    submit:
+      create: Opret %{model}
+      submit: Gem %{model}
+      update: Opdater %{model}

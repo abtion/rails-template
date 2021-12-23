@@ -1,0 +1,9 @@
+---
+da:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'Godkendelse gik galt: %{errors}'
+        restrict_dependent_destroy:
+          has_many: Kunne ikke slette posten fordi afhængige %{record} findes
+          has_one: Kunne ikke slette posten fordi en afhængig %{record} findes
