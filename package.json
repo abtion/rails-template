@@ -12,7 +12,7 @@
     "@babel/preset-typescript": "^7.15.0",
     "@rails/actioncable": "latest",
     "@rails/activestorage": "latest",
-    "@rails/ujs": "^6.1.4-1",
+    "@rails/ujs": "^7.0.0",
     "@rails/webpacker": "^6.0.0-rc.5",
     "classnames": "^2.3.1",
     "color-string": "^1.6.0",
