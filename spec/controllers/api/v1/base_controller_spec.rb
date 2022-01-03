@@ -14,7 +14,7 @@ RSpec.describe Api::V1::BaseController, type: :controller do
   describe "#index" do
     context "when authentication is successful" do
       it "signs in" do
-        user = FactoryBot.create(:user)
+        user = create(:user)
         request.headers["X-User-Id"] = user.id
         request.headers["Authorization"] = "Token #{user.authentication_token}"
 
@@ -31,7 +31,7 @@ RSpec.describe Api::V1::BaseController, type: :controller do
 
     context "when invalid user id given" do
       it "returns a 401 unauthorized" do
-        user = FactoryBot.create(:user)
+        user = create(:user)
         request.headers["X-User-Id"] = "nope"
         request.headers["Authorization"] = "Token #{user.authentication_token}"
 
@@ -43,7 +43,7 @@ RSpec.describe Api::V1::BaseController, type: :controller do
 
     context "when no valid user id given" do
       it "returns a 401 unauthorized" do
-        user = FactoryBot.create(:user)
+        user = create(:user)
         request.headers["Authorization"] = "Token #{user.authentication_token}"
 
         get :index
@@ -54,7 +54,7 @@ RSpec.describe Api::V1::BaseController, type: :controller do
 
     context "when invalid token given" do
       it "returns a 401 unauthorized" do
-        user = FactoryBot.create(:user)
+        user = create(:user)
         request.headers["X-User-Id"] = user.id
         request.headers["Authorization"] = "Token 'nope'"
 
@@ -66,7 +66,7 @@ RSpec.describe Api::V1::BaseController, type: :controller do
 
     context "when no valid token given" do
       it "returns a 401 unauthorized" do
-        user = FactoryBot.create(:user)
+        user = create(:user)
         request.headers["X-User-Id"] = user.id
 
         get :index
