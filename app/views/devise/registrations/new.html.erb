@@ -1,29 +1,32 @@
-<h2><%= t(".sign_up") %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "mx-auto max-w-sm w-full" }) do |f| %>
+  <h2 class="text-3xl font-semibold mb-12"><%= t(".sign_up") %></h2>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label(:email) %><br>
-    <%= f.email_field(:email, autofocus: true, autocomplete: "email") %>
+  <div class="mb-6">
+    <%= f.label(:email, class: "mb-2 inline-block") %><br>
+    <%= f.email_field(:email, autofocus: true, autocomplete: "email", placeholder: true, class: "Input Input--neutral Input--md block w-full") %>
   </div>
 
-  <div class="field">
-    <%= f.label(:password) %>
+  <div class="mb-6">
+    <%= f.label(:password, class: "mb-2 inline-block") %>
     <% if @minimum_password_length %>
     <em><%= t("devise.shared.minimum_password_length", count: @minimum_password_length) %></em>
     <% end %><br>
-    <%= f.password_field(:password, autocomplete: "new-password") %>
+    <%= f.password_field(:password, autocomplete: "new-password", placeholder: true, class: "Input Input--neutral Input--md block w-full") %>
   </div>
 
-  <div class="field">
-    <%= f.label(:password_confirmation) %><br>
-    <%= f.password_field(:password_confirmation, autocomplete: "new-password") %>
+  <div class="mb-6">
+    <%= f.label(:password_confirmation, class: "mb-2 inline-block") %><br>
+    <%= f.password_field(:password_confirmation, autocomplete: "new-password", placeholder: true, class: "Input Input--neutral Input--md block w-full") %>
   </div>
 
   <div class="actions">
-    <%= f.submit(t(".sign_up")) %>
+    <%= f.submit(t(".sign_up"), class: "Button Button--md Button--primary w-full") %>
+  </div>
+  <div class="mt-3">
+    <small class="text-sm block text-right">
+        <%= render "devise/shared/links" %>
+    </small>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
