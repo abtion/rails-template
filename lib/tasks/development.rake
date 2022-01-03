@@ -53,6 +53,7 @@ unless Rails.env.production?
 
   # Run the tests and fail if coverage is below 100%
   task test_strict: :environment do
+    Dotenv.overload(".env.test")
     ENV["CODE_COVERAGE_PERCENTAGE"] = "100"
     Rake::Task[:spec].invoke
   end
@@ -70,6 +71,7 @@ unless Rails.env.production?
 
   # Run EVERYTHING
   task test_all_strict: :environment do
+    Dotenv.overload(".env.test")
     ENV["CODE_COVERAGE_PERCENTAGE"] = "100"
     Rake::Task[:yarn_lint].invoke
     Rake::Task[:yarn_test].invoke
