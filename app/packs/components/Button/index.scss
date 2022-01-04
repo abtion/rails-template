@@ -1,5 +1,5 @@
 .Button {
-  @apply border-2 border-transparent text-base font-medium rounded-md leading-4;
+  @apply border-2 border-transparent text-base font-medium rounded-md leading-4 whitespace-normal;
 
   // Sizes
   &--sm {
