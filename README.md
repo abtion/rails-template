@@ -161,12 +161,29 @@ If you need to ignore specific translation keys, follow this process:
 
 ### Setup mailing
 
-1. Go to the production app in the Heroku dashboard.
-2. Add Sendgrid addon.
-3. Click the added Sendgrid resource, go through the confirmation steps.
-4. Set up DKIM on the client's domain (under sender authentication -> domain authentication).
-5. Go to staging and repeat the above steps.
-6. If you want the review apps to send emails: Copy the staging app's Sendgrid credentials and add them to the review apps config vars. Do not add the Sendgrid addon to review apps in `app.json` (Sendgrid will ban our account).
+1. Register and add to 1Password new sendinblue account
+   1. Register: https://app.sendinblue.com/account/register
+   2. Email: Client google group account
+   3. Password: Generate in 1Password
+2. You must validate a phone number in order to start sending mails.
+3. Generate SENDINBLUE keys
+   1. Go to SMTP & API under user settings
+   2. Click on SMTP Tab
+   3. Create a new SMTP KEY.
+   4. Copy smtp key value to `SENDINBLUE_PASSWORD` variable on clients heroku project
+   5. Copy login to `SENDINBLUE_USERNAME` variable on clients heroku project
+4. If you want the review apps to send emails: Copy the staging app's Sendinblue credentials and add them to the review apps config vars.
+5. Setup DNS for production domain (when the production domain is ready):
+   1. Go to: https://account.sendinblue.com/senders
+   2. Open "Domains"
+   3. Add a new domain
+   4. Fill in domain name and check the option to digitally sign emails, then continue
+   5. Add each of the shown DNS records to the client's DNS setup.
+      The DNS provider differs from client to client depending on whether we bought the domain or they did it themselves.
+      If we don't have access, we provide the settings to the client so they can set it up.
+   6. It will take an hour or so for new records to propagate, be patient.
+   7. Back on the sendinblue page, validate each setting.
+   8. When all settings are validated, the setup is complete.
 
 ### Setup basic auth
 
