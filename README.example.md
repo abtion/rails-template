@@ -131,7 +131,7 @@ bundle exec bundle-audit
 yarn lint
 ```
 
-Or instead, you can run `rails test_all_strict`
+Or instead, you can run `bin/test-all-strict`
 
 ### 4. Git hooks
 
@@ -150,9 +150,9 @@ To disable letter_opener set `USE_LETTER_OPENER` variable in `.env.development` 
 ## Day-to-day
 
 - Run the server: `bin/rails server` and [http://localhost:3000](http://localhost:3000)
-- Run tests: `bundle exec rspec`
-- Run backend linters: `bin/rails lint_fix`
-- Run frontend linters: `yarn lint-fix`
+- Run backend tests: `bundle exec rspec`
+- Run frontend tests: `yarn test`
+- Run linters: `bin/lint-fix`
 
 Spring has also been installed for development. The binstubs have not been generated but you can run it with:
 
