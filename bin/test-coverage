@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+set -e
+
+CODE_COVERAGE_PERCENTAGE=100 bundle exec rspec 
+yarn test --coverage

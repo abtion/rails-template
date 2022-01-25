@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+set -e
+
+bundle exec rubocop --auto-correct
+bundle exec erblint --lint-all --autocorrect
+yarn lint-fix
