@@ -1,6 +1,6 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import Variants from "../../const/variants"
+import Variants from "../../const/variant"
 
 import ExampleComponent, { ExampleComponentProps } from "."
 

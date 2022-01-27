@@ -1,4 +1,4 @@
-enum Variants {
+enum Variant {
   Neutral = "neutral",
   Primary = "primary",
   Success = "success",
@@ -7,4 +7,4 @@ enum Variants {
   Info = "info",
 }
 
-export default Variants
+export default Variant

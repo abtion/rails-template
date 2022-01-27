@@ -1,7 +1,7 @@
 import React from "react"
 import classNames from "classnames"
 
-import Variants from "../../const/variants"
+import Variants from "../../const/variant"
 
 import imageSource from "../../images/muffi-background-image.jpg"
 import "./index.scss"

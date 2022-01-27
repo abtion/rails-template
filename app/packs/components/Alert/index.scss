@@ -1,28 +1,89 @@
 .Alert {
-  @apply border border-transparent text-base rounded-md leading-4 px-4 py-4;
-
-  // Colors
-  &--neutral {
-    @apply text-neutral-800 border-neutral-500 bg-neutral-50;
-  }
+  @apply text-sm rounded-md px-4 py-4;
 
   &--primary {
-    @apply text-primary-800 border-primary-500 bg-primary-50;
+    @apply text-primary-800 bg-primary-50;
+
+    .Alert__close {
+      @apply text-primary-500;
+
+      &:hover {
+        @apply text-primary-700;
+      }
+    }
+  }
+
+  &--neutral {
+    @apply text-neutral-800 bg-neutral-50;
+
+    .Alert__close {
+      @apply text-neutral-500;
+
+      &:hover {
+        @apply text-neutral-700;
+      }
+    }
   }
 
   &--success {
-    @apply text-success-800 border-success-500 bg-success-50;
+    @apply text-success-800 bg-success-50;
+
+    .Alert__close {
+      @apply text-success-500;
+
+      &:hover {
+        @apply text-success-700;
+      }
+    }
   }
 
   &--danger {
-    @apply text-danger-800 border-danger-500 bg-danger-50;
+    @apply text-danger-800 bg-danger-50;
+
+    .Alert__close {
+      @apply text-danger-500;
+
+      &:hover {
+        @apply text-danger-700;
+      }
+    }
   }
 
   &--warning {
-    @apply text-warning-800 border-warning-500 bg-warning-50;
+    @apply text-warning-800 bg-warning-50;
+
+    .Alert__close {
+      @apply text-warning-500;
+
+      &:hover {
+        @apply text-warning-700;
+      }
+    }
   }
 
   &--info {
-    @apply text-info-800 border-info-500 bg-info-50;
+    @apply text-info-800 bg-info-50;
+
+    .Alert__close {
+      @apply text-info-500;
+
+      &:hover {
+        @apply text-info-700;
+      }
+    }
+  }
+
+  &--dismissable {
+    @apply relative;
+
+    padding-right: 3.25rem;
+  }
+
+  &__close {
+    @apply p-4 absolute right-0 top-0 cursor-pointer;
+
+    svg {
+      @apply w-5 h-5;
+    }
   }
 }
