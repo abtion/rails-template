@@ -33,7 +33,7 @@ group :development, :test do
   gem "dotenv-rails"
   gem "erb_lint", require: false
   gem "i18n-tasks"
-  gem "rspec-rails", "~> 5.0"
+  gem "rspec-rails", "~> 5.1"
   gem "rubocop"
   gem "rubocop-performance"
   gem "rubocop-rails"
