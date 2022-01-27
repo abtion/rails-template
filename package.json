@@ -15,6 +15,7 @@
     "@rails/activestorage": "^7.0.0",
     "@rails/ujs": "^7.0.0",
     "@rails/webpacker": "^6.0.0-rc.6",
+    "@testing-library/user-event": "^13.5.0",
     "classnames": "^2.3.1",
     "color-string": "^1.6.0",
     "css-loader": "^6.5.1",
