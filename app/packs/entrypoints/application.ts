@@ -5,8 +5,6 @@ import mountComponents from "../util/mountComponents"
 import prepareColorVariables from "../util/prepareColorVariables"
 import colors from "../../../colors.json"
 
-import "../application.scss"
-
 ujs.start()
 activestorage.start()
 
@@ -15,6 +13,10 @@ require.context("../images", true)
 
 // Add all component CSS files to bundle (required for components with no JS files)
 require.context("../components", true, /(?<=\.scss)$/) // Only include scss files
+
+// Add application wide CSS, we do this after the components
+// because we want tailwind classes to override default component styling
+require("../application.scss")
 
 // Define CSS variables for all colors
 // These variables are used by tailwind.
