@@ -166,6 +166,7 @@ If you need to ignore specific translation keys, follow this process:
    2. Email: Client google group account
    3. Password: Generate in 1Password
 2. You must validate a phone number in order to start sending mails.
+   1. Use Abtion's shared phone number 60 57 59 72 and check the code in #access-and-permissions (Slack)
 3. Generate SENDINBLUE keys
    1. Go to SMTP & API under user settings
    2. Click on SMTP Tab
