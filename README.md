@@ -167,14 +167,14 @@ If you need to ignore specific translation keys, follow this process:
    3. Password: Generate in 1Password
 2. You must validate a phone number in order to start sending mails.
    1. Use Abtion's shared phone number 60 57 59 72 and check the code in #access-and-permissions (Slack)
-4. Generate SENDINBLUE keys
+3. Generate SENDINBLUE keys
    1. Go to SMTP & API under user settings
    2. Click on SMTP Tab
    3. Create a new SMTP KEY.
    4. Copy smtp key value to `SENDINBLUE_PASSWORD` variable on clients heroku project
    5. Copy login to `SENDINBLUE_USERNAME` variable on clients heroku project
-5. If you want the review apps to send emails: Copy the staging app's Sendinblue credentials and add them to the review apps config vars.
-6. Setup DNS for production domain (when the production domain is ready):
+4. If you want the review apps to send emails: Copy the staging app's Sendinblue credentials and add them to the review apps config vars.
+5. Setup DNS for production domain (when the production domain is ready):
    1. Go to: https://account.sendinblue.com/senders
    2. Open "Domains"
    3. Add a new domain
