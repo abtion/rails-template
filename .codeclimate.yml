@@ -6,10 +6,6 @@ exclude_patterns:
   - public/**/*
 
 plugins:
-  # https://docs.codeclimate.com/docs/bundler-audit
-  bundler-audit:
-    enabled: true
-
   # https://docs.codeclimate.com/docs/duplication
   duplication:
     enabled: true

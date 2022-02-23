@@ -2,6 +2,5 @@
 set -e
 
 bin/lint
-bundle exec bundle-audit --update
 bin/rake webpacker:compile
 bin/test-coverage

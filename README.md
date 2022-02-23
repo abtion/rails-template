@@ -76,7 +76,7 @@ Alternatively, import Muffi into a new repository by going to https://github.com
 
 Set up branch protection rules:
 
-- Require status checks before merging (all except bundle-audit).
+- Require status checks before merging.
 - Require branches to be up to date.
 - Require signed commits.
 
