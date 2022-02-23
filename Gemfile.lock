@@ -88,9 +88,6 @@ GEM
     bullet (7.0.1)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
-    bundler-audit (0.9.0.1)
-      bundler (>= 1.2.0, < 3)
-      thor (~> 1.0)
     byebug (11.1.3)
     capybara (3.36.0)
       addressable
@@ -367,7 +364,6 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   brakeman
   bullet
-  bundler-audit
   byebug
   capybara
   devise

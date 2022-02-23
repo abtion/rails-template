@@ -126,8 +126,6 @@ bundle exec rspec
 bundle exec rubocop
 bundle exec brakeman --quiet --no-summary
 bundle exec erblint --lint-all
-bundle exec bundle-audit update
-bundle exec bundle-audit
 yarn lint
 ```
 

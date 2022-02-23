@@ -59,17 +59,6 @@ jobs:
         run: yarn --frozen-lockfile
       - name: stylelint
         run: npx stylelint "app/packs/**/*.scss"
-  bundle-audit:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout repository
-        uses: actions/checkout@v2.4.0
-      - name: set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
-      - name: bundle-audit
-        run: bundle exec bundle-audit update && bundle exec bundle-audit
   erb-lint:
     runs-on: ubuntu-latest
     steps:
