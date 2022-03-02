@@ -1748,10 +1748,10 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
 
-"@types/rails__activestorage@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@types/rails__activestorage/-/rails__activestorage-6.0.1.tgz#edabdb81fd19dae291334f2cefc4c7d4e5283683"
-  integrity sha512-3BuX2qYTNVMaGtt+9qy1AUB4Y3jCEPkHPnNDf7mPY2M6dOTGcFKKJeXWiAYMYF7u4ll9JnC/hXTyjkwgAk3Z/A==
+"@types/rails__activestorage@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@types/rails__activestorage/-/rails__activestorage-7.0.0.tgz#3238b1a34d1327bf9eb7d03518ffa1468361bb9e"
+  integrity sha512-Z4SCPvo3T4tBTADQyot6hd/W7sjXmH+2HgzNNNTf3DPsX6QB9d7/eZS/h1XqPAbFjDfHufu2AmohmC9O9avjCA==
 
 "@types/rails__ujs@^6.0.1":
   version "6.0.1"
