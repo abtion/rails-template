@@ -10,7 +10,7 @@ RSpec.describe Constraints::ApiVersion do
         version_constraints = Constraints::ApiVersion.new(version)
         mock_request = double("Request", headers: { "X-Api-Version" => version })
 
-        expect(version_constraints.matches?(mock_request)).to eq(true)
+        expect(version_constraints.matches?(mock_request)).to be(true)
       end
     end
 
@@ -20,7 +20,7 @@ RSpec.describe Constraints::ApiVersion do
         version_constraints = Constraints::ApiVersion.new(version)
         mock_request = double("Request", headers: { "X-Api-Version" => "7.33.1" })
 
-        expect(version_constraints.matches?(mock_request)).to eq(false)
+        expect(version_constraints.matches?(mock_request)).to be(false)
       end
     end
 
@@ -30,7 +30,7 @@ RSpec.describe Constraints::ApiVersion do
         version_constraints = Constraints::ApiVersion.new(version)
         mock_request = double("Request", headers: {})
 
-        expect(version_constraints.matches?(mock_request)).to eq(false)
+        expect(version_constraints.matches?(mock_request)).to be(false)
       end
     end
 
@@ -39,7 +39,7 @@ RSpec.describe Constraints::ApiVersion do
         version = "1.33.7"
         version_constraints = Constraints::ApiVersion.new(version)
 
-        expect(version_constraints.matches?(nil)).to eq(false)
+        expect(version_constraints.matches?(nil)).to be(false)
       end
     end
   end

@@ -50,7 +50,7 @@ RSpec.describe ApiAuthenticable, type: :model do
     it "behaves nicely if no token is provided" do
       user = build(:user, authentication_token: nil)
 
-      expect(user.valid_token?(nil)).to eq(false)
+      expect(user.valid_token?(nil)).to be(false)
     end
   end
 end
