@@ -231,18 +231,7 @@ jobs:
           bundle exec rake db:create
           bundle exec rake db:schema:load
       - name: rspec
-        env:
-          # If we don't supply a CC_TEST_REPORTER_ID simplecov won't output coverage in a way that
-          # code climate understands
-          CC_TEST_REPORTER_ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
         run: bundle exec rspec
-      - name: Archive coverage
-        uses: actions/upload-artifact@v2
-        if: always()
-        with:
-          name: coverage
-          path: |
-            coverage
       - name: Archive capybara artifacts
         uses: actions/upload-artifact@v2
         if: failure()

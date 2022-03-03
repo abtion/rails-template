@@ -1,6 +1,3 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/d0e13853fa82d32e650a/maintainability)](https://codeclimate.com/repos/5dcbb7cd09f28e014c00f396/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/d0e13853fa82d32e650a/test_coverage)](https://codeclimate.com/repos/5dcbb7cd09f28e014c00f396/test_coverage)
-
 # Muffi
 
 1. [Muffi](#muffi)
@@ -13,15 +10,14 @@
       2. [Replace license](#replace-license)
       3. [Configure the project](#configure-the-project)
       4. [Setup colors](#setup-colors)
-      5. [Configure Code Climate](#configure-code-climate)
-      6. [Configure CD](#configure-cd)
-      7. [Configure i18n tasks](#configure-i18n-tasks)
-      8. [Setup mailing](#setup-mailing)
-      9. [Setup basic auth](#setup-basic-auth)
-      10. [Capybara drivers](#capybara-drivers)
-      11. [Capybara Screenshots in CI](#capybara-screenshots-in-ci)
-      12. [Set up Dependabot](#set-up-dependabot)
-      13. [Set up database backups](#set-up-database-backups)
+      5. [Configure CD](#configure-cd)
+      6. [Configure i18n tasks](#configure-i18n-tasks)
+      7. [Setup mailing](#setup-mailing)
+      8. [Setup basic auth](#setup-basic-auth)
+      9. [Capybara drivers](#capybara-drivers)
+      10. [Capybara Screenshots in CI](#capybara-screenshots-in-ci)
+      11. [Set up Dependabot](#set-up-dependabot)
+      12. [Set up database backups](#set-up-database-backups)
    4. [Contributing](#contributing)
    5. [License](#license)
    6. [About Abtion](#about-abtion)
@@ -112,15 +108,6 @@ All the predefined colors are required for the built-in components to work:
 
 - Contrast colors are picked from the "light" and "dark" colours.
 - Contextual colors (primary, secondary, etc.) are used for component variants.
-
-### Configure Code Climate
-
-1. Login to CodeClimate and add your project
-2. Go to the `Repo Settings` -> `Test coverage`
-3. Enable `Enforce Diff Coverage` with a threshold of 100%
-4. Copy the `TEST REPORTER ID`
-5. Visit `https://github.com/abtion/<Project name>/settings/secrets`
-6. Add a new secret: `CC_TEST_REPORTER_ID` with the copied value from codeclimate
 
 ### Configure CD
 
