@@ -6819,9 +6819,9 @@ postcss-normalize-url@^5.0.4:
     postcss-value-parser "^4.2.0"
 
 postcss-normalize-whitespace@^5.0.2:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/postcss-normalize-whitespace/-/postcss-normalize-whitespace-5.0.3.tgz#fb6bcc9ff2f834448b802657c7acd0956f4591d1"
-  integrity sha512-333JWRnX655fSoUbufJ10HJop3c8mrpKkCCUnEmgz/Cb/QEtW+/TMZwDAUt4lnwqP6tCCk0x0b58jqvDgiQm/A==
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-normalize-whitespace/-/postcss-normalize-whitespace-5.1.0.tgz#aed8b4580c9ad6e8eac034177291187ea16a059c"
+  integrity sha512-7O1FanKaJkpWFyCghFzIkLhehujV/frGkdofGLwhg5upbLyGsSfiTcZAdSzoPsSUgyPCkBkNMeWR8yVgPdQybg==
   dependencies:
     postcss-value-parser "^4.2.0"
 
