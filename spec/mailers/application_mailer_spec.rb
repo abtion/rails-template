@@ -6,7 +6,7 @@ RSpec.describe ApplicationMailer do
   before do
     test_mailer = Class.new(ApplicationMailer) do
       def test_mail
-        mail(to: "test@example.com", subject: "test") do |format|
+        mail(to: "test@example.com", subject: "test") do |format| # rubocop:disable Rails/I18nLocaleTexts
           format.text do
             render plain: "Test Text"
           end
