@@ -64,13 +64,13 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp-relay.sendinblue.com",
     port: 587,
-    user_name: ENV["SENDINBLUE_EMAIL"],
-    password: ENV["SENDINBLUE_PASSWORD"],
+    user_name: ENV.fetch("SENDINBLUE_EMAIL", nil),
+    password: ENV.fetch("SENDINBLUE_PASSWORD", nil),
     authentication: "login",
     enable_starttls_auto: true
   }
 
-  hostname = ENV["DOMAIN_NAME"]
+  hostname = ENV.fetch("DOMAIN_NAME", nil)
   hostname ||= "#{ENV.fetch('HEROKU_APP_NAME')}.herokuapp.com"
   config.action_mailer.default_url_options = { host: hostname }
 

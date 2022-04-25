@@ -48,7 +48,7 @@ Rails.application.configure do
 
   # Use letter_opener to display mails
 
-  if ENV["USE_LETTER_OPENER"] == "true"
+  if ENV.fetch("USE_LETTER_OPENER", nil) == "true"
     config.action_mailer.delivery_method = :letter_opener
     config.action_mailer.perform_deliveries = true
   end
