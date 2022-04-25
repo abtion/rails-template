@@ -2,7 +2,7 @@
 
 require "simplecov"
 
-unless ENV.fetch("DISABLE_SIMPLECOV", nil) == "true"
+unless ENV.key?("DISABLE_SIMPLECOV")
   SimpleCov.start("rails") do
     add_filter "spec"
     add_filter "vendor"
