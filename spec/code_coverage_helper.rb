@@ -2,15 +2,15 @@
 
 require "simplecov"
 
-unless ENV["DISABLE_SIMPLECOV"] == "true"
+unless ENV.fetch("DISABLE_SIMPLECOV", nil) == "true"
   SimpleCov.start("rails") do
     add_filter "spec"
     add_filter "vendor"
     enable_coverage :branch
     primary_coverage :branch
     minimum_coverage(
-      line: (ENV["CODE_COVERAGE_PERCENTAGE"] || 0).to_i,
-      branch: (ENV["CODE_COVERAGE_PERCENTAGE"] || 0).to_i
+      line: ENV.fetch("CODE_COVERAGE_PERCENTAGE", 0).to_i,
+      branch: ENV.fetch("CODE_COVERAGE_PERCENTAGE", 0).to_i
     )
   end
 end
