@@ -143,7 +143,7 @@ The hooks are symlinked meaning all the changes to the repo hooks will automatic
 ### 5. Mails (letter_opener)
 
 Mail sent while working in development environment is displayed with letter_opener.
-To disable letter_opener set `USE_LETTER_OPENER` variable in `.env.development` file to `false` (true by default)
+To disable letter_opener remove/comment out the `USE_LETTER_OPENER` line from `.env.development`.
 
 ## Day-to-day
 
