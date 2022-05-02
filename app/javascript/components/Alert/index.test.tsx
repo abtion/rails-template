@@ -1,5 +1,5 @@
 import React from "react"
-import { render } from "@testing-library/react"
+import { render, waitFor } from "@testing-library/react"
 import Variant from "~/const/variant"
 
 import Alert, { AlertProps } from "."
@@ -31,7 +31,7 @@ describe(Alert, () => {
   })
 
   describe("with onClose handler", () => {
-    it("has a close button", () => {
+    it("has a close button", async () => {
       const closeHandler = jest.fn()
       const { getByRole } = render(
         <Alert
@@ -49,7 +49,9 @@ describe(Alert, () => {
 
       userEvent.click(element)
 
-      expect(closeHandler).toHaveBeenCalled()
+      await waitFor(() => {
+        expect(closeHandler).toHaveBeenCalled()
+      })
     })
   })
 })

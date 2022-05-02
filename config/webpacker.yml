@@ -1,7 +1,9 @@
 # Note: You must restart bin/webpack-dev-server for changes to take effect
 
 default: &default
-  source_path: app/packs
+  source_path: app/javascript
+  # Default source_entry_path is "."" which will compile all files in the source path, we don't want
+  # that since it prevents us from having configuration files and the likes in app/javascript
   source_entry_path: entrypoints
   public_root_path: public
   public_output_path: packs

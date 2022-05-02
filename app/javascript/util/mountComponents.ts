@@ -1,5 +1,5 @@
 import React from "react"
-import ReactDOM from "react-dom"
+import { createRoot } from "react-dom/client"
 
 interface RequireContext {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -60,7 +60,7 @@ function getConstructor(className: string, contexts: RequireContext[]) {
   return component
 }
 
-export default function mountComponent(...contexts: RequireContext[]): void {
+export default function mountComponents(...contexts: RequireContext[]): void {
   const nodes = document.querySelectorAll("[data-react-component]")
 
   for (let i = 0; i < nodes.length; ++i) {
@@ -75,6 +75,7 @@ export default function mountComponent(...contexts: RequireContext[]): void {
     const props = propsJson && JSON.parse(propsJson)
 
     const component = React.createElement(constructor, props)
-    ReactDOM.render(component, node)
+    const root = createRoot(node)
+    root.render(component)
   }
 }
