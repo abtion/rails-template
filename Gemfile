@@ -19,9 +19,9 @@ gem "rack-attack"
 gem "rails", "~> 7.0.2"
 gem "rails-i18n"
 gem "rollbar"
+gem "shakapacker"
 gem "sidekiq"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "webpacker", "~> 6.0.0.rc"
 
 group :development, :test do
   gem "abtion-scripts"

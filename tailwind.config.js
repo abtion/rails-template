@@ -1,12 +1,15 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const colors = require("./colors.json")
-const prepareColorVariables = require("./app/packs/util/prepareColorVariables")
+const prepareColorVariables = require("./app/javascript/util/prepareColorVariables")
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 const tailwindConfig = prepareColorVariables(colors).tailwindConfig
 
 module.exports = {
-  purge: ["./app/packs/**/*.{js,jsx,ts,tsx,scss,css}", "./app/views/**/*.erb"],
+  purge: [
+    "./app/javascript/**/*.{js,jsx,ts,tsx,scss,css}",
+    "./app/views/**/*.erb",
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     container: {

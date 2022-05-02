@@ -1,4 +1,4 @@
-const { webpackConfig } = require("@rails/webpacker")
+const { webpackConfig } = require("shakapacker")
 
 const nodeSassGlobImporter = require("node-sass-glob-importer")
 

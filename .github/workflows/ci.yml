@@ -41,7 +41,7 @@ jobs:
       - name: yarn
         run: yarn --frozen-lockfile
       - name: lint
-        run: yarn eslint app/packs
+        run: yarn eslint app/javascript
   stylelint:
     runs-on: ubuntu-latest
     steps:
@@ -58,7 +58,7 @@ jobs:
       - name: yarn
         run: yarn --frozen-lockfile
       - name: stylelint
-        run: npx stylelint "app/packs/**/*.scss"
+        run: npx stylelint "app/javascript/**/*.scss"
   erb-lint:
     runs-on: ubuntu-latest
     steps:
@@ -114,7 +114,7 @@ jobs:
       - name: yarn
         run: yarn --frozen-lockfile
       - name: prettier
-        run: yarn prettier app/packs --check
+        run: yarn prettier app/javascript --check
   schema:
     runs-on: ubuntu-latest
 
