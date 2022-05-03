@@ -18,5 +18,6 @@ end
 RSpec.configure do |config|
   config.before(:each, type: :system) do
     driven_by(ENV.fetch("CAPYBARA_DRIVER", "selenium_chrome_headless").to_sym)
+    page.driver.browser.manage.window.resize_to(1920, 1080)
   end
 end
