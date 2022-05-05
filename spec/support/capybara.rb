@@ -17,6 +17,7 @@ end
 # So we set it the rails way instead of the capybara way
 RSpec.configure do |config|
   config.before(:each, type: :system) do
-    driven_by(ENV.fetch("CAPYBARA_DRIVER", "selenium_chrome_headless").to_sym)
+    driven_by(:selenium, using: ENV.fetch("CAPYBARA_DRIVER", "headless_chrome").to_sym,
+                         screen_size: [1920, 1080])
   end
 end
