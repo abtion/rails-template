@@ -19,6 +19,9 @@ This project is built on top of [Muffi](https://github.com/abtion/muffi).
    - [Day-to-day](#day-to-day)
    - [Debugging](#debugging)
    - [Download production or staging DB](#download-production-or-staging-db)
+   - [System specs (E2E tests)](#system-specs-e2e-tests)
+     - [Switching browser driver](#switching-browser-driver)
+     - [Screenshots in CI](#screenshots-in-ci)
 4. [Notable inclusions and Notable exclusions](#notable-inclusions-and-notable-exclusions)
    1. [Devise User Authorization](#devise-user-authorization)
 5. [Production](#production)
@@ -171,6 +174,33 @@ It contains personal data, and the environment you download it to must be as sec
 Additionally, you must ensure that the data is deleted afterwards.
 
 If for some reason you need to download production data anyway, you can use [parity](https://github.com/thoughtbot/parity).
+
+## System specs (E2E tests)
+
+We use [rspecs adaptor for rails system test](https://relishapp.com/rspec/rspec-rails/v/5-1/docs/system-specs/system-spec), which in turn is using [capybara](https://github.com/teamcapybara/capybara).
+
+The configuration is kept in `spec/support/capybara.rb`.
+
+### Switching browser driver
+
+By default the systems specs are executed in a headless chrome browser.
+
+To see what's going on in a spec use the `CAPYBARA_DRIVER` env var to set a non-headless browser, e.g.:
+
+`CAPYBARA_DRIVER=chrome bundle exec rspec`
+
+Available options are (as per possible names [here](https://github.com/rails/rails/blob/df1e1bc35c6210ecb39532a06823a6cf4f07bcd8/actionpack/lib/action_dispatch/system_testing/browser.rb)):
+
+- `chrome`
+- `firefox`\*
+- `headless_chrome`
+- `headless_firefox`\*
+
+\* Firefox options are untested and therefore cannot be relied upon
+
+### Screenshots in CI
+
+When system spec fails in CI a screenshot will be saved as a Github Actions artifact. If need be you can download the `capybara.zip` file and extract it to get to the screenshots.
 
 # Notable inclusions and Notable exclusions
 

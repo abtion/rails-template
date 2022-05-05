@@ -14,10 +14,8 @@
       6. [Configure i18n tasks](#configure-i18n-tasks)
       7. [Setup mailing](#setup-mailing)
       8. [Setup basic auth](#setup-basic-auth)
-      9. [Capybara drivers](#capybara-drivers)
-      10. [Capybara Screenshots in CI](#capybara-screenshots-in-ci)
-      11. [Set up Dependabot](#set-up-dependabot)
-      12. [Set up database backups](#set-up-database-backups)
+      9. [Set up Dependabot](#set-up-dependabot)
+      10. [Set up database backups](#set-up-database-backups)
    4. [Contributing](#contributing)
    5. [License](#license)
    6. [About Abtion](#about-abtion)
@@ -181,17 +179,6 @@ For added security we want to add basic auth to our review/staging environments.
 2. Add environment variables for:
 3. `HTTP_AUTH_USERNAME`
 4. `HTTP_AUTH_PASSWORD`
-
-### Capybara drivers
-
-This project registers two Capybara drivers.
-
-Set the environment variable `CAPYBARA_DRIVER` to `headless_chrome` (default) to run specs without
-opening Chrome, or use `chrome` to open the browser automatically.
-
-### Capybara Screenshots in CI
-
-When a spec using Capybara fails in CI a screenshot will be saved under Github Actions Artifacts. If need be you can download the `capybara.zip` file and extract it to get to the screenshots.
 
 ### Set up Dependabot
 
