@@ -391,7 +391,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rspec
-  shakapacker
+  shakapacker (= 6.2.1)
   shoulda-matchers
   sidekiq
   simplecov
