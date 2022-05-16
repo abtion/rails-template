@@ -62,7 +62,7 @@
     "@types/jest": "^27.0.2",
     "@types/rails__activestorage": "^7.0.0",
     "@types/rails__ujs": "^6.0.1",
-    "@types/react": "^18.0.8",
+    "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
     "@types/testing-library__jest-dom": "^5.14.3",
     "@types/webpack-env": "^1.16.2",
