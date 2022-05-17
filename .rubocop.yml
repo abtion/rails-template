@@ -54,28 +54,32 @@ Metrics/MethodLength:
 Rails/FilePath:
   EnforcedStyle: arguments
 
+Rails/EnvironmentVariableAccess:
+  Enabled: true
+
 Style/Documentation:
   Enabled: false
 
 Style/MethodCallWithArgsParentheses:
-  IgnoredMethods: [
-    "to",
-    "to_not",
-    "require",
-    "require_relative",
-    "describe",
-    "it",
-    "context",
-    "exit",
-    "validate_presence_of",
-    "belong_to",
-    "have_many",
-    "raise",
-    "puts",
-    "desc",
-    "redirect_to",
-    "render"
-  ]
+  IgnoredMethods:
+    [
+      "to",
+      "to_not",
+      "require",
+      "require_relative",
+      "describe",
+      "it",
+      "context",
+      "exit",
+      "validate_presence_of",
+      "belong_to",
+      "have_many",
+      "raise",
+      "puts",
+      "desc",
+      "redirect_to",
+      "render",
+    ]
   Enabled: true
   Exclude:
     - "db/migrate/*.rb"
