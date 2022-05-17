@@ -1,0 +1,6 @@
+---
+da:
+  errors:
+    not_found:
+      subtitle: Har du eventuelt skrevet adressen forkert?
+      title: Siden kunne ikke findes.
