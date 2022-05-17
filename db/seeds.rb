@@ -9,8 +9,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.find_or_create_by(email: ENV.fetch("SEED_ADMIN_EMAIL", "admin@example.com")) do |u|
-  password = ENV.fetch("SEED_ADMIN_INITIAL_PASSWORD", SecureRandom.hex(64))
+User.find_or_create_by(email: Constants::SEED_ADMIN_EMAIL) do |u|
+  password = Constants::SEED_ADMIN_INITIAL_PASSWORD
 
   u.password = u.password_confirmation = password
   u.admin = true

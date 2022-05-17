@@ -28,7 +28,7 @@ RSpec.describe ApplicationController, type: :controller do
     end
 
     it "requires authentication if ENV HTTP_AUTH_PASSWORD is set" do
-      allow(ENV).to receive(:fetch).with("HTTP_AUTH_PASSWORD", nil).and_return("a")
+      stub_const("Constants::HTTP_AUTH_PASSWORD", "a")
 
       get :index
 
@@ -36,9 +36,9 @@ RSpec.describe ApplicationController, type: :controller do
     end
 
     it "authenticates" do
-      allow(ENV).to receive(:fetch).with("HTTP_AUTH_USERNAME").and_return("a")
-      allow(ENV).to receive(:fetch).with("HTTP_AUTH_PASSWORD", nil).and_return("a")
-      allow(ENV).to receive(:fetch).with("HTTP_AUTH_PASSWORD").and_return("b")
+      stub_const("Constants::HTTP_AUTH_USERNAME", "a")
+      stub_const("Constants::HTTP_AUTH_PASSWORD", "b")
+
       request.env["HTTP_AUTHORIZATION"] =
         ActionController::HttpAuthentication::Basic.encode_credentials("a", "b")
       get :index

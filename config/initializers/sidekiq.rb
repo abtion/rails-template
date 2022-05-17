@@ -2,11 +2,11 @@
 
 if Rails.env.production?
   def sidekiq_username
-    ENV.fetch("SIDEKIQ_USERNAME")
+    Constants::SIDEKIQ_USERNAME
   end
 
   def sidekiq_password
-    ENV.fetch("SIDEKIQ_PASSWORD")
+    Constants::SIDEKIQ_PASSWORD
   end
 
   require "sidekiq/web"
@@ -18,9 +18,9 @@ if Rails.env.production?
 end
 
 Sidekiq.configure_server do |config|
-  config.redis = { url: ENV.fetch("REDIS_URL") }
+  config.redis = { url: Constants::REDIS_URL }
 end
 
 Sidekiq.configure_client do |config|
-  config.redis = { url: ENV.fetch("REDIS_URL") }
+  config.redis = { url: Constants::REDIS_URL }
 end
