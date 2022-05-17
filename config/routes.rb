@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   end
 
   root to: "home#index"
+
+  match "*unmatched", to: "errors#not_found", via: :all
 end
