@@ -54,5 +54,6 @@ group :test do
   gem "capybara"
   gem "factory_bot_rails"
   gem "faker"
+  gem "rails-controller-testing"
   gem "simplecov"
 end
