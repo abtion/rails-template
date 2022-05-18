@@ -6,11 +6,10 @@ const prepareColorVariables = require("./app/javascript/util/prepareColorVariabl
 const tailwindConfig = prepareColorVariables(colors).tailwindConfig
 
 module.exports = {
-  purge: [
+  content: [
     "./app/javascript/**/*.{js,jsx,ts,tsx,scss,css}",
     "./app/views/**/*.erb",
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
       center: true,
@@ -25,12 +24,6 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Inter", "sans-serif"],
-    },
-  },
-  variants: {
-    extend: {
-      backgroundColor: ["odd", "active"],
-      boxShadow: ["active"],
     },
   },
   plugins: [],
