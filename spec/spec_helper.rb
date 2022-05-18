@@ -8,6 +8,7 @@ Dotenv.load(
   ".env"
 )
 
+require_relative "../config/constants"
 require "code_coverage_helper"
 
 RSpec.configure do |config|
