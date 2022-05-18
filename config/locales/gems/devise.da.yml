@@ -5,13 +5,6 @@ da:
       new:
         resend_confirmation_instructions: Gensend bekræftelsesinstruktioner
     mailer:
-      confirmation_instructions:
-        action: Bekræft min konto
-        greeting: Velkommen %{recipient}
-        instruction: 'Du kan bekræfte din konto og e-mail via linket herunder:'
-      email_changed:
-        greeting: Hej %{recipient}
-        message: Vi skriver til dig for at oplyse dig om, at din e-mail er blevet ændret til %{email}.
       password_change:
         greeting: Hej %{recipient}
         message: Vi skriver til dig for at oplyse dig om, at din adgangskode er blevet ændret.
@@ -21,11 +14,6 @@ da:
         instruction: Der er blevet anmodet om at ændre din adgangskode. Du kan ændre den via linket herunder.
         instruction_2: Hvis du ikke har anmodet om dette, så se venligst bort fra denne mail.
         instruction_3: Din adgangskode forbliver uændret, indtil du laver en ny via linket herover.
-      unlock_instructions:
-        action: Lås min konto op
-        greeting: Hej %{recipient}
-        instruction: 'Klik på linket herunder for at låse din konto op:'
-        message: Din konto er blevet låst efter for mange forkerte forsøg på at logge ind.
     passwords:
       edit:
         change_my_password: Skift min adgangskode
