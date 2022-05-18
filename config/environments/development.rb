@@ -48,7 +48,7 @@ Rails.application.configure do
 
   # Use letter_opener to display mails
 
-  if ENV.fetch("USE_LETTER_OPENER", nil) == "true"
+  if Constants::USE_LETTER_OPENER == "true"
     config.action_mailer.delivery_method = :letter_opener
     config.action_mailer.perform_deliveries = true
   end
@@ -75,7 +75,7 @@ Rails.application.configure do
   # For example in `.env.development.local`:
   #
   # ALLOWED_HOSTS=dev-server,xxx.ngrok.io
-  config.hosts += ENV.fetch("ALLOWED_HOSTS", "").split(",")
+  config.hosts += Constants::ALLOWED_HOSTS.split(",")
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
