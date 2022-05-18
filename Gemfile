@@ -30,6 +30,8 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "dotenv-rails"
   gem "erb_lint", require: false
+  gem "factory_bot_rails"
+  gem "faker"
   gem "i18n-tasks"
   gem "rspec-rails", "~> 6.0.0.rc1"
   gem "rubocop"
@@ -52,8 +54,6 @@ end
 
 group :test do
   gem "capybara"
-  gem "factory_bot_rails"
-  gem "faker"
   gem "rails-controller-testing"
   gem "simplecov"
 end
