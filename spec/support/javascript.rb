@@ -4,7 +4,8 @@
 # This will fail feature specs on javascript errors/warnings
 RSpec.configure do |config|
   config.after(:each, type: :system) do |example|
-    errors = page.driver.browser.manage.logs.get(:browser)
+    errors = page.driver.browser.logs.get(:browser)
+
     disable_info = <<~TXT
       If the error is expected, handle the browser log in the test:
 
