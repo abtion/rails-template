@@ -111,6 +111,9 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.10.2)
       devise (>= 4.8.0)
+    devise-pwned_password (0.1.9)
+      devise (~> 4)
+      pwned (~> 2.0.0)
     diff-lcs (1.5.0)
     digest (3.1.0)
     docile (1.4.0)
@@ -211,6 +214,7 @@ GEM
       nio4r (~> 2.0)
     pundit (2.2.0)
       activesupport (>= 3.0.0)
+    pwned (2.0.2)
     racc (1.6.0)
     rack (2.2.3)
     rack-attack (6.6.1)
@@ -371,6 +375,7 @@ DEPENDENCIES
   capybara
   devise
   devise-i18n
+  devise-pwned_password
   dotenv-rails
   erb_lint
   factory_bot_rails
