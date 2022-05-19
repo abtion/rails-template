@@ -1,0 +1,28 @@
+.AlertIcon {
+  @apply w-5 h-5 flex-none mr-3;
+
+  // Colors
+  &--neutral {
+    @apply text-neutral-400;
+  }
+
+  &--primary {
+    @apply text-primary-400;
+  }
+
+  &--success {
+    @apply text-success-400;
+  }
+
+  &--danger {
+    @apply text-danger-400;
+  }
+
+  &--warning {
+    @apply text-warning-400;
+  }
+
+  &--info {
+    @apply text-info-400;
+  }
+}
