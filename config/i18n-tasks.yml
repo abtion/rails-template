@@ -100,16 +100,16 @@ search:
 ignore_unused:
   - "activerecord.errors.messages.record_invalid"
   - "activerecord.errors.messages.restrict_dependent_destroy.*"
-  - 'helpers.placeholder.*'
-  - 'helpers.select.*'
-  - 'helpers.submit.*'
+  - "helpers.placeholder.*"
+  - "helpers.select.*"
+  - "helpers.submit.*"
   - "date.*"
   - "datetime.*"
   - "errors.*"
   - "number.*"
   - "support.*"
   - "time.*"
-
+  - "devise.sessions.warn_pwned.*"
 ## Exclude these keys from the `i18n-tasks eq-base' report:
 # ignore_eq_base:
 #   all:

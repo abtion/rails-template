@@ -14,7 +14,7 @@ Devise.setup do |config|
 
   # To prevent the default call to the HaveIBeenPwned API on user sign-in
   # (only really useful if you're going to check pwned? after sign-in).
-  config.pwned_password_check_on_sign_in = false
+  config.pwned_password_check_on_sign_in = true
 
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
