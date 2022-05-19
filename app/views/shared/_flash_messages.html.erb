@@ -1,0 +1,8 @@
+<div class="container mx-auto">
+  <% if flash[:alert] %>
+    <%= react_component :FlashMessage, variant: :danger, className: "my-4", children: flash[:alert] %>
+  <% end %>
+  <% if flash[:notice] %>
+    <%= react_component :FlashMessage, variant: :success, className: "my-4", children: flash[:notice] %>
+  <% end %>
+</div>
