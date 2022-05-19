@@ -67,4 +67,8 @@ RSpec.configure do |config|
   # Include integration helpers for feature tests
   config.include(Devise::Test::IntegrationHelpers, type: :system)
   config.include(Devise::Test::ControllerHelpers, type: :controller)
+  config.include(RequestStubs)
+  config.before do
+    stub_strong_password
+  end
 end
