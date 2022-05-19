@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :user do
     name { Faker::Name.name }
     email { Faker::Internet.safe_email }
-    password { Faker::Internet.password(min_length: 8) }
+    password { "woof-SAYS-muffi" }
     password_confirmation { password }
 
     trait :admin do
