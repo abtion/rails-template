@@ -57,4 +57,5 @@ group :test do
   gem "capybara"
   gem "rails-controller-testing"
   gem "simplecov"
+  gem "webmock"
 end
