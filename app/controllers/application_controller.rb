@@ -19,4 +19,12 @@ class ApplicationController < ActionController::Base
         ActiveSupport::SecurityUtils.secure_compare(password, ENV.fetch("HTTP_AUTH_PASSWORD"))
     end
   end
+
+  def after_sign_in_path_for(resource)
+    if resource.respond_to?(:pwned?) && resource.pwned?
+      set_flash_message!(:warning, :warn_pwned, count: resource.pwned_count)
+    end
+
+    super
+  end
 end

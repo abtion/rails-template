@@ -2,7 +2,7 @@
 
 # rubocop:disable Rails/ApplicationController
 class ErrorsController < ActionController::Base
-  layout "devise_parent"
+  layout "devise"
 
   def not_found
     render status: :not_found

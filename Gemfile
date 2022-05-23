@@ -9,6 +9,7 @@ gem "awesome_print"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "devise"
 gem "devise-i18n"
+gem "devise-pwned_password"
 gem "jquery-rails"
 gem "jsonapi-serializer"
 gem "pg", "~> 1.3"
@@ -56,4 +57,5 @@ group :test do
   gem "capybara"
   gem "rails-controller-testing"
   gem "simplecov"
+  gem "webmock"
 end

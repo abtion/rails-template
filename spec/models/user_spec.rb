@@ -6,16 +6,31 @@ RSpec.describe User, type: :model do
   describe "password" do
     context "with 8 character long password" do
       it "user is valid" do
-        user = build(:user, password: "12345678")
+        user = build(:user)
         expect(user).to be_valid
       end
     end
 
     context "without 8 character long password" do
       it "user is not valid" do
-        user = build(:user, password: "1234567")
+        stub_strong_password(password: "AWMG129")
+        user = build(:user, password: "AWMG129")
+
         expect(user).to_not be_valid
         expect(user.errors[:password]).to eq(["is too short (minimum is 8 characters)"])
+      end
+    end
+
+    context "with weak password" do
+      it "user is not valid" do
+        stub_weak_password(password: "password", breach_count: 3_861_493)
+        user = build(:user, password: "password")
+
+        expect(user).to_not(be_valid)
+        expect(user.errors[:password]).to eq([
+          "has previously appeared in data breaches 3861493 times and should never be used.
+          Please choose something harder to guess.".squish
+        ])
       end
     end
   end

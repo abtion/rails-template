@@ -2,6 +2,9 @@
   <% if flash[:alert] %>
     <%= react_component :FlashMessage, variant: :danger, className: "my-4", children: flash[:alert] %>
   <% end %>
+  <% if flash[:warning] %>
+    <%= react_component :FlashMessage, variant: :warning, className: "my-4", children: flash[:warning] %>
+  <% end %>
   <% if flash[:notice] %>
     <%= react_component :FlashMessage, variant: :success, className: "my-4", children: flash[:notice] %>
   <% end %>

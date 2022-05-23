@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "layouts/devise_parent", type: :view do
+RSpec.describe "layouts/devise", type: :view do
   it "renders the placeholder image" do
     render
 

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "webmock/rspec"
 require "dotenv"
 Dotenv.load(
   ".env.test.local",
@@ -11,6 +12,11 @@ Dotenv.load(
 require "code_coverage_helper"
 
 RSpec.configure do |config|
+  WebMock.disable_net_connect!(
+    allow: "https://chromedriver.storage.googleapis.com",
+    allow_localhost: true
+  )
+
   config.expect_with(:rspec) do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
