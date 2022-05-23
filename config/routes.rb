@@ -4,7 +4,9 @@ require "sidekiq/web"
 require "constraints/api_version"
 
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: "users/sessions"
+  }
 
   mount Sidekiq::Web => "/sidekiq"
 
