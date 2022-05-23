@@ -15,7 +15,7 @@
     "@babel/preset-typescript": "^7.16.7",
     "@babel/runtime": "^7.17.9",
     "@heroicons/react": "^1.0.6",
-    "@rails/actioncable": "^7.0.0",
+    "@rails/actioncable": "^7.0.3",
     "@rails/activestorage": "^7.0.2",
     "@rails/ujs": "^7.0.0",
     "autoprefixer": "^10.4.7",
