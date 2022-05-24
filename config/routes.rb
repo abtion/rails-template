@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     sessions: "users/sessions"
   }
 
+  namespace :admin do
+    resources :users
+  end
+
   mount Sidekiq::Web => "/sidekiq"
 
   namespace :api, defaults: { format: :json } do
