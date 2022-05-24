@@ -3,3 +3,5 @@ da:
   policies:
     application:
       you_are_not_logged_in: Du er ikke logget ind
+  pundit:
+    not_authorized: Adgang nægtet!
