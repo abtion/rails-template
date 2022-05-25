@@ -108,6 +108,7 @@ RSpec/MultipleExpectations:
   Max: 5
   Exclude:
     - "spec/mailers/**/*"
+    - "spec/views/**/*"
 
 RSpec/LeadingSubject:
   Enabled: false
