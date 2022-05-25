@@ -10,7 +10,6 @@
   <div class="mb-6">
     <%= f.label(:password, class: "inline-block mb-2") %>
     <%= f.password_field(:password, autocomplete: "new-password", placeholder: true, class: "Input Input--neutral Input--md block w-full") %>
-    <%= error_message(field: :password, resource: @user) %>
   </div>
   <div class="mb-12">
     <%= f.label(:password_confirmation, class: "inline-block mb-2") %>
