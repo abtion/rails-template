@@ -1,0 +1,13 @@
+---
+en:
+  admin:
+    users:
+      edit:
+        title: Edit user
+      index:
+        new: Create new user
+        title: Users
+      new:
+        title: Create new user
+      show:
+        title: User

@@ -1,6 +1,9 @@
 ---
 en:
   activerecord:
+    attributes:
+      user:
+        name: Name
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'

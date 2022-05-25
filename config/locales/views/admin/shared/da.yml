@@ -1,0 +1,11 @@
+---
+da:
+  admin:
+    shared:
+      cancel: Tilbage
+      delete: Slet
+      delete_confirm: Er du sikker?
+      edit: Rediger
+      save: Gem
+      show: Vis
+      title: Admin Area

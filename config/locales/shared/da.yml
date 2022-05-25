@@ -159,6 +159,10 @@ da:
     precision:
       format:
         delimiter: ''
+  shared:
+    flash_messages:
+      error: Fejl!
+      success: Succes!
   support:
     array:
       last_word_connector: " og "
