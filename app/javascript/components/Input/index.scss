@@ -38,4 +38,8 @@
   &--info {
     @apply border-info-300 focus:ring-info-300 focus:border-info-300;
   }
+
+  &.field_with_errors {
+    @apply border-danger-300 mb-2 focus:ring-danger-300 focus:border-danger-300;
+  }
 }
