@@ -31,7 +31,8 @@
   }
 
   // Colors
-  &:enabled {
+  &:enabled,
+  &.Button__link {
     &.Button--neutral {
       @apply text-neutral-600-contrast bg-neutral-500 hover:bg-neutral-600 active:bg-neutral-700 ring-neutral-500;
     }
