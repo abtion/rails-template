@@ -5,7 +5,3 @@
 // stylelint-disable scss/at-import-partial-extension-blacklist
 @import "fonts/**/*.scss";
 // stylelint-enable scss/at-import-partial-extension-blacklist
-
-a {
-  @apply underline text-primary;
-}
