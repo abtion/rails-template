@@ -18,5 +18,7 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
-  match "*unmatched", to: "errors#not_found", via: :all
+  if ENV.fetch("RAILS_ENV", "development") == "production"
+    match "*unmatched", to: "errors#not_found", via: :all
+  end
 end
