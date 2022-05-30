@@ -13,7 +13,7 @@
     "@babel/preset-env": "^7.16.10",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.16.7",
-    "@babel/runtime": "^7.17.9",
+    "@babel/runtime": "^7.18.3",
     "@heroicons/react": "^1.0.6",
     "@rails/actioncable": "^7.0.3",
     "@rails/activestorage": "^7.0.2",
