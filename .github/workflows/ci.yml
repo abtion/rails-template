@@ -160,6 +160,8 @@ jobs:
       MAIL_FROM: dummy
       REDIS_URL: dummy
       SECRET_KEY_BASE: dummy
+      SIDEKIQ_USERNAME: dummy
+      SIDEKIQ_PASSWORD: dummy
 
     steps:
       - name: checkout repository
