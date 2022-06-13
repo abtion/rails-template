@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-  def error_message(field:, resource:)
+  def field_error(field:, resource:)
     return unless resource.errors.key?(field)
 
     errors_array = resource.errors.messages[field]
