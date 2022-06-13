@@ -7,7 +7,7 @@ module ApplicationHelper
     errors_array = resource.errors.messages[field]
     translated_attribute = resource.class.human_attribute_name(field)
 
-    tag.div(class: "mt-1") do
+    tag.div(class: "error-messages") do
       errors_array.map do |error|
         concat(tag.p("#{translated_attribute} #{error}.", class: "text-danger-800 text-sm"))
       end
