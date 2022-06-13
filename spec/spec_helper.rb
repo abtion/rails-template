@@ -28,6 +28,7 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
   config.order = :random
   config.example_status_persistence_file_path = "tmp/spec_example_status_persistence.txt"
+  config.profile_examples = 5
 
   Kernel.srand(config.seed)
 end
