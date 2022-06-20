@@ -16,9 +16,9 @@ export enum LinkVariant {
 }
 
 export interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
-  variant: LinkVariant
+  variant?: LinkVariant
   text: string
-  size: LinkSize
+  size?: LinkSize
   underline?: boolean
 }
 
