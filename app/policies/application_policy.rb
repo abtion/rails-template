@@ -13,34 +13,28 @@ class ApplicationPolicy
     @record = record
   end
 
-  delegate :admin?, to: :user
-
-  def index?
-    admin?
-  end
-
   def show?
-    admin?
+    user.admin?
   end
 
   def create?
-    admin?
+    user.admin?
   end
 
   def new?
-    admin?
+    user.admin?
   end
 
   def update?
-    admin?
+    user.admin?
   end
 
   def edit?
-    admin?
+    user.admin?
   end
 
   def destroy?
-    admin?
+    user.admin?
   end
 
   class Scope

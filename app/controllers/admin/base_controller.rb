@@ -2,12 +2,9 @@
 
 module Admin
   class BaseController < ApplicationController
-    before_action :validate_admin
+    after_action :verify_authorized, except: :index
+    after_action :verify_policy_scoped, only: :index
 
-    private
-
-    def validate_admin
-      authorize(current_user, :admin?)
-    end
+    def index; end
   end
 end

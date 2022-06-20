@@ -33,7 +33,7 @@ RSpec.describe Admin::UsersController, type: :controller do
 
   describe "#new" do
     it "renders new and assigns user" do
-      new_user_mock = instance_double(User)
+      new_user_mock = build(:user)
       allow(User).to receive(:new) { new_user_mock }
 
       get :new

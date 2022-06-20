@@ -3,19 +3,19 @@
 module Admin
   class UsersController < BaseController
     def index
-      @users = User.all
+      @users = policy_scope(User)
     end
 
     def show
-      @user = User.find(params[:id])
+      @user = authorize(User.find(params[:id]))
     end
 
     def new
-      @user = User.new
+      @user = authorize(User.new)
     end
 
     def create
-      @user = User.new(permitted_params)
+      @user = authorize(User.new(permitted_attributes(User)))
 
       if @user.save
         flash[:notice] = I18n.t("shared.flash_messages.success")
@@ -29,13 +29,13 @@ module Admin
     end
 
     def edit
-      @user = User.find(params[:id])
+      @user = authorize(User.find(params[:id]))
     end
 
     def update
-      @user = User.find(params[:id])
+      @user = authorize(User.find(params[:id]))
 
-      if @user.update(permitted_params)
+      if @user.update(permitted_attributes(@user).compact_blank)
         flash[:notice] = I18n.t("shared.flash_messages.success")
 
         redirect_to admin_user_path(@user)
@@ -47,7 +47,7 @@ module Admin
     end
 
     def destroy
-      user = User.find(params[:id])
+      user = authorize(User.find(params[:id]))
 
       if user.destroy
         flash[:notice] = I18n.t("shared.flash_messages.success")
@@ -56,19 +56,6 @@ module Admin
       end
 
       redirect_to admin_users_path
-    end
-
-    private
-
-    def permitted_params
-      params
-        .require(:user)
-        .permit(
-          :email,
-          :name,
-          :password,
-          :password_confirmation
-        ).compact_blank
     end
   end
 end
