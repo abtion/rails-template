@@ -1,5 +1,5 @@
 .Link {
-  @apply flex hover:underline w-max cursor-pointer;
+  @apply flex hover:underline w-max cursor-pointer text-info-400;
 
   // Colors
   &--neutral {
@@ -12,10 +12,6 @@
 
   &--neutral-dark {
     @apply text-neutral-700;
-  }
-
-  &--info {
-    @apply text-info-400;
   }
 
   // underline
