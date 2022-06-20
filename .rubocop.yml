@@ -32,7 +32,6 @@ Lint/ScriptPermission:
     - "Rakefile"
 
 Metrics/AbcSize:
-  Max: 15
   Exclude:
     - "spec/**/*"
     - "db/migrate/*.rb"
