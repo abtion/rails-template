@@ -22,8 +22,7 @@ RSpec.describe "admin/users/index", type: :view do
 
     expect(rendered).to have_css("tr th", text: "Created at")
     expect(rendered).to have_css("tr td", text: user.created_at.strftime("%d %b %H:%M").to_s)
-    expect(rendered).to have_css("[data-react-component=Link]", count: 2)
-    expect(rendered).to match(admin_user_path(user).to_s)
-    expect(rendered).to match(edit_admin_user_path(user).to_s)
+    expect(rendered).to have_link("Show", href: admin_user_path(user).to_s)
+    expect(rendered).to have_link("Edit", href: edit_admin_user_path(user).to_s)
   end
 end

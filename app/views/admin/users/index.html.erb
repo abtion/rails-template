@@ -36,8 +36,8 @@
                     <%= I18n.l(user.created_at, format: :short) %>
                   </td>
                   <td scope="row" class="px-6 py-4 flex justify-end">
-                    <%= react_component :Link, className: "ml-1", size: "bs", variant: :info, href: admin_user_path(user), text: t("admin.shared.show") %>
-                    <%= react_component :Link, className: "ml-1", size: "bs", variant: :info, href: edit_admin_user_path(user), text: t("admin.shared.edit") %>
+                    <%= link_to t("admin.shared.show"), admin_user_path(user), class: "ml-1 Link Link--info" %>
+                    <%= link_to t("admin.shared.edit"), edit_admin_user_path(user), class: "ml-1 Link Link--info" %>
                   </td>
                 </tr>
               <% end %>
