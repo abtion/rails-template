@@ -4,7 +4,7 @@
 
   <div class="mb-6">
     <%= f.label(:email, class: "mb-2 inline-block") %><br>
-    <%= f.email_field(:email, autofocus: true, autocomplete: "email", class: "Input Input--neutral Input--md block w-full") %>
+    <%= f.email_field(:email, autofocus: true, autocomplete: "email", class: "Input Input--default Input--md block w-full") %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -17,17 +17,17 @@
     <% if @minimum_password_length %>
       <em><%= t("devise.shared.minimum_password_length", count: @minimum_password_length) %></em><br>
     <% end %>
-    <%= f.password_field(:password, autocomplete: "new-password", placeholder: true, class: "Input Input--neutral Input--md block w-full") %>
+    <%= f.password_field(:password, autocomplete: "new-password", placeholder: true, class: "Input Input--default Input--md block w-full") %>
   </div>
 
   <div class="mb-6">
     <%= f.label(:password_confirmation, class: "mb-2 inline-block") %><br>
-    <%= f.password_field(:password_confirmation, autocomplete: "new-password", placeholder: true, class: "Input Input--neutral Input--md block w-full") %>
+    <%= f.password_field(:password_confirmation, autocomplete: "new-password", placeholder: true, class: "Input Input--default Input--md block w-full") %>
   </div>
 
   <div class="mb-6">
     <%= f.label(:current_password, class: "mb-2 inline-block") %> <i>(<%= t(".we_need_your_current_password_to_confirm_your_changes") %>)</i><br>
-    <%= f.password_field(:current_password, autocomplete: "current-password", placeholder: true, class: "Input Input--neutral Input--md block w-full") %>
+    <%= f.password_field(:current_password, autocomplete: "current-password", placeholder: true, class: "Input Input--default Input--md block w-full") %>
   </div>
 
   <div class="actions">
