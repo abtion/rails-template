@@ -7,6 +7,7 @@
   <div class="mb-6">
     <%= f.label(:password, class: "mb-2 inline-block") %>
     <%= f.password_field(:password, autocomplete: "current-password", placeholder: true, class: "Input Input--neutral Input--md block w-full") %>
+    <%= render "shared/flash_messages", container_class: "my-6" %>
     <small class="text-sm block text-right mt-3">
       <%= link_to t(".forgot_your_password"), new_password_path(resource_name) %>
     </small>
