@@ -9,12 +9,12 @@
     <% if @minimum_password_length %>
       <em><%= t("devise.shared.minimum_password_length", count: @minimum_password_length) %></em><br>
     <% end %>
-    <%= f.password_field(:password, autofocus: true, autocomplete: "new-password", placeholder: true, class: "Input Input--neutral Input--md block w-full") %>
+    <%= f.password_field(:password, autofocus: true, autocomplete: "new-password", placeholder: true, class: "Input Input--default Input--md block w-full") %>
   </div>
 
   <div class="field mb-6">
     <%= f.label(:password_confirmation, t(".confirm_new_password"), class: "mb-2 inline-block") %><br>
-    <%= f.password_field(:password_confirmation, autocomplete: "new-password", placeholder: true, class: "Input Input--neutral Input--md block w-full") %>
+    <%= f.password_field(:password_confirmation, autocomplete: "new-password", placeholder: true, class: "Input Input--default Input--md block w-full") %>
   </div>
 
   <div class="actions">
