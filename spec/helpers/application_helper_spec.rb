@@ -9,7 +9,7 @@ RSpec.describe ApplicationHelper, type: :helper do
         user = build(:user, email: nil)
         user.valid?
         expected_html_tag = [
-          "<div class=\"error-messages\">",
+          "<div>",
           "<p class=\"text-danger-800 text-sm\">Email can&#39;t be blank.</p>",
           "</div>"
         ].join
