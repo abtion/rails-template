@@ -22,7 +22,7 @@ class ApplicationPolicy
   end
 
   def new?
-    user.admin?
+    create?
   end
 
   def update?
@@ -30,7 +30,7 @@ class ApplicationPolicy
   end
 
   def edit?
-    user.admin?
+    update?
   end
 
   def destroy?
