@@ -3,7 +3,7 @@
 module Admin
   class UsersController < BaseController
     def index
-      @users = policy_scope(User)
+      @users = policy_scope(authorize(User))
     end
 
     def show

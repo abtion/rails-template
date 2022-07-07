@@ -5,7 +5,7 @@ require "pundit/rspec"
 
 RSpec.describe ApplicationPolicy, type: :policy do
   context "when user is admin" do
-    permissions :new?, :create?, :edit?, :update?, :destroy?, :show? do
+    permissions :index?, :new?, :create?, :edit?, :update?, :destroy?, :show? do
       it "grants access" do
         user = build(:user, :admin)
         expect(ApplicationPolicy).to permit(user)
@@ -14,7 +14,7 @@ RSpec.describe ApplicationPolicy, type: :policy do
   end
 
   context "when user is not admin" do
-    permissions :new?, :create?, :edit?, :update?, :destroy?, :show? do
+    permissions :index?, :new?, :create?, :edit?, :update?, :destroy?, :show? do
       it "denies access" do
         expect(ApplicationPolicy).to_not(permit(build(:user)))
       end
