@@ -23,6 +23,7 @@ gem "rollbar"
 gem "shakapacker", "6.5.0"
 gem "sidekiq"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "vite_rails"
 
 group :development, :test do
   gem "abtion-scripts"

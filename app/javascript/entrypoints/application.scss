@@ -1,0 +1,12 @@
+// @import "../components/**/*.scss";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// @import "../fonts/**/*.scss";
+@import "../fonts/inter.scss";
+
+a {
+  @apply underline text-primary;
+}
