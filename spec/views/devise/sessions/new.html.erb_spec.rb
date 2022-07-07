@@ -65,7 +65,7 @@ RSpec.describe "devise/sessions/new", type: :view do
 
       render
 
-      expect(rendered).to have_css("a", exact_text: "Glemt dit kodeord?", normalize_ws: true)
+      expect(rendered).to have_link(exact_text: "Glemt dit kodeord?", normalize_ws: true)
     end
   end
 
@@ -115,7 +115,7 @@ RSpec.describe "devise/sessions/new", type: :view do
 
       render
 
-      expect(rendered).to have_css("a", exact_text: "Forgot your password?")
+      expect(rendered).to have_link(exact_text: "Forgot your password?")
     end
   end
 end
