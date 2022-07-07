@@ -11,7 +11,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
 
       get :show, params: { id: user.id }
 
-      expect(response.status).to eq(200)
+      expect(response).to have_http_status(:ok)
     end
   end
 end

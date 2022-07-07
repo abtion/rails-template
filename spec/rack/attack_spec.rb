@@ -44,7 +44,7 @@ RSpec.describe Rack::Attack, type: :request do
       it "does not change the request status" do
         limit.times do
           get "/", env: { REMOTE_ADDR: "1.2.3.4" }
-          expect(response.status).to_not eq(429)
+          expect(response).to_not have_http_status(:too_many_requests)
         end
       end
     end
