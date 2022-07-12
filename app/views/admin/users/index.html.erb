@@ -13,15 +13,15 @@
             <%= User.human_attribute_name("created_at") %>
           </th>
           <th scope="col" class="text-right px-3 py-2 font-normal">
-            <%= link_to t(".new"), new_admin_user_path, class: "ButtonClear ButtonClear--sm ButtonClear--primary inline-block" %>
+            <%= link_to t(".new"), new_admin_user_path, class: "ButtonClear ButtonClear--sm ButtonClear--primary" %>
           </th>
         </tr>
       </thead>
       <tbody>
         <% @users.each do |user| %>
           <tr class="even:bg-neutral-50 odd:bg-white">
-            <td class="text-sm text-neutral-800 font-medium px-6 py-4 whitespace-nowrap">
-              <%= user.email %>
+            <td class="text-sm text-neutral-800 font-medium px-3 py-2 whitespace-nowrap">
+              <%= link_to user.email, admin_user_path(user), class: "ButtonClear ButtonClear--sm ButtonClear--primary" %>
             </td>
             <td class="text-sm text-neutral-500 px-6 py-4 whitespace-nowrap">
               <%= user.name %>
@@ -30,7 +30,7 @@
               <%= I18n.l(user.created_at, format: :short) %>
             </td>
             <td scope="row" class="px-3 py-2 flex justify-end">
-              <%= link_to t("admin.shared.edit"), edit_admin_user_path(user), class: "ButtonClear ButtonClear--sm ButtonClear--primary inline-block" %>
+              <%= link_to t("admin.shared.edit"), edit_admin_user_path(user), class: "ButtonClear ButtonClear--sm ButtonClear--primary" %>
             </td>
           </tr>
         <% end %>
