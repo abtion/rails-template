@@ -1,10 +1,10 @@
-<nav class="bg-white shadow-md sticky inset-x-0">
+<nav class="bg-white shadow-sm sticky inset-x-0">
   <div class="container mx-auto">
     <div class="flex justify-between flex-wrap">
       <div class="flex">
-        <div>
-          <%= link_to "Project Name Human", root_path, { class: "NavLink flex items-center py-4 px-2 font-semibold" } %>
-        </div>
+        <%= link_to root_path, class: "md:mr-12 grid" do %>
+          <%= image_pack_tag "muffi-logo.svg", class: "justify-self-center self-center" %>
+        <% end %>
       </div>
 
       <div class="md:hidden flex items-center">
@@ -15,23 +15,29 @@
         </button>
       </div>
 
-      <ul class="w-full md:w-auto md:flex items-center hidden">
+      <ul class="w-full md:w-auto md:flex-grow md:flex items-center hidden md:space-x-5">
         <% if user_signed_in? %>
-          <li class="nav-item">
+          <% if policy(:user).index? %>
+            <li>
+              <%= link_to "Users", admin_users_path, class: "NavLink #{'NavLink--active' if controller_name == 'users'}" %>
+            </li>
+          <% end %>
+        <% end %>
+
+        <li class="md:flex-grow"></li>
+
+        <li>
+          <% if user_signed_in? %>
             <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "NavLink" %>
-          </li>
-        <% else %>
-          <li class="nav-item">
+          <% else %>
             <%- if controller_name != 'sessions' %>
               <%= link_to "Log in", new_session_path(User), class: "NavLink" %>
             <% end %>
-          </li>
-          <li class="nav-item">
             <%- if Devise.mappings[:user].registerable? && controller_name != 'registrations' %>
               <%= link_to "Sign up", new_registration_path(User), class: "NavLink" %>
             <% end %>
-          </li>
-        <% end %>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
