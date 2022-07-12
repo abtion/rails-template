@@ -9,9 +9,6 @@ RSpec.describe "admin/users/index", type: :view do
 
     render
 
-    expect(rendered).to have_content("Admin Area")
-    expect(rendered).to have_content("Users")
-
     expect(rendered).to have_link("Create new user", href: new_admin_user_path.to_s)
 
     expect(rendered).to have_css("tr th", text: "Email")
@@ -22,7 +19,6 @@ RSpec.describe "admin/users/index", type: :view do
 
     expect(rendered).to have_css("tr th", text: "Created at")
     expect(rendered).to have_css("tr td", text: user.created_at.strftime("%d %b %H:%M").to_s)
-    expect(rendered).to have_link("Show", href: admin_user_path(user).to_s)
     expect(rendered).to have_link("Edit", href: edit_admin_user_path(user).to_s)
   end
 end

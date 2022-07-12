@@ -1,50 +1,40 @@
-<div class="container mx-auto my-5">
-  <h2 class="text-3xl font-bold mt-0 mb-6"><%= t("admin.shared.title") %></h2>
-  <h3 class="text-2xl font-bold mb-8"><%= t(".title") %></h3>
-  <div class="flex justify-end">
-    <a role="button" href="<%= new_admin_user_path %>" class="Button Button--lg Button--primary inline-block text-center"><%= t(".new") %></a>
-  </div>
-  <div class="flex flex-col">
-    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-      <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-        <div class="overflow-hidden">
-          <table class="min-w-full">
-            <thead class="bg-white border-b">
-              <tr class="border">
-                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                  <%= User.human_attribute_name("email") %>
-                </th>
-                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                  <%= User.human_attribute_name("name") %>
-                </th>
-                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                  <%= User.human_attribute_name("created_at") %>
-                </th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @users.each do |user| %>
-                <tr class="bg-gray-100 border">
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    <%= user.email %>
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    <%= user.name %>
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    <%= I18n.l(user.created_at, format: :short) %>
-                  </td>
-                  <td scope="row" class="px-6 py-4 flex justify-end">
-                    <%= link_to t("admin.shared.show"), admin_user_path(user), class: "ml-1 Link" %>
-                    <%= link_to t("admin.shared.edit"), edit_admin_user_path(user), class: "ml-1 Link" %>
-                  </td>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+<div class="container mx-auto my-24">
+  <div class="overflow-hidden rounded border border-neutral-200 shadow-sm">
+    <table class="min-w-full">
+      <thead class="border-b border-b-neutral-200">
+        <tr class="bg-neutral-50">
+          <th scope="col" class="text-left text-neutral-500 text-xs uppercase font-medium px-6 py-3">
+            <%= User.human_attribute_name("email") %>
+          </th>
+          <th scope="col" class="text-left text-neutral-500 text-xs uppercase font-medium px-6 py-3">
+            <%= User.human_attribute_name("name") %>
+          </th>
+          <th scope="col" class="text-left text-neutral-500 text-xs uppercase font-medium px-6 py-3">
+            <%= User.human_attribute_name("created_at") %>
+          </th>
+          <th scope="col" class="text-right px-3 py-2 font-normal">
+            <%= link_to t(".new"), new_admin_user_path, class: "ButtonClear ButtonClear--sm ButtonClear--primary inline-block" %>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr class="even:bg-neutral-50 odd:bg-white">
+            <td class="text-sm text-neutral-800 font-medium px-6 py-4 whitespace-nowrap">
+              <%= user.email %>
+            </td>
+            <td class="text-sm text-neutral-500 px-6 py-4 whitespace-nowrap">
+              <%= user.name %>
+            </td>
+            <td class="text-sm text-neutral-500 px-6 py-4 whitespace-nowrap">
+              <%= I18n.l(user.created_at, format: :short) %>
+            </td>
+            <td scope="row" class="px-3 py-2 flex justify-end">
+              <%= link_to t("admin.shared.edit"), edit_admin_user_path(user), class: "ButtonClear ButtonClear--sm ButtonClear--primary inline-block" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
