@@ -129,6 +129,27 @@ RSpec.describe Admin::UsersController, type: :controller do
       end
     end
 
+    context "when password fields filled in" do
+      it "updates the password" do
+        user = create(:user)
+
+        valid_params = {
+          id: user.id,
+          user: {
+            password: "woof-SAYS-muffi",
+            password_confirmation: "woof-SAYS-muffi"
+          }
+        }
+
+        put :update, params: valid_params
+
+        expect(response).to have_http_status(:found)
+        expect(response).to redirect_to(admin_user_path(user))
+        expect(user.reload.valid_password?("woof-SAYS-muffi")).to be(true)
+        expect(flash[:notice]).to eq("Success!")
+      end
+    end
+
     context "with invalid params" do
       it "returns errors and renders edit" do
         user = create(:user, email: "initial@email.com")
