@@ -5,7 +5,7 @@ require "pundit/rspec"
 
 RSpec.describe UserPolicy, type: :policy do
   context "when user is admin" do
-    permissions :index?, :new?, :create?, :edit?, :update?, :destroy?, :show? do
+    permissions :new?, :create?, :edit?, :update?, :destroy?, :show? do
       it "grants access" do
         user = build(:user, :admin)
         expect(UserPolicy).to permit(user)
@@ -19,7 +19,7 @@ RSpec.describe UserPolicy, type: :policy do
   end
 
   context "when user is not admin" do
-    permissions :index?, :new?, :create?, :edit?, :update?, :destroy?, :show? do
+    permissions :new?, :create?, :edit?, :update?, :destroy?, :show? do
       it "denies access" do
         expect(UserPolicy).to_not(permit(build(:user)))
       end
@@ -35,6 +35,17 @@ RSpec.describe UserPolicy, type: :policy do
     it "raises an exception" do
       expect { UserPolicy.new(nil, nil) }.to raise_error(Pundit::NotAuthorizedError)
       expect { Pundit.policy_scope(nil, :application) }.to raise_error(Pundit::NotAuthorizedError)
+    end
+  end
+
+  describe "#permitted_attributes" do
+    it "returns the correct attributes" do
+      expect(UserPolicy.new(build(:user), nil).permitted_attributes).to match_array([
+        :email,
+        :name,
+        :password,
+        :password_confirmation
+      ])
     end
   end
 end

@@ -1,0 +1,26 @@
+<%= form_for [:admin, @user] do |f| %>
+  <%= back_path_field %>
+  <div class="mb-6">
+    <%= f.label(:email, class: "inline-block mb-2") %>
+    <%= f.email_field(:email, placeholder: true, class: "Input Input--default Input--md block w-full") %>
+    <%= field_error(field: :email, resource: @user) %>
+  </div>
+  <div class="mb-6">
+    <%= f.label(:name, class: "inline-block mb-2") %>
+    <%= f.text_field(:name, placeholder: true, class: "Input Input--default Input--md block w-full") %>
+    <%= field_error(field: :name, resource: @user) %>
+  </div>
+  <div class="mb-6">
+    <%= f.label(:password, class: "inline-block mb-2") %>
+    <%= f.password_field(:password, autocomplete: "new-password", placeholder: true, class: "Input Input--default Input--md block w-full") %>
+    <%= field_error(field: :password, resource: @user) %>
+  </div>
+  <div class="mb-10">
+    <%= f.label(:password_confirmation, class: "inline-block mb-2") %>
+    <%= f.password_field(:password_confirmation, autocomplete: "new-password", placeholder: true, class: "Input Input--default Input--md block w-full") %>
+    <%= field_error(field: :password_confirmation, resource: @user) %>
+  </div>
+  <div class="flex justify-end">
+    <button type="submit" class="Button Button--md Button--primary"><%= t("admin.shared.save") %></button>
+  </div>
+<% end %>

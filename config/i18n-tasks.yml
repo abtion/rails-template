@@ -110,6 +110,7 @@ ignore_unused:
   - "support.*"
   - "time.*"
   - "devise.sessions.warn_pwned.*"
+  - "activerecord.attributes.user.*"
 ## Exclude these keys from the `i18n-tasks eq-base' report:
 # ignore_eq_base:
 #   all:

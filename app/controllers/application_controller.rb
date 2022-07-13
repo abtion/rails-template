@@ -2,13 +2,14 @@
 
 class ApplicationController < ActionController::Base
   include Pundit::Authorization
-  rescue_from Pundit::NotAuthorizedError, with: :access_denied
+  rescue_from Pundit::NotAuthorizedError, with: :not_authorized
   before_action :basic_auth_wall, if: -> { ENV.fetch("HTTP_AUTH_PASSWORD", nil).present? }
 
   protected
 
-  def access_denied(error)
-    render plain: error.message, status: :forbidden
+  def not_authorized
+    flash[:alert] = t("pundit.not_authorized")
+    redirect_to(request.referer || root_path)
   end
 
   private

@@ -1,0 +1,9 @@
+---
+en:
+  admin:
+    shared:
+      back: Back
+      delete: Delete
+      delete_confirm: Are you sure?
+      edit: Edit
+      save: Save

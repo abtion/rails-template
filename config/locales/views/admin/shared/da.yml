@@ -1,0 +1,9 @@
+---
+da:
+  admin:
+    shared:
+      back: Tilbage
+      delete: Slet
+      delete_confirm: Er du sikker?
+      edit: Rediger
+      save: Gem

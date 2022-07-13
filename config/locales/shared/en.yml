@@ -159,6 +159,15 @@ en:
     precision:
       format:
         delimiter: ''
+  shared:
+    flash_messages:
+      error: Something went wrong, please try again
+      success: Success!
+    nav:
+      log_in: Log in
+      sign_out: Sign out
+      sign_up: Sign up
+      users: Users
   support:
     array:
       last_word_connector: ", and "

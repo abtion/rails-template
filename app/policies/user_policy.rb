@@ -12,4 +12,13 @@ class UserPolicy < ApplicationPolicy
   def destroy?
     super || user == record
   end
+
+  def permitted_attributes
+    [
+      :email,
+      :name,
+      :password,
+      :password_confirmation
+    ]
+  end
 end

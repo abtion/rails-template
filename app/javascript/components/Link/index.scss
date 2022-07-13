@@ -1,0 +1,34 @@
+.Link {
+  @apply flex hover:underline w-max cursor-pointer text-info-400;
+
+  // Colors
+  &--neutral {
+    @apply text-neutral-500;
+  }
+
+  &--neutral-light {
+    @apply text-neutral-400;
+  }
+
+  &--neutral-dark {
+    @apply text-neutral-700;
+  }
+
+  // underline
+  &--underline {
+    @apply underline hover:no-underline;
+  }
+
+  // Sizes
+  &--xs {
+    @apply text-xs;
+  }
+
+  &--sm {
+    @apply text-sm;
+  }
+
+  &--bs {
+    @apply text-base;
+  }
+}

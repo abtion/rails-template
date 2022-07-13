@@ -31,7 +31,9 @@
   }
 
   // Colors
-  &:enabled {
+  // We make a negative check on disabled because it allows this styling to work with tags
+  // that don't have enabled/disabled states
+  &:not(:disabled) {
     &.Button--neutral {
       @apply text-neutral-600-contrast bg-neutral-500 hover:bg-neutral-600 active:bg-neutral-700 ring-neutral-500;
     }

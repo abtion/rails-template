@@ -1,0 +1,11 @@
+<div class="container mx-auto my-20 max-w-3xl">
+  <div class="flex items-center">
+    <h1 class="text-3xl flex-grow"><%= t(".title") %></h1>
+
+    <%= link_to t("admin.shared.back"), back_path(fallback: admin_users_path), class: "ButtonClear ButtonClear--md ButtonClear--primary" %>
+  </div>
+
+  <div class="rounded border border-neutral-200 shadow-sm mt-10 p-5 bg-white">
+    <%= render partial: "form" %>
+  </div>
+</div>

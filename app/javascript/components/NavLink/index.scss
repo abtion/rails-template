@@ -1,3 +1,9 @@
 .NavLink {
-  @apply no-underline py-4 px-2 text-neutral-900 hover:text-neutral-600 block;
+  @apply no-underline py-4 text-neutral-500 hover:text-neutral-800 block text-sm font-medium;
+  @apply md:pt-8 md:pb-7 md:px-0.5 md:border-b-2 md:border-b-transparent;
+
+  &--active {
+    @apply text-neutral-800;
+    @apply md:border-b-primary-500;
+  }
 }

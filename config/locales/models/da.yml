@@ -1,6 +1,9 @@
 ---
 da:
   activerecord:
+    attributes:
+      user:
+        name: Navn
     errors:
       messages:
         record_invalid: 'Godkendelse gik galt: %{errors}'

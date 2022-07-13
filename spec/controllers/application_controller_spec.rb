@@ -6,7 +6,7 @@ RSpec.describe ApplicationController, type: :controller do
   context "when Pundit::NotAuthorizedError error is risen" do
     controller do
       def index
-        raise Pundit::NotAuthorizedError, "Not authorized!"
+        raise Pundit::NotAuthorizedError, "Access not authorized"
       end
     end
 
@@ -14,8 +14,8 @@ RSpec.describe ApplicationController, type: :controller do
       it "handles it by rendering access_denied" do
         get :index
 
-        expect(response).to have_http_status(:forbidden)
-        expect(response.body).to eq("Not authorized!")
+        expect(flash[:alert]).to eq("Access not authorized")
+        expect(response).to redirect_to(root_path)
       end
     end
   end

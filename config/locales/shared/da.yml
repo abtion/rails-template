@@ -159,6 +159,15 @@ da:
     precision:
       format:
         delimiter: ''
+  shared:
+    flash_messages:
+      error: Fejl!
+      success: Succes!
+    nav:
+      log_in: Log ind
+      sign_out: Log ud
+      sign_up: Opret bruger
+      users: Brugere
   support:
     array:
       last_word_connector: " og "

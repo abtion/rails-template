@@ -27,4 +27,26 @@ RSpec.describe ApplicationPolicy, type: :policy do
       expect { Pundit.policy_scope(nil, :application) }.to raise_error(Pundit::NotAuthorizedError)
     end
   end
+
+  describe "policy_scope" do
+    context "when admin" do
+      it "includes all records" do
+        user = build(:user, :admin)
+
+        users_in_db = create_list(:user, 5)
+
+        expect(ApplicationPolicy::Scope.new(user, User).resolve).to match_array(users_in_db)
+      end
+    end
+
+    context "when not admin" do
+      it "includes no records" do
+        user = build(:user)
+
+        create_list(:user, 5)
+
+        expect(ApplicationPolicy::Scope.new(user, User).resolve).to be_empty
+      end
+    end
+  end
 end

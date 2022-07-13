@@ -1,0 +1,11 @@
+---
+da:
+  admin:
+    users:
+      edit:
+        title: 'Redigér bruger: %{title}'
+      index:
+        new: Opret ny bruger
+        title: Brugere
+      new:
+        title: Opret ny bruger

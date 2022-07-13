@@ -32,7 +32,6 @@ Lint/ScriptPermission:
     - "Rakefile"
 
 Metrics/AbcSize:
-  Max: 15
   Exclude:
     - "spec/**/*"
     - "db/migrate/*.rb"
@@ -108,6 +107,7 @@ RSpec/MultipleExpectations:
   Max: 5
   Exclude:
     - "spec/mailers/**/*"
+    - "spec/views/**/*"
 
 RSpec/LeadingSubject:
   Enabled: false
