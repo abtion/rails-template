@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    abtion-scripts (1.1.1)
     actioncable (7.0.3)
       actionpack (= 7.0.3)
       activesupport (= 7.0.3)
@@ -377,7 +376,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  abtion-scripts
   awesome_print
   bootsnap (>= 1.4.4)
   brakeman
