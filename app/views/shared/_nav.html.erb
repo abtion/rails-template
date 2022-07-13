@@ -19,7 +19,7 @@
         <% if user_signed_in? %>
           <% if policy(:user).index? %>
             <li>
-              <%= link_to "Users", admin_users_path, class: "NavLink #{'NavLink--active' if controller_name == 'users'}" %>
+              <%= link_to t(".users"), admin_users_path, class: "NavLink #{'NavLink--active' if controller_name == 'users'}" %>
             </li>
           <% end %>
         <% end %>
@@ -28,13 +28,13 @@
 
         <li>
           <% if user_signed_in? %>
-            <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "NavLink" %>
+            <%= link_to t(".sign_out"), destroy_user_session_path, method: :delete, class: "NavLink" %>
           <% else %>
             <%- if controller_name != 'sessions' %>
-              <%= link_to "Log in", new_session_path(User), class: "NavLink" %>
+              <%= link_to t(".log_in"), new_session_path(User), class: "NavLink" %>
             <% end %>
             <%- if Devise.mappings[:user].registerable? && controller_name != 'registrations' %>
-              <%= link_to "Sign up", new_registration_path(User), class: "NavLink" %>
+              <%= link_to t(".sign_up"), new_registration_path(User), class: "NavLink" %>
             <% end %>
           <% end %>
         </li>
