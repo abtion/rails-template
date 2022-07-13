@@ -43,6 +43,6 @@ RSpec.describe "admin/users/edit", type: :view do
     expect(rendered).to have_css(password_selector)
     expect(rendered).to have_css(password_confirmation_selector)
     expect(rendered).to have_button("Save")
-    expect(rendered).to have_link("Back")
+    expect(rendered).to have_link("Back", href: admin_users_path)
   end
 end

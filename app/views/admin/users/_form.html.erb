@@ -1,4 +1,5 @@
 <%= form_for [:admin, @user] do |f| %>
+  <%= back_path_field %>
   <div class="mb-6">
     <%= f.label(:email, class: "inline-block mb-2") %>
     <%= f.email_field(:email, placeholder: true, class: "Input Input--default Input--md block w-full") %>
