@@ -22,7 +22,7 @@ module Admin
 
         redirect_to admin_user_path(@user)
       else
-        flash[:alert] = I18n.t("shared.flash_messages.error")
+        flash.now[:alert] = I18n.t("shared.flash_messages.error")
 
         render :new
       end
@@ -35,12 +35,12 @@ module Admin
     def update
       @user = authorize(User.find(params[:id]))
 
-      if @user.update(permitted_attributes(@user).compact_blank)
+      if @user.update(update_params)
         flash[:notice] = I18n.t("shared.flash_messages.success")
 
         redirect_to admin_user_path(@user)
       else
-        flash[:alert] = I18n.t("shared.flash_messages.error")
+        flash.now[:alert] = I18n.t("shared.flash_messages.error")
 
         render :edit
       end
