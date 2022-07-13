@@ -1,6 +1,6 @@
 {
   "environments": {
-    "review":{
+    "review": {
       "env": {
         "HTTP_AUTH_PASSWORD": {
           "required": true
@@ -19,7 +19,7 @@
         }
       },
       "scripts": {
-        "postdeploy": "bundle exec rails db:seed"
+        "postdeploy": "bin/rails db:seed"
       }
     }
   },
@@ -27,7 +27,9 @@
     "rollbar:free",
     {
       "plan": "heroku-postgresql",
-      "options": { "version": "12" }
+      "options": {
+        "version": "12"
+      }
     },
     "heroku-redis:hobby-dev"
   ],

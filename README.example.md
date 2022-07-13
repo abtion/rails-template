@@ -110,14 +110,14 @@ Run: `bin/setup`
 Download the correct version of chromedriver.\*
 
 ```sh
-$ bundle exec rails webdrivers:chromedriver:update
+$ bin/rails webdrivers:chromedriver:update
 ```
 
 \*_It will try to do this automatically when running the tests, but if you disable network with webmock/vcr your tests will fail when it does._
 
 If you need to, you can disable the Chrome driver by setting
 `DISABLE_WEBDRIVERS` to `true` in `.env.test` or running
-`DISABLE_WEBDRIVERS=true bundle exec rspec` if you only need to do it
+`DISABLE_WEBDRIVERS=true bin/rspec` if you only need to do it
 occasionally.
 
 ### 3. Ensure that linting and tests pass
@@ -125,10 +125,10 @@ occasionally.
 Run:
 
 ```sh
-bundle exec rspec
-bundle exec rubocop
-bundle exec brakeman --quiet --no-summary
-bundle exec erblint --lint-all
+bin/rspec
+bin/rubocop
+bin/brakeman --quiet --no-summary
+bin/erblint --lint-all
 yarn lint
 ```
 
@@ -151,7 +151,7 @@ To disable letter_opener set `USE_LETTER_OPENER` variable in `.env.development` 
 ## Day-to-day
 
 - Run the server: `bin/rails server` and [http://localhost:3000](http://localhost:3000)
-- Run backend tests: `bundle exec rspec`
+- Run backend tests: `bin/rspec`
 - Run frontend tests: `yarn test`
 - Run linters: `bin/lint-fix`
 
@@ -187,7 +187,7 @@ By default the systems specs are executed in a headless chrome browser.
 
 To see what's going on in a spec use the `CAPYBARA_DRIVER` env var to set a non-headless browser, e.g.:
 
-`CAPYBARA_DRIVER=chrome bundle exec rspec`
+`CAPYBARA_DRIVER=chrome bin/rspec`
 
 Available options are (as per possible names [here](https://github.com/rails/rails/blob/df1e1bc35c6210ecb39532a06823a6cf4f07bcd8/actionpack/lib/action_dispatch/system_testing/browser.rb)):
 
