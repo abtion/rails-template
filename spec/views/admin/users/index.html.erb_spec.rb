@@ -9,6 +9,8 @@ RSpec.describe "admin/users/index", type: :view do
 
     render
 
+    expect(rendered).to have_text("Users")
+
     expect(rendered).to have_link("Create new user", href: new_admin_user_path.to_s)
 
     expect(rendered).to have_css("tr th", text: "Email")
