@@ -1,5 +1,9 @@
 <div class="container mx-auto my-20">
-  <h1 class="text-3xl"><%= t(".title") %></h1>
+  <div class="flex items-center">
+    <h1 class="text-3xl flex-grow"><%= t(".title") %></h1>
+
+    <%= link_to t(".new"), new_admin_user_path, class: "Button Button--sm Button--primary" %>
+  </div>
 
   <div class="overflow-hidden rounded border border-neutral-200 shadow-sm mt-10">
     <table class="min-w-full">
@@ -14,9 +18,7 @@
           <th scope="col" class="text-left text-neutral-500 text-xs uppercase font-medium px-6 py-3">
             <%= User.human_attribute_name("created_at") %>
           </th>
-          <th scope="col" class="text-right px-3 py-2 font-normal">
-            <%= link_to t(".new"), new_admin_user_path, class: "ButtonClear ButtonClear--sm ButtonClear--primary" %>
-          </th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
