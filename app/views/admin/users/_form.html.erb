@@ -14,13 +14,12 @@
     <%= f.password_field(:password, autocomplete: "new-password", placeholder: true, class: "Input Input--default Input--md block w-full") %>
     <%= field_error(field: :password, resource: @user) %>
   </div>
-  <div class="mb-12">
+  <div class="mb-10">
     <%= f.label(:password_confirmation, class: "inline-block mb-2") %>
     <%= f.password_field(:password_confirmation, autocomplete: "new-password", placeholder: true, class: "Input Input--default Input--md block w-full") %>
     <%= field_error(field: :password_confirmation, resource: @user) %>
   </div>
-  <div class="mb-6">
-    <%= react_component :Button, className: "w-full mb-2", size: "lg", variant: :primary, type: :submit, children: t("admin.shared.save") %>
-    <a role="button" href="<%= admin_users_path %>" class="Button Button--lg Button--neutral inline-block text-center w-full"><%= t("admin.shared.cancel") %></a>
+  <div class="flex justify-end">
+    <button type="submit" class="Button Button--md Button--primary"><%= t("admin.shared.save") %></button>
   </div>
 <% end %>

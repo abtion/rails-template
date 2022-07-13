@@ -3,9 +3,7 @@ da:
   admin:
     shared:
       back: Tilbage
-      cancel: Tilbage
       delete: Slet
       delete_confirm: Er du sikker?
       edit: Rediger
       save: Gem
-      title: Admin Area

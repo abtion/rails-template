@@ -3,7 +3,7 @@ da:
   admin:
     users:
       edit:
-        title: Rediger bruger
+        title: 'Redigér bruger: %{title}'
       index:
         new: Opret ny bruger
         title: Brugere

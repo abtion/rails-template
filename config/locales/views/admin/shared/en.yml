@@ -3,9 +3,7 @@ en:
   admin:
     shared:
       back: Back
-      cancel: Cancel
       delete: Delete
       delete_confirm: Are you sure?
       edit: Edit
       save: Save
-      title: Admin Area

@@ -37,17 +37,12 @@ RSpec.describe "admin/users/edit", type: :view do
       "[placeholder='Password confirmation']"
     ].join
 
-    submit_selector = [
-      "[data-react-component=Button]"
-    ].join
-
-    expect(rendered).to have_content("Admin Area")
-    expect(rendered).to have_content("Edit user")
+    expect(rendered).to have_content("Edit user: #{user.email}")
     expect(rendered).to have_css(email_selector)
     expect(rendered).to have_css(name_selector)
     expect(rendered).to have_css(password_selector)
     expect(rendered).to have_css(password_confirmation_selector)
-    expect(rendered).to have_css(submit_selector)
-    expect(rendered).to have_link("Cancel", href: admin_users_path.to_s)
+    expect(rendered).to have_button("Save")
+    expect(rendered).to have_link("Back")
   end
 end
