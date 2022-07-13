@@ -4,6 +4,8 @@ require "rails_helper"
 
 RSpec.describe "admin/users/index", type: :view do
   it "renders users index page" do
+    enable_pundit(view, build(:user, :admin))
+
     user = create(:user)
     assign(:users, [user])
 
