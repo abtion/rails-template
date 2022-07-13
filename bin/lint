@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -e
 
-bundle exec rubocop
-bundle exec erblint --lint-all
-bundle exec brakeman --quiet --no-summary
+bin/rubocop
+bin/erblint --lint-all
+bin/brakeman --quiet --no-summary
 yarn lint

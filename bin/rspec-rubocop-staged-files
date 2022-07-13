@@ -18,21 +18,21 @@ module RspecRubocopStagedFiles
       return true unless files.any?
 
       puts "Running rubocop"
-      system "bundle exec rubocop #{files.join(' ')}"
+      system "bin/rubocop #{files.join(' ')}"
     end
 
     def erb_lint(files)
       return true unless files.any?
 
       puts "Running erb_lint"
-      system "bundle exec erblint #{files.join(' ')}"
+      system "bin/erblint #{files.join(' ')}"
     end
 
     def rspec(files)
       return true unless files.any?
 
       puts "Running Rspec"
-      system "DISABLE_SIMPLECOV=true bundle exec rspec #{files.join(' ')}"
+      system "DISABLE_SIMPLECOV=true bin/rspec #{files.join(' ')}"
     end
 
     def staged_files

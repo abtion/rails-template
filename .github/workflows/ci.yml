@@ -13,7 +13,7 @@ jobs:
         with:
           bundler-cache: true
       - name: Rubocop
-        run: bundle exec rubocop
+        run: bin/rubocop
   brakeman:
     runs-on: ubuntu-latest
     steps:
@@ -24,7 +24,7 @@ jobs:
         with:
           bundler-cache: true
       - name: Brakeman
-        run: bundle exec brakeman
+        run: bin/brakeman
   eslint:
     runs-on: ubuntu-latest
     steps:
@@ -69,7 +69,7 @@ jobs:
         with:
           bundler-cache: true
       - name: erb-lint
-        run: bundle exec erblint --lint-all
+        run: bin/erblint --lint-all
   i18n-tasks:
     runs-on: ubuntu-latest
     steps:
@@ -80,7 +80,7 @@ jobs:
         with:
           bundler-cache: true
       - name: i18n-tasks
-        run: bundle exec i18n-tasks check-normalized
+        run: bin/i18n-tasks check-normalized
   jest:
     runs-on: ubuntu-latest
     steps:
@@ -146,8 +146,8 @@ jobs:
           bundle install --jobs 4 --retry 3
       - name: run migrations
         run: |
-          bundle exec rake db:create
-          bundle exec rake db:migrate
+          bin/rake db:create
+          bin/rake db:migrate
       - name: check git diff
         run: git diff --exit-code db/schema.rb
 
@@ -228,10 +228,10 @@ jobs:
         run: yarn --frozen-lockfile
       - name: setup database
         run: |
-          bundle exec rake db:create
-          bundle exec rake db:schema:load
+          bin/rake db:create
+          bin/rake db:schema:load
       - name: rspec
-        run: bundle exec rspec
+        run: bin/rspec
       - name: Archive capybara artifacts
         uses: actions/upload-artifact@v3
         if: failure()
