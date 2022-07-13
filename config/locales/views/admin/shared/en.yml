@@ -2,6 +2,7 @@
 en:
   admin:
     shared:
+      back: Back
       cancel: Cancel
       delete: Delete
       delete_confirm: Are you sure?
