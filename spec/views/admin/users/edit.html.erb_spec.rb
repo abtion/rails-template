@@ -13,14 +13,14 @@ RSpec.describe "admin/users/edit", type: :view do
       "input",
       "[type=email]",
       "[name='user[email]']",
-      "[value='#{user.email}']"
+      "[value=#{user.email.to_json}]"
     ].join
 
     name_selector = [
       "input",
       "[type=text]",
       "[name='user[name]']",
-      "[value='#{user.name}']"
+      "[value=#{user.name.to_json}]"
     ].join
 
     password_selector = [
