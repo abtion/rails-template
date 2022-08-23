@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 set -e
 
-CODE_COVERAGE_PERCENTAGE=100 bin/rspec
+bin/rspec-coverage
 yarn test --coverage

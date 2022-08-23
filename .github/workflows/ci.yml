@@ -231,7 +231,7 @@ jobs:
           bin/rake db:create
           bin/rake db:schema:load
       - name: rspec
-        run: bin/rspec
+        run: bin/rspec-coverage
       - name: Archive capybara artifacts
         uses: actions/upload-artifact@v3
         if: failure()
