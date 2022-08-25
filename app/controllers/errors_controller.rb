@@ -7,7 +7,10 @@ class ErrorsController < ActionController::Base
   layout "devise"
 
   def not_found
-    render status: :not_found
+    respond_to do |format|
+      format.html { render status: :not_found }
+      format.any { render json: { error: "Page not found" }, status: :not_found }
+    end
 
     return unless request.referer
 
