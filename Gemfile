@@ -39,7 +39,7 @@ group :development, :test do
   gem "rubocop-rails"
   gem "rubocop-rspec"
   gem "shoulda-matchers"
-  gem "webdrivers", "~> 5.0", require: false
+  gem "webdrivers", "~> 5.1", require: false
 end
 
 group :development do
