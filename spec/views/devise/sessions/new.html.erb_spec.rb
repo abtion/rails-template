@@ -16,7 +16,7 @@ RSpec.describe "devise/sessions/new", type: :view do
 
     render
 
-    expect(rendered).to have_css("input[type=checkbox][name='user[remember_me]']")
+    expect(rendered).to have_field("user[remember_me]", type: :checkbox)
   end
 
   context "with Danish locale" do
