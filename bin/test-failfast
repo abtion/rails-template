@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-set -e
-
-bin/rspec --order defined --fail-fast $(find spec -iname "*_spec.rb" -exec ls -1t "{}" +;)
