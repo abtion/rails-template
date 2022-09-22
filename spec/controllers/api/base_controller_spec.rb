@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe Api::V1::BaseController, type: :controller do
+RSpec.describe Api::BaseController, type: :controller do
   controller do
     before_action :require_authentication!
 
