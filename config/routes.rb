@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "sidekiq/web"
-require "constraints/api_version"
 
 Rails.application.routes.draw do
   devise_for :users, controllers: {
@@ -15,9 +14,7 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => "/sidekiq"
 
   namespace :api, defaults: { format: :json } do
-    scope module: :v1, constraints: Constraints::ApiVersion.new("v1") do
-      resources :users, only: :show
-    end
+    resources :users, only: :show
   end
 
   root to: "home#index"
