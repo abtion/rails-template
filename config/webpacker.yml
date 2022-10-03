@@ -10,6 +10,9 @@ default: &default
   cache_path: tmp/webpacker
   webpack_compile_output: true
 
+  # Prevents dependabot - and devs - from updating either shakapacker npms or gems independently
+  ensure_consistent_versioning: true
+
   # Additional paths webpack should look up modules
   # ['app/assets', 'engine/foo/app/assets']
   additional_paths: []
