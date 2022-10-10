@@ -56,7 +56,7 @@
   "devDependencies": {
     "@testing-library/dom": "^8.17.1",
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
+    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.1.1",
     "@types/jest": "^29.0.3",
     "@types/rails__activestorage": "^7.0.1",
