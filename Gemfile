@@ -33,7 +33,7 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
   gem "i18n-tasks"
-  gem "rspec-rails", "~> 6.0.0.rc1"
+  gem "rspec-rails", "~> 6.0.0"
   gem "rubocop"
   gem "rubocop-performance"
   gem "rubocop-rails"
