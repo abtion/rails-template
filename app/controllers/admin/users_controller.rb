@@ -14,6 +14,10 @@ module Admin
       @user = authorize(User.new)
     end
 
+    def edit
+      @user = authorize(User.find(params[:id]))
+    end
+
     def create
       @user = authorize(User.new(permitted_attributes(User)))
 
@@ -26,10 +30,6 @@ module Admin
 
         render :new
       end
-    end
-
-    def edit
-      @user = authorize(User.find(params[:id]))
     end
 
     def update

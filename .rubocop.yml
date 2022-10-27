@@ -57,7 +57,7 @@ Style/Documentation:
   Enabled: false
 
 Style/MethodCallWithArgsParentheses:
-  IgnoredMethods:
+  AllowedMethods:
     [
       "to",
       "to_not",
