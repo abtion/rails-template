@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe Admin::BaseController, type: :controller do
+RSpec.describe Admin::BaseController do
   describe "#index" do
     context "when policy scope not called" do
       controller do

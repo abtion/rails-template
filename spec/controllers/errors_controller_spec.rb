@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe ErrorsController, type: :controller do
+RSpec.describe ErrorsController do
   describe "GET #not_found" do
     context "when request has no referer" do
       it "renders 404 status page and does not send warning to Rollbar" do

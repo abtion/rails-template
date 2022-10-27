@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "errors/not_found", type: :view do
+RSpec.describe "errors/not_found" do
   it "renders not_found template" do
     render
 
