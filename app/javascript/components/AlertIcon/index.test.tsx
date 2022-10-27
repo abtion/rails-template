@@ -1,6 +1,6 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import InformationCircleIcon from "@heroicons/react/solid/InformationCircleIcon"
+import InformationCircleIcon from "@heroicons/react/20/solid/InformationCircleIcon"
 
 import Variant from "~/const/variant"
 import AlertIcon from "."

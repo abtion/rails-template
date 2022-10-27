@@ -2,7 +2,7 @@ import React from "react"
 import classNames from "classnames"
 import Variant from "~/const/variant"
 import "./index.scss"
-import XIcon from "@heroicons/react/solid/XIcon"
+import XMarkIcon from "@heroicons/react/20/solid/XMarkIcon"
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: Variant
@@ -26,7 +26,7 @@ export default function Alert(props: AlertProps): JSX.Element {
       {children}
       {onClose && (
         <button className="Alert__close" onClick={onClose} aria-label="Close">
-          <XIcon />
+          <XMarkIcon />
         </button>
       )}
     </div>
