@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import classNames from "classnames"
 import Variant from "~/const/variant"
 
-import CheckCircleIcon from "@heroicons/react/solid/CheckCircleIcon"
-import XCircleIcon from "@heroicons/react/solid/XCircleIcon"
-import ExclamationIcon from "@heroicons/react/solid/ExclamationIcon"
+import CheckCircleIcon from "@heroicons/react/20/solid/CheckCircleIcon"
+import XCircleIcon from "@heroicons/react/20/solid/XCircleIcon"
+import ExclamationTriangleIcon from "@heroicons/react/20/solid/ExclamationTriangleIcon"
 
 import Alert from "~/components/Alert"
 import AlertIcon from "~/components/AlertIcon"
@@ -19,7 +19,7 @@ export default function FlashMessage(props: FlashMessageProps) {
 
   const IconComponent = {
     danger: XCircleIcon,
-    warning: ExclamationIcon,
+    warning: ExclamationTriangleIcon,
     success: CheckCircleIcon,
   }[variant]
 
