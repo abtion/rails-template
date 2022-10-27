@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "Log in as a user", type: :system do
+RSpec.describe "Log in as a user" do
   it "render 'abtion-rails'" do
     visit root_path
 

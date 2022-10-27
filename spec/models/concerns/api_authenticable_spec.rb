@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe ApiAuthenticable, type: :model do
+RSpec.describe ApiAuthenticable do
   describe "before_create" do
     context "when authentication_token doesn't already exist" do
       it "sets an authentication_token automatically" do

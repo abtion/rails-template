@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "devise/sessions/new", type: :view do
+RSpec.describe "devise/sessions/new" do
   def stub_devise_helpers
     without_partial_double_verification do
       allow(view).to receive(:resource) { User.new }

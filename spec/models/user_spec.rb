@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe User, type: :model do
+RSpec.describe User do
   describe "password" do
     context "with 8 character long password" do
       it "user is valid" do
