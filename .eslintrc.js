@@ -20,4 +20,16 @@ module.exports = {
     // Don't allow console.log
     "no-console": ["error"],
   },
+  overrides: [
+    {
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ["./tsconfig.json"],
+      },
+      files: ["*.ts", "*.tsx"],
+      rules: {
+        "@typescript-eslint/no-floating-promises": ["error"],
+      },
+    },
+  ],
 }

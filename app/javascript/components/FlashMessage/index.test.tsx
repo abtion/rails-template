@@ -37,7 +37,7 @@ describe(FlashMessage, () => {
 
     const closeButton = getByRole("button")
 
-    userEvent.click(closeButton)
+    await userEvent.click(closeButton)
 
     await waitFor(() => expect(element).not.toBeInTheDocument())
   })
