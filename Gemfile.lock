@@ -213,7 +213,7 @@ GEM
       activesupport (>= 3.0.0)
     pwned (2.0.2)
     racc (1.6.2)
-    rack (2.2.4)
+    rack (2.2.5)
     rack-attack (6.6.1)
       rack (>= 1.0, < 3)
     rack-mini-profiler (3.0.0)
