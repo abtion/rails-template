@@ -73,7 +73,7 @@ Rails.application.configure do
       enable_starttls_auto: true
     }
   elsif ENV.key?("MAILTRAP_API_TOKEN")
-    response = URI.parse("https:///api/v1/inboxes.json?api_token=#{ENV.fetch('MAILTRAP_API_TOKEN')}").read
+    response = URI.parse("https://mailtrap.io/api/v1/inboxes.json?api_token=#{ENV.fetch('MAILTRAP_API_TOKEN')}").read
     first_inbox = JSON.parse(response)[0]
     config.action_mailer.smtp_settings = {
       address: first_inbox["domain"],
