@@ -25,7 +25,7 @@
   },
   "addons": [
     "mailtrap:unpaid",
-    "rollbar:free",
+    "rollbar:trial-5k",
     {
       "plan": "heroku-postgresql:mini",
       "options": {
