@@ -24,6 +24,7 @@
     }
   },
   "addons": [
+    "mailtrap:unpaid",
     "rollbar:free",
     {
       "plan": "heroku-postgresql",

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require "active_support/core_ext/integer/time"
+require "open-uri"
+require "json"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -59,16 +61,29 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "project_name_snake_production"
 
   config.action_mailer.perform_caching = false
-
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: "smtp-relay.sendinblue.com",
-    port: 587,
-    user_name: ENV.fetch("SENDINBLUE_EMAIL", nil),
-    password: ENV.fetch("SENDINBLUE_PASSWORD", nil),
-    authentication: "login",
-    enable_starttls_auto: true
-  }
+
+  if ENV.key?("SENDINBLUE_USERNAME")
+    config.action_mailer.smtp_settings = {
+      address: "smtp-relay.sendinblue.com",
+      port: 587,
+      user_name: ENV.fetch("SENDINBLUE_EMAIL"),
+      password: ENV.fetch("SENDINBLUE_PASSWORD"),
+      authentication: "login",
+      enable_starttls_auto: true
+    }
+  elsif ENV.key?("MAILTRAP_API_TOKEN")
+    response = URI.parse("https:///api/v1/inboxes.json?api_token=#{ENV.fetch('MAILTRAP_API_TOKEN')}").read
+    first_inbox = JSON.parse(response)[0]
+    config.action_mailer.smtp_settings = {
+      address: first_inbox["domain"],
+      port: first_inbox["smtp_ports"][0],
+      user_name: first_inbox["username"],
+      password: first_inbox["password"],
+      authentication: :plain,
+      domain: first_inbox["domain"]
+    }
+  end
 
   hostname = ENV.fetch("DOMAIN_NAME", nil)
   hostname ||= "#{ENV.fetch('HEROKU_APP_NAME')}.herokuapp.com"
