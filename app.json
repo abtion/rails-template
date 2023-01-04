@@ -27,12 +27,12 @@
     "mailtrap:unpaid",
     "rollbar:free",
     {
-      "plan": "heroku-postgresql",
+      "plan": "heroku-postgresql:mini",
       "options": {
         "version": "12"
       }
     },
-    "heroku-redis:hobby-dev"
+    "heroku-redis:mini"
   ],
   "buildpacks": [
     {
