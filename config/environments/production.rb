@@ -75,9 +75,16 @@ Rails.application.configure do
   elsif ENV.key?("MAILTRAP_API_TOKEN")
     response = URI.parse("https://mailtrap.io/api/v1/inboxes.json?api_token=#{ENV.fetch('MAILTRAP_API_TOKEN')}").read
     first_inbox = JSON.parse(response)[0]
+
+    # Port 25 is not available due to limitations in AWS ec2 which heroku is using under the hood.
+    # https://devcenter.heroku.com/changelog-items/2198
+    # https://help.heroku.com/IR3S6I5X/problem-in-sending-e-mails-through-smtp
+    # https://aws.amazon.com/premiumsupport/knowledge-center/ec2-port-25-throttle/
+    available_ports = first_inbox["smtp_ports"] - [25]
+
     config.action_mailer.smtp_settings = {
       address: first_inbox["domain"],
-      port: first_inbox["smtp_ports"][0],
+      port: available_ports[0],
       user_name: first_inbox["username"],
       password: first_inbox["password"],
       authentication: :plain,
