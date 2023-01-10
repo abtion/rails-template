@@ -44,7 +44,7 @@ end
 
 group :development do
   gem "letter_opener"
-  gem "listen", "~> 3.7"
+  gem "listen", "~> 3.8"
   gem "pivotal_git_scripts"
   gem "rack-mini-profiler", "~> 3.0"
   gem "spring", require: false
