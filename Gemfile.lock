@@ -262,7 +262,7 @@ GEM
       ffi (~> 1.0)
     redis-client (0.12.1)
       connection_pool
-    regexp_parser (2.6.1)
+    regexp_parser (2.6.2)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
