@@ -1,6 +1,5 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import Variants from "../../const/variant"
 
 import ExampleComponent, { ExampleComponentProps } from "."
 
@@ -29,7 +28,7 @@ describe(ExampleComponent, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { container } = render(
-        <ExampleComponent {...defaultProps} variant={Variants.Primary} />
+        <ExampleComponent {...defaultProps} variant="primary" />
       )
 
       const component = container.querySelector(".ExampleComponent--primary")

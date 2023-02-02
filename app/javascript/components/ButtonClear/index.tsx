@@ -1,7 +1,7 @@
 import React from "react"
 import classNames from "classnames"
-import Variant from "~/const/variant"
-import Size from "~/const/size"
+import { Variant } from "~/const/variant"
+import { Size } from "~/const/size"
 import "./index.scss"
 
 export interface ButtonClearProps

@@ -1,6 +1,6 @@
 import React from "react"
 import classNames from "classnames"
-import Variant from "~/const/variant"
+import { Variant } from "~/const/variant"
 import "./index.scss"
 
 export interface AlertProps extends React.HTMLAttributes<SVGElement> {

@@ -14,6 +14,10 @@
     @apply text-neutral-700;
   }
 
+  &--info {
+    @apply text-info-400;
+  }
+
   // underline
   &--underline {
     @apply underline hover:no-underline;

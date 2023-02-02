@@ -1,6 +1,6 @@
 import React from "react"
 import classNames from "classnames"
-import Variant from "~/const/variant"
+import { Variant } from "~/const/variant"
 import "./index.scss"
 import XMarkIcon from "@heroicons/react/20/solid/XMarkIcon"
 

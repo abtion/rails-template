@@ -1,6 +1,5 @@
 import React from "react"
 import { render, waitFor } from "@testing-library/react"
-import Variant from "~/const/variant"
 
 import FlashMessage from "."
 import userEvent from "@testing-library/user-event"
@@ -8,7 +7,7 @@ import userEvent from "@testing-library/user-event"
 describe(FlashMessage, () => {
   it("displays a flash message", () => {
     const { getByText } = render(
-      <FlashMessage variant={Variant.Danger}>Message</FlashMessage>
+      <FlashMessage variant="danger">Message</FlashMessage>
     )
 
     const element = getByText("Message")
@@ -18,7 +17,7 @@ describe(FlashMessage, () => {
 
   it("adds variant class", () => {
     const { getByText } = render(
-      <FlashMessage variant={Variant.Danger}>Message</FlashMessage>
+      <FlashMessage variant="danger">Message</FlashMessage>
     )
 
     const element = getByText("Message")
@@ -28,7 +27,7 @@ describe(FlashMessage, () => {
 
   it("is dismissable", async () => {
     const { getByRole, getByText } = render(
-      <FlashMessage variant={Variant.Danger}>Message</FlashMessage>
+      <FlashMessage variant="danger">Message</FlashMessage>
     )
 
     const element = getByText("Message")

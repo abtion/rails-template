@@ -29,10 +29,10 @@
 
   // Variants
   &--default {
-    @apply border-neutral-300 focus:ring-primary-500 focus:border-primary-500;
+    @apply border-neutral-300 focus:ring-primary-400 focus:border-primary-400;
   }
 
   &--error {
-    @apply border-danger-500 focus:ring-danger-500 focus:border-danger-500;
+    @apply border-danger-500 focus:ring-danger-400 focus:border-danger-400;
   }
 }

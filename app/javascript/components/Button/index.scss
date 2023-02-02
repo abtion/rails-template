@@ -1,5 +1,10 @@
 .Button {
-  @apply border border-transparent font-medium rounded-md leading-4 shadow-sm;
+  @apply border border-transparent font-medium leading-4 shadow-sm;
+
+  // Round if no rounding class is specified
+  &:not([class*="rounded"]) {
+    @apply rounded-md;
+  }
 
   // Sizes
   &--xs {

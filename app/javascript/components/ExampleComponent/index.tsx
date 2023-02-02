@@ -1,14 +1,14 @@
 import React from "react"
 import classNames from "classnames"
 
-import Variants from "../../const/variant"
+import { Variant } from "../../const/variant"
 
 import imageSource from "../../images/muffi-background-image.jpg"
 import "./index.scss"
 
 export interface ExampleComponentProps
   extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: Variants
+  variant?: Variant
 }
 
 export default function ExampleComponent(
@@ -17,7 +17,7 @@ export default function ExampleComponent(
   const { children, variant, className, ...rest } = props
 
   const usedClassName = classNames(
-    "border-2 rounded-lg border-neutral-500 p-5 bg-neutral-100",
+    "border-2 rounded-lg p-5",
     {
       [`ExampleComponent--${variant}`]: variant,
     },

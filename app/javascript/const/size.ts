@@ -1,9 +1,4 @@
-enum Size {
-  ExtraSmall = "xs",
-  Small = "sm",
-  Medium = "md",
-  Large = "lg",
-  ExtraLarge = "xl",
-}
+export const Sizes = ["xs", "sm", "md", "lg", "xl"] as const
+export type Size = typeof Sizes[number]
 
-export default Size
+export default Sizes

@@ -6,6 +6,7 @@ module.exports = {
     "app/javascript/**/*.{js,ts,tsx}",
     "!app/javascript/entrypoints/*",
     "!app/javascript/**/*.d.ts",
+    "!app/javascript/const/**/*",
   ],
   coverageThreshold: {
     "app/javascript/**/*.{js,ts,tsx}": {

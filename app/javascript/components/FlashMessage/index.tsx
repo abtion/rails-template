@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import classNames from "classnames"
-import Variant from "~/const/variant"
 
 import CheckCircleIcon from "@heroicons/react/20/solid/CheckCircleIcon"
 import XCircleIcon from "@heroicons/react/20/solid/XCircleIcon"
@@ -10,7 +9,7 @@ import Alert from "~/components/Alert"
 import AlertIcon from "~/components/AlertIcon"
 
 interface FlashMessageProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant: Variant.Danger | Variant.Warning | Variant.Success
+  variant: "danger" | "warning" | "success"
 }
 
 export default function FlashMessage(props: FlashMessageProps) {

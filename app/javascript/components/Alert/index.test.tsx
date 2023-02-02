@@ -1,6 +1,5 @@
 import React from "react"
 import { render, waitFor } from "@testing-library/react"
-import Variant from "~/const/variant"
 
 import Alert, { AlertProps } from "."
 import userEvent from "@testing-library/user-event"
@@ -21,7 +20,7 @@ describe(Alert, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { getByText } = render(
-        <Alert {...defaultProps} variant={Variant.Primary} />
+        <Alert {...defaultProps} variant="primary" />
       )
 
       const element = getByText(defaultProps.children as string)
@@ -34,11 +33,7 @@ describe(Alert, () => {
     it("has a close button", async () => {
       const closeHandler = jest.fn()
       const { getByRole } = render(
-        <Alert
-          {...defaultProps}
-          onClose={closeHandler}
-          variant={Variant.Primary}
-        />
+        <Alert {...defaultProps} onClose={closeHandler} variant="primary" />
       )
 
       const element = getByRole("button")
@@ -48,10 +43,7 @@ describe(Alert, () => {
       expect(closeHandler).not.toHaveBeenCalled()
 
       await userEvent.click(element)
-
-      await waitFor(() => {
-        expect(closeHandler).toHaveBeenCalled()
-      })
+      await waitFor(() => expect(closeHandler).toHaveBeenCalled())
     })
   })
 })

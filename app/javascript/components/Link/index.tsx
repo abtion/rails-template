@@ -2,18 +2,16 @@ import React from "react"
 import classNames from "classnames"
 import "./index.scss"
 
-export enum LinkSize {
-  ExtraSmall = "xs",
-  Small = "sm",
-  Base = "bs",
-}
+export const LinkSizes = ["xs", "sm", "bs"] as const
+export type LinkSize = typeof LinkSizes[number]
 
-export enum LinkVariant {
-  Neutral = "neutral",
-  NeutralLight = "neutral-light",
-  NeutralDark = "neutral-dark",
-  Info = "info",
-}
+export const LinkVariants = [
+  "neutral",
+  "neutral-light",
+  "neutral-dark",
+  "info",
+] as const
+export type LinkVariant = typeof LinkVariants[number]
 
 export interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   variant?: LinkVariant
@@ -23,13 +21,17 @@ export interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
 }
 
 export default function Link(props: LinkProps): JSX.Element {
-  const { underline, size, className, variant, text, ...rest } = props
+  const { underline, size, variant, className, text, ...rest } = props
 
-  const usedClassName = classNames("Link", className, {
-    [`Link--${variant}`]: variant,
-    [`Link--${size}`]: size,
-    [`Link--underline`]: underline,
-  })
+  const usedClassName = classNames(
+    "Link",
+    {
+      [`Link--${variant}`]: variant,
+      [`Link--${size}`]: size,
+      [`Link--underline`]: underline,
+    },
+    className
+  )
 
   return (
     <a className={usedClassName} {...rest}>

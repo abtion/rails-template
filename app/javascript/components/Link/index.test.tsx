@@ -1,12 +1,12 @@
 import React from "react"
 import { render } from "@testing-library/react"
 
-import Link, { LinkProps, LinkSize, LinkVariant } from "."
+import Link, { LinkProps } from "."
 
 const defaultProps: LinkProps = {
-  variant: LinkVariant.Info,
+  variant: "info",
   text: "Link text",
-  size: LinkSize.Base,
+  size: "bs",
   underline: false,
 }
 
@@ -21,9 +21,7 @@ describe(Link, () => {
 
   describe("when size is set", () => {
     it("adds size class", () => {
-      const { getByText } = render(
-        <Link {...defaultProps} size={LinkSize.Small} />
-      )
+      const { getByText } = render(<Link {...defaultProps} size="sm" />)
 
       const link = getByText(defaultProps.text as string)
 
@@ -34,7 +32,7 @@ describe(Link, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { getByText } = render(
-        <Link {...defaultProps} variant={LinkVariant.NeutralLight} />
+        <Link {...defaultProps} variant="neutral-light" />
       )
 
       const link = getByText(defaultProps.text as string)
