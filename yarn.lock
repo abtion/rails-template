@@ -4954,9 +4954,9 @@ istanbul-reports@^3.1.3:
     istanbul-lib-report "^3.0.0"
 
 jest-changed-files@^29.2.0:
-  version "29.2.0"
-  resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-29.2.0.tgz#b6598daa9803ea6a4dce7968e20ab380ddbee289"
-  integrity sha512-qPVmLLyBmvF5HJrY7krDisx6Voi8DmlV3GZYX0aFNbaQsZeoz1hfxcCMbqDGuQCxU1dJy9eYc2xscE8QrCCYaA==
+  version "29.4.0"
+  resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-29.4.0.tgz#ac2498bcd394228f7eddcadcf928b3583bf2779d"
+  integrity sha512-rnI1oPxgFghoz32Y8eZsGJMjW54UlqT17ycQeCEktcxxwqqKdlj9afl8LNeO0Pbu+h2JQHThQP0BzS67eTRx4w==
   dependencies:
     execa "^5.0.0"
     p-limit "^3.1.0"
