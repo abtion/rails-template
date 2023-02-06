@@ -263,9 +263,9 @@ GEM
     redis-client (0.12.1)
       connection_pool
     regexp_parser (2.6.2)
-    responders (3.0.1)
-      actionpack (>= 5.0)
-      railties (>= 5.0)
+    responders (3.1.0)
+      actionpack (>= 5.2)
+      railties (>= 5.2)
     rexml (3.2.5)
     rollbar (3.4.0)
     rspec-core (3.12.0)
