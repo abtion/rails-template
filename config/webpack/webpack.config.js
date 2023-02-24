@@ -1,6 +1,7 @@
 const { webpackConfig, merge } = require("shakapacker")
 
 const aliasConfig = require("./alias")
+const dynamicCssVariables = require("./dynamicCssVariables")
 const nodeSassGlobImporter = require("node-sass-glob-importer")
 
 const sassRule = webpackConfig.module.rules.find((rule) =>
@@ -12,5 +13,6 @@ const sassLoader = sassRule.use.find((use) => {
 })
 
 sassLoader.options.sassOptions.importer = nodeSassGlobImporter()
+sassLoader.options.additionalData = dynamicCssVariables
 
 module.exports = merge({}, webpackConfig, aliasConfig)
