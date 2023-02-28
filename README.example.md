@@ -1,8 +1,8 @@
 Project Name Human
 
-![Observatory](https://img.shields.io/mozilla-observatory/grade-score/muffi-template.herokuapp.com)
+![Observatory](https://img.shields.io/mozilla-observatory/grade-score/abtion-rails-template.herokuapp.com)
 
-This project is built on top of [Muffi](https://github.com/abtion/muffi).
+This project is built on top of the [Abtion Rails Template](https://github.com/abtion/rails-template).
 
 1. [Project Name Human](#project-name-param)
 2. [Requirements](#requirements)

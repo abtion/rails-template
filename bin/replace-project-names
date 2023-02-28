@@ -30,7 +30,7 @@ class ProjectName < String
   end
 end
 
-module MuffiFileRenamer
+module FileRenamer
   class << self
     def call
       files.each do |file|
@@ -74,7 +74,7 @@ module MuffiFileRenamer
 end
 
 begin
-  MuffiFileRenamer.call
+  FileRenamer.call
 rescue Interrupt
   abort 'Aborted'
 end

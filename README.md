@@ -1,9 +1,9 @@
-# Muffi
+# Abtion Rails Template
 
-1. [Muffi](#muffi)
-   1. [What is Muffi?](#what-is-muffi)
-      1. [What are the benefits of using Muffi?](#what-are-the-benefits-of-using-muffi)
-      2. [Muffi challenges](#muffi-challenges)
+1. [Abtion Rails Template](#abtion-rails-template)
+   1. [What is this?](#what-is-this)
+      1. [What are the benefits of using this?](#what-are-the-benefits-of-using-this)
+      2. [Finding the right compromise](#finding-the-right-compromise)
    2. [Key features](#key-features)
    3. [Getting Started](#getting-started)
       1. [Start a new project](#start-a-new-project)
@@ -20,15 +20,15 @@
    5. [License](#license)
    6. [About Abtion](#about-abtion)
 
-## What is Muffi?
+## What is this?
 
-Muffi is a project template maintained by [Abtion](https://abtion.com/) and used to kick start
+The Abtion Rails template - also known as **_Muffi on rails_** - is a project template maintained by [Abtion](https://abtion.com/) and used to kick start
 Ruby on Rails applications.
 
-### What are the benefits of using Muffi?
+### What are the benefits of using this?
 
 - Much less time spent on "first-time setup":
-  - Projects starting from the Muffi template include all the libraries we typically use at Abtion on the latest version.
+  - Projects starting from this template include all the libraries we typically use at Abtion on the latest version.
   - Basic functionality is there from the start; we can have the app live from the moment we start, start sending emails, or log in with a user to the system.
 - Lots of decisions are already made:
   - We've made these same decisions many times - now we know which decisions are the right ones.
@@ -39,10 +39,12 @@ Ruby on Rails applications.
   - Easy to scale projects up and down. Developers know what to expect when they join the project. They've seen similar things before.
   - Less reliance on specific people - the whole team can contribute even when a team member is not present.
 
-### Muffi challenges
+### Finding the right compromise
+
+Everything in the template has been carefully considered in regards to:
 
 - We want to be open to multiple unknown futures, with one single template.
-- It is difficult to decide what belongs to Muffi (feature creep)
+- But we don't want the feature creep to creep up on us too much.
 
 ## Key features
 
@@ -59,12 +61,11 @@ Ruby on Rails applications.
 
 ### Start a new project
 
-To start a new project with Muffi, simply create a new repository on GitHub
-using this repository as a template.
-(You loose the Muffi history, adding everything in Muffi at that time as a single initial commit)
+To start up, simply create a new repository on GitHub using this repository as a template.
+(You loose the template's history, adding everything as one initial commit)
 
-Alternatively, import Muffi into a new repository by going to https://github.com/new/import and specify https://github.com/abtion/muffi.git
-(You retain all the Muffi history)
+Alternatively, import the template into a new repository by going to https://github.com/new/import and specify https://github.com/abtion/rails-template.git
+(You retain all template history history)
 
 ####
 
@@ -109,8 +110,8 @@ All the predefined colors are required for the built-in components to work:
 
 ### Configure CD
 
-1. Create staging heroku app based on the muffi template.
-   1. Visit: https://dashboard.heroku.com/new?org=abtion&template=https%3A%2F%2Fgithub.com%2Fabtion%2Fmuffi
+1. Create staging heroku app based on the template.
+   1. Visit: https://dashboard.heroku.com/new?org=abtion&template=https%3A%2F%2Fgithub.com%2Fabtion%2Frails-template
    2. Fill in the name with `<PROJECT-NAME>-staging`.
    3. Select europe as region.
    4. Create a new pipeline for the project `<PROJECT-NAME>`.
@@ -206,11 +207,11 @@ To enable DB backups, see this guide: https://github.com/abtion/heroku-db-backup
 
 ## Contributing
 
-Muffi is maintained by [_Abtioneers_](#about-abtion), but open for anyone to suggest improvements and bugfixes.
+The Abtion Rails Template is maintained by [_Abtioneers_](#about-abtion), but open for anyone to suggest improvements and bugfixes.
 
 One abtioneer is currently responsible for the project at Abtion, with support from other employees.
 
-Please see [CONTRIBUTING.md](https://github.com/abtion/muffi/blob/main/CONTRIBUTING.md).
+Please see [CONTRIBUTING.md](https://github.com/abtion/rails-template/blob/main/CONTRIBUTING.md).
 
 ## License
 
