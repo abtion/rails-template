@@ -1310,23 +1310,7 @@
   dependencies:
     jest-get-type "^29.4.3"
 
-"@jest/expect@^29.3.1":
-  version "29.3.1"
-  resolved "https://registry.yarnpkg.com/@jest/expect/-/expect-29.3.1.tgz#456385b62894349c1d196f2d183e3716d4c6a6cd"
-  integrity sha512-QivM7GlSHSsIAWzgfyP8dgeExPRZ9BIe2LsdPyEhCGkZkoyA+kGsoIzbKAfZCvvRzfZioKwPtCZIt5SaoxYCvg==
-  dependencies:
-    expect "^29.3.1"
-    jest-snapshot "^29.3.1"
-
-"@jest/expect@^29.4.2":
-  version "29.4.2"
-  resolved "https://registry.yarnpkg.com/@jest/expect/-/expect-29.4.2.tgz#2d4a6a41b29380957c5094de19259f87f194578b"
-  integrity sha512-NUAeZVApzyaeLjfWIV/64zXjA2SS+NuUPHpAlO7IwVMGd5Vf9szTl9KEDlxY3B4liwLO31os88tYNHl6cpjtKQ==
-  dependencies:
-    expect "^29.4.2"
-    jest-snapshot "^29.4.2"
-
-"@jest/expect@^29.5.0":
+"@jest/expect@^29.3.1", "@jest/expect@^29.4.2", "@jest/expect@^29.5.0":
   version "29.5.0"
   resolved "https://registry.yarnpkg.com/@jest/expect/-/expect-29.5.0.tgz#80952f5316b23c483fbca4363ce822af79c38fba"
   integrity sha512-PueDR2HGihN3ciUNGr4uelropW7rqUfTiOn+8u0leg/42UhblPxHkfoh0Ruu3I9Y1962P3u2DY4+h7GVTSVU6g==
