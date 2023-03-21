@@ -40,12 +40,9 @@ RSpec.describe UserPolicy, type: :policy do
 
   describe "#permitted_attributes" do
     it "returns the correct attributes" do
-      expect(UserPolicy.new(build(:user), nil).permitted_attributes).to match_array([
-        :email,
-        :name,
-        :password,
-        :password_confirmation
-      ])
+      expect(UserPolicy.new(build(:user),
+                            nil).permitted_attributes).to contain_exactly(:email, :name, :password,
+                                                                          :password_confirmation)
     end
   end
 end

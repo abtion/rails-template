@@ -16,7 +16,7 @@ RSpec.describe Admin::UsersController do
       get :index
 
       expect(response).to have_http_status(:ok)
-      expect(assigns(:users)).to match_array([user, admin])
+      expect(assigns(:users)).to contain_exactly(user, admin)
     end
   end
 
