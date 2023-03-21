@@ -72,4 +72,8 @@ RSpec.configure do |config|
   config.before do
     stub_strong_password
   end
+  config.around do |example|
+    vcr = example.metadata[:vcr]
+    vcr ? example.run : VCR.turned_off { example.run }
+  end
 end
