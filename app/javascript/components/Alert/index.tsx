@@ -25,7 +25,12 @@ export default function Alert(props: AlertProps): JSX.Element {
     <div className={usedClassName} role="alert" {...rest}>
       {children}
       {onClose && (
-        <button className="Alert__close" onClick={onClose} aria-label="Close">
+        <button
+          className="Alert__close"
+          type="button"
+          onClick={onClose}
+          aria-label="Close"
+        >
           <XMarkIcon />
         </button>
       )}
