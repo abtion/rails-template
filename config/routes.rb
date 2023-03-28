@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   if ENV.fetch("RAILS_ENV", "development") == "production"
-    match "*unmatched", to: "errors#not_found", via: :all
+    match "*unmatched", to: "errors#not_found", via: :all, constraints: lambda { |req|
+      req.path.exclude?("rails/active_storage")
+    }
   end
 end
