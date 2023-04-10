@@ -2614,9 +2614,9 @@ babel-plugin-istanbul@^6.1.1:
     test-exclude "^6.0.0"
 
 babel-plugin-jest-hoist@^29.4.2:
-  version "29.4.2"
-  resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-29.4.2.tgz#22aa43e255230f02371ffef1cac7eedef58f60bc"
-  integrity sha512-5HZRCfMeWypFEonRbEkwWXtNS1sQK159LhRVyRuLzyfVBxDy/34Tr/rg4YVi0SScSJ4fqeaR/OIeceJ/LaQ0pQ==
+  version "29.5.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-29.5.0.tgz#a97db437936f441ec196990c9738d4b88538618a"
+  integrity sha512-zSuuuAlTMT4mzLj2nPnUm6fsE6270vdOfnpbJ+RmruU75UhLFvL0N2NgI7xpeS7NaB6hGqmd5pVpGTDYvi4Q3w==
   dependencies:
     "@babel/template" "^7.3.3"
     "@babel/types" "^7.3.3"
