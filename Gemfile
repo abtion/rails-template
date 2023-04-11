@@ -46,7 +46,7 @@ group :development do
   gem "letter_opener"
   gem "listen", "~> 3.8"
   gem "pivotal_git_scripts"
-  gem "rack-mini-profiler", "~> 3.0"
+  gem "rack-mini-profiler", "~> 3.1"
   gem "spring", require: false
   gem "spring-commands-rspec", require: false
   gem "web-console"
