@@ -1442,7 +1442,7 @@
     callsites "^3.0.0"
     graceful-fs "^4.2.9"
 
-"@jest/test-result@^29.3.1", "@jest/test-result@^29.4.2", "@jest/test-result@^29.4.3":
+"@jest/test-result@^29.3.1", "@jest/test-result@^29.4.2":
   version "29.4.3"
   resolved "https://registry.yarnpkg.com/@jest/test-result/-/test-result-29.4.3.tgz#e13d973d16c8c7cc0c597082d5f3b9e7f796ccb8"
   integrity sha512-Oi4u9NfBolMq9MASPwuWTlC5WvmNRwI4S8YrQg5R5Gi47DYlBe3sh7ILTqi/LGrK1XUE4XY9KZcQJTH1WJCLLA==
@@ -5618,21 +5618,7 @@ jest-validate@^29.5.0:
     leven "^3.1.0"
     pretty-format "^29.5.0"
 
-jest-watcher@^29.3.1:
-  version "29.4.3"
-  resolved "https://registry.yarnpkg.com/jest-watcher/-/jest-watcher-29.4.3.tgz#e503baa774f0c2f8f3c8db98a22ebf885f19c384"
-  integrity sha512-zwlXH3DN3iksoIZNk73etl1HzKyi5FuQdYLnkQKm5BW4n8HpoG59xSwpVdFrnh60iRRaRBGw0gcymIxjJENPcA==
-  dependencies:
-    "@jest/test-result" "^29.4.3"
-    "@jest/types" "^29.4.3"
-    "@types/node" "*"
-    ansi-escapes "^4.2.1"
-    chalk "^4.0.0"
-    emittery "^0.13.1"
-    jest-util "^29.4.3"
-    string-length "^4.0.1"
-
-jest-watcher@^29.5.0:
+jest-watcher@^29.3.1, jest-watcher@^29.5.0:
   version "29.5.0"
   resolved "https://registry.yarnpkg.com/jest-watcher/-/jest-watcher-29.5.0.tgz#cf7f0f949828ba65ddbbb45c743a382a4d911363"
   integrity sha512-KmTojKcapuqYrKDpRwfqcQ3zjMlwu27SYext9pt4GlF5FUgB+7XE1mcCnSm6a4uUpFyQIkb6ZhzZvHl+jiBCiA==
