@@ -7,5 +7,5 @@ const Variants = [
   "info",
 ] as const
 
-export type Variant = typeof Variants[number]
+export type Variant = (typeof Variants)[number]
 export default Variants
