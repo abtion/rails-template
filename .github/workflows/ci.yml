@@ -156,7 +156,6 @@ jobs:
     env:
       RAILS_ENV: production
       HEROKU_APP_NAME: dummy
-      MAIL_FROM: dummy
       REDIS_URL: dummy
       SECRET_KEY_BASE: dummy
 

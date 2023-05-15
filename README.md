@@ -132,7 +132,6 @@ All the predefined colors are required for the built-in components to work:
    - `SEED_ADMIN_INITIAL_PASSWORD`
    - `HTTP_AUTH_USERNAME`
    - `HTTP_AUTH_PASSWORD`
-   - `MAIL_FROM`
 
 ### Configure i18n tasks
 
