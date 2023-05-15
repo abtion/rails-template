@@ -42,12 +42,6 @@
       "url": "heroku/ruby"
     }
   ],
-  "env": {
-    "DOMAIN_NAME": {
-      "description": "The domain for the app. If this has not been decided yet, use <App name>.herokuapp.com",
-      "required": true
-    }
-  },
   "formation": {},
   "name": "project-name-param",
   "scripts": {},
