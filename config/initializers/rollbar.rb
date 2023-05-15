@@ -50,6 +50,10 @@ Rollbar.configure do |config|
   # You can supply custom Sidekiq options:
   # config.use_sidekiq 'queue' => 'default'
 
+  # Don't report exceptions from retrying sidekiq jobs until third retry
+  # This is unrelated to and independent from `use_sidekiq` (though the docs are very unclear)
+  config.sidekiq_threshold = 3
+
   # If your application runs behind a proxy server, you can set proxy parameters here.
   # If https_proxy is set in your environment, that will be used. Settings here have precedence.
   # The :host key is mandatory and must include the URL scheme (e.g. 'http://'), all other fields
