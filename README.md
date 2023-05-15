@@ -193,7 +193,7 @@ token to the settings of your project on GitHub. Follow these steps:
 
 1. Acquire a token
    1. Sign into github using the client github account. (More info [here](https://inside.abtion.com/tools_and_services/access_and_permissions.html#github))
-   2. Create an access token (use [this](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) guide)
+   2. Create an access token (classic with no expiration) (use [this](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic) guide)
 2. Set up the token
    1. Go to "Settings" > "Secrets" for the repository.
    2. Click "New secret".
