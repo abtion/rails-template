@@ -96,6 +96,10 @@ Rails.application.configure do
   hostname ||= "#{ENV.fetch('HEROKU_APP_NAME')}.herokuapp.com"
   config.action_mailer.default_url_options = { host: hostname }
 
+  # Only require MAIL_FROM when we've set up a host name for the app
+  default_from = ENV.key?("DOMAIN_NAME") ? ENV.fetch("MAIL_FROM") : "info@#{hostname}"
+  config.action_mailer.default_options = { from: default_from }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false

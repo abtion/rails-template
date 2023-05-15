@@ -40,6 +40,7 @@ Rails.application.configure do
 
   # Set default URL options in development so mail can be generated
   config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
+  config.action_mailer.default_options = { from: "mail_from@example.com" }
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
