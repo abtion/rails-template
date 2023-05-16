@@ -44,7 +44,9 @@ Rails.application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
-  config.action_mailer.default_url_options = { host: "localhost" }
+  # The port must be the same as in `spec/support/capybara.rb`
+  server_port = 9887 + ENV["TEST_ENV_NUMBER"].to_i
+  config.action_mailer.default_url_options = { host: "localhost:#{server_port}" }
   config.action_mailer.default_options = { from: "mail_from@example.com" }
 
   # Print deprecation notices to the stderr.
