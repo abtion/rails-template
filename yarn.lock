@@ -1370,7 +1370,7 @@
     slash "^3.0.0"
     strip-ansi "^6.0.0"
 
-"@jest/environment@^29.4.2", "@jest/environment@^29.5.0":
+"@jest/environment@^29.5.0":
   version "29.5.0"
   resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-29.5.0.tgz#9152d56317c1fdb1af389c46640ba74ef0bb4c65"
   integrity sha512-5FXw2+wD29YU1d4I2htpRX7jYnAyTRjP2CsXQdo9SAM8g3ifxWPSV0HnClSn71xwctr0U3oZIIH+dtbfmnbXVQ==
@@ -1402,7 +1402,7 @@
     expect "^29.5.0"
     jest-snapshot "^29.5.0"
 
-"@jest/fake-timers@^29.4.2", "@jest/fake-timers@^29.5.0":
+"@jest/fake-timers@^29.5.0":
   version "29.5.0"
   resolved "https://registry.yarnpkg.com/@jest/fake-timers/-/fake-timers-29.5.0.tgz#d4d09ec3286b3d90c60bdcd66ed28d35f1b4dc2c"
   integrity sha512-9ARvuAAQcBwDAqOnglWq2zwNIRUDtk/SCkp/ToGEhFv5r86K21l+VEs0qNTaXtyiY0lEePl3kylijSYJQqdbDg==
@@ -5248,19 +5248,7 @@ jest-environment-jsdom@^29.5.0:
     jest-util "^29.5.0"
     jsdom "^20.0.0"
 
-jest-environment-node@^29.4.2:
-  version "29.4.2"
-  resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-29.4.2.tgz#0eab835b41e25fd0c1a72f62665fc8db08762ad2"
-  integrity sha512-MLPrqUcOnNBc8zTOfqBbxtoa8/Ee8tZ7UFW7hRDQSUT+NGsvS96wlbHGTf+EFAT9KC3VNb7fWEM6oyvmxtE/9w==
-  dependencies:
-    "@jest/environment" "^29.4.2"
-    "@jest/fake-timers" "^29.4.2"
-    "@jest/types" "^29.4.2"
-    "@types/node" "*"
-    jest-mock "^29.4.2"
-    jest-util "^29.4.2"
-
-jest-environment-node@^29.5.0:
+jest-environment-node@^29.4.2, jest-environment-node@^29.5.0:
   version "29.5.0"
   resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-29.5.0.tgz#f17219d0f0cc0e68e0727c58b792c040e332c967"
   integrity sha512-ExxuIK/+yQ+6PRGaHkKewYtg6hto2uGCgvKdb2nfJfKXgZ17DfXjvbZ+jA1Qt9A8EQSfPnt5FKIfnOO3u1h9qw==
@@ -5358,7 +5346,7 @@ jest-message-util@^29.4.1, jest-message-util@^29.4.3, jest-message-util@^29.5.0:
     slash "^3.0.0"
     stack-utils "^2.0.3"
 
-jest-mock@^29.4.2, jest-mock@^29.5.0:
+jest-mock@^29.5.0:
   version "29.5.0"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-29.5.0.tgz#26e2172bcc71d8b0195081ff1f146ac7e1518aed"
   integrity sha512-GqOzvdWDE4fAV2bWQLQCkujxYWL7RxjCnj71b5VhDAGOevB3qj3Ovg26A5NI84ZpODxyzaozXLOh2NCgkbvyaw==
