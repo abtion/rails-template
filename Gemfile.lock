@@ -213,7 +213,7 @@ GEM
     pundit (2.3.0)
       activesupport (>= 3.0.0)
     pwned (2.0.2)
-    racc (1.7.0)
+    racc (1.7.1)
     rack (2.2.7)
     rack-attack (6.6.1)
       rack (>= 1.0, < 3)
