@@ -1384,19 +1384,7 @@
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.3.tgz#e45e384e4b8ec16bce2fd903af78450f6bf7ec98"
   integrity sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==
 
-"@jest/console@^29.4.3":
-  version "29.4.3"
-  resolved "https://registry.yarnpkg.com/@jest/console/-/console-29.4.3.tgz#1f25a99f7f860e4c46423b5b1038262466fadde1"
-  integrity sha512-W/o/34+wQuXlgqlPYTansOSiBnuxrTv61dEVkA6HNmpcgHLUjfaUbdqt6oVvOzaawwo9IdW9QOtMgQ1ScSZC4A==
-  dependencies:
-    "@jest/types" "^29.4.3"
-    "@types/node" "*"
-    chalk "^4.0.0"
-    jest-message-util "^29.4.3"
-    jest-util "^29.4.3"
-    slash "^3.0.0"
-
-"@jest/console@^29.5.0":
+"@jest/console@^29.4.3", "@jest/console@^29.5.0":
   version "29.5.0"
   resolved "https://registry.yarnpkg.com/@jest/console/-/console-29.5.0.tgz#593a6c5c0d3f75689835f1b3b4688c4f8544cb57"
   integrity sha512-NEpkObxPwyw/XxZVLPmAGKE89IQRp4puc6IQRPru6JKd1M3fW9v1xM1AnzIJE65hbCkzQAdnL8P47e9hzhiYLQ==
@@ -5412,7 +5400,7 @@ jest-matcher-utils@^29.5.0:
     jest-get-type "^29.4.3"
     pretty-format "^29.5.0"
 
-jest-message-util@^29.4.1, jest-message-util@^29.4.3, jest-message-util@^29.5.0:
+jest-message-util@^29.4.1, jest-message-util@^29.5.0:
   version "29.5.0"
   resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-29.5.0.tgz#1f776cac3aca332ab8dd2e3b41625435085c900e"
   integrity sha512-Kijeg9Dag6CKtIDA7O21zNTACqD5MD/8HfIV8pdD94vFyFuer52SigdC3IQMhab3vACxXMiFk+yMHNdbqtyTGA==
