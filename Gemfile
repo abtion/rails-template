@@ -20,7 +20,7 @@ gem "rack-attack"
 gem "rails", "~> 7.0.6"
 gem "rails-i18n"
 gem "rollbar"
-gem "shakapacker", "6.6.0"
+gem "shakapacker", "7.0.2"
 gem "sidekiq"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
