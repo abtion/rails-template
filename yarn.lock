@@ -5677,14 +5677,6 @@ jest-haste-map@^29.6.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
-jest-leak-detector@^29.5.0:
-  version "29.5.0"
-  resolved "https://registry.yarnpkg.com/jest-leak-detector/-/jest-leak-detector-29.5.0.tgz#cf4bdea9615c72bac4a3a7ba7e7930f9c0610c8c"
-  integrity sha512-u9YdeeVnghBUtpN5mVxjID7KbkKE1QU4f6uUwuxiY0vYRi9BUCLKlPEZfDGR67ofdFmDz9oPAy2G92Ujrntmow==
-  dependencies:
-    jest-get-type "^29.4.3"
-    pretty-format "^29.5.0"
-
 jest-leak-detector@^29.6.1:
   version "29.6.1"
   resolved "https://registry.yarnpkg.com/jest-leak-detector/-/jest-leak-detector-29.6.1.tgz#66a902c81318e66e694df7d096a95466cb962f8e"
@@ -5818,34 +5810,7 @@ jest-resolve@^29.6.1:
     resolve.exports "^2.0.0"
     slash "^3.0.0"
 
-jest-runner@^29.5.0:
-  version "29.5.0"
-  resolved "https://registry.yarnpkg.com/jest-runner/-/jest-runner-29.5.0.tgz#6a57c282eb0ef749778d444c1d758c6a7693b6f8"
-  integrity sha512-m7b6ypERhFghJsslMLhydaXBiLf7+jXy8FwGRHO3BGV1mcQpPbwiqiKUR2zU2NJuNeMenJmlFZCsIqzJCTeGLQ==
-  dependencies:
-    "@jest/console" "^29.5.0"
-    "@jest/environment" "^29.5.0"
-    "@jest/test-result" "^29.5.0"
-    "@jest/transform" "^29.5.0"
-    "@jest/types" "^29.5.0"
-    "@types/node" "*"
-    chalk "^4.0.0"
-    emittery "^0.13.1"
-    graceful-fs "^4.2.9"
-    jest-docblock "^29.4.3"
-    jest-environment-node "^29.5.0"
-    jest-haste-map "^29.5.0"
-    jest-leak-detector "^29.5.0"
-    jest-message-util "^29.5.0"
-    jest-resolve "^29.5.0"
-    jest-runtime "^29.5.0"
-    jest-util "^29.5.0"
-    jest-watcher "^29.5.0"
-    jest-worker "^29.5.0"
-    p-limit "^3.1.0"
-    source-map-support "0.5.13"
-
-jest-runner@^29.6.1:
+jest-runner@^29.5.0, jest-runner@^29.6.1:
   version "29.6.1"
   resolved "https://registry.yarnpkg.com/jest-runner/-/jest-runner-29.6.1.tgz#54557087e7972d345540d622ab5bfc3d8f34688c"
   integrity sha512-tw0wb2Q9yhjAQ2w8rHRDxteryyIck7gIzQE4Reu3JuOBpGp96xWgF0nY8MDdejzrLCZKDcp8JlZrBN/EtkQvPQ==
