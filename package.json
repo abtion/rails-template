@@ -76,7 +76,7 @@
     "jest-environment-jsdom": "^29.6.1",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
-    "stylelint": "^14.16.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "webpack-dev-server": "^4.11.1"
   },
