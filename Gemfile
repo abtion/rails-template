@@ -38,8 +38,8 @@ group :development, :test do
   gem "rubocop-performance"
   gem "rubocop-rails"
   gem "rubocop-rspec"
+  gem "selenium-webdriver", ">= 4.11"
   gem "shoulda-matchers"
-  gem "webdrivers", "~> 5.2", require: false
 end
 
 group :development do

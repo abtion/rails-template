@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 require "capybara/rspec"
-require "webdrivers/chromedriver" unless ENV.key?("DISABLE_WEBDRIVERS")
+
+# Configure Selenium WebDriver Logger
+Selenium::WebDriver.logger.ignore(:capabilities)
 
 # Default driver registrations
 # https://github.com/teamcapybara/capybara/blob/master/lib/capybara/registrations/drivers.rb
