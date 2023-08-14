@@ -1,24 +1,25 @@
 # Abtion Rails Template
 
-1. [Abtion Rails Template](#abtion-rails-template)
-   1. [What is this?](#what-is-this)
-      1. [What are the benefits of using this?](#what-are-the-benefits-of-using-this)
-      2. [Finding the right compromise](#finding-the-right-compromise)
-   2. [Key features](#key-features)
-   3. [Getting Started](#getting-started)
-      1. [Start a new project](#start-a-new-project)
-      2. [Replace license](#replace-license)
-      3. [Configure the project](#configure-the-project)
-      4. [Setup colors](#setup-colors)
-      5. [Configure CD](#configure-cd)
-      6. [Configure i18n tasks](#configure-i18n-tasks)
-      7. [Setup mailing](#setup-mailing)
-      8. [Setup basic auth](#setup-basic-auth)
-      9. [Set up Dependabot](#set-up-dependabot)
-      10. [Set up database backups](#set-up-database-backups)
-   4. [Contributing](#contributing)
-   5. [License](#license)
-   6. [About Abtion](#about-abtion)
+- [Abtion Rails Template](#abtion-rails-template)
+  - [What is this?](#what-is-this)
+    - [What are the benefits of using this?](#what-are-the-benefits-of-using-this)
+    - [Finding the right compromise](#finding-the-right-compromise)
+  - [Key features](#key-features)
+  - [Getting Started](#getting-started)
+    - [Start a new project](#start-a-new-project)
+      - [Set up branch protection rules](#set-up-branch-protection-rules)
+    - [Replace license](#replace-license)
+    - [Configure the project](#configure-the-project)
+    - [Setup colors](#setup-colors)
+    - [Configure CD](#configure-cd)
+    - [Configure i18n tasks](#configure-i18n-tasks)
+    - [Setup mailing](#setup-mailing)
+    - [Setup basic auth](#setup-basic-auth)
+    - [Set up Dependabot](#set-up-dependabot)
+    - [Set up database backups](#set-up-database-backups)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [About Abtion](#about-abtion)
 
 ## What is this?
 
@@ -62,14 +63,11 @@ Everything in the template has been carefully considered in regards to:
 ### Start a new project
 
 To start up, simply create a new repository on GitHub using this repository as a template.
-(You loose the template's history, adding everything as one initial commit)
+(You lose the template's history, adding everything as one initial commit)
 
-Alternatively, import the template into a new repository by going to https://github.com/new/import and specify https://github.com/abtion/rails-template.git
-(You retain all template history history)
+Alternatively, import the template into a new repository by going to https://github.com/new/import and specifying https://github.com/abtion/rails-template.git (You retain all template history)
 
-####
-
-Set up branch protection rules:
+#### Set up branch protection rules
 
 - Require status checks before merging.
 - Require branches to be up to date.
@@ -150,23 +148,23 @@ Setting up email has historically proven to be something we cannot do in the beg
 
 For those reasons the template is set up to use [mailtrap](https://elements.heroku.com/addons/mailtrap) by default. Mailtrap catches any sent emails and allows us to potentially debug them. Most importantly it lets the app run without a hitch until the requirements for setting up real email are met.
 
-When a project eventually gets a domain, and we have access to the domain's DNS settings, our goto solution is to set up [sendinblue](https://www.sendinblue.com/) for the production environment:
+When a project eventually gets a domain, and we have access to the domain's DNS settings, our goto solution is to set up [brevo](https://www.brevo.com/) for the production environment:
 
 1. Remove the mailtrap addon on heroku
-2. Register and add to 1Password new sendinblue account
-   1. Register: https://app.sendinblue.com/account/register
+2. Register and add to 1Password new brevo account
+   1. Register: https://app.brevo.com/account/register
    2. Email: Client google group account
    3. Password: Generate in 1Password
-3. You must validate a phone number in order to start sending mails.
+3. You must validate a phone number to start sending mails.
    1. Use Abtion's shared phone number 60 57 59 72 and check the code in #access-and-permissions (Slack)
-4. Generate SENDINBLUE keys
+4. Generate brevo keys
    1. Go to SMTP & API under user settings
    2. Click on SMTP Tab
    3. Create a new SMTP KEY.
-   4. Copy smtp key value to `SENDINBLUE_PASSWORD` variable on clients heroku project
-   5. Copy login to `SENDINBLUE_USERNAME` variable on clients heroku project
+   4. Copy smtp key value to `BREVO_PASSWORD` variable on clients heroku project
+   5. Copy login to `BREVO_USERNAME` variable on clients heroku project
 5. Setup DNS:
-   1. Go to: https://account.sendinblue.com/senders
+   1. Go to: https://account.brevo.com/senders
    2. Open "Domains"
    3. Add a new domain
    4. Fill in domain name and check the option to digitally sign emails, then continue
@@ -174,7 +172,7 @@ When a project eventually gets a domain, and we have access to the domain's DNS 
       The DNS provider differs from client to client depending on whether we bought the domain or they did it themselves.
       If we don't have access, we provide the settings to the client so they can set it up.
    6. It will take an hour or so for new records to propagate, be patient.
-   7. Back on the sendinblue page, validate each setting.
+   7. Back on the brevo page, validate each setting.
    8. When all settings are validated, the setup is complete.
 
 ### Setup basic auth

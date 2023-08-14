@@ -63,12 +63,12 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   config.action_mailer.delivery_method = :smtp
 
-  if ENV.key?("SENDINBLUE_USERNAME")
+  if ENV.key?("brevo_USERNAME")
     config.action_mailer.smtp_settings = {
-      address: "smtp-relay.sendinblue.com",
+      address: "smtp-relay.brevo.com",
       port: 587,
-      user_name: ENV.fetch("SENDINBLUE_EMAIL"),
-      password: ENV.fetch("SENDINBLUE_PASSWORD"),
+      user_name: ENV.fetch("brevo_EMAIL"),
+      password: ENV.fetch("brevo_PASSWORD"),
       authentication: "login",
       enable_starttls_auto: true
     }
