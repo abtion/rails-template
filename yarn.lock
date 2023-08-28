@@ -5986,21 +5986,13 @@ jest-regex-util@^29.6.3:
   resolved "https://registry.yarnpkg.com/jest-regex-util/-/jest-regex-util-29.6.3.tgz#4a556d9c776af68e1c5f48194f4d0327d24e8a52"
   integrity sha512-KJJBsRCyyLNWCNBOvZyRDnAIfUiRJ8v+hOBQYGn8gDyF3UegwiP4gwRR3/SDa42g1YbVycTidUF3rKjyLFDWbg==
 
-jest-resolve-dependencies@^29.5.0:
-  version "29.5.0"
-  resolved "https://registry.yarnpkg.com/jest-resolve-dependencies/-/jest-resolve-dependencies-29.5.0.tgz#f0ea29955996f49788bf70996052aa98e7befee4"
-  integrity sha512-sjV3GFr0hDJMBpYeUuGduP+YeCRbd7S/ck6IvL3kQ9cpySYKqcqhdLLC2rFwrcL7tz5vYibomBrsFYWkIGGjOg==
+jest-resolve-dependencies@^29.5.0, jest-resolve-dependencies@^29.6.1:
+  version "29.6.4"
+  resolved "https://registry.yarnpkg.com/jest-resolve-dependencies/-/jest-resolve-dependencies-29.6.4.tgz#20156b33c7eacbb6bb77aeba4bed0eab4a3f8734"
+  integrity sha512-7+6eAmr1ZBF3vOAJVsfLj1QdqeXG+WYhidfLHBRZqGN24MFRIiKG20ItpLw2qRAsW/D2ZUUmCNf6irUr/v6KHA==
   dependencies:
-    jest-regex-util "^29.4.3"
-    jest-snapshot "^29.5.0"
-
-jest-resolve-dependencies@^29.6.1:
-  version "29.6.1"
-  resolved "https://registry.yarnpkg.com/jest-resolve-dependencies/-/jest-resolve-dependencies-29.6.1.tgz#b85b06670f987a62515bbf625d54a499e3d708f5"
-  integrity sha512-BbFvxLXtcldaFOhNMXmHRWx1nXQO5LoXiKSGQcA1LxxirYceZT6ch8KTE1bK3X31TNG/JbkI7OkS/ABexVahiw==
-  dependencies:
-    jest-regex-util "^29.4.3"
-    jest-snapshot "^29.6.1"
+    jest-regex-util "^29.6.3"
+    jest-snapshot "^29.6.4"
 
 jest-resolve@^29.5.0:
   version "29.5.0"
@@ -6185,7 +6177,7 @@ jest-runtime@^29.6.2:
     slash "^3.0.0"
     strip-bom "^4.0.0"
 
-jest-snapshot@^29.5.0, jest-snapshot@^29.6.1, jest-snapshot@^29.6.2:
+jest-snapshot@^29.5.0, jest-snapshot@^29.6.1, jest-snapshot@^29.6.2, jest-snapshot@^29.6.4:
   version "29.6.4"
   resolved "https://registry.yarnpkg.com/jest-snapshot/-/jest-snapshot-29.6.4.tgz#9833eb6b66ff1541c7fd8ceaa42d541f407b4876"
   integrity sha512-VC1N8ED7+4uboUKGIDsbvNAZb6LakgIPgAF4RSpF13dN6YaMokfRqO+BaqK4zIh6X3JffgwbzuGqDEjHm/MrvA==
