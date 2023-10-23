@@ -5800,21 +5800,13 @@ jest-haste-map@^29.7.0:
   optionalDependencies:
     fsevents "^2.3.2"
 
-jest-leak-detector@^29.6.1:
-  version "29.6.1"
-  resolved "https://registry.yarnpkg.com/jest-leak-detector/-/jest-leak-detector-29.6.1.tgz#66a902c81318e66e694df7d096a95466cb962f8e"
-  integrity sha512-OrxMNyZirpOEwkF3UHnIkAiZbtkBWiye+hhBweCHkVbCgyEy71Mwbb5zgeTNYWJBi1qgDVfPC1IwO9dVEeTLwQ==
+jest-leak-detector@^29.6.1, jest-leak-detector@^29.6.2:
+  version "29.7.0"
+  resolved "https://registry.yarnpkg.com/jest-leak-detector/-/jest-leak-detector-29.7.0.tgz#5b7ec0dadfdfec0ca383dc9aa016d36b5ea4c728"
+  integrity sha512-kYA8IJcSYtST2BY9I+SMC32nDpBT3J2NvWJx8+JCuCdl/CR1I4EKUJROiP8XtCcxqgTTBGJNdbB1A8XRKbTetw==
   dependencies:
-    jest-get-type "^29.4.3"
-    pretty-format "^29.6.1"
-
-jest-leak-detector@^29.6.2:
-  version "29.6.2"
-  resolved "https://registry.yarnpkg.com/jest-leak-detector/-/jest-leak-detector-29.6.2.tgz#e2b307fee78cab091c37858a98c7e1d73cdf5b38"
-  integrity sha512-aNqYhfp5uYEO3tdWMb2bfWv6f0b4I0LOxVRpnRLAeque2uqOVVMLh6khnTcE2qJ5wAKop0HcreM1btoysD6bPQ==
-  dependencies:
-    jest-get-type "^29.4.3"
-    pretty-format "^29.6.2"
+    jest-get-type "^29.6.3"
+    pretty-format "^29.7.0"
 
 jest-matcher-utils@^29.4.1:
   version "29.4.1"
