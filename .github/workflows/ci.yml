@@ -180,6 +180,8 @@ jobs:
         run: |
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
+      - name: yarn install
+        run: yarn install --prod
       - name: run bin/rails assets:precompile
         run: bin/rails assets:precompile
 
