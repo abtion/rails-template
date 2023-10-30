@@ -27,7 +27,7 @@ RSpec.describe "devise/sessions/new" do
 
       render
 
-      expect(rendered).to have_selector("h2", exact_text: "Log ind")
+      expect(rendered).to have_css("h2", exact_text: "Log ind")
     end
 
     it "renders a login form" do
@@ -77,7 +77,7 @@ RSpec.describe "devise/sessions/new" do
 
       render
 
-      expect(rendered).to have_selector("h2", exact_text: "Sign in")
+      expect(rendered).to have_css("h2", exact_text: "Sign in")
     end
 
     it "renders a login form" do
