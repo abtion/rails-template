@@ -11,15 +11,6 @@ RSpec.describe Rack::Attack, type: :request do
     allow(Rails).to receive(:cache).and_return(memory_store)
     allow(Rack::Attack).to receive(:enabled).and_return(true)
     Rack::Attack.reset!
-
-    # We are testing the lower middleware layers, so routing errors are irrelevant
-    # Therefore we force request to show rather than raise exceptions.
-    org_new = ActionDispatch::Request.method(:new)
-    allow(ActionDispatch::Request).to receive(:new) do |env|
-      request = org_new.call(env)
-      allow(request).to receive(:show_exceptions?).and_return(true)
-      request
-    end
   end
 
   describe "IP address throttling" do
