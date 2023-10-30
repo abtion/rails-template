@@ -1,5 +1,5 @@
-// These are all the static file formats that webpacker comes preconfigured with support for:
-// https://github.com/rails/webpacker/blob/e039a2f27e6bb684e921081295d3408625d25799/package/rules/file.js
+// These are all the static file formats that shakapacker comes preconfigured with support for:
+// https://github.com/shakacode/shakapacker/blob/91f7fbec861e88acbe60e0da671cbb0d8665bd0a/package/rules/file.js
 declare module "*.bmp" {
   const path: string
   export default path

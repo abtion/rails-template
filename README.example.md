@@ -207,7 +207,7 @@ When system spec fails in CI a screenshot will be saved as a Github Actions arti
 Inclusions:
 
 - [Devise](#devise-user-authorization)
-- Webpacker
+- Shakapacker
 - Jest
 - PostgreSQL database (11.x)
 - [Rollbar](https://rollbar.com) error monitoring

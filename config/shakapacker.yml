@@ -7,7 +7,7 @@ default: &default
   source_entry_path: entrypoints
   public_root_path: public
   public_output_path: packs
-  cache_path: tmp/webpacker
+  cache_path: tmp/shakapacker
   webpack_compile_output: true
 
   # Prevents dependabot - and devs - from updating either shakapacker npms or gems independently
