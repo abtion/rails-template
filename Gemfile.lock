@@ -376,7 +376,7 @@ GEM
     spring (4.1.1)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
-    stringio (3.0.8)
+    stringio (3.0.9)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     thor (1.3.0)
