@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
           cache: "yarn"
@@ -43,7 +43,7 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
           cache: "yarn"
@@ -78,7 +78,7 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
           cache: "yarn"
@@ -91,7 +91,7 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
           cache: "yarn"
@@ -152,7 +152,7 @@ jobs:
           bundler-cache: true
       - name: install required apt packages
         run: sudo apt-get -y install libpq-dev
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
           cache: "yarn"
@@ -192,7 +192,7 @@ jobs:
           bundler-cache: true
       - name: install required apt packages
         run: sudo apt-get -y install libpq-dev
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
           cache: "yarn"
