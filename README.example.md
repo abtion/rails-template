@@ -5,8 +5,10 @@ Project Name Human
 This project is built on top of the [Abtion Rails Template](https://github.com/abtion/rails-template).
 
 1. [Project Name Human](#project-name-param)
-2. [Requirements](#requirements)
-   - [Installing requirements](#installing-requirements)
+2. [Getting the project running](#getting-the-project-running)
+   1. [Run locally using docker for database servers](#run-locally-using-docker-for-database-servers)
+   2. [Run entirely project locally](#run-entirely-project-locally)
+   3. [Run inside docker dev container](#run-inside-docker-dev-container)
 3. [Developing](#developing)
    - [First time setup](#first-time-setup)
      - [1. Configuration](#1-configuration)
@@ -51,31 +53,82 @@ This section should include any business related explanation that helps understa
 If the project is using some special external services (NemID, oAuth, Customer API, etc.) give a short description here.
 Example: The app is using NemID to authenticate all its users.
 
-# Requirements
+# Getting the project running
 
-You must have the following installed and available on your machine:
+There are three supported ways to run the project:
 
-- **Ruby 3.0.x**
-- **Node JS 16.x**
-- **Yarn 1.x**
-- **PostgreSQL 12**
-- **Redis**
+1. [Run locally using docker for database servers](#run-locally-using-docker-for-database-servers)
+2. [Run entirely project locally (for non-docker purists)](#run-entirely-project-locally)
+3. [Run inside docker dev container (for docker purists)](#run-inside-docker-dev-container)
 
-## Installing requirements
+## Run locally using docker for database servers
 
-With [asdf](https://asdf-vm.com/) and [docker](https://www.docker.com/) (or [podman](https://podman.io/)) you can easily install/run the required versions of runtimes and services.
+Requirements:
 
-Install runtimes with `asdf`:
+- docker (or podman)
+- asdf
 
-```
+1. First install node and ruby:
+
+```bash
+# Add nodejs and ruby plugins if you don't already have them
+asdf plugin add nodejs
+asdf plugin ad ruby
+
+# Install
 asdf install
 ```
 
-Start services with `docker-compose`:
+2. Then run database with docker:
 
+```bash
+docker compose up
 ```
-docker-compose up
+
+3. Run setup:
+
+```bash
+bin/setup
 ```
+
+The project is now ready to run locally.
+
+## Run entirely project locally
+
+The steps are the same as for [Run locally using docker for database servers](#run-locally-using-docker-for-database-servers) except for step 2, and `docker` is (obviously) not a requirement.
+
+You will instead need to install the database servers and configure them correctly:
+
+- PostgreSQL (see version in docker-compose.yml)
+- Redis (see version in docker-compose.yml)
+
+It will be necessary to configure the database connections by setting corresponding env vars.
+If postgres is set up to use trust authentication (default for homebrew), then the following should be enough:
+
+```bash
+# .env.local
+DATABASE_SERVER=""
+```
+
+## Run inside docker dev container
+
+Requirements:
+
+- docker (or podman)
+
+First get the databases and dev container running with:
+`docker compose --profile dev up`
+
+When the command prints "Dev container ready" it means that you can now connect to the dev server to do whatever you would usually do:
+
+```bash
+docker compose exec dev bash
+bin/setup
+rails s
+```
+
+You can connect multiple times to run multiple processes, for instance shakapacker-dev-server can be started with:
+`docker compose exec dev bin/shakapacker-dev-server`
 
 # Developing
 
@@ -94,16 +147,6 @@ The following files are checked into git:
 If you need to make local changes to the env files, create a `.env.ENVIRONMENT.local` file (where ENVIRONMENT is test or development).
 
 Any env var you specify in such a file will override the configuration for the corresponding environment.
-
-#### Database connection
-
-You can set `DATABASE_SERVER` in `.env.local`, if you for instance use Docker for Postgres: `DATABASE_SERVER="postgresql://postgres@localhost:5432"`
-Or if you just use a local postgres instance:
-`DATABASE_SERVER=postgresql://user:pass@localhost:5432`
-
-### 2. Dependencies and database setup
-
-Run: `bin/setup`
 
 #### Chrome driver
 
