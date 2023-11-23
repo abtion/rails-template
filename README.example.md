@@ -106,12 +106,14 @@ You will instead need to install the database servers and configure them correct
 - Redis (see version in docker-compose.yml)
 
 It will be necessary to configure the database connections by setting corresponding env vars.
-If postgres is set up to use trust authentication (default for homebrew), then the following should be enough:
+If postgres is set up to use trust authentication (default for homebrew), then the following should be enough\*:
 
 ```bash
 # .env.local
 DATABASE_SERVER=""
 ```
+
+\*_Caution: If you on a mac do not clear `DATABASE_SERVER`, you might get a seemingly unrelated: `+[__NSCFConstantString initialize] may have been in progress in another thread...`_
 
 ## Run inside docker dev container
 
