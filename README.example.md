@@ -73,7 +73,7 @@ Requirements:
 ```bash
 # Add nodejs and ruby plugins if you don't already have them
 asdf plugin add nodejs
-asdf plugin ad ruby
+asdf plugin add ruby
 
 # Install
 asdf install
