@@ -87,13 +87,11 @@ We use [dotenv](https://github.com/bkeepers/dotenv) for configuring env vars.
 
 The following files are checked into git:
 
-- `.env` - configuration common across all environments
+- `.env` - common configuration for development and test environments (**not production**)
 - `.env.development` - configuration specific to the development environment
 - `.env.test` - configuration specific to the test environment
 
-If you need to make local changes to the env files, create a `.env.ENVIRONMENT.local` file (where ENVIRONMENT is test or development).
-
-Any env var you specify in such a file will override the configuration for the corresponding environment.
+To make local changes, create a `.env.local` file (or `.env.development.local`/`.env.test.local` for the development/test environments specifically).
 
 #### Database connection
 
