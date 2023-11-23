@@ -68,15 +68,18 @@ Requirements:
 - docker (or podman)
 - asdf
 
-1. First install node and ruby:
+1. First set up node and ruby:
 
 ```bash
 # Add nodejs and ruby plugins if you don't already have them
 asdf plugin add nodejs
 asdf plugin add ruby
 
-# Install
+# Install ruby and nodejs
 asdf install
+
+# Install yarn
+npm install -g yarn
 ```
 
 2. Then run database with docker:
