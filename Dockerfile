@@ -29,9 +29,9 @@ RUN chmod +x wait-for-sigterm.sh
 WORKDIR /app
 
 # ASDF
+ENV PATH=$PATH:/root/.asdf/shims:/root/.asdf/bin
 COPY .tool-versions ./
 RUN asdf plugin add nodejs
 RUN asdf plugin add ruby
-ENV PATH=$PATH:/root/.asdf/shims:/root/.asdf/bin
 
 VOLUME [ "/root/.asdf" ]
