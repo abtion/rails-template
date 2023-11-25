@@ -19,8 +19,6 @@ RUN git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1 && \
 ARG CAPYBARA_NO_SANDBOX=1
 ENV CAPYBARA_NO_SANDBOX=$CAPYBARA_NO_SANDBOX
 
-SHELL ["/bin/bash", "-lc"]
-
 # Make it easy to keep the container alive, yet comply when the container is asked to stop
 RUN echo '#!/bin/bash' > wait-for-sigterm.sh \
   && echo 'trap "exit 0" SIGTERM' >> wait-for-sigterm.sh \
