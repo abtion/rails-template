@@ -13,5 +13,47 @@ services:
     image: redis:6-alpine
     ports:
       - "127.0.0.1:6379:6379"
+
+  # Optional containers for development
+  install-deps:
+    profiles: [ dev ]
+    image: dev
+    build: .
+    command: bash -c "asdf install; npm install -g yarn; bundle install; yarn"
+    working_dir: /app
+    volumes:
+      - .:/app
+      - node-modules:/app/node_modules
+      - asdf:/root/.asdf
+
+  dev:
+    profiles: [ dev ]
+    image: dev
+    build: .
+    command: bash -c "echo 'Dev container ready'; /wait-for-sigterm.sh"
+    environment:
+      REDIS_URL: redis://redis
+      DATABASE_SERVER: postgres://postgres@postgres
+      BINDING: 0.0.0.0
+      SHAKAPACKER_DEV_SERVER_HOST: 0.0.0.0
+    working_dir: /app
+    volumes:
+      - .:/app
+      - cache:/app/tmp/cache
+      - asdf:/root/.asdf
+    ports:
+      - 127.0.0.1:3000:3000
+      - 127.0.0.1:3035:3035
+    depends_on:
+      postgres:
+        condition: service_started
+      redis:
+        condition: service_started
+      install-deps:
+        condition: service_completed_successfully
+
 volumes:
   pg14:
+  node-modules:
+  asdf:
+  cache:

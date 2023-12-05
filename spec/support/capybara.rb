@@ -20,6 +20,8 @@ end
 RSpec.configure do |config|
   config.before(:each, type: :system) do
     driven_by(:selenium, using: ENV.fetch("CAPYBARA_DRIVER", "headless_chrome").to_sym,
-                         screen_size: [1920, 1080])
+                         screen_size: [1920, 1080]) do |capabilities|
+      capabilities.add_argument("--no-sandbox") if ENV["CAPYBARA_NO_SANDBOX"].present?
+    end
   end
 end
