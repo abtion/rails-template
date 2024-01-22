@@ -20,6 +20,23 @@ RSpec.describe ApplicationController do
     end
   end
 
+  context "when InvalidAuthenticityToken error is risen" do
+    controller do
+      def index
+        raise ActionController::InvalidAuthenticityToken
+      end
+    end
+
+    describe "#invalid_authenticity_token" do
+      it "handles it by redirecting back and displaying flash alert" do
+        get :index
+
+        expect(response).to redirect_to(root_path)
+        expect(flash[:alert]).to eq("Your session has expired. Please log in again to continue.")
+      end
+    end
+  end
+
   describe "#basic_auth_wall" do
     controller do
       def index

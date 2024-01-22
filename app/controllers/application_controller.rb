@@ -3,6 +3,7 @@
 class ApplicationController < ActionController::Base
   include Pundit::Authorization
   rescue_from Pundit::NotAuthorizedError, with: :not_authorized
+  rescue_from ActionController::InvalidAuthenticityToken, with: :invalid_authenticity_token
   before_action :basic_auth_wall, if: -> { ENV.fetch("HTTP_AUTH_PASSWORD", nil).present? }
 
   protected
@@ -27,5 +28,11 @@ class ApplicationController < ActionController::Base
     end
 
     super
+  end
+
+  def invalid_authenticity_token
+    flash[:alert] = t("errors.session_expired")
+
+    redirect_back(fallback_location: root_url)
   end
 end

@@ -4,3 +4,4 @@ en:
     not_found:
       subtitle: You may have mistyped the address or the page may have moved.
       title: The page you were looking for doesn't exist.
+    session_expired: Your session has expired. Please log in again to continue.
