@@ -32,7 +32,7 @@ RSpec.describe ApplicationController do
         get :index
 
         expect(response).to redirect_to(root_path)
-        expect(flash[:alert]).to eq("Your session has expired. Please log in again to continue.")
+        expect(flash[:alert]).to eq("Your session has expired. Please try again.")
       end
     end
   end
