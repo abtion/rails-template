@@ -4,3 +4,4 @@ da:
     not_found:
       subtitle: Har du eventuelt skrevet adressen forkert?
       title: Siden kunne ikke findes.
+    session_expired: Din session er udløbet. Prøv venligst igen.
