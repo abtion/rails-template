@@ -34,4 +34,23 @@ RSpec.describe ErrorsController do
       end
     end
   end
+
+  context "when route includes ignored route pattern" do
+    it "renders 404 status page and does not send warning to Rollbar" do
+      allow(Rollbar).to receive(:warning)
+
+      Rails.application.routes.draw do
+        get "/test.php" => "errors#not_found"
+      end
+
+      controller.request.headers.merge({ HTTP_REFERER: "https://example.com/" })
+
+      get :not_found, params: { use_route: "/test.php" }
+
+      expect(response).to have_http_status(:not_found)
+      expect(Rollbar).to_not(have_received(:warning))
+
+      Rails.application.reload_routes!
+    end
+  end
 end
