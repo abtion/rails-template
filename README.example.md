@@ -4,33 +4,31 @@ Project Name Human
 
 This project is built on top of the [Abtion Rails Template](https://github.com/abtion/rails-template).
 
-1. [Project Name Human](#project-name-param)
-2. [Getting the project running](#getting-the-project-running)
-   1. [Run locally using docker for database servers](#run-locally-using-docker-for-database-servers)
-   2. [Run entirely project locally](#run-entirely-project-locally)
-   3. [Run inside docker dev container](#run-inside-docker-dev-container)
-3. [Developing](#developing)
-   - [First time setup](#first-time-setup)
-     - [1. Configuration](#1-configuration)
-       - [Database connection](#database-connection)
-     - [2. Dependencies and database setup](#2-dependencies-and-database-setup)
-       - [Chrome driver](#chrome-driver)
-     - [3. Ensure that linting and tests pass](#3-ensure-that-linting-and-tests-pass)
-     - [4. Git hooks](#4-git-hooks)
-     - [5. Mails (letter_opener)](#5-mails-letter_opener)
-   - [Day-to-day](#day-to-day)
-   - [Debugging](#debugging)
-   - [Download production or staging DB](#download-production-or-staging-db)
-   - [System specs (E2E tests)](#system-specs-e2e-tests)
-     - [Switching browser driver](#switching-browser-driver)
-     - [Screenshots in CI](#screenshots-in-ci)
-4. [Notable inclusions and Notable exclusions](#notable-inclusions-and-notable-exclusions)
-   1. [Devise User Authorization](#devise-user-authorization)
-5. [Production](#production)
-   1. [Deployments](#deployments)
-6. [Staging](#staging)
-7. [Third party services](#third-party-services)
-   1. [Name of the third party](#name-of-the-third-party)
+- [Getting the project running](#getting-the-project-running)
+  - [Run locally using docker for database servers](#run-locally-using-docker-for-database-servers)
+  - [Run entirely project locally](#run-entirely-project-locally)
+  - [Run inside docker dev container](#run-inside-docker-dev-container)
+- [Developing](#developing)
+  - [First time setup](#first-time-setup)
+    - [1. Configuration](#1-configuration)
+      - [Chrome driver](#chrome-driver)
+    - [3. Ensure that linting and tests pass](#3-ensure-that-linting-and-tests-pass)
+    - [4. Git hooks](#4-git-hooks)
+    - [5. Mails (letter\_opener)](#5-mails-letter_opener)
+  - [Day-to-day](#day-to-day)
+  - [Debugging](#debugging)
+  - [Download production or staging DB](#download-production-or-staging-db)
+  - [System specs (E2E tests)](#system-specs-e2e-tests)
+    - [Switching browser driver](#switching-browser-driver)
+    - [Screenshots in CI](#screenshots-in-ci)
+- [Notable inclusions and Notable exclusions](#notable-inclusions-and-notable-exclusions)
+  - [Devise User Authorization](#devise-user-authorization)
+  - [Sidekiq](#sidekiq)
+- [Production](#production)
+  - [Deployments](#deployments)
+- [Staging](#staging)
+- [Third party services](#third-party-services)
+  - [Name of the third party](#name-of-the-third-party)
 
 Description of the project. What is it solving? Who are the users?
 
@@ -250,7 +248,7 @@ Inclusions:
 - [Devise](#devise-user-authorization)
 - Shakapacker
 - Jest
-- PostgreSQL database (11.x)
+- PostgreSQL database (15.5)
 - [Rollbar](https://rollbar.com) error monitoring
 - Prettier for linting javascript files
 - RSpec runner
