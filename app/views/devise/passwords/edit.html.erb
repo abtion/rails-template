@@ -1,7 +1,7 @@
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "mx-auto max-w-sm w-full" }) do |f| %>
   <h2 class="text-3xl font-semibold mb-12"><%= t(".change_your_password") %></h2>
 
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= render "devise/shared/error_messages", resource: %>
   <%= f.hidden_field(:reset_password_token) %>
 
   <div class="field mb-6">

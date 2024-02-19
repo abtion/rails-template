@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ReactHelper
-  def react_component(name, props = {}, options = {}, &block)
+  def react_component(name, props = {}, options = {}, &)
     options = { tag: options } if options.is_a?(Symbol)
 
     props = camelize_props(props)
@@ -17,7 +17,7 @@ module ReactHelper
     # remove internally used properties so they aren't rendered to DOM
     html_options.except!(:tag)
 
-    content_tag(html_tag, "", html_options, &block)
+    content_tag(html_tag, "", html_options, &)
   end
 
   private

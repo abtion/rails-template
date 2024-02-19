@@ -8,7 +8,7 @@
 # provide a fallback in case there's no referrer available.
 module BackLinkHelper
   def back_path_field(fallback: nil)
-    hidden_field_tag(:back_path, back_path(fallback: fallback))
+    hidden_field_tag(:back_path, back_path(fallback:))
   end
 
   def back_path(fallback: nil)

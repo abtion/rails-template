@@ -1,7 +1,7 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "mx-auto max-w-sm w-full" }) do |f| %>
   <h2 class="text-3xl font-semibold mb-12"><%= t(".sign_up") %></h2>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= render "devise/shared/error_messages", resource: %>
 
   <div class="mb-6">
     <%= f.label(:email, class: "mb-2 inline-block") %><br>
