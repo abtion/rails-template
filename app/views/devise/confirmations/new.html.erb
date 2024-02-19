@@ -1,6 +1,6 @@
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post, class: "mx-auto max-w-sm w-full" }) do |f| %>
   <h2 class="text-3xl font-semibold mb-12"><%= t(".resend_confirmation_instructions") %></h2>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= render "devise/shared/error_messages", resource: %>
 
   <div class="mb-6">
     <%= f.label(:email, class: "mb-2 inline-block") %><br>
