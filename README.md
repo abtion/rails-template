@@ -161,8 +161,8 @@ When a project eventually gets a domain, and we have access to the domain's DNS 
    1. Go to SMTP & API under user settings
    2. Click on SMTP Tab
    3. Create a new SMTP KEY.
-   4. Copy smtp key value to `BREVO_PASSWORD` variable on clients heroku project
-   5. Copy login to `BREVO_USERNAME` variable on clients heroku project
+   4. Copy smtp key value to `SMTP_PASSWORD` variable on clients heroku project
+   5. Copy login to `SMTP_USERNAME` variable on clients heroku project
 5. Setup DNS:
    1. Go to: https://account.brevo.com/senders
    2. Open "Domains"
