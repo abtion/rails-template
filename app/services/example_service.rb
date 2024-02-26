@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ExampleService < BaseService
+  class InvalidMessageError < StandardError; end
+
   attr_reader :message
 
   def initialize(message)
@@ -9,6 +11,8 @@ class ExampleService < BaseService
   end
 
   def execute
-    ServiceResult.new(payload: message.upcase)
+    raise InvalidMessageError if @message == "invalid"
+
+    message.upcase
   end
 end
