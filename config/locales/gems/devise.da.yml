@@ -1,13 +1,7 @@
 ---
 da:
   devise:
-    confirmations:
-      new:
-        resend_confirmation_instructions: Gensend bekræftelsesinstruktioner
     mailer:
-      password_change:
-        greeting: Hej %{recipient}
-        message: Vi skriver til dig for at oplyse dig om, at din adgangskode er blevet ændret.
       reset_password_instructions:
         action: Skift adgangskode
         greeting: Hej %{recipient}
@@ -23,18 +17,6 @@ da:
       new:
         forgot_your_password: Glemt adgangskode?
         send_me_reset_password_instructions: Send mig instruktioner om at skifte adgangskode
-    registrations:
-      edit:
-        are_you_sure: Er du sikker?
-        cancel_my_account: Luk min konto
-        currently_waiting_confirmation_for_email: 'Afventer bekræftelse af: %{email}'
-        leave_blank_if_you_don_t_want_to_change_it: 'lad være tomt, hvis du ikke ønsker at ændre '
-        title: Rediger %{resource}
-        unhappy: Utilfreds?
-        update: Opdater
-        we_need_your_current_password_to_confirm_your_changes: vi skal bruge din nuværende adgangskode for at bekræfte ændringerne.
-      new:
-        sign_up: Opret konto
     sessions:
       new:
         dont_have_an_account: Har du ikke en konto?
@@ -43,7 +25,6 @@ da:
         sign_up: Tilmeld dig her
     shared:
       links:
-        back: Tilbage
         didn_t_receive_confirmation_instructions: Har du ikke modtaget bekræftelsesinstruktioner?
         didn_t_receive_unlock_instructions: Har du ikke modtaget låse-op-instruktioner?
         forgot_your_password: Glemt adgangskode?
@@ -53,9 +34,6 @@ da:
       minimum_password_length:
         one: "(Mindst %{count} tegn)"
         other: "(Mindst %{count} tegn)"
-    unlocks:
-      new:
-        resend_unlock_instructions: Gensend låse-op-instruktioner
   errors:
     messages:
       not_saved:
