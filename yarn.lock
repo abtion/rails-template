@@ -1945,9 +1945,9 @@
     "@types/node" "*"
 
 "@types/sockjs@^0.3.33":
-  version "0.3.33"
-  resolved "https://registry.yarnpkg.com/@types/sockjs/-/sockjs-0.3.33.tgz#570d3a0b99ac995360e3136fd6045113b1bd236f"
-  integrity sha512-f0KEEe05NvUnat+boPTZ0dgaLZ4SfSouXUgv5noUiefG2ajgKjmETo9ZJyuqsl7dfl2aHlLJUiki6B4ZYldiiw==
+  version "0.3.36"
+  resolved "https://registry.yarnpkg.com/@types/sockjs/-/sockjs-0.3.36.tgz#ce322cf07bcc119d4cbf7f88954f3a3bd0f67535"
+  integrity sha512-MK9V6NzAS1+Ud7JV9lJLFqW85VbC9dq3LmwZCuBe4wBDgKC0Kj/jd8Xl+nSviU+Qc3+m7umHHyHg//2KSa0a0Q==
   dependencies:
     "@types/node" "*"
 
