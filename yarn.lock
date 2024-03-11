@@ -6124,11 +6124,11 @@ postcss-colormin@^6.0.0:
     postcss-value-parser "^4.2.0"
 
 postcss-convert-values@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-convert-values/-/postcss-convert-values-6.0.0.tgz#ec94a954957e5c3f78f0e8f65dfcda95280b8996"
-  integrity sha512-U5D8QhVwqT++ecmy8rnTb+RL9n/B806UVaS3m60lqle4YDFcpbS3ae5bTQIh3wOGUSDHSEtMYLs/38dNG7EYFw==
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-convert-values/-/postcss-convert-values-6.1.0.tgz#3498387f8efedb817cbc63901d45bd1ceaa40f48"
+  integrity sha512-zx8IwP/ts9WvUM6NkVSkiU902QZL1bwPhaVaLynPtCsOTqp+ZKbNi+s6XJg3rfqpKGA/oc7Oxk5t8pOQJcwl/w==
   dependencies:
-    browserslist "^4.21.4"
+    browserslist "^4.23.0"
     postcss-value-parser "^4.2.0"
 
 postcss-discard-comments@^6.0.0:
