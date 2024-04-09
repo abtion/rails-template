@@ -81,4 +81,21 @@ Rollbar.configure do |config|
       environment: ENV.fetch("ROLLBAR_ENV", nil).presence || Rails.env
     }
   }
+
+  # Reduce reporting of routing errors from directory bursting
+  filter_routing_errors = proc do |options|
+    if options[:exception].is_a?(ActionController::RoutingError)
+      # Ignore requests without a referer
+      referer = options[:scope][:request][:headers]["Referer"]
+      raise Rollbar::Ignore if referer.blank?
+
+      # Ignore common patterns
+      path = URI.parse(options[:scope][:request][:url]).path.downcase
+      is_ignored_pattern = [".php", ".xml", ".txt", ".css", ".zip", ".gz"].any? do |pattern|
+        path.include?(pattern)
+      end
+      raise Rollbar::Ignore if is_ignored_pattern
+    end
+  end
+  config.before_process << filter_routing_errors
 end
