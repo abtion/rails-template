@@ -32,6 +32,8 @@ module ProjectNamePascal
     #
     # config.eager_load_paths << Rails.root.join("extras")
 
+    config.exceptions_app = routes
+
     config.time_zone = "Europe/Copenhagen"
   end
 end
