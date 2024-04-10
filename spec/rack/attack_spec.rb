@@ -73,14 +73,14 @@ RSpec.describe Rack::Attack, type: :request do
         # Make the allowed number of login attempts
         limit.times do
           post "/users/sign_in",
-               params: { user: { email: email, password: password } },
+               params: { user: { email:, password: } },
                env: { "REMOTE_ADDR" => ip_address }
           expect(response).to_not have_http_status(:too_many_requests)
         end
 
         # Make one more attempt which should be throttled
         post "/users/sign_in",
-             params: { user: { email: email, password: password } },
+             params: { user: { email:, password: } },
              env: { "REMOTE_ADDR" => ip_address }
         expect(response).to have_http_status(:too_many_requests)
       end
@@ -95,12 +95,12 @@ RSpec.describe Rack::Attack, type: :request do
       freeze_time do
         # Make the allowed number of login attempts with the same email
         limit.times do
-          post "/users/sign_in", params: { user: { email: email, password: "incorrect" } }
+          post "/users/sign_in", params: { user: { email:, password: "incorrect" } }
           expect(response).to_not have_http_status(:too_many_requests)
         end
 
         # Make one more attempt which should be throttled
-        post "/users/sign_in", params: { user: { email: email, password: "incorrect" } }
+        post "/users/sign_in", params: { user: { email:, password: "incorrect" } }
         expect(response).to have_http_status(:too_many_requests)
       end
     end
