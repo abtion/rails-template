@@ -65,7 +65,7 @@ Everything in the template has been carefully considered in regards to:
 To start up, simply create a new repository on GitHub using this repository as a template.
 (You lose the template's history, adding everything as one initial commit)
 
-Alternatively, import the template into a new repository by going to https://github.com/new/import and specifying https://github.com/abtion/rails-template.git (You retain all template history)
+Alternatively, import the template into a new repository by going to <https://github.com/new/import> and specifying <https://github.com/abtion/rails-template.git> (You retain all template history)
 
 #### Set up branch protection rules
 
@@ -77,7 +77,7 @@ Alternatively, import the template into a new repository by going to https://git
 
 Replace the contents of `LICENSE.md` with the following:
 
-```
+```txt
 Copyright (C) Abtion - All Rights Reserved
 Unauthorized copying of this project, via any medium is strictly prohibited.
 Proprietary and confidential.
@@ -99,7 +99,7 @@ Proprietary and confidential.
 If there's a designer on the project, get that person to fill in all the colors and nuances.
 
 If there's no designer present, replace the colors with company colors where it makes sense. Use a tool like the following for creating nuances:
-https://tailwind.simeongriggs.dev/
+<https://tailwind.simeongriggs.dev/>
 
 All the predefined colors are required for the built-in components to work:
 
@@ -109,7 +109,7 @@ All the predefined colors are required for the built-in components to work:
 ### Configure CD
 
 1. Create staging heroku app based on the template.
-   1. Visit: https://dashboard.heroku.com/new?org=abtion&template=https%3A%2F%2Fgithub.com%2Fabtion%2Frails-template
+   1. Visit: <https://dashboard.heroku.com/new?org=abtion&template=https%3A%2F%2Fgithub.com%2Fabtion%2Frails-template>
    2. Fill in the name with `<PROJECT-NAME>-staging`.
    3. Select europe as region.
    4. Create a new pipeline for the project `<PROJECT-NAME>`.
@@ -152,7 +152,7 @@ When a project eventually gets a domain, and we have access to the domain's DNS 
 
 1. Remove the mailtrap addon on heroku
 2. Register and add to 1Password new brevo account
-   1. Register: https://app.brevo.com/account/register
+   1. Register: <https://app.brevo.com/account/register>
    2. Email: Client google group account
    3. Password: Generate in 1Password
 3. You must validate a phone number to start sending mails.
@@ -164,7 +164,7 @@ When a project eventually gets a domain, and we have access to the domain's DNS 
    4. Copy smtp key value to `SMTP_PASSWORD` variable on clients heroku project
    5. Copy login to `SMTP_USERNAME` variable on clients heroku project
 5. Setup DNS:
-   1. Go to: https://account.brevo.com/senders
+   1. Go to: <https://account.brevo.com/senders>
    2. Open "Domains"
    3. Add a new domain
    4. Fill in domain name and check the option to digitally sign emails, then continue
@@ -200,7 +200,7 @@ token to the settings of your project on GitHub. Follow these steps:
 
 ### Set up database backups
 
-To enable DB backups, see this guide: https://github.com/abtion/heroku-db-backup-s3
+To enable DB backups, see this guide: <https://github.com/abtion/heroku-db-backup-s3>
 
 ## Contributing
 

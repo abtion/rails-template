@@ -19,7 +19,7 @@ We welcome everyone to participate in this project by:
 
 **Note on security issues:**
 Please do not report important security issues directly on GitHub, but feel free to send an email
-to support@abtion.com.
+to <support@abtion.com>.
 
 ## Pull requests
 
