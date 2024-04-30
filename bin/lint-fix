@@ -3,4 +3,4 @@ set -e
 
 bin/rubocop --auto-correct
 bin/erblint --lint-all --autocorrect
-yarn lint-fix
+npm run lint-fix

@@ -75,9 +75,6 @@ Requirements:
 
     # Install ruby and nodejs
     asdf install
-
-    # Install yarn
-    npm install -g yarn
     ```
 
 2. Then run database with docker:
@@ -168,7 +165,7 @@ bin/rspec
 bin/rubocop
 bin/brakeman --quiet --no-summary
 bin/erblint --lint-all
-yarn lint
+npm run lint
 ```
 
 Or instead, you can run `bin/test-all-strict`
@@ -191,7 +188,7 @@ To disable letter_opener set `USE_LETTER_OPENER` variable in `.env.development` 
 
 - Run the server: `bin/rails server` and [http://localhost:3000](http://localhost:3000)
 - Run backend tests: `bin/rspec`
-- Run frontend tests: `yarn test`
+- Run frontend tests: `npm run test`
 - Run linters: `bin/lint-fix`
 
 Spring has also been installed for development. The binstubs have not been generated but you can run it with:

@@ -19,7 +19,7 @@ services:
     profiles: [ dev ]
     image: dev
     build: .
-    command: bash -c "asdf install; npm install -g yarn; bundle install; yarn"
+    command: bash -c "asdf install; bundle install; npm i"
     working_dir: /app
     volumes:
       - .:/app
