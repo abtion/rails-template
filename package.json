@@ -4,8 +4,8 @@
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
-    "lint": "prettier app/javascript --check && eslint app/javascript && stylelint 'app/javascript/**/*.scss'",
-    "lint-fix": "prettier app/javascript --write; eslint --fix app/javascript; stylelint --fix 'app/javascript/**/*.scss'"
+    "lint": "prettier app/javascript --check && eslint app/javascript && stylelint 'app/javascript/**/*.scss' && markdownlint-cli2 './**/*.md'",
+    "lint-fix": "prettier app/javascript --write; eslint --fix app/javascript; stylelint --fix 'app/javascript/**/*.scss' && markdownlint-cli2 --fix './**/*.md'"
   },
   "dependencies": {
     "@babel/core": "^7.20.7",
@@ -75,6 +75,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "markdownlint-cli2": "^0.13.0",
     "postcss": "^8.4.32",
     "prettier": "^2.8.8",
     "stylelint": "^14.16.1",
