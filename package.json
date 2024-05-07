@@ -47,7 +47,7 @@
   },
   "engines": {
     "node": "18.x",
-    "yarn": "1.x"
+    "npm": ">=9"
   },
   "version": "0.1.1",
   "browserslist": [

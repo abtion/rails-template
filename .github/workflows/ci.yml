@@ -33,11 +33,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
-      - name: yarn
-        run: yarn --frozen-lockfile
+          cache: "npm"
+      - name: npm
+        run: npm ci
       - name: lint
-        run: yarn eslint app/javascript
+        run: npx eslint app/javascript
   markdownlint:
     runs-on: ubuntu-latest
     steps:
@@ -46,11 +46,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
-      - name: yarn
-        run: yarn --frozen-lockfile
+          cache: "npm"
+      - name: npm
+        run: npm ci
       - name: lint
-        run: yarn markdownlint-cli2 './**/*.md'
+        run: npx markdownlint-cli2 './**/*.md'
   stylelint:
     runs-on: ubuntu-latest
     steps:
@@ -59,9 +59,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
-      - name: yarn
-        run: yarn --frozen-lockfile
+          cache: "npm"
+      - name: npm
+        run: npm ci
       - name: stylelint
         run: npx stylelint "app/javascript/**/*.scss"
   erb-lint:
@@ -94,11 +94,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
-      - name: yarn
-        run: yarn --frozen-lockfile
+          cache: "npm"
+      - name: npm
+        run: npm ci
       - name: test
-        run: yarn test --coverage
+        run: npm run test -- --coverage
   prettier:
     runs-on: ubuntu-latest
     steps:
@@ -107,11 +107,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
-      - name: yarn
-        run: yarn --frozen-lockfile
+          cache: "npm"
+      - name: npm
+        run: npm ci
       - name: prettier
-        run: yarn prettier app/javascript --check
+        run: npx prettier app/javascript --check
   schema:
     runs-on: ubuntu-latest
 
@@ -168,13 +168,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
+          cache: "npm"
       - name: bundle install
         run: |
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
-      - name: yarn install
-        run: yarn install --prod
+      - name: npm install
+        run: npm i --omit=dev
       - name: run bin/rails assets:precompile
         run: bin/rails assets:precompile
 
@@ -208,13 +208,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".tool-versions"
-          cache: "yarn"
+          cache: "npm"
       - name: bundle install
         run: |
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
-      - name: yarn
-        run: yarn --frozen-lockfile
+      - name: npm
+        run: npm ci
       - name: setup database
         run: |
           bin/rake db:create

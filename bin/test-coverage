@@ -2,4 +2,4 @@
 set -e
 
 bin/rspec
-yarn test --coverage
+npm run test -- --coverage

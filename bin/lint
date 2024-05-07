@@ -4,4 +4,4 @@ set -e
 bin/rubocop
 bin/erblint --lint-all
 bin/brakeman --quiet --no-summary
-yarn lint
+npm run lint
