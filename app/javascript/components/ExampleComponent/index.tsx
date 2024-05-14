@@ -17,7 +17,7 @@ export default function ExampleComponent(
   const { children, variant, className, ...rest } = props
 
   const usedClassName = classNames(
-    "border-2 rounded-lg p-5",
+    "ExampleComponent",
     {
       [`ExampleComponent--${variant}`]: variant,
     },
@@ -26,7 +26,7 @@ export default function ExampleComponent(
 
   return (
     <div className={usedClassName} {...rest}>
-      <h1 className="ExampleComponent__heading text-dark">Example component</h1>
+      <h1 className="ExampleComponent__heading">Example component</h1>
       <p>{children}</p>
       <img
         alt="image"

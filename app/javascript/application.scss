@@ -1,7 +1,12 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@layer tailwind-base, components, tailwind-utils;
 
-// stylelint-disable scss/at-import-partial-extension-blacklist
-@import "fonts/**/*.scss";
-// stylelint-enable scss/at-import-partial-extension-blacklist
+@import "fonts/inter.scss";
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utils {
+  @tailwind components;
+  @tailwind utilities;
+}

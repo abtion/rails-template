@@ -23,9 +23,9 @@ gem "rack-attack"
 gem "rails", "~> 7.1.2"
 gem "rails-i18n"
 gem "rollbar"
-gem "shakapacker", "8.0.0.rc.3"
 gem "sidekiq"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "vite_rails"
 
 group :development, :test do
   gem "brakeman"

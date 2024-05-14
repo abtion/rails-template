@@ -1,5 +1,8 @@
-const prepareColorVariables = require("../../app/javascript/util/prepareColorVariables.js")
-const colors = require("../../colors.json")
+import prepareColorVariables from "../../app/javascript/util/prepareColorVariables.js"
+import colors from "../../colors.json"
+
+// const prepareColorVariables = require("../../app/javascript/util/prepareColorVariables.js")
+// const colors = require("../../colors.json")
 
 // Define CSS variables for all colors
 // These variables are used by tailwind.
@@ -9,7 +12,7 @@ const cssVariableStrings = Object.entries(cssVariables).map(
   ([name, value]) => `${name}: ${value};`
 )
 
-module.exports = `
+export default `
 :root {
   ${cssVariableStrings.join("\n")}
 }

@@ -1,8 +1,4 @@
-// This file uses js and commonjs to be compatible with tailwind config
-
-/* eslint-disable @typescript-eslint/no-var-requires */
-const colorString = require("color-string")
-/* eslint-enable @typescript-eslint/no-var-requires */
+import colorString from "color-string"
 
 // The calculation is based on the following algorithm:
 // https://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
@@ -39,7 +35,7 @@ const luminanceList = [
   0.9473, 0.956, 0.9647, 0.9734, 0.9823, 0.9911, 1,
 ]
 
-module.exports = function getLuminance(color) {
+export default function getLuminance(color) {
   let [rInt, gInt, bInt] = colorString.get.rgb(color)
 
   const rFloat = rInt / 255

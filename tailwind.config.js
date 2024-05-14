@@ -1,14 +1,13 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const colors = require("./colors.json")
-const prepareColorVariables = require("./app/javascript/util/prepareColorVariables")
-/* eslint-enable @typescript-eslint/no-var-requires */
+import colors from "./colors.json"
+import prepareColorVariables from "./app/javascript/util/prepareColorVariables"
 
 const tailwindConfig = prepareColorVariables(colors).tailwindConfig
 
-module.exports = {
+export default {
   content: [
     "./app/javascript/**/*.{js,jsx,ts,tsx,scss,css}",
     "./app/views/**/*.erb",
+    // "./app/views/home/index.html.erb",
   ],
   theme: {
     container: {

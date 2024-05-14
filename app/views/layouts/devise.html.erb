@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_pack_tag "application" %>
-    <%= javascript_pack_tag "application" %>
+    <%= vite_client_tag %>
+    <%= vite_stylesheet_tag 'application.scss' %>
+    <%= vite_typescript_tag 'application' %>
   </head>
 
   <body class="<%= "#{controller.controller_name} #{@body_class}".strip %> h-full">
     <main class="w-full h-full md:flex">
       <div class="w-full h-full p-6 md:w-1/2">
-        <%= image_pack_tag("images/muffi-logo.svg", class: "absolute") %>
+        <%= vite_image_tag("images/muffi-logo.svg", class: "absolute") %>
         <div class="flex items-center justify-center h-full">
           <%= yield %>
         </div>
