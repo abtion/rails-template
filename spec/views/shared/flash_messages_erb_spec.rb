@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "shared/flash_messages" do
+RSpec.describe "shared/flash_messages", type: :view do
   context "when flash is alert" do
     it "renders flash_messages partial" do
       expected_message = t("devise.sessions.signed_out")

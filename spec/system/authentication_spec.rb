@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "Authentication" do
+RSpec.describe "Authentication", type: :system do
   describe "sign in" do
     it "redirects to the root path" do
       user = create(:user)

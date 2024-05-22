@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "admin/users/edit" do
+RSpec.describe "admin/users/edit", type: :view do
   it "renders edit user form" do
     user = create(:user)
     assign(:user, user)

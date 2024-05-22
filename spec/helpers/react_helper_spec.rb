@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe ReactHelper do
+RSpec.describe ReactHelper, type: :helper do
   describe "passed props" do
     it "renders the props in data" do
       html = react_component("Foo", { bar: "value" })

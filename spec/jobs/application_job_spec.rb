@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe ApplicationJob do
+RSpec.describe ApplicationJob, type: :job do
   it "can be used as basis for jobs" do
     rocket_class = double("Rocket")
     allow(rocket_class).to receive(:launch_all!)

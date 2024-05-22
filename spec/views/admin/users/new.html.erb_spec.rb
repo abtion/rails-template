@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "admin/users/new" do
+RSpec.describe "admin/users/new", type: :view do
   it "renders new user form" do
     user = User.new
     assign(:user, user)

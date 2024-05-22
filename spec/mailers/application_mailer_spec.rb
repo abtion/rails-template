@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe ApplicationMailer do
+RSpec.describe ApplicationMailer, type: :mailer do
   before do
     test_mailer = Class.new(ApplicationMailer) do
       def test_mail
