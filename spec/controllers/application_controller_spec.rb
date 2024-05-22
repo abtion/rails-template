@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe ApplicationController do
+RSpec.describe ApplicationController, type: :controller do
   context "when Pundit::NotAuthorizedError error is risen" do
     controller do
       def index

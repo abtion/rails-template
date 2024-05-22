@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "admin/users/show" do
+RSpec.describe "admin/users/show", type: :view do
   it "renders user show page" do
     enable_pundit(view, build(:user, :admin))
 

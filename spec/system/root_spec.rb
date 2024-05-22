@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "Root" do
+RSpec.describe "Root", type: :system do
   it "renders 'abtion-rails'" do
     visit root_path
 

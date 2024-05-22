@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe Devise::Mailer do
+RSpec.describe Devise::Mailer, type: :mailer do
   describe "#password_change" do
     it "password changed mailer with correct body" do
       user = build(:user)

@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe Api::UsersController do
+RSpec.describe Api::UsersController, type: :controller do
   describe "#show" do
     it "returns a 200 OK" do
       user = create(:user)

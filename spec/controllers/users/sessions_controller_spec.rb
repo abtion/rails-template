@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe Users::SessionsController do
+RSpec.describe Users::SessionsController, type: :controller do
   describe "#create" do
     context "with a pwned password" do
       it "allows sign in, but warns in a flash message" do

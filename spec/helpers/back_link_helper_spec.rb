@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe BackLinkHelper do
+RSpec.describe BackLinkHelper, type: :helper do
   describe "#back_path" do
     context "when a back_path is sent via params" do
       it "returns the specified back path" do

@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe ApplicationHelper do
+RSpec.describe ApplicationHelper, type: :helper do
   describe "#field_error" do
     context "when errors are present" do
       it "returns error messages in content tag" do
