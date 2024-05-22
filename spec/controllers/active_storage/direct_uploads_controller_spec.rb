@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe ActiveStorage::DirectUploadsController do
+RSpec.describe ActiveStorage::DirectUploadsController, type: :controller do
   describe "#create" do
     it "creates a blob for direct upload" do
       user = create(:user)
