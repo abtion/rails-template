@@ -124,3 +124,6 @@ RSpec/MessageChain:
 
 RSpec/InstanceVariable:
   AssignmentOnly: false
+
+RSpec/Rails/InferredSpecType:
+  Enabled: false
