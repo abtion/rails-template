@@ -12,7 +12,7 @@ RSpec.describe "Authentication", type: :system do
       fill_in "Email", with: user.email
       fill_in "Password", with: user.password
 
-      click_button "Sign in"
+      click_on "Sign in"
 
       expect(page).to have_current_path("/")
     end
@@ -24,12 +24,12 @@ RSpec.describe "Authentication", type: :system do
 
       visit "/users/sign_in"
 
-      click_link "Forgot your password?"
+      click_on "Forgot your password?"
 
       fill_in "Email", with: user.email
 
       expect do
-        click_button("Send me reset password instructions")
+        click_on("Send me reset password instructions")
       end.to change { ActionMailer::Base.deliveries.size }.by(1)
 
       sent_mail = ActionMailer::Base.deliveries.first
@@ -43,7 +43,7 @@ RSpec.describe "Authentication", type: :system do
       fill_in "user_password_confirmation", with: "1234password!$"
 
       stub_strong_password(password: "1234password!$")
-      click_button "Change my password"
+      click_on "Change my password"
 
       expect(page).to have_content("Your password has been changed successfully")
     end
