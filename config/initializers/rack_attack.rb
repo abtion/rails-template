@@ -30,7 +30,10 @@ module Rack
     # Throttle all requests by IP (60rpm)
     #
     # Key: "rack::attack:#{Time.now.to_i/:period}:req/ip:#{req.ip}"
-    throttle("req/ip", limit: 300, period: 5.minutes, &:ip)
+    throttle("req/ip",
+             limit: ENV.fetch("RACK_ATTACK_THROTTLE_LIMIT", "300").to_i,
+             period: ENV.fetch("RACK_ATTACK_THROTTLE_PERIOD", "5").to_i.minutes,
+             &:ip)
 
     ### Prevent Brute-Force Login Attacks ###
 
