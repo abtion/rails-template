@@ -5,17 +5,6 @@ require "rails_helper"
 RSpec.describe Rack::Attack, type: :request do
   include ActiveSupport::Testing::TimeHelpers
 
-  def requests_to_force_limit(limit)
-    # In Rack::Attack, requests are tracked using cache keys that reset after a specific period,
-    # similar to a bucket being emptied. For example, if a bucket (cache key) can hold up to 300
-    # requests (balls) and is emptied every 5 minutes, starting at a random time means we might
-    # not hit the limit by just exceeding it slightly. By sending double the limit plus one,
-    # (601 requests in this case), we ensure at least one bucket overflows,
-    # effectively testing the throttle. This method accounts for the uncertainty of when the bucket
-    # resets, guaranteeing we trigger the rate limit at least once within any given period.
-    (limit * 2) + 1
-  end
-
   before do
     memory_store = ActiveSupport::Cache.lookup_store(:memory_store)
     allow(Rails).to receive(:cache).and_return(memory_store)
@@ -26,38 +15,23 @@ RSpec.describe Rack::Attack, type: :request do
   describe "IP address throttling" do
     let(:limit) { 300 }
 
-    context "when the number of requests does not exceed the limit" do
-      it "does not change the request status" do
-        limit.times do
-          get "/", env: { REMOTE_ADDR: "1.2.3.4" }
-          expect(response).to_not have_http_status(:too_many_requests)
-        end
-      end
-    end
+    it "throttles requests from the same IP with status 429 when limit is exceeded" do
+      freeze_time do
+        # Get close to the limit without excersizing the whole stack for each request.
+        # Otherwise the spec would be really too slow
+        (limit - 1).times { Rack::Attack.cache.count("req/ip:1.2.3.5", 5.minutes) }
 
-    context "when the number of requests is higher than the limit" do
-      it "changes the request status to 429" do
-        statuses = []
+        # Reaching the limit
+        get "/", env: { REMOTE_ADDR: "1.2.3.5" }
+        expect(response).to_not have_http_status(:too_many_requests)
 
-        requests_to_force_limit(limit).times do |i|
-          get "/", env: { REMOTE_ADDR: "1.2.3.5" }
-          statuses[i] = response.status
-        end
+        # Exceeding the limit
+        get "/", env: { REMOTE_ADDR: "1.2.3.5" }
+        expect(response).to have_http_status(:too_many_requests)
 
-        expect(statuses).to include(429)
-      end
-
-      context "when the IP addresses are not the same" do
-        it "doesn't throttle the requests" do
-          statuses = []
-
-          requests_to_force_limit(limit).times do |i|
-            get "/", env: { REMOTE_ADDR: "1.2.3.#{i}" }
-            statuses[i] = response.status
-          end
-
-          expect(statuses).to_not include(429)
-        end
+        # Request from other IP
+        get "/", env: { REMOTE_ADDR: "1.2.3.10" }
+        expect(response).to_not have_http_status(:too_many_requests)
       end
     end
   end
