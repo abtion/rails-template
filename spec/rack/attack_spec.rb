@@ -6,7 +6,6 @@ RSpec.describe Rack::Attack, type: :request do
   include ActiveSupport::Testing::TimeHelpers
 
   before do
-    # Use memory cache store for this test
     memory_store = ActiveSupport::Cache.lookup_store(:memory_store)
     allow(Rails).to receive(:cache).and_return(memory_store)
     allow(Rack::Attack).to receive(:enabled).and_return(true)
@@ -14,47 +13,69 @@ RSpec.describe Rack::Attack, type: :request do
   end
 
   describe "IP address throttling" do
-    let(:limit) { 20 }
+    let(:limit) { 300 }
 
-    context "when the number of requests does not exceed the limit" do
-      it "does not change the request status" do
-        freeze_time do
-          limit.times do
-            get "/", env: { REMOTE_ADDR: "1.2.3.4" }
-            expect(response).to_not(have_http_status(:too_many_requests))
-          end
-        end
+    it "throttles requests from the same IP with status 429 when limit is exceeded" do
+      freeze_time do
+        # Get close to the limit without excersizing the whole stack for each request.
+        # Otherwise the spec would be really too slow
+        (limit - 1).times { Rack::Attack.cache.count("req/ip:1.2.3.5", 5.minutes) }
+
+        # Reaching the limit
+        get "/", env: { REMOTE_ADDR: "1.2.3.5" }
+        expect(response).to_not have_http_status(:too_many_requests)
+
+        # Exceeding the limit
+        get "/", env: { REMOTE_ADDR: "1.2.3.5" }
+        expect(response).to have_http_status(:too_many_requests)
+
+        # Request from other IP
+        get "/", env: { REMOTE_ADDR: "1.2.3.10" }
+        expect(response).to_not have_http_status(:too_many_requests)
       end
     end
+  end
 
-    context "when the number of requests is higher than the limit" do
-      it "changes the request status to 429" do
-        freeze_time do
-          statuses = []
+  describe "throttle logins by IP address" do
+    it "throttles excessive login attempts by IP address" do
+      freeze_time do
+        limit = 5
+        email = "user@example.com"
+        password = "incorrect"
+        ip_address = "1.2.3.4"
 
-          (limit + 1).times do |i|
-            get "/", env: { REMOTE_ADDR: "1.2.3.5" }
-            statuses[i] = response.status
-          end
-
-          expect(statuses).to include(429)
+        # Make the allowed number of login attempts
+        limit.times do
+          post "/users/sign_in",
+               params: { user: { email:, password: } },
+               env: { "REMOTE_ADDR" => ip_address }
+          expect(response).to_not have_http_status(:too_many_requests)
         end
+
+        # Make one more attempt which should be throttled
+        post "/users/sign_in",
+             params: { user: { email:, password: } },
+             env: { "REMOTE_ADDR" => ip_address }
+        expect(response).to have_http_status(:too_many_requests)
       end
+    end
+  end
 
-      context "when the IP-adresses are not the same" do
-        it "doesn't throttle the requests" do
-          freeze_time do
-            statuses = []
+  describe "throttle logins by email address" do
+    it "throttles excessive login attempts by email address" do
+      limit = 5
+      email = "user@example.com"
 
-            (limit + 1).times do |i|
-              get "/", env: { REMOTE_ADDR: "1.2.3.#{i}" },
-                       headers: { "action_dispatch.show_exceptions": "1" }
-              statuses[i] = response.status
-            end
-
-            expect(statuses).to_not(include(429))
-          end
+      freeze_time do
+        # Make the allowed number of login attempts with the same email
+        limit.times do
+          post "/users/sign_in", params: { user: { email:, password: "incorrect" } }
+          expect(response).to_not have_http_status(:too_many_requests)
         end
+
+        # Make one more attempt which should be throttled
+        post "/users/sign_in", params: { user: { email:, password: "incorrect" } }
+        expect(response).to have_http_status(:too_many_requests)
       end
     end
   end
