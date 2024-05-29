@@ -36,7 +36,7 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
   gem "i18n-tasks"
-  gem "rspec-rails", "~> 6.0.3"
+  gem "rspec-rails", "~> 6.1.2"
   gem "rubocop"
   gem "rubocop-performance"
   gem "rubocop-rails"
