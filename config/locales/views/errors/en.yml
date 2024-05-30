@@ -1,7 +1,13 @@
 ---
 en:
   errors:
+    internal_server_error:
+      subtitle: Please try again. If the problem continues, please reach out to us.
+      title: We're sorry, but something went wrong
     not_found:
       subtitle: You may have mistyped the address or the page may have moved.
       title: The page you were looking for doesn't exist.
     session_expired: Your session has expired. Please try again.
+    unprocessable_entity:
+      subtitle: Maybe you tried to change something you didn't have access to.
+      title: The change you wanted was rejected
