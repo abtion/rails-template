@@ -7,7 +7,6 @@ AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
   NewCops: enable
-  TargetRubyVersion: 3.2
   Severity: error
 
   Exclude:
