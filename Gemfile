@@ -38,9 +38,12 @@ group :development, :test do
   gem "i18n-tasks"
   gem "rspec-rails", "~> 6.1.3"
   gem "rubocop"
+  gem "rubocop-capybara"
+  gem "rubocop-factory_bot"
   gem "rubocop-performance"
   gem "rubocop-rails"
   gem "rubocop-rspec"
+  gem "rubocop-rspec_rails"
   gem "selenium-webdriver", ">= 4.11"
   gem "shoulda-matchers"
 end
