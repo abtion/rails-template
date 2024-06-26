@@ -1,20 +1,18 @@
 # frozen_string_literal: true
 
-if Rails.env.production?
-  def sidekiq_username
-    ENV.fetch("SIDEKIQ_USERNAME")
-  end
+def sidekiq_username
+  ENV.fetch("SIDEKIQ_USERNAME")
+end
 
-  def sidekiq_password
-    ENV.fetch("SIDEKIQ_PASSWORD")
-  end
+def sidekiq_password
+  ENV.fetch("SIDEKIQ_PASSWORD")
+end
 
-  require "sidekiq/web"
+require "sidekiq/web"
 
-  Sidekiq::Web.use(Rack::Auth::Basic) do |username, password|
-    ActiveSupport::SecurityUtils.secure_compare(username, sidekiq_username) &
-      ActiveSupport::SecurityUtils.secure_compare(password, sidekiq_password)
-  end
+Sidekiq::Web.use(Rack::Auth::Basic) do |username, password|
+  ActiveSupport::SecurityUtils.secure_compare(username, sidekiq_username) &
+    ActiveSupport::SecurityUtils.secure_compare(password, sidekiq_password)
 end
 
 redis_config = {
