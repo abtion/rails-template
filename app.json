@@ -27,7 +27,7 @@
     "mailtrap:unpaid",
     "rollbar:trial-5k",
     {
-      "plan": "heroku-postgresql:mini",
+      "plan": "heroku-postgresql:essential-0",
       "options": {
         "version": "15"
       }
