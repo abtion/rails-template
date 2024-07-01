@@ -2,6 +2,10 @@ name: auto-merge
 
 on:
   pull_request_target:
+    types:
+      - opened
+    branches:
+      - 'dependabot/**'
 
 jobs:
   auto-merge:
