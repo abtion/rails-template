@@ -191,10 +191,10 @@ To disable letter_opener set `USE_LETTER_OPENER` variable in `.env.development` 
 - Run frontend tests: `npm run test`
 - Run linters: `bin/lint-fix`
 
-Spring has also been installed for development. The binstubs have not been generated but you can run it with:
+Spring has also been installed for development. The binstubs have not been springified, but you can run it with:
 
 ```sh
-bundle exec spring rspec
+bin/spring rspec
 ```
 
 ### Debugging
