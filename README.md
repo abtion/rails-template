@@ -49,7 +49,7 @@ Everything in the template has been carefully considered in regards to:
 
 ## Key features
 
-- Heroku ready - Review apps, staging and production
+- Heroku ready
 - Uses [devise](https://github.com/plataformatec/devise)
 - Uses [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions)
 - Uses [Jest](https://github.com/facebook/jest)
@@ -124,12 +124,6 @@ All the predefined colors are required for the built-in components to work:
    - Add the app to the "production" stage of the pipeline
 3. When app creation has succeeded, press "manage app" to get to the app, then select the pipeline in the breadcrumb
 4. Connect the pipeline to the project's github repo. (There should be a "Connect to Github" button).
-5. Enable review apps.
-6. Add config vars for review apps:
-   - `SEED_ADMIN_EMAIL`
-   - `SEED_ADMIN_INITIAL_PASSWORD`
-   - `HTTP_AUTH_USERNAME`
-   - `HTTP_AUTH_PASSWORD`
 
 ### Configure i18n tasks
 
