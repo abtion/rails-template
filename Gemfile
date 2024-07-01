@@ -55,6 +55,7 @@ group :development do
   gem "rack-mini-profiler", "~> 3.3"
   gem "spring", require: false
   gem "spring-commands-rspec", require: false
+  gem "spring-watcher-listen", require: false
   gem "web-console"
 end
 
