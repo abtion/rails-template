@@ -129,7 +129,7 @@ GEM
       devise (~> 4)
       pwned (~> 2.4)
     diff-lcs (1.5.1)
-    docile (1.4.0)
+    docile (1.4.1)
     dotenv (3.1.2)
     dotenv-rails (3.1.2)
       dotenv (= 3.1.2)
