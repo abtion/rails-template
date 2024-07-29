@@ -28,7 +28,6 @@ gem "sidekiq"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
-  gem "brakeman"
   gem "bullet"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "dotenv-rails"
@@ -37,22 +36,23 @@ group :development, :test do
   gem "faker"
   gem "i18n-tasks"
   gem "rspec-rails", "~> 6.1.3"
-  gem "rubocop"
-  gem "rubocop-capybara"
-  gem "rubocop-factory_bot"
-  gem "rubocop-performance"
-  gem "rubocop-rails"
-  gem "rubocop-rspec"
-  gem "rubocop-rspec_rails"
   gem "selenium-webdriver", ">= 4.11"
   gem "shoulda-matchers"
 end
 
 group :development do
+  gem "brakeman", require: false
   gem "letter_opener"
   gem "listen", "~> 3.9"
   gem "pivotal_git_scripts"
   gem "rack-mini-profiler", "~> 3.3"
+  gem "rubocop", require: false
+  gem "rubocop-capybara", require: false
+  gem "rubocop-factory_bot", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-rspec", require: false
+  gem "rubocop-rspec_rails", require: false
   gem "spring", require: false
   gem "spring-commands-rspec", require: false
   gem "spring-watcher-listen", require: false
