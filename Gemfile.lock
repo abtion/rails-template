@@ -135,12 +135,12 @@ GEM
       dotenv (= 3.1.2)
       railties (>= 6.1)
     drb (2.2.1)
-    erb_lint (0.5.0)
+    erb_lint (0.6.0)
       activesupport
       better_html (>= 2.0.1)
       parser (>= 2.7.1.4)
       rainbow
-      rubocop
+      rubocop (>= 1)
       smart_properties
     erubi (1.13.0)
     factory_bot (6.4.6)
