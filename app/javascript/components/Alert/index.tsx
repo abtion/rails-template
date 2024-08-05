@@ -18,7 +18,7 @@ export default function Alert(props: AlertProps): JSX.Element {
       [`Alert--${variant}`]: variant,
       "Alert--dismissable": onClose,
     },
-    className
+    className,
   )
 
   return (

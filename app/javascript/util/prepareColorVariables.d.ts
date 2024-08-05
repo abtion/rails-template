@@ -3,7 +3,7 @@ export as namespace prepareColorVariables
 export = prepareColorVariables
 
 declare function prepareColorVariables(
-  jsonColors: prepareColorVariables.JsonColors
+  jsonColors: prepareColorVariables.JsonColors,
 ): prepareColorVariables.PreparedColorVariables
 
 declare namespace prepareColorVariables {

@@ -30,7 +30,7 @@ export default function Link(props: LinkProps): JSX.Element {
       [`Link--${size}`]: size,
       [`Link--underline`]: underline,
     },
-    className
+    className,
   )
 
   return (

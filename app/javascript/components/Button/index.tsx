@@ -19,7 +19,7 @@ export default function Button(props: ButtonProps): JSX.Element {
       [`Button--${size}`]: size,
       [`Button--${variant}`]: variant,
     },
-    className
+    className,
   )
 
   return <button className={usedClassName} {...rest} />

@@ -12,7 +12,7 @@ export interface ExampleComponentProps
 }
 
 export default function ExampleComponent(
-  props: ExampleComponentProps
+  props: ExampleComponentProps,
 ): JSX.Element {
   const { children, variant, className, ...rest } = props
 
@@ -21,7 +21,7 @@ export default function ExampleComponent(
     {
       [`ExampleComponent--${variant}`]: variant,
     },
-    className
+    className,
   )
 
   return (

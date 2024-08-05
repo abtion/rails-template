@@ -20,7 +20,7 @@ describe(Alert, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { getByText } = render(
-        <Alert {...defaultProps} variant="primary" />
+        <Alert {...defaultProps} variant="primary" />,
       )
 
       const element = getByText(defaultProps.children as string)
@@ -33,7 +33,7 @@ describe(Alert, () => {
     it("has a close button", async () => {
       const closeHandler = jest.fn()
       const { getByRole } = render(
-        <Alert {...defaultProps} onClose={closeHandler} variant="primary" />
+        <Alert {...defaultProps} onClose={closeHandler} variant="primary" />,
       )
 
       const element = getByRole("button")

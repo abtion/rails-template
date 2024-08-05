@@ -38,7 +38,7 @@ module.exports = function prepareColorVariables(jsonColors) {
       const contrastColor = getContrastColor(
         color,
         jsonColors.dark,
-        jsonColors.light
+        jsonColors.light,
       )
       const contrastVariableName =
         contrastColor === jsonColors.dark ? "--color-dark" : "--color-light"
