@@ -29,7 +29,7 @@ describe(ButtonClear, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { getByText } = render(
-        <ButtonClear {...defaultProps} variant="primary" />
+        <ButtonClear {...defaultProps} variant="primary" />,
       )
 
       const button = getByText(defaultProps.children as string)

@@ -21,7 +21,7 @@ export default function Input(props: InputProps): JSX.Element {
       [`Input--${size}`]: size,
       [`Input--${variant}`]: variant,
     },
-    className
+    className,
   )
 
   return <input className={usedClassName} {...rest} />

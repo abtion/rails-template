@@ -16,7 +16,7 @@ export default function AlertIcon(props: AlertProps): JSX.Element {
     {
       [`AlertIcon--${variant}`]: variant,
     },
-    className
+    className,
   )
 
   return <Icon className={usedClassName} {...rest} />

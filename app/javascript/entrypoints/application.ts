@@ -20,6 +20,6 @@ require("../application.scss")
 const componentsContext = require.context(
   "../components",
   true,
-  /(?<!(test|test\.[jt]sx?|\.scss))$/ // Exclude tests and scss files
+  /(?<!(test|test\.[jt]sx?|\.scss))$/, // Exclude tests and scss files
 )
 mountComponents(componentsContext)

@@ -19,7 +19,7 @@ export default function ButtonClear(props: ButtonClearProps): JSX.Element {
       [`ButtonClear--${size}`]: size,
       [`ButtonClear--${variant}`]: variant,
     },
-    className
+    className,
   )
 
   return <button className={usedClassName} {...rest} />

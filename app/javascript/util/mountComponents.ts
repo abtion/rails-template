@@ -10,7 +10,7 @@ interface RequireContext {
 function getValidPaths(contexts: RequireContext[]): string[] {
   return contexts.reduce(
     (res, context) => res.concat(context.keys()),
-    [] as string[]
+    [] as string[],
   )
 }
 

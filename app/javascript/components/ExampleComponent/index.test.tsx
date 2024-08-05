@@ -28,7 +28,7 @@ describe(ExampleComponent, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { container } = render(
-        <ExampleComponent {...defaultProps} variant="primary" />
+        <ExampleComponent {...defaultProps} variant="primary" />,
       )
 
       const component = container.querySelector(".ExampleComponent--primary")

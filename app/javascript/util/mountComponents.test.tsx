@@ -48,7 +48,7 @@ describe(mountComponents, () => {
     await waitFor(() => {
       expect(document.body.querySelector(".TestComponent")?.tagName).toBe("H1")
       expect(document.body.querySelector(".TestComponent")).toHaveTextContent(
-        "Title"
+        "Title",
       )
     })
   })
@@ -68,7 +68,7 @@ describe(mountComponents, () => {
     await waitFor(() => {
       expect(document.body.querySelector(".TestComponent")?.tagName).toBe("H1")
       expect(document.body.querySelector(".TestComponent")).toHaveTextContent(
-        "Title"
+        "Title",
       )
     })
   })
@@ -123,7 +123,7 @@ describe(mountComponents, () => {
       mountComponents(contextA, contextB)
 
       expect(console.error).toHaveBeenCalledWith(
-        'Cannot find module "./TestComponent"'
+        'Cannot find module "./TestComponent"',
       )
       expect(console.log).toHaveBeenCalledWith("Valid paths are:", [
         "./Component1",
