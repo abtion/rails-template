@@ -6,7 +6,7 @@ const dynamicCssVariables = require("./dynamicCssVariables")
 const nodeSassGlobImporter = require("node-sass-glob-importer")
 
 const sassRule = webpackConfig.module.rules.find((rule) =>
-  [].concat(rule.test).some((test) => test.test(".scss"))
+  [].concat(rule.test).some((test) => test.test(".scss")),
 )
 const sassLoader = sassRule.use.find((use) => {
   const loader = typeof use === "object" ? use.loader : use
@@ -14,6 +14,7 @@ const sassLoader = sassRule.use.find((use) => {
 })
 
 sassLoader.options.sassOptions.importer = nodeSassGlobImporter()
+sassLoader.options.api = "legacy"
 sassLoader.options.additionalData = dynamicCssVariables
 
 module.exports = merge({}, webpackConfig, aliasConfig)
