@@ -32,7 +32,7 @@ describe(Link, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { getByText } = render(
-        <Link {...defaultProps} variant="neutral-light" />
+        <Link {...defaultProps} variant="neutral-light" />,
       )
 
       const link = getByText(defaultProps.text as string)

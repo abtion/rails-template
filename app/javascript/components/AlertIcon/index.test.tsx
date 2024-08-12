@@ -20,7 +20,7 @@ describe(AlertIcon, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { container } = render(
-        <AlertIcon {...defaultProps} variant="primary" />
+        <AlertIcon {...defaultProps} variant="primary" />,
       )
 
       const element = container.querySelector("svg")

@@ -106,6 +106,13 @@ bin/test-all-strict # Run all tests and linters
 bin/shakapacker-dev-server # Watch for frontend changes and compile on the go
 ```
 
+Spring is also available for development. Since using spring can cause hard-to-debug errors, the binstubs are not springifie, but you can run easily spring with `bin/spring [command]`, e.g.:
+
+```sh
+bin/spring rspec
+bin/spring rails s
+```
+
 ## Good to know
 
 ### Notable inclusions and exclusions
