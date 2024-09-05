@@ -1,6 +1,6 @@
 # Project Name Human
 
-![Observatory](https://img.shields.io/mozilla-observatory/grade-score/abtion-rails-template.herokuapp.com)
+[![Observatory](https://img.shields.io/mozilla-observatory/grade-score/abtion-rails-template.herokuapp.com)](https://observatory.mozilla.org/analyze/abtion-rails-template.herokuapp.com)
 
 This project is built on top of the [Abtion Rails Template](https://github.com/abtion/rails-template).
 
