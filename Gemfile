@@ -64,4 +64,5 @@ group :test do
   gem "rails-controller-testing"
   gem "simplecov"
   gem "webmock"
+  gem "rspec-github", require: false
 end
