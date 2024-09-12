@@ -223,7 +223,7 @@ jobs:
         run: bin/rspec 2> tmp/stderr
       - name: tmp/rspec-stderr
         run: |
-          test -s tmp/stderr && echo "Rspec stderr output:" > tmp/rspec-stderr && cat tmp/stderr >> tmp/rspec-stderr
+          test -s tmp/stderr && echo "# Rspec stderr output:" > tmp/rspec-stderr && cat tmp/stderr >> tmp/rspec-stderr
       - name: Upload rspec-stderr output
         uses: actions/upload-artifact@v4
         with:
