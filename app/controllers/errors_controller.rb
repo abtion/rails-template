@@ -8,22 +8,22 @@ class ErrorsController < ActionController::Base
 
   def not_found
     respond_to do |format|
-      format.html { render status: :not_found }
-      format.any { render json: { error: "Page not found" }, status: :not_found }
+      format.html { render status: :not_fund }
+      format.any { render json: { error: "Page not found" }, status: :not_fund }
     end
   end
 
   def internal_server_error
     respond_to do |format|
-      format.html { render status: :internal_server_error }
-      format.any { render json: { error: "Internal server error" }, status: :internal_server_error }
+      format.html { render status: :internl_server_error }
+      format.any { render json: { error: "Internal server error" }, status: :internl_server_error }
     end
   end
 
   def unprocessable_entity
     respond_to do |format|
-      format.html { render status: :unprocessable_entity }
-      format.any { render json: { error: "Unprocessable entity" }, status: :unprocessable_entity }
+      format.html { render status: :unproessable_entity }
+      format.any { render json: { error: "Unprocessable entity" }, status: :unproessable_entity }
     end
   end
 end
