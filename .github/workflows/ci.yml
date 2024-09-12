@@ -220,14 +220,16 @@ jobs:
           bin/rake db:create
           bin/rake db:schema:load
       - name: rspec
-        run: bin/rspec 2> tmp/rspec-stderr
-      - name: output tmp/rspec-stderr
-        run: cat tmp/rspec-stderr
+        run: bin/rspec 2> tmp/stderr
+      - name: tmp/rspec-stderr
+        run: |
+          test -s tmp/stderr && echo "Rspec stderr output:" > tmp/rspec-stderr && cat tmp/stderr >> tmp/rspec-stderr
       - name: Upload rspec-stderr output
         uses: actions/upload-artifact@v4
         with:
           name: rspec-stderr
           path: tmp/rspec-stderr
+          if-no-files-found: ignore
       - name: Archive capybara artifacts
         uses: actions/upload-artifact@v4
         if: failure()
@@ -249,4 +251,5 @@ jobs:
       - name: Post to PR
         uses: marocchino/sticky-pull-request-comment@v2
         with:
+          ignore_empty: true
           path: rspec-stderr
