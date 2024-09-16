@@ -45,7 +45,9 @@ Rails.application.configure do
   end
 
   # Generate session nonces for permitted importmap, inline scripts, and inline styles.
-  config.content_security_policy_nonce_generator = ->(request) { request.session[:nonce] ||= SecureRandom.hex }
+  config.content_security_policy_nonce_generator = lambda { |request|
+    request.session[:nonce] ||= SecureRandom.hex
+  }
   config.content_security_policy_nonce_directives = %w[script-src style-src]
 
   # Report violations without enforcing the policy.
