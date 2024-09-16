@@ -3,9 +3,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# In bundler 2.4.22 you can do `ruby file: ".tool-versions"`, but heroku uses an old bundler
-/^ruby (?<version>\d+\.\d+\.\d+)$/ =~ File.read(File.join(__dir__, ".tool-versions"))
-ruby version
+ruby file: ".tool-versions"
 
 gem "awesome_print"
 gem "bootsnap", ">= 1.4.4", require: false
