@@ -46,7 +46,7 @@
     "webpack-sources": "^3.2.3"
   },
   "engines": {
-    "node": "18.x",
+    "node": "22.x",
     "npm": ">=9"
   },
   "version": "0.1.1",
@@ -66,8 +66,8 @@
     "@types/react-dom": "^18.2.22",
     "@types/testing-library__jest-dom": "^6.0.0",
     "@types/webpack-env": "^1.18.5",
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/eslint-plugin": "^8.6.0",
+    "@typescript-eslint/parser": "^8.6.0",
     "babel-jest": "^29.7.0",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
