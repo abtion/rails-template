@@ -14,7 +14,9 @@ require.context("../components", true, /(?<=\.scss)$/) // Only include scss file
 
 // Add application wide CSS, we do this after the components
 // because we want tailwind classes to override default component styling
+/* eslint-disable @typescript-eslint/no-require-imports */
 require("../application.scss")
+/* eslint-enable @typescript-eslint/no-require-imports */
 
 // Make components available for react_component helper
 const componentsContext = require.context(

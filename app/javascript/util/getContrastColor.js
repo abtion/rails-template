@@ -1,8 +1,8 @@
 // This file uses js and commonjs to be compatible with tailwind config
 
-/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
 const getLuminance = require("./getLuminance")
-/* eslint-enable @typescript-eslint/no-var-requires */
+/* eslint-enable @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
 
 // Based on luminance, pick the best suited contrast color (dark/light) to the target color
 module.exports = function getContrastColor(target, dark, light) {
