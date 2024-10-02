@@ -60,6 +60,7 @@ end
 group :test do
   gem "capybara"
   gem "rails-controller-testing"
+  gem "rspec-github", require: false
   gem "simplecov"
   gem "webmock"
 end
