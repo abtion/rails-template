@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const colors = require("./colors.json")
-const prepareColorVariables = require("./app/javascript/util/prepareColorVariables")
+const { getTailwindColors } = require("@abtion-oss/design-system-colors")
 /* eslint-enable @typescript-eslint/no-var-requires */
-
-const tailwindConfig = prepareColorVariables(colors).tailwindConfig
 
 module.exports = {
   content: [
@@ -20,7 +18,7 @@ module.exports = {
       white: "white",
       black: "black",
       current: "currentColor",
-      ...tailwindConfig,
+      ...getTailwindColors(colors),
     },
     fontFamily: {
       sans: ["Inter", "sans-serif"],
