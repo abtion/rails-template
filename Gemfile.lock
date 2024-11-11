@@ -319,7 +319,7 @@ GEM
     rspec-mocks (3.13.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (7.0.1)
+    rspec-rails (7.1.0)
       actionpack (>= 7.0)
       activesupport (>= 7.0)
       railties (>= 7.0)
@@ -359,7 +359,7 @@ GEM
       rubocop-rspec (~> 3, >= 3.0.1)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    securerandom (0.3.1)
+    securerandom (0.3.2)
     selenium-webdriver (4.26.0)
       base64 (~> 0.2)
       logger (~> 1.4)
@@ -457,7 +457,7 @@ DEPENDENCIES
   rails-i18n
   rollbar
   rspec-github
-  rspec-rails (~> 7.0.1)
+  rspec-rails (~> 7.1.0)
   rubocop
   rubocop-capybara
   rubocop-factory_bot
