@@ -152,7 +152,7 @@ GEM
     ffi (1.17.0-x86_64-linux-gnu)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    hashdiff (1.1.1)
+    hashdiff (1.1.2)
     highline (3.1.1)
       reline
     i18n (1.14.6)
