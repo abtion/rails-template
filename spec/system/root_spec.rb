@@ -6,6 +6,6 @@ RSpec.describe "Root", type: :system do
   it "renders 'abtion-rails'" do
     visit root_path
 
-    expect(page).to have_content("abtion-rails")
+    expect(page).to have_content("this should fail")
   end
 end
