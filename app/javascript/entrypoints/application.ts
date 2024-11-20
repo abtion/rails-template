@@ -1,4 +1,4 @@
-import * as ujs from "@rails/ujs"
+import ujs from "@rails/ujs"
 import * as activestorage from "@rails/activestorage"
 
 import mountComponents from "../util/mountComponents"
