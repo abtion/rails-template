@@ -22,7 +22,7 @@ services:
     command: bash -c "asdf install; bundle install; npm i"
     working_dir: /app
     volumes:
-      - .:/app
+      - .:/app:z
       - node-modules:/app/node_modules
       - asdf:/root/.asdf
 
@@ -38,7 +38,7 @@ services:
       SHAKAPACKER_DEV_SERVER_HOST: 0.0.0.0
     working_dir: /app
     volumes:
-      - .:/app
+      - .:/app:z
       - cache:/app/tmp/cache
       - asdf:/root/.asdf
     ports:
