@@ -75,7 +75,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "markdownlint-cli2": "^0.14.0",
+    "markdownlint-cli2": "^0.15.0",
     "postcss": "^8.4.33",
     "prettier": "^3.3.3",
     "stylelint": "^14.16.1",
