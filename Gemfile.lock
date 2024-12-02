@@ -115,7 +115,7 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
-    date (3.4.0)
+    date (3.4.1)
     devise (4.9.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
