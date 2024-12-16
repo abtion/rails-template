@@ -26,7 +26,7 @@
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.0",
     "dot-prop": "^8.0.2",
-    "mini-css-extract-plugin": "^2.7.2",
+    "mini-css-extract-plugin": "^2.9.2",
     "node-sass-glob-importer": "^5.3.3",
     "postcss-import": "^16.1.0",
     "postcss-loader": "^7.3.3",
