@@ -298,7 +298,7 @@ GEM
       ffi (~> 1.0)
     rdoc (6.8.1)
       psych (>= 4.0.0)
-    redis-client (0.22.2)
+    redis-client (0.23.0)
       connection_pool
     regexp_parser (2.9.3)
     reline (0.5.12)
