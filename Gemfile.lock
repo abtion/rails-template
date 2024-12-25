@@ -227,7 +227,7 @@ GEM
       racc
     pg (1.5.9)
     pivotal_git_scripts (1.4.0)
-    pry (0.15.0)
+    pry (0.15.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
     pry-rails (0.3.11)
