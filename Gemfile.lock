@@ -153,7 +153,7 @@ GEM
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.1.2)
-    highline (3.1.1)
+    highline (3.1.2)
       reline
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
