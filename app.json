@@ -32,7 +32,12 @@
         "version": "15"
       }
     },
-    "heroku-redis:mini"
+    {
+      "plan": "heroku-redis:mini",
+      "options": {
+        "maxmemory-policy": "volatile-lru"
+      }
+    }
   ],
   "buildpacks": [
     {
