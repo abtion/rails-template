@@ -79,7 +79,7 @@
     "postcss": "^8.4.33",
     "prettier": "^3.3.3",
     "stylelint": "^14.16.1",
-    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-config-sass-guidelines": "^12.1.0",
     "webpack-dev-server": "^4.15.2"
   },
   "peerDependencies": {
