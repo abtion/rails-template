@@ -21,7 +21,7 @@ gem "rack-attack"
 gem "rails", "~> 7.2.1"
 gem "rails-i18n"
 gem "rollbar"
-gem "shakapacker", "8.0.2"
+gem "shakapacker", "8.2.0"
 gem "sidekiq"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 

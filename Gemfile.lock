@@ -210,7 +210,7 @@ GEM
     matrix (0.4.2)
     method_source (1.1.0)
     mini_mime (1.1.5)
-    minitest (5.25.4)
+    minitest (5.25.5)
     msgpack (1.8.0)
     net-imap (0.5.6)
       date
@@ -384,7 +384,7 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     semantic_range (3.1.0)
-    shakapacker (8.0.2)
+    shakapacker (8.2.0)
       activesupport (>= 5.2)
       package_json
       rack-proxy (>= 0.6.1)
@@ -487,7 +487,7 @@ DEPENDENCIES
   rubocop-rspec
   rubocop-rspec_rails
   selenium-webdriver (>= 4.11)
-  shakapacker (= 8.0.2)
+  shakapacker (= 8.2.0)
   shoulda-matchers
   sidekiq
   simplecov
