@@ -13,7 +13,7 @@ jobs:
         with:
           bundler-cache: true
       - name: Rubocop
-        run: bin/rubocop
+        run: bin/rubocop --format github
   brakeman:
     runs-on: ubuntu-latest
     steps:
@@ -219,7 +219,7 @@ jobs:
         run: |
           bin/rake db:create
           bin/rake db:schema:load
-      - run: bin/rspec --format documentation 2> >(tee /tmp/stderr.log >&2)
+      - run: bin/rspec --format RSpec::Github::Formatter --format documentation 2> >(tee /tmp/stderr.log >&2)
         id: rspec
       - name: stderr
         if: ${{ !cancelled() }}

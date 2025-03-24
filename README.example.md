@@ -1,6 +1,6 @@
 # Project Name Human
 
-[![Observatory](https://img.shields.io/mozilla-observatory/grade-score/abtion-rails-template.herokuapp.com)](https://observatory.mozilla.org/analyze/abtion-rails-template.herokuapp.com)
+[![Observatory](https://img.shields.io/mozilla-observatory/grade-score/abtion-rails-template.herokuapp.com)](https://developer.mozilla.org/en-US/observatory/analyze?host=abtion-rails-template.herokuapp.com)
 
 This project is built on top of the [Abtion Rails Template](https://github.com/abtion/rails-template).
 
@@ -69,24 +69,33 @@ For running the project locally:
 
 1. In one terminal window:
 
-    ```sh
-    docker compose up
-    ```
+   ```sh
+   docker compose up
+   ```
 
 2. In another terminal window:
 
-    ```sh
-    asdf install # To install runtimes
-    bin/setup # To install dependencies and initialize the database
-    bin/rails s # To run the webserver
-    ```
+   ```sh
+   asdf install # To install runtimes
+   bin/setup # To install dependencies and initialize the database
+   bin/rails s # To run the webserver
+   ```
 
 3. The project can now be accessed at <http://localhost:3000>
 
 #### Other setups
 
-It is also possible to run everything locally, but it requires locally setting up the services specified in the [docker-compose.yml](docker-compose.yml).\
-It will also require changes to the connection string env vars.
+##### Docker dev container
+
+1. Run `docker compose --profile dev up` and wait for "Dev container ready".
+2. Now connect with `docker compose exec -it dev bash` to get a terminal from where the server can be started.
+
+To get multiple terminals either connect multiple times or use a multiplexer (`docker compose exec -it dev byobu`).
+
+##### Fully local
+
+This is supported, but requires locally setting up the services specified in the [docker-compose.yml](docker-compose.yml).\
+Connection string env vars also have to be modified (use a `.env.local`-file).
 
 #### Available scripts
 

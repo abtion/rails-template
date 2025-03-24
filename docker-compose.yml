@@ -22,7 +22,7 @@ services:
     command: bash -c "asdf install; bundle install; npm i"
     working_dir: /app
     volumes:
-      - .:/app
+      - .:/app:z
       - node-modules:/app/node_modules
       - asdf:/root/.asdf
 
@@ -30,7 +30,7 @@ services:
     profiles: [ dev ]
     image: dev
     build: .
-    command: bash -c "echo 'Dev container ready'; /wait-for-sigterm.sh"
+    command: bash -c "echo 'Dev container ready, connect with `docker compose exec -it dev /bin/bash`'; /wait-for-sigterm.sh"
     environment:
       REDIS_URL: redis://redis
       DATABASE_SERVER: postgres://postgres@postgres
@@ -38,7 +38,7 @@ services:
       SHAKAPACKER_DEV_SERVER_HOST: 0.0.0.0
     working_dir: /app
     volumes:
-      - .:/app
+      - .:/app:z
       - cache:/app/tmp/cache
       - asdf:/root/.asdf
     ports:

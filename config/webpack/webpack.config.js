@@ -2,7 +2,8 @@ const { generateWebpackConfig, merge } = require("shakapacker")
 const webpackConfig = generateWebpackConfig()
 
 const aliasConfig = require("./alias")
-const dynamicCssVariables = require("./dynamicCssVariables")
+const colors = require("../../colors.json")
+const { getColorStyles } = require("@abtion-oss/design-system-colors")
 const nodeSassGlobImporter = require("node-sass-glob-importer")
 
 const sassRule = webpackConfig.module.rules.find((rule) =>
@@ -15,6 +16,6 @@ const sassLoader = sassRule.use.find((use) => {
 
 sassLoader.options.sassOptions.importer = nodeSassGlobImporter()
 sassLoader.options.api = "legacy"
-sassLoader.options.additionalData = dynamicCssVariables
+sassLoader.options.additionalData = getColorStyles(colors)
 
 module.exports = merge({}, webpackConfig, aliasConfig)
