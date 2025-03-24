@@ -1,6 +1,6 @@
 name: CI
 
-on: [push, pull_request, workflow_dispatch]
+on: [push]
 
 jobs:
   rubocop:
@@ -219,38 +219,25 @@ jobs:
         run: |
           bin/rake db:create
           bin/rake db:schema:load
-      - name: rspec
-        run: bin/rspec 2> tmp/stderr
-      - name: tmp/rspec-stderr
+      - run: bin/rspec --format documentation 2> >(tee /tmp/stderr.log >&2)
+        id: rspec
+      - name: stderr
+        if: ${{ !cancelled() }}
         run: |
-          test -s tmp/stderr && echo "# Rspec stderr output:" > tmp/rspec-stderr && cat tmp/stderr >> tmp/rspec-stderr
-      - name: Upload rspec-stderr output
-        uses: actions/upload-artifact@v4
-        with:
-          name: rspec-stderr
-          path: tmp/rspec-stderr
-          if-no-files-found: ignore
+          touch /tmp/stderr.log
+          errors=$(
+            cat /tmp/stderr.log | while read line
+              do
+                [ "$line" = "Stopped processing SimpleCov as a previous error not related to SimpleCov has been detected" ] && continue
+                echo "::error ::$line"
+              done
+          )
+          echo "$errors"
+          test -z "$errors"
+        continue-on-error: ${{ steps.rspec.conclusion == 'failure' }}
       - name: Archive capybara artifacts
         uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: capybara
           path: tmp/capybara/
-
-  post_to_github_pr:
-    runs-on: ubuntu-latest
-    needs: rspec
-    if: github.event.pull_request
-    permissions:
-      pull-requests: write
-      contents: read
-    steps:
-      - name: Download rspec-stderr
-        uses: actions/download-artifact@v4
-        with:
-          name: rspec-stderr
-      - name: Post to PR
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          ignore_empty: true
-          path: rspec-stderr
