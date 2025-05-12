@@ -128,7 +128,7 @@ GEM
     devise-pwned_password (0.1.12)
       devise (~> 4)
       pwned (~> 2.4)
-    diff-lcs (1.6.1)
+    diff-lcs (1.6.2)
     docile (1.4.1)
     dotenv (3.1.8)
     dotenv-rails (3.1.8)
