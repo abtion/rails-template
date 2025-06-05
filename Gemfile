@@ -18,7 +18,7 @@ gem "pry-rails"
 gem "puma", "~> 6.6"
 gem "pundit"
 gem "rack-attack"
-gem "rails", "~> 7.2.1"
+gem "rails", "~> 8.0.1"
 gem "rails-i18n"
 gem "rollbar"
 gem "shakapacker", "8.3.0"
@@ -41,7 +41,6 @@ end
 group :development do
   gem "brakeman", require: false
   gem "letter_opener"
-  gem "listen", "~> 3.9"
   gem "pivotal_git_scripts"
   gem "rack-mini-profiler", "~> 3.3"
   gem "rubocop", require: false
