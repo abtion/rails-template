@@ -35,6 +35,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # Use a real queuing backend for Active Job (and separate queues per environment).
+  config.active_job.queue_adapter = :sidekiq
+
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
