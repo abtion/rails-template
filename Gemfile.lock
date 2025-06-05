@@ -477,7 +477,7 @@ DEPENDENCIES
   pundit
   rack-attack
   rack-mini-profiler (~> 3.3)
-  rails (~> 8.0.1)
+  rails (~> 8.0.2)
   rails-controller-testing
   rails-i18n
   rollbar
