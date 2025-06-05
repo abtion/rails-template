@@ -74,7 +74,7 @@ jobs:
         with:
           bundler-cache: true
       - name: erb-lint
-        run: bin/erblint --lint-all
+        run: bin/erb_lint --lint-all
   i18n-tasks:
     runs-on: ubuntu-latest
     steps:
