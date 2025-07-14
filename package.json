@@ -24,7 +24,7 @@
     "classnames": "^2.5.1",
     "compression-webpack-plugin": "^11.1.0",
     "css-loader": "^7.1.2",
-    "css-minimizer-webpack-plugin": "^7.0.0",
+    "css-minimizer-webpack-plugin": "^7.0.2",
     "dot-prop": "^8.0.2",
     "mini-css-extract-plugin": "^2.9.2",
     "node-sass-glob-importer": "^5.3.3",
