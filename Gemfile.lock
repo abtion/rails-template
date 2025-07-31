@@ -255,7 +255,7 @@ GEM
     rack (3.2.0)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
-    rack-mini-profiler (4.0.0)
+    rack-mini-profiler (4.0.1)
       rack (>= 1.2.0)
     rack-proxy (0.7.7)
       rack
