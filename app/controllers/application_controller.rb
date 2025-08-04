@@ -2,6 +2,7 @@
 
 class ApplicationController < ActionController::Base
   include Pundit::Authorization
+
   rescue_from Pundit::NotAuthorizedError, with: :not_authorized
   rescue_from ActionController::InvalidAuthenticityToken, with: :invalid_authenticity_token
   before_action :basic_auth_wall, if: -> { ENV.fetch("HTTP_AUTH_PASSWORD", nil).present? }
