@@ -74,7 +74,7 @@
     "eslint-plugin-jest-dom": "5.5.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^30.0.5",
-    "jest-environment-jsdom": "^29.7.0",
+    "jest-environment-jsdom": "^30.0.5",
     "markdownlint-cli2": "^0.15.0",
     "postcss": "^8.4.33",
     "prettier": "^3.6.0",
