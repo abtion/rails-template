@@ -78,7 +78,7 @@
     "markdownlint-cli2": "^0.15.0",
     "postcss": "^8.4.33",
     "prettier": "^3.6.0",
-    "stylelint": "^16.20.0",
+    "stylelint": "^16.23.1",
     "stylelint-config-sass-guidelines": "^12.1.0",
     "webpack-dev-server": "^5.2.2"
   },
