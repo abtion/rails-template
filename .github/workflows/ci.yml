@@ -219,8 +219,22 @@ jobs:
         run: |
           bin/rake db:create
           bin/rake db:schema:load
-      - name: rspec
-        run: bin/rspec --format RSpec::Github::Formatter --format progress
+      - run: bin/rspec --format RSpec::Github::Formatter --format documentation 2> >(tee /tmp/stderr.log >&2)
+        id: rspec
+      - name: stderr
+        if: ${{ !cancelled() }}
+        run: |
+          touch /tmp/stderr.log
+          errors=$(
+            cat /tmp/stderr.log | while read line
+              do
+                [ "$line" = "Stopped processing SimpleCov as a previous error not related to SimpleCov has been detected" ] && continue
+                echo "::error ::$line"
+              done
+          )
+          echo "$errors"
+          test -z "$errors"
+        continue-on-error: ${{ steps.rspec.conclusion == 'failure' }}
       - name: Archive capybara artifacts
         uses: actions/upload-artifact@v4
         if: failure()
