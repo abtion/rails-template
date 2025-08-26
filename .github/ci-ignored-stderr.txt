@@ -1,0 +1,1 @@
+^Stopped processing SimpleCov as a previous error not related to SimpleCov has been detected$

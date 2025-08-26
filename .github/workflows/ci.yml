@@ -225,13 +225,7 @@ jobs:
         if: ${{ !cancelled() }}
         run: |
           touch /tmp/stderr.log
-          errors=$(
-            cat /tmp/stderr.log | while read line
-              do
-                [ "$line" = "Stopped processing SimpleCov as a previous error not related to SimpleCov has been detected" ] && continue
-                echo "::error ::$line"
-              done
-          )
+          errors=$(cat /tmp/stderr.log | grep -vf .github/ci-ignored-stderr.txt | sed 's/\(.*\)/::error::\1/')
           echo "$errors"
           test -z "$errors"
         continue-on-error: ${{ steps.rspec.conclusion == 'failure' }}
