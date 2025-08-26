@@ -23,11 +23,11 @@ gem "rails-i18n"
 gem "rollbar"
 gem "shakapacker", "8.3.0"
 gem "sidekiq"
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "tzinfo-data", platforms: [:windows, :jruby]
 
 group :development, :test do
   gem "bullet"
-  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "byebug", platforms: [:mri, :windows]
   gem "dotenv-rails"
   gem "erb_lint", require: false
   gem "factory_bot_rails"
