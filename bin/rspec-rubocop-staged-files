@@ -25,7 +25,7 @@ module RspecRubocopStagedFiles
       return true unless files.any?
 
       puts "Running erb_lint"
-      system "bin/erblint #{files.join(' ')}"
+      system "bin/erb_lint #{files.join(' ')}"
     end
 
     def rspec(files)

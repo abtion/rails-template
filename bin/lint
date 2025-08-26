@@ -2,6 +2,6 @@
 set -e
 
 bin/rubocop
-bin/erblint --lint-all
+bin/erb_lint --lint-all
 bin/brakeman --quiet --no-summary
 npm run lint
