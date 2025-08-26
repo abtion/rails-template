@@ -1,4 +1,4 @@
-require:
+plugins:
   - rubocop-performance
   - rubocop-rails
   - rubocop-rspec
@@ -18,6 +18,7 @@ AllCops:
     - "node_modules/**/*"
     - "tmp/**/*"
     - "vendor/**/*"
+    - "config/initializers/new_framework_defaults_*.rb"
     - "db/schema.rb"
 
 Layout/FirstArrayElementIndentation:

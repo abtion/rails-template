@@ -2,5 +2,5 @@
 set -e
 
 bin/rubocop --auto-correct
-bin/erblint --lint-all --autocorrect
+bin/erb_lint --lint-all --autocorrect
 npm run lint-fix

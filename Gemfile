@@ -13,27 +13,27 @@ gem "devise-pwned_password"
 gem "jquery-rails"
 gem "jsonapi-serializer"
 gem "lograge"
-gem "pg", "~> 1.5"
+gem "pg", "~> 1.6"
 gem "pry-rails"
 gem "puma", "~> 6.6"
 gem "pundit"
 gem "rack-attack"
-gem "rails", "~> 7.2.1"
+gem "rails", "~> 8.0.2"
 gem "rails-i18n"
 gem "rollbar"
-gem "shakapacker", "8.2.0"
+gem "shakapacker", "8.3.0"
 gem "sidekiq"
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "tzinfo-data", platforms: [:windows, :jruby]
 
 group :development, :test do
   gem "bullet"
-  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "byebug", platforms: [:mri, :windows]
   gem "dotenv-rails"
   gem "erb_lint", require: false
   gem "factory_bot_rails"
   gem "faker"
   gem "i18n-tasks"
-  gem "rspec-rails", "~> 7.1.1"
+  gem "rspec-rails", "~> 8.0.2"
   gem "selenium-webdriver", ">= 4.11"
   gem "shoulda-matchers"
 end
@@ -41,9 +41,8 @@ end
 group :development do
   gem "brakeman", require: false
   gem "letter_opener"
-  gem "listen", "~> 3.9"
   gem "pivotal_git_scripts"
-  gem "rack-mini-profiler", "~> 3.3"
+  gem "rack-mini-profiler", "~> 4.0"
   gem "rubocop", require: false
   gem "rubocop-capybara", require: false
   gem "rubocop-factory_bot", require: false

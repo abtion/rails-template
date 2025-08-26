@@ -20,10 +20,10 @@ class ErrorsController < ActionController::Base
     end
   end
 
-  def unprocessable_entity
+  def unprocessable_content
     respond_to do |format|
-      format.html { render status: :unprocessable_entity }
-      format.any { render json: { error: "Unprocessable entity" }, status: :unprocessable_entity }
+      format.html { render status: :unprocessable_content }
+      format.any { render json: { error: "Unprocessable content" }, status: :unprocessable_content }
     end
   end
 end

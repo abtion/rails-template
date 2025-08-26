@@ -8,6 +8,6 @@ da:
       subtitle: Har du eventuelt skrevet adressen forkert?
       title: Siden kunne ikke findes.
     session_expired: Din session er udløbet. Prøv venligst igen.
-    unprocessable_entity:
+    unprocessable_content:
       subtitle: Måske prøvede du at ændre noget du ikke havde adgang til.
       title: Ændringen blev afvist
