@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version-file: ".tool-versions"
           cache: "npm"
@@ -43,7 +43,7 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version-file: ".tool-versions"
           cache: "npm"
@@ -56,7 +56,7 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version-file: ".tool-versions"
           cache: "npm"
@@ -91,7 +91,7 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version-file: ".tool-versions"
           cache: "npm"
@@ -104,7 +104,7 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version-file: ".tool-versions"
           cache: "npm"
@@ -165,7 +165,7 @@ jobs:
           bundler-cache: true
       - name: install required apt packages
         run: sudo apt-get -y install libpq-dev
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version-file: ".tool-versions"
           cache: "npm"
@@ -205,7 +205,7 @@ jobs:
           bundler-cache: true
       - name: install required apt packages
         run: sudo apt-get -y install libpq-dev
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version-file: ".tool-versions"
           cache: "npm"
