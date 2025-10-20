@@ -324,7 +324,7 @@ GEM
       railties (>= 7.0)
     rexml (3.4.4)
     rollbar (3.6.2)
-    rspec-core (3.13.5)
+    rspec-core (3.13.6)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
