@@ -35,7 +35,7 @@ RSpec.describe BackLinkHelper, type: :helper do
       subject = back_path_field
 
       expected_html_tag = <<~HTML.chomp
-        <input type="hidden" name="back_path" id="back_path" value="https://back-path.com" autocomplete="off" />
+        <input type="hidden" name="back_path" id="back_path" value="https://back-path.com" />
       HTML
 
       expect(subject).to eq(expected_html_tag)
