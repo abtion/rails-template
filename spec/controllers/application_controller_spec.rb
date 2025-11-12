@@ -45,7 +45,7 @@ RSpec.describe ApplicationController, type: :controller do
     end
 
     it "requires authentication if ENV HTTP_AUTH_PASSWORD is set" do
-      allow(ENV).to receive(:fetch).with("HTTP_AUTH_PASSWORD", nil).and_return("a")
+      allow(ENV).to receive(:fetch).with("HTTP_AUTH_PASSWORD", nil).and_return(SecureRandom.hex(16))
 
       get :index
 
@@ -53,11 +53,13 @@ RSpec.describe ApplicationController, type: :controller do
     end
 
     it "authenticates" do
-      allow(ENV).to receive(:fetch).with("HTTP_AUTH_USERNAME").and_return("a")
-      allow(ENV).to receive(:fetch).with("HTTP_AUTH_PASSWORD", nil).and_return("a")
-      allow(ENV).to receive(:fetch).with("HTTP_AUTH_PASSWORD").and_return("b")
+      password = SecureRandom.hex(16)
+      username = Faker::Internet.username
+      allow(ENV).to receive(:fetch).with("HTTP_AUTH_USERNAME").and_return(username)
+      allow(ENV).to receive(:fetch).with("HTTP_AUTH_PASSWORD", nil).and_return(password)
+      allow(ENV).to receive(:fetch).with("HTTP_AUTH_PASSWORD").and_return(password)
       request.env["HTTP_AUTHORIZATION"] =
-        ActionController::HttpAuthentication::Basic.encode_credentials("a", "b")
+        ActionController::HttpAuthentication::Basic.encode_credentials(username, password)
       get :index
 
       expect(response).to have_http_status(:ok)
