@@ -8,6 +8,10 @@ module.exports = {
     "!app/javascript/**/*.d.ts",
     "!app/javascript/const/**/*",
   ],
+  transform: {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    "^.+\\.(t|j)sx?$": ["@swc/jest", require("./config/swc.config.js").options],
+  },
   coverageThreshold: {
     "app/javascript/**/*.{js,ts,tsx}": {
       branches: 100,
