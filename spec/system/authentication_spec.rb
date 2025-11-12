@@ -20,6 +20,8 @@ RSpec.describe "Authentication", type: :system do
 
   describe "password reset" do
     it "allows resetting the password" do
+      password = SecureRandom.hex(16)
+      stub_strong_password(password:)
       user = create(:user)
 
       visit "/users/sign_in"
@@ -40,10 +42,9 @@ RSpec.describe "Authentication", type: :system do
 
       visit reset_link
 
-      fill_in "user_password", with: "1234password!$"
-      fill_in "user_password_confirmation", with: "1234password!$"
+      fill_in "user_password", with: password
+      fill_in "user_password_confirmation", with: password
 
-      stub_strong_password(password: "1234password!$")
       click_on "Change my password"
 
       expect(page).to have_content("Your password has been changed successfully")
