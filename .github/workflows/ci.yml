@@ -230,7 +230,7 @@ jobs:
           test -z "$errors"
         continue-on-error: ${{ steps.rspec.conclusion == 'failure' }}
       - name: Archive capybara artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         if: failure()
         with:
           name: capybara
