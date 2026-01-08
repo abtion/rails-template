@@ -27,7 +27,7 @@
     "react-dom": "^18.2.0",
     "sass": "^1.89.2",
     "sass-loader": "^16.0.3",
-    "shakapacker": "9.3.2",
+    "shakapacker": "9.5.0",
     "style-loader": "^4.0.0",
     "swc-loader": "^0.2.6",
     "tailwindcss": "^3.4.7",
