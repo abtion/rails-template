@@ -80,7 +80,7 @@ GEM
     ast (2.4.3)
     awesome_print (1.9.2)
     base64 (0.3.0)
-    bcrypt (3.1.20)
+    bcrypt (3.1.21)
     better_html (2.2.0)
       actionview (>= 7.0)
       activesupport (>= 7.0)
