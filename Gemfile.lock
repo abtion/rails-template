@@ -128,8 +128,8 @@ GEM
     devise-i18n (1.15.0)
       devise (>= 4.9.0)
       rails-i18n
-    devise-pwned_password (0.1.12)
-      devise (~> 4)
+    devise-pwned_password (0.2.0)
+      devise (>= 4, < 6)
       pwned (~> 2.4)
     diff-lcs (1.6.2)
     docile (1.4.1)
@@ -231,7 +231,7 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.5)
-    nokogiri (1.19.0-x86_64-linux-gnu)
+    nokogiri (1.19.1-x86_64-linux-gnu)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     package_json (0.2.0)
