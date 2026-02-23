@@ -1,15 +1,22 @@
-name: auto-merge
+name: Dependabot Auto-Merge
 
 on:
   pull_request_target:
 
+permissions:
+  pull-requests: write
+  contents: write
+
 jobs:
-  auto-merge:
-    if: startsWith(github.head_ref, 'dependabot/')
-    runs-on: ubuntu-latest
+  dependabot:
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v6
-      - uses: ahmadnassri/action-dependabot-auto-merge@v2.6
+      - uses: abtion/dependabot-auto-merge@v1.1.0
         with:
-          target: minor
-          github-token: ${{ secrets.AUTO_MERGE_TOKEN }}
+          config: >-
+            [
+              { "update-type": "semver-minor" },
+              { "dependency-name": "rails", "update-type": "semver-patch" },
+            ]
+          github-token: ${{ secrets.GITHUB_TOKEN }}
