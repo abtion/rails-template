@@ -125,8 +125,8 @@ GEM
       railties (>= 7.0)
       responders
       warden (~> 1.2.3)
-    devise-i18n (1.15.0)
-      devise (>= 4.9.0)
+    devise-i18n (1.16.0)
+      devise (>= 5.0.0)
       rails-i18n
     devise-pwned_password (0.2.0)
       devise (>= 4, < 6)
@@ -138,7 +138,7 @@ GEM
       dotenv (= 3.2.0)
       railties (>= 6.1)
     drb (2.2.3)
-    erb (6.0.1)
+    erb (6.0.2)
     erb_lint (0.9.0)
       activesupport
       better_html (>= 2.0.1)
@@ -218,7 +218,8 @@ GEM
     matrix (0.4.3)
     method_source (1.1.0)
     mini_mime (1.1.5)
-    minitest (6.0.1)
+    minitest (6.0.2)
+      drb (~> 2.0)
       prism (~> 1.5)
     msgpack (1.8.0)
     net-imap (0.6.3)
