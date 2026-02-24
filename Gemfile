@@ -33,7 +33,7 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
   gem "i18n-tasks"
-  gem "rspec-rails", "~> 8.0.2"
+  gem "rspec-rails", "~> 8.0.3"
   gem "selenium-webdriver", ">= 4.11"
   gem "shoulda-matchers"
 end
