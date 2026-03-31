@@ -11,6 +11,10 @@ updates:
       - dependency-name: "scss-lint"
       # Actually keep everything updated (if you remove this, keep the above ones).
       - dependency-type: "all"
+    cooldown:
+      default-days: 7
+      exclude:
+        - "brakeman"
 
   - package-ecosystem: "npm"
     directory: "/"
@@ -18,6 +22,8 @@ updates:
       interval: "weekly"
     allow:
       - dependency-type: "all"
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: "github-actions"
     directory: "/"
