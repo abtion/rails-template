@@ -5,7 +5,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby file: ".tool-versions"
 
-gem "awesome_print"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "devise"
 gem "devise-i18n"

@@ -78,7 +78,6 @@ GEM
     addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
     ast (2.4.3)
-    awesome_print (1.9.2)
     base64 (0.3.0)
     bcrypt (3.1.22)
     better_html (2.2.0)
@@ -464,7 +463,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  awesome_print
   bootsnap (>= 1.4.4)
   brakeman
   bullet
