@@ -2,7 +2,7 @@ services:
   postgres:
     image: postgres:15.5-alpine
     ports:
-      - 127.0.0.1:5432:5432
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
     environment:
       - POSTGRES_HOST_AUTH_METHOD=trust
     volumes:
@@ -10,7 +10,7 @@ services:
   redis:
     image: redis:6-alpine
     ports:
-      - "127.0.0.1:6379:6379"
+      - "127.0.0.1:${REDIS_PORT:-6379}:6379"
 
   # Optional containers for development
   install-deps:

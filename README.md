@@ -196,6 +196,10 @@ token to the settings of your project on GitHub. Follow these steps:
 
 To enable DB backups, see this guide: <https://github.com/abtion/heroku-db-backup-s3>
 
+### Custom Docker Ports
+
+Docker services bind to default ports (Postgres 5432, Redis 6379). To use custom host ports (e.g. to run multiple projects simultaneously), set `POSTGRES_PORT` and/or `REDIS_PORT` in `.env.local` and make sure they're exported before running `docker compose`.
+
 ## Contributing
 
 The Abtion Rails Template is maintained by [_Abtioneers_](#about-abtion), but open for anyone to suggest improvements and bugfixes.
