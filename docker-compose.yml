@@ -1,14 +1,16 @@
 services:
   postgres:
-    image: postgres:15.5-alpine
+    image: postgres:17-alpine
     ports:
       - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
     environment:
       - POSTGRES_HOST_AUTH_METHOD=trust
     volumes:
-      - pg15:/var/lib/postgresql/data
+      - pg17:/var/lib/postgresql/data
   redis:
-    image: redis:6-alpine
+    # Valkey, because Heroku Key-Value Store is Valkey — same wire protocol,
+    # same REDIS_URL. The service keeps its name so hostnames don't change.
+    image: valkey/valkey:9-alpine
     ports:
       - "127.0.0.1:${REDIS_PORT:-6379}:6379"
 
@@ -51,7 +53,7 @@ services:
         condition: service_completed_successfully
 
 volumes:
-  pg15:
+  pg17:
   node-modules:
   asdf:
   cache:
