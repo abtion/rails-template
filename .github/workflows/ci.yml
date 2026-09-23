@@ -11,7 +11,6 @@ jobs:
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version-file: ".ruby-version"
           bundler-cache: true
       - name: Rubocop
         run: bin/rubocop --format github
@@ -23,7 +22,6 @@ jobs:
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version-file: ".ruby-version"
           bundler-cache: true
       - name: Brakeman
         run: bin/brakeman
@@ -74,7 +72,6 @@ jobs:
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version-file: ".ruby-version"
           bundler-cache: true
       - name: erb-lint
         run: bin/erb_lint --lint-all
@@ -86,7 +83,6 @@ jobs:
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version-file: ".ruby-version"
           bundler-cache: true
       - name: i18n-tasks
         run: bin/i18n-tasks check-normalized
@@ -139,7 +135,6 @@ jobs:
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version-file: ".ruby-version"
           bundler-cache: true
       - name: bundle install
         run: |
@@ -167,7 +162,6 @@ jobs:
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version-file: ".ruby-version"
           bundler-cache: true
       - name: install required apt packages
         run: sudo apt-get -y install libpq-dev
@@ -208,7 +202,6 @@ jobs:
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version-file: ".ruby-version"
           bundler-cache: true
       - name: install required apt packages
         run: sudo apt-get -y install libpq-dev
