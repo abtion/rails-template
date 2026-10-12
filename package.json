@@ -30,7 +30,7 @@
     "shakapacker": "9.7.0",
     "style-loader": "^4.0.0",
     "swc-loader": "^0.2.7",
-    "tailwindcss": "^3.4.7",
+    "tailwindcss": "^4.3.3",
     "terser-webpack-plugin": "^5.3.16",
     "typescript": "^4.8.4",
     "webpack": "^5.100.2",
@@ -74,7 +74,7 @@
     "postcss": "^8.5.13",
     "prettier": "^3.6.0",
     "stylelint": "^16.23.1",
-    "stylelint-config-sass-guidelines": "^12.1.0",
+    "stylelint-config-sass-guidelines": "^13.0.0",
     "webpack-dev-server": "^5.2.5"
   },
   "peerDependencies": {
