@@ -41,7 +41,7 @@
   },
   "packageManager": "npm@11.10.0",
   "engines": {
-    "node": ">=24.14.1",
+    "node": "24.x",
     "npm": "^11.10.0"
   },
   "version": "0.1.1",
