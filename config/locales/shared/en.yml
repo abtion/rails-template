@@ -165,6 +165,7 @@ en:
       success: Success!
     nav:
       log_in: Log in
+      menu: Menu
       sign_out: Sign out
       sign_up: Sign up
       users: Users
