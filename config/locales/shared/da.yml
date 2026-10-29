@@ -165,6 +165,7 @@ da:
       success: Succes!
     nav:
       log_in: Log ind
+      menu: Menu
       sign_out: Log ud
       sign_up: Opret bruger
       users: Brugere
