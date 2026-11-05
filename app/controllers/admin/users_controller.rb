@@ -7,7 +7,7 @@ module Admin
     end
 
     def show
-      @user = authorize(User.find(params[:id]))
+      @user = authorize(User.find(params.expect(:id)))
     end
 
     def new
@@ -15,7 +15,7 @@ module Admin
     end
 
     def edit
-      @user = authorize(User.find(params[:id]))
+      @user = authorize(User.find(params.expect(:id)))
     end
 
     def create
@@ -33,7 +33,7 @@ module Admin
     end
 
     def update
-      @user = authorize(User.find(params[:id]))
+      @user = authorize(User.find(params.expect(:id)))
 
       if @user.update(update_params)
         flash[:notice] = I18n.t("shared.flash_messages.success")
@@ -47,7 +47,7 @@ module Admin
     end
 
     def destroy
-      user = authorize(User.find(params[:id]))
+      user = authorize(User.find(params.expect(:id)))
 
       if user.destroy
         flash[:notice] = I18n.t("shared.flash_messages.success")

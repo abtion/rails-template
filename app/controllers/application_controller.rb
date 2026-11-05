@@ -34,6 +34,6 @@ class ApplicationController < ActionController::Base
   def invalid_authenticity_token
     flash[:alert] = t("errors.session_expired")
 
-    redirect_back(fallback_location: root_url)
+    redirect_back_or_to(root_url)
   end
 end
