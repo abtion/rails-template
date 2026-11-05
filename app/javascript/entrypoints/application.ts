@@ -2,9 +2,11 @@ import ujs from "@rails/ujs"
 import * as activestorage from "@rails/activestorage"
 
 import mountComponents from "../util/mountComponents"
+import navToggle from "../util/navToggle"
 
 ujs.start()
 activestorage.start()
+navToggle()
 
 // Make all images available for image_pack_tag
 require.context("../images", true)
