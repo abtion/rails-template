@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable Rails/ApplicationController
+# rubocop:disable-next Rails/ApplicationController
 class ErrorsController < ActionController::Base
   skip_before_action :verify_authenticity_token
 
@@ -27,4 +27,3 @@ class ErrorsController < ActionController::Base
     end
   end
 end
-# rubocop:enable Rails/ApplicationController
