@@ -39,10 +39,10 @@
     "webpack-merge": "^6.0.1",
     "webpack-sources": "^3.3.4"
   },
-  "packageManager": "npm@11.10.0",
+  "packageManager": "npm@12.2.1",
   "engines": {
     "node": "24.x",
-    "npm": "^11.10.0"
+    "npm": "^12.2.1"
   },
   "version": "0.1.1",
   "browserslist": [
@@ -82,5 +82,10 @@
   },
   "overrides": {
     "postcss": "^8.5.13"
+  },
+  "allowScripts": {
+    "@parcel/watcher": false,
+    "@swc/core": false,
+    "unrs-resolver": false
   }
 }
