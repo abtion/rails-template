@@ -37,7 +37,7 @@ RSpec.describe "admin/users/edit", type: :view do
       "[placeholder='Password confirmation']"
     ].join
 
-    expect(rendered).to have_content("Edit user: #{user.email}")
+    expect(rendered).to have_text("Edit user: #{user.email}")
     expect(rendered).to have_css(email_selector)
     expect(rendered).to have_css(name_selector)
     expect(rendered).to have_css(password_selector)

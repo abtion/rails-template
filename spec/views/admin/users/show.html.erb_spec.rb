@@ -11,7 +11,7 @@ RSpec.describe "admin/users/show", type: :view do
 
     render
 
-    expect(rendered).to have_content(user.email)
+    expect(rendered).to have_text(user.email)
 
     expect(rendered).to have_link("Back", href: admin_users_path.to_s)
     expect(rendered).to have_link("Edit", href: edit_admin_user_path(user).to_s)
