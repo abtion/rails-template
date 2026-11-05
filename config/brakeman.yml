@@ -1,0 +1,6 @@
+---
+# Rails end-of-life is tracked through Dependabot and SLA maintenance
+# planning, so Brakeman's EOLRails check would only fail CI over an
+# upgrade that is already on the list.
+:skip_checks:
+  - CheckEOLRails
