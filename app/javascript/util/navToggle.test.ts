@@ -35,6 +35,19 @@ describe("navToggle", () => {
     const menu = document.querySelector("ul") as HTMLElement
 
     document.body.click()
+    document.dispatchEvent(new MouseEvent("click"))
     expect(menu.classList).toContain("hidden")
+  })
+
+  it("ignores toggle buttons without a nav or menu", () => {
+    document.body.innerHTML = `
+      <button data-nav-toggle id="outside"></button>
+      <nav><button data-nav-toggle id="empty"></button></nav>
+    `
+    const outside = document.getElementById("outside") as HTMLElement
+    const empty = document.getElementById("empty") as HTMLElement
+
+    expect(() => outside.click()).not.toThrow()
+    expect(() => empty.click()).not.toThrow()
   })
 })

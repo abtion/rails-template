@@ -1,6 +1,6 @@
 // Toggles the mobile nav menu. This replaces an inline onclick handler,
 // which the content security policy blocks.
-export default function navToggle(root: Document = document): void {
+export default function navToggle(root: Document): void {
   root.addEventListener("click", (event) => {
     if (!(event.target instanceof Element)) return
 

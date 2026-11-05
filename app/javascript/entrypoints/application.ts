@@ -6,7 +6,7 @@ import navToggle from "../util/navToggle"
 
 ujs.start()
 activestorage.start()
-navToggle()
+navToggle(document)
 
 // Make all images available for image_pack_tag
 require.context("../images", true)
