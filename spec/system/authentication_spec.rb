@@ -32,7 +32,7 @@ RSpec.describe "Authentication", type: :system do
 
       expect do
         click_on("Send me reset password instructions")
-        expect(page).to have_content("You will receive an email")
+        expect(page).to have_text("You will receive an email")
       end.to change { ActionMailer::Base.deliveries.size }.by(1)
 
       sent_mail = ActionMailer::Base.deliveries.first
@@ -47,7 +47,7 @@ RSpec.describe "Authentication", type: :system do
 
       click_on "Change my password"
 
-      expect(page).to have_content("Your password has been changed successfully")
+      expect(page).to have_text("Your password has been changed successfully")
     end
   end
 end

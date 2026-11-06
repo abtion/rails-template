@@ -37,7 +37,7 @@ RSpec.describe "admin/users/new", type: :view do
       "[placeholder='Password confirmation']"
     ].join
 
-    expect(rendered).to have_content("Create new user")
+    expect(rendered).to have_text("Create new user")
     expect(rendered).to have_css(email_selector)
     expect(rendered).to have_css(name_selector)
     expect(rendered).to have_css(password_selector)
