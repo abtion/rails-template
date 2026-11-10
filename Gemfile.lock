@@ -336,17 +336,17 @@ GEM
       railties (>= 7.0)
     rexml (3.4.4)
     rollbar (3.8.0)
-    rspec-core (3.13.6)
+    rspec-core (3.13.7)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.6)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-github (3.0.0)
       rspec-core (~> 3.0)
-    rspec-mocks (3.13.8)
+    rspec-mocks (3.13.9)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (8.0.4)
+    rspec-rails (8.1.0)
       actionpack (>= 7.2)
       activesupport (>= 7.2)
       railties (>= 7.2)
@@ -495,7 +495,7 @@ DEPENDENCIES
   rails-i18n
   rollbar
   rspec-github
-  rspec-rails (~> 8.0.4)
+  rspec-rails (~> 8.1.0)
   rubocop
   rubocop-capybara
   rubocop-factory_bot
