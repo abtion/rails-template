@@ -41,7 +41,7 @@ group :development do
   gem "brakeman", require: false
   gem "letter_opener"
   gem "pivotal_git_scripts"
-  gem "rack-mini-profiler", "~> 4.0"
+  gem "rack-mini-profiler", "~> 5.0"
   gem "rubocop", require: false
   gem "rubocop-capybara", require: false
   gem "rubocop-factory_bot", require: false
